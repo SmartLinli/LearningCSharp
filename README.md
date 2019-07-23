@@ -1,3 +1,4 @@
 # LearningCSharp
 Examples about C# grammar,design patterns,Visual Studio and .NET Framework
-¹ØÓÚC#Óï·¨¡¢Éè¼ÆÄ£Ê½¡¢Visual StudioºÍ.NET¿ò¼ÜµÄÀıÌâ¡£
+
+å…³äºC#è¯­æ³•ã€è®¾è®¡æ¨¡å¼ã€Visual Studioå’Œ.NETæ¡†æ¶çš„ä¾‹é¢˜ã€‚
