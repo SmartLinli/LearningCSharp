@@ -1,8 +1,8 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             oop.RestoreName();
             oop.RestoreName();
             oop.RestoreName();
-            Console.Read();
+            Read();
         }
     }
 }

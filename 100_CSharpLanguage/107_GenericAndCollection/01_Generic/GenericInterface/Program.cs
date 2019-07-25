@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -15,7 +12,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             StudentUi studentUi = new StudentUi();
             courseUi.Display(Oop);
             studentUi.Display(boy);
-            Console.Read();
+            Read();
         }
     }
 }

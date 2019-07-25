@@ -1,10 +1,9 @@
-﻿
-namespace SmartLin.LearningCSharp.GenericTypeAndCollection
+﻿namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
-    /// <summary>
-    /// 学生服务；
-    /// </summary>
-    public class StudentService
+	/// <summary>
+	/// 学生服务；
+	/// </summary>
+	public class StudentService
     {
         /// <summary>
         /// 注册；

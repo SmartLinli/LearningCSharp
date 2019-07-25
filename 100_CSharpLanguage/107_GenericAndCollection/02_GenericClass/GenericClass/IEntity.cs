@@ -12,7 +12,6 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         string Number
         {
             get;
-            set;
         }
     }
 }

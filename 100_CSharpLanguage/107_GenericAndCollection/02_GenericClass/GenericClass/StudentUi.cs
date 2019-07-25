@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
@@ -13,14 +13,10 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <param name="student">学生</param>
         private static void Display(Student student)
         {
-            Console.WriteLine
-                ("学号：{0,-15}姓名：{1}\n性别：{2,-14}生日：{3:D}\n年龄：{4,-15}学籍：{5}"
-                , student.Number
-                , student.Name
-                , student.Gender == Gender.MALE ? "男" : "女"
-                , student.BirthDate
-                , student.Age
-                , student.Status);
+			WriteLine
+				($"学号：{student.Number,-15}姓名：{student.Name}\n"
+				+ $"性别：{student.Gender,-14}生日：{student.BirthDate:D}\n"
+				+ $"年龄：{student.Age,-15}学籍：{student.Status}");
         }
         /// <summary>
         /// 显示学生；
@@ -31,7 +27,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         {
             if (student != null)
             {
-                Console.WriteLine(title + "：");
+				WriteLine($"{title}：");
                 Display(student);
             }
         }
@@ -44,8 +40,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             int i = 1;
             foreach (Student student in students)
             {
-                string title = string.Format("{0}", i);
-                Display(title, student);
+                Display($"{i}", student);
                 i++;
             }
         }
@@ -56,7 +51,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <param name="students">多名学生</param>
         public static void Display(string title, GenericContainer<Student> students)
         {
-            Console.WriteLine("\n" + title + "：");
+			WriteLine($"\n{title}：");
             Display(students);
         }
     }

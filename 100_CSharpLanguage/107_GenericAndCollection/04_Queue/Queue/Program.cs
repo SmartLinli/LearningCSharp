@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 using System.Collections.Generic;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
@@ -26,7 +26,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             studentAuditManager.EnterStudents(students);
             studentAuditManager.AuditStudents();
             studentAuditManager.ShowStudentsPassed();
-            Console.Read();
+            Read();
         }
     }
 }

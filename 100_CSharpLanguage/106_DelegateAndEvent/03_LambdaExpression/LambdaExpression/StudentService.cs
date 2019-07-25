@@ -62,7 +62,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <param name="students">多名学生</param>
         /// <param name="gender">性别</param>
         /// <returns>多名学生</returns>
-        public static Student[] FindByGender(this Student[] students, Gender gender)
+        public static Student[] FindByGender(this Student[] students, string gender)
         {
             Student[] tempResults = new Student[students.Length];
             int tempResultCount = 0;

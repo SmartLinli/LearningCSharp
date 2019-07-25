@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.DelegateAndEvent
 {
@@ -23,10 +23,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         public void AddBookOrder(Student student, string courseName)            //注册至委托对象的函数的签名必须与委托定义一致；
         {
             this.BookOrderCount++;
-            Console.WriteLine
-                ("\n已为学生{0}增订教材，当前共需订购教材{1}本。"
-                , student.Name
-                , this.BookOrderCount);
-        }
+			WriteLine($"\n已为学生{student.Name}增订教材，当前共需订购教材{this.BookOrderCount}本。");
+		}
     }
 }

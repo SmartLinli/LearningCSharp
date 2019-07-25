@@ -23,30 +23,18 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             get;
             private set;
         }
-        /// <summary>
-        /// 名称；
-        /// </summary>
-        public string Name
-        {
-            get
-            {
-                return this.Year.ToString() + "级" + this.Major.Name;
-            }
-        }
-        /// <summary>
-        /// 简称；
-        /// </summary>
-        public string ShortName
-        {
-            get
-            {
-                return this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
-            }
-        }
-        /// <summary>
-        /// 学生；
-        /// </summary>
-        public Student[] Students
+		/// <summary>
+		/// 名称；
+		/// </summary>
+		public string Name => this.Year.ToString() + "级" + this.Major.Name;
+		/// <summary>
+		/// 简称；
+		/// </summary>
+		public string ShortName => this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
+		/// <summary>
+		/// 学生；
+		/// </summary>
+		public Student[] Students
         {
             get;
             set;

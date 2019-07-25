@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.DelegateAndEvent
 {
@@ -14,10 +14,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <param name="courseName">课程名称</param>
         public static void InformAfterSelectCourse(Student student, string courseName)             //注册至委托对象的函数的签名必须与委托定义一致；
         {
-            Console.WriteLine
-                ("\n发送短信至手机{0}：已成功选修《{1}》。\n"
-                , student.PhoneNumber
-                , courseName);
-        }
-    }
+			WriteLine($"\n发送短信至手机{student.PhoneNumber}：已成功选修《{courseName}》。\n");
+		}
+	}
 }

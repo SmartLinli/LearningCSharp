@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.GenericTypeAndCollection
+﻿namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
     class Program
     {

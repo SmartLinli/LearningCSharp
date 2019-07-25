@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
@@ -37,7 +38,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                 , im18Students
                     .Find(s => s.Gender == Gender.MALE)
                     .ForEach(s => s.Gender = Gender.FEMALE));
-            Console.Read();
+            Read();
         }
     }
 }

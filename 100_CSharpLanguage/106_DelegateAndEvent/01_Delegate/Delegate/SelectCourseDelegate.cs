@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.DelegateAndEvent
+﻿namespace SmartLin.LearningCSharp.DelegateAndEvent
 {
     /// <summary>
     /// 选课后续；

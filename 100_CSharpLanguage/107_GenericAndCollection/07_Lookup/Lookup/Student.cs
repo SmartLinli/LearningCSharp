@@ -2,18 +2,18 @@
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
-    /// <summary>
-    /// 性别；
-    /// </summary>
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    /// <summary>
-    /// 学生；
-    /// </summary>
-    public class Student
+	/// <summary>
+	/// 性别；
+	/// </summary>
+	public class Gender
+	{
+		public static readonly string MALE = "男";
+		public static readonly string FEMALE = "女";
+	}
+	/// <summary>
+	/// 学生；
+	/// </summary>
+	public class Student
     {
         /// <summary>
         /// 学号；
@@ -34,7 +34,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <summary>
         /// 性别；
         /// </summary>
-        public Gender Gender
+        public string Gender
         {
             get;
             set;
@@ -50,7 +50,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Student(string number, string name, Gender gender)
+        public Student(string number, string name, string gender)
         {
             this.Number = number;
             this.Name = name;
@@ -63,10 +63,8 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="birthDate">生日</param>
-        public Student(string number, string name, Gender gender, Class currentClass)
+        public Student(string number, string name, string gender, Class currentClass)
             : this(number, name, gender)
-        {
-            this.Class = currentClass;
-        }
-    }
+			=> this.Class = currentClass;
+	}
 }

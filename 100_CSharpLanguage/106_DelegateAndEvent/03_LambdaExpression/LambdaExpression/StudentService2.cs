@@ -64,7 +64,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>是否满足</returns>
         public static bool FindByGender(Student student, object value)
         {
-            Gender studentGender = (Gender)value;
+            string studentGender = value as string;
             return student.Gender == studentGender;
         }
         /// <summary>

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -22,20 +23,20 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                 , new Student("3180707009", "刘燕婷", Gender.FEMALE, new DateTime(2000, 9, 28))
                 , new Student("3180707010", "梁婷", Gender.FEMALE, new DateTime(1999, 6, 12))
             };
-            Console.WriteLine("当前容量：{0}。", students.Capacity);
-            Console.WriteLine("当前个数：{0}。", students.Count);
+            WriteLine($"当前容量：{students.Capacity}。");
+            WriteLine($"当前个数：{students.Count}。");
             students.TrimExcess();                                                                      //删除额外容量；
-            Console.WriteLine("当前容量：{0}。", students.Capacity);
+            WriteLine($"当前容量：{students.Capacity}。");
             students.Add                                                                                //添加元素；
                 (new Student("3180707011", "刘雪晴", Gender.FEMALE, new DateTime(2000, 7, 5)));            
             if (!students.Contains(studentNo1))                                                         //判断是否包含指定元素；
             {
                 students.Add(studentNo1);
-                Console.WriteLine("新增学生{0}。", studentNo1.Name);
+                WriteLine($"新增学生{studentNo1.Name}。");
             }
             else
             {
-                Console.WriteLine("已有学生{0}，请勿重复添加。", studentNo1.Name);
+                WriteLine($"已有学生{studentNo1.Name}，请勿重复添加。");
             }
             students.AddRange                                                                           //批量添加元素；
                 (new List<Student>()                                                                    //除添加列表，还可添加数组；
@@ -46,36 +47,28 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                     });
             students.Insert                                                                             //在指定位置插入元素；
                 (13, new Student("3180707014", "张海展", Gender.MALE, new DateTime(2000, 6, 14)));
-            /*
+			/*
             students.Remove                                                                             //查找指定元素并删除；
                 (new Student("3180707001", null, 0));                                                   //查找时将调用equals方法进行匹配；若未重写equals方法，将调用object类的equals方法；
             students.RemoveAll                                                                          //查找满足条件的所有元素并删除；
                 (s => s.BirthDate.Value.Year >= 2000);                                                  //条件通过委托指定；
             students.Clear();                                                                           //清除所有元素；
             */
-            students.FindAll                                                                            //查找满足条件的所有元素；
-                (s => s.BirthDate.Value.Year < 2000)                                                    //若调用Find方法，则只返回满足条件的第一项元素；
-                .ForEach                                                                                //迭代每个元素；
-                (s => Console.WriteLine                                                                 //并通过委托执行指定的操作；
-                        ("学号：{0,-15}姓名：{1,-5}\t生日：{2}"
-                        , s.Number
-                        , s.Name
-                        , s.BirthDate.Value.ToLongDateString()));                                       
+			students.FindAll                                                                            //查找满足条件的所有元素；
+				(s => s.BirthDate.Value.Year < 2000)                                                    //若调用Find方法，则只返回满足条件的第一项元素；
+				.ForEach                                                                                //迭代每个元素；
+				(s => WriteLine                                                                         //并通过委托执行指定的操作；
+						($"学号：{s.Number,-15}姓名：{s.Name,-5}\t生日：{s.BirthDate.Value.ToLongDateString()}"));                                      
             string studentNumber = "31800707100";
-            Console.WriteLine
-                ("该班{0}存在学号为{1}的学生。"
-                , students.Exists(s => s.Number == studentNumber) ? "" : "不"                           //满足条件的元素是否存在；
-                , studentNumber);
+			WriteLine																					//满足条件的元素是否存在；
+				($"该班{(students.Exists(s => s.Number == studentNumber) ? "" : "不")}存在学号为{studentNumber}的学生。");
             students.Sort();                                                                            //元素必须实现IComparable接口，方可调用无参的Sort方法；
             students.Sort((s, s2) => s.Name.CompareTo(s2.Name));                                        //通过委托指定排序选项；
             students.Reverse();                                                                         //倒转顺序；
             students.ForEach                                                                            
-                (s => Console.WriteLine
-                        ("学号：{0,-15}姓名：{1,-5}\t生日：{2}"
-                        , s.Number
-                        , s.Name
-                        , s.BirthDate.Value.ToLongDateString()));
-            Console.Read();
+                (s => WriteLine
+						($"学号：{s.Number,-15}姓名：{s.Name,-5}\t生日：{s.BirthDate.Value.ToLongDateString()}"));
+			Read();
         }
     }
 }

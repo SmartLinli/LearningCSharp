@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.DelegateAndEvent
 {
@@ -44,8 +44,8 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// </summary>
         private void SelectCourse()
         {
-            Console.WriteLine("请输入课程名称：");
-            var courseName = Console.ReadLine();
+            WriteLine("请输入课程名称：");
+            var courseName = ReadLine();
             if (this.AfterSelectCourse != null)                             //若委托对象非空；
             {
                 this.AfterSelectCourse(this, courseName);                   //执行委托，并按委托签名提供参数；多播委托将依次调用各个函数，但只能返回最后1个函数的结果；
@@ -56,16 +56,16 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// </summary>
         private void Evaluate()
         {
-            Console.WriteLine("请输入评教分数：");
-            Console.ReadLine();
+            WriteLine("请输入评教分数：");
+            ReadLine();
         }
         /// <summary>
         /// 显示菜单；
         /// </summary>
         public void ShowMenu()
         {
-            Console.WriteLine("教务系统学生端菜单：\n1、选课\n2、评教");
-            var input = int.Parse(Console.ReadLine());
+            WriteLine("教务系统学生端菜单：\n1、选课\n2、评教");
+            var input = int.Parse(ReadLine());
             switch (input)
             {
                 case 1:

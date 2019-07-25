@@ -1,8 +1,9 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.DelegateAndEvent
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -67,7 +68,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                 , im18.Students
                     .Find(s => s.Gender == Gender.MALE)
                     .Modify(s => s.Gender = Gender.FEMALE));
-            Console.Read();
+            Read();
         }
     }
 }

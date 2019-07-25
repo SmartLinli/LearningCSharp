@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -29,20 +29,14 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                 (Lookup<Class, Student>)studentsList.ToLookup(s => s.Class);                    //Lookup类必须借助ToLookup方法来创建，并在参数中指定键；创建的结果为ILookup接口，还需通过显式类型转换将之转为Lookup类；
             while (true)
             {
-                Console.WriteLine("请输入年级：");
-                var inputYear = int.Parse(Console.ReadLine());
-                Console.WriteLine("请输入专业简称：");
-                var inputMajorShortName = Console.ReadLine();
+                WriteLine("请输入年级：");
+                var inputYear = int.Parse(ReadLine());
+                WriteLine("请输入专业简称：");
+                var inputMajorShortName = ReadLine();
                 Class inputClass = new Class(new Major("", inputMajorShortName), inputYear);
-                foreach (Student student in studentsLookupByClass[inputClass])                  //Lookup类通过索引器传送参数，并通过循环来迭代查找结果；
-                {
-                    Console.WriteLine
-                            ("学号：{0,-15}姓名：{1,-5}\t班级：{2}"
-                            , student.Number
-                            , student.Name
-                            , student.Class.ShortName);
-                }
-            }
+				studentsLookupByClass[inputClass].ToList().ForEach								//Lookup类通过索引器传送参数，并通过循环来迭代查找结果；
+					(s => WriteLine($"学号：{s.Number,-15}姓名：{s.Name,-5}\t班级：{s.Class.ShortName}"));	
+			}
         }
     }
 }

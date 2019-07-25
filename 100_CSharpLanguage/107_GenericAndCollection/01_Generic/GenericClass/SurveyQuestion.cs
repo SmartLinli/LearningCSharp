@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.GenericTypeAndCollection
+﻿namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
     /// <summary>
     /// 调查问题；

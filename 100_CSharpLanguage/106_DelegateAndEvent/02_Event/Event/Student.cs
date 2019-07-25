@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.DelegateAndEvent
 {
@@ -52,8 +52,8 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// </summary>
         private void SelectCourse()
         {
-            Console.WriteLine("请输入课程名称：");
-            var courseName = Console.ReadLine();
+            WriteLine("请输入课程名称：");
+            var courseName = ReadLine();
             this.OnSelectCourse(courseName);                                           //调用能触发事件的方法；
         }
         /// <summary>
@@ -61,16 +61,16 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// </summary>
         private void Evaluate()
         {
-            Console.WriteLine("请输入评教分数：");
-            Console.ReadLine();
+            WriteLine("请输入评教分数：");
+            ReadLine();
         }
         /// <summary>
         /// 显示菜单；
         /// </summary>
         public void ShowMenu()
         {
-            Console.WriteLine("教务系统学生端菜单：\n1、选课\n2、评教");
-            var input = int.Parse(Console.ReadLine());
+            WriteLine("教务系统学生端菜单：\n1、选课\n2、评教");
+            var input = int.Parse(ReadLine());
             switch (input)
             {
                 case 1:

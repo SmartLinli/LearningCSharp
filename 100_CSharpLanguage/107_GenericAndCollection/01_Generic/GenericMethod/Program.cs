@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 {
@@ -22,17 +22,12 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             int pageSize = 3, pageNumber = 4;
             Student[] currentPageStudents = 
                 PagingService.GetPage(students, pageSize, pageNumber);          //调用泛型方法；泛型方法可通过参数推断类型，无需再指定类型；
-            Console.WriteLine
-                ("第{0}页："
-                , pageNumber);
+			WriteLine($"第{pageNumber}页：");
             foreach (Student student in currentPageStudents)
             {
-                Console.WriteLine
-                    ("学号：{0,-15}姓名：{1}"
-                    , student.Number
-                    , student.Name);
+				WriteLine($"学号：{student.Number,-15}姓名：{student.Name}");
             }
-            Console.Read();
+            Read();
         }
     }
 }
