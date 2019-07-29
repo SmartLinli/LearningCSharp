@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.OperatorAndCast
 {
@@ -16,21 +16,18 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
             };
             Class im18 = new Class("18信管");
             im18 += newStudents;
-            /*查找学生*/
-            Console.WriteLine
-                ("查得学生{0}。"
-                , im18["3180707001"].Name);                                             //通过索引器获取数组元素；
+			/*查找学生*/
+			WriteLine
+				($"查得学生{im18["3180707001"].Name}。");                                //通过索引器获取数组元素；
             /*修改学生*/
             im18["3180707002"].Name = "林钦妹";                                         //通过索引器获取数组元素，并修改其属性；             
-            Console.WriteLine
-                ("学生已更名为{0}。"
-                , im18["3180707002"].Name);
+            WriteLine
+                ($"学生已更名为{im18["3180707002"].Name}。");
             /*添加学生*/
             im18["3180707006"] = new Student("3180707006", "陈雯婷");                   //通过索引器对数组元素赋值；
-            Console.WriteLine
-                ("新增学生{0}。"
-                , im18["3180707006"].Name);
-            Console.Read();
+			WriteLine
+				($"新增学生{im18["3180707006"].Name}。");
+            Read();
         }
     }
 }

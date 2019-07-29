@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -28,16 +28,16 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public override void Intro()                                                        //重写基类中的虚方法；
         {
-            Console.Write("我是{0}老师", this.Name.Substring(0, 1));
+            Write($"我是{this.Name.Substring(0, 1)}老师");
             if (this.Department != null)
             {
-                Console.Write("，来自{0}", this.Department.Name);
+                Write($"，来自{this.Department.Name}");
             }
             else
             {
-                Console.Write("，今天刚入职");
+                Write("，今天刚入职");
             }
-            Console.Write("，专长是{0}", this.Speciality);
+            Write($"，专长是{this.Speciality}");
         }
         /// <summary>
         /// 构造函数；
@@ -45,7 +45,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">工号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Faculty(string number, string name, Gender gender)
+        public Faculty(string number, string name, string gender)
             : base(number, name, gender)                                                    //调用基类的构造函数；
         {
             ;
@@ -57,7 +57,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="department">部门</param>
-        public Faculty(string number, string name, Gender gender, Department department)
+        public Faculty(string number, string name, string gender, Department department)
             : this(number, name, gender)                                                    //调用本类的构造函数；
         {
             this.Department = department;

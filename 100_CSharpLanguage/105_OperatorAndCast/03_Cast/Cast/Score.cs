@@ -10,11 +10,11 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <summary>
         /// 最小值；
         /// </summary>
-        private static decimal Min = 0;
+        private static decimal MIN = 0;
         /// <summary>
         /// 最大值；
         /// </summary>
-        private static decimal Max = 100;
+        private static decimal MAX = 100;
         /// <summary>
         /// 数值；
         /// </summary>
@@ -29,14 +29,14 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <param name="input">输入</param>
         public void InputNumeral(decimal input)
         {
-            if (input < Min)
+            if (input < MIN)
             {
-                this.Numeral = Min;
+                this.Numeral = MIN;
                 return;
             }
-            if (input > Max)
+            if (input > MAX)
             {
-                this.Numeral = Max;
+                this.Numeral = MAX;
                 return;
             }
             decimal decimalPart = input - (int)input;
@@ -66,7 +66,7 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <returns>成绩</returns>
         public static explicit operator Score(double value)             //定义源类型为双精度浮点数、目标类型为Score的显式类型转换；
         {
-            Score score = new Score(Min, Max);
+            Score score = new Score(MIN, MAX);
             score.InputNumeral((Decimal)value);
             return score;
         }
@@ -85,8 +85,8 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <param name="max">最大值</param>
         public Score(decimal min, decimal max)
         {
-            Min = min;
-            Max = max;
+            MIN = min;
+            MAX = max;
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -33,9 +34,9 @@ namespace SmartLin.LearningCSharp.Inheritance
             mrLin.Intro();
             boy.Register();                                                                             //派生类调用基类的方法；
             girl.Register();
-            boy.SendSms("请及时评教。");                                                                //派生类调用基类的方法；                                                                                
+            boy.SendSms("请及时评教。");																	//派生类调用基类的方法；                                                                                
             girl.SendSms("请及时评教。");            
-            Console.Read();
+            Read();
         }
     }
 }

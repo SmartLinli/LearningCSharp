@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.OperatorAndCast
 {
@@ -19,9 +19,9 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
             im18 += newStudents;
             foreach (Student student in im18)
             {
-                Console.WriteLine("{0,-12}{1}", student.Number, student.Name);
+                WriteLine("{0,-12}{1}", student.Number, student.Name);
             }
-            Console.Read();
+            Read();
         }
     }
 }

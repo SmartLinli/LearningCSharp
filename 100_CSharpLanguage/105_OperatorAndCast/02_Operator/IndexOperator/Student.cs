@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace SmartLin.LearningCSharp.OperatorAndCast
+﻿namespace SmartLin.LearningCSharp.OperatorAndCast
 {
-    /// <summary>
-    /// 学生；
-    /// </summary>
-    public class Student
+	/// <summary>
+	/// 学生；
+	/// </summary>
+	public class Student
     {
         /// <summary>
         /// 学号；

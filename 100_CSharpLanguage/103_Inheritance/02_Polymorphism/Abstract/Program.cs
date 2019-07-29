@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -25,18 +26,18 @@ namespace SmartLin.LearningCSharp.Inheritance
             newGuy.Instructor = msYang;
             /*介绍；注册；转专业；*/
             mrLin.Intro();                                                                          //调用派生类重写的方法；
-            Console.WriteLine();
+            WriteLine();
             boy.Intro();
-            Console.WriteLine();
+            WriteLine();
             girl.Intro();
-            Console.WriteLine();
+            WriteLine();
             newGuy.Intro();
-            Console.WriteLine();
+            WriteLine();
             boy.Register();
             girl.Register();
             newGuy.Register();
             newGuy.TransferToMajor(null, 2018);                                                     //调用派生类的新方法；
-            Console.Read();
+            Read();
         }
     }
 }

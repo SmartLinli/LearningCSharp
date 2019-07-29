@@ -1,8 +1,8 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Array
 {
-    class Program
+	class Program
     {
         static void Main()
         {
@@ -25,9 +25,9 @@ namespace SmartLin.LearningCSharp.Array
             /*遍历班级中的学生；*/
             foreach (Student student in im18)                                       //使用foreach语句（只读地）访问提供了枚举器的类；但此处循环变量的类型无法使用var；
             {
-                Console.WriteLine("{0,-12}{1}", student.Number, student.Name);
+                WriteLine($"{student.Number,-12}{student.Name}");
             }
-            Console.Read();
+            Read();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -35,9 +36,9 @@ namespace SmartLin.LearningCSharp.Inheritance
             StudentUi.Display(boy);
             UndergraduateUi.Display(newGuy);
             UserService.IntroduceAll(new User[] { msYang, mrLin, boy, girl, newGuy });                  //基类的类型同样适用于派生类；
-            Console.WriteLine();
+            WriteLine();
             StudentService.RegisterAll(new Student[] { boy, girl, newGuy });
-            Console.Read();
+            Read();
         }
     }
 }

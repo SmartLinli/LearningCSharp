@@ -1,19 +1,20 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-    /// <summary>
-    /// 性别；
-    /// </summary>
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    /// <summary>
-    /// 用户；
-    /// </summary>
-    public class User                                                      
+	/// <summary>
+	/// 性别；
+	/// </summary>
+	public class Gender
+	{
+		public static readonly string MALE = "男";
+		public static readonly string FEMALE = "女";
+	}
+	/// <summary>
+	/// 用户；
+	/// </summary>
+	public class User                                                      
     {
         /// <summary>
         /// 编号；
@@ -34,7 +35,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 性别；
         /// </summary>
-        public Gender Gender
+        public string Gender
         {
             get;
             private set;
@@ -84,7 +85,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
         {
-            Console.Write("我叫{0}", this.Name);
+            Write($"我叫{this.Name}");
         }
         /// <summary>
         /// 发送短信；
@@ -94,11 +95,11 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             if (this._PhoneNumber != null)
             {
-                Console.WriteLine("发送短信至用户手机{0}：{1}\n", this.PhoneNumber, message);
+                WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
             }
             else
             {
-                Console.WriteLine("用户尚未登记手机号。\n");
+                WriteLine("用户尚未登记手机号。\n");
             }
         }
         /// <summary>
@@ -107,7 +108,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">编号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public User(string number, string name, Gender gender)                      
+        public User(string number, string name, string gender)                      
         {
             this.Number = number;
             this.Name = name;

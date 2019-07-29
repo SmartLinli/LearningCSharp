@@ -28,7 +28,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Student(string number, string name, Gender gender)               //该构造函数不可缺少，因为本类的派生类只能通过本类的构造函数，间接调用本类的基类的构造函数；
+        public Student(string number, string name, string gender)               //该构造函数不可缺少，因为本类的派生类只能通过本类的构造函数，间接调用本类的基类的构造函数；
             : base(number, name, gender)                                        //调用基类的构造函数；
         {
             ;

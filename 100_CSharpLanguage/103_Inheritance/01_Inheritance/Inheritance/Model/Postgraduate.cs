@@ -36,7 +36,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Postgraduate(string number, string name, Gender gender)
+        public Postgraduate(string number, string name, string gender)
             : base(number, name, gender)                                                    //调用基类的构造函数；
         {
             ;
@@ -48,7 +48,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="supervisor">导师</param>
-        public Postgraduate(string number, string name, Gender gender, Faculty supervisor)
+        public Postgraduate(string number, string name, string gender, Faculty supervisor)
             : this(number, name, gender)                                                    //调用本类的构造函数；
         {
             this.Supervisor = supervisor;

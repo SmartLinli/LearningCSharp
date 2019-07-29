@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -16,10 +16,8 @@ namespace SmartLin.LearningCSharp.Inheritance
             for (int i = 0; i < students.Length; i++)
             {
                 students[i].Register();
-                Console.WriteLine
-                    ("{0}当前学籍为“{1}”"
-                    , students[i].Name
-                    , students[i].Status);
+                WriteLine
+                    ($"{students[i].Name}当前学籍为“{students[i].Status}”");
             }
         }
     }

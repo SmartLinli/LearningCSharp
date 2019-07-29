@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -30,11 +30,11 @@ namespace SmartLin.LearningCSharp.Inheritance
             base.Intro();                                                                   //调用基类的虚方法；
             if (this.School != null)
             {
-                Console.Write("，同时也是来自{0}的交换生", this.School);
+                Write($"，同时也是来自{this.School}的交换生");
             }
             else
             {
-                Console.Write("，今天刚到福建中医药大学");
+                Write("，今天刚到福建中医药大学");
             }
         }
         /// <summary>
@@ -44,7 +44,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="year">年级</param>
         public new void TransferToMajor(Major newMajor, int year)                           //定义新方法，隐藏基类方法；
         {
-            Console.WriteLine("交换生必须在指定专业就读，不能转专业。\n");
+            WriteLine("交换生必须在指定专业就读，不能转专业。\n");
         }
         /// <summary>
         /// 构造函数；
@@ -52,7 +52,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public ExchangeStudent(string number, string name, Gender gender)
+        public ExchangeStudent(string number, string name, string gender)
             : base(number, name, gender)
         {
             ;
@@ -65,7 +65,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="gender">性别</param>
         /// <param name="currentClass">班级</param>
         /// <param name="school">学校</param>
-        public ExchangeStudent(string number, string name, Gender gender, Class currentClass, string school)
+        public ExchangeStudent(string number, string name, string gender, Class currentClass, string school)
             : base(number, name, gender, currentClass)
         {
             this.School = school;

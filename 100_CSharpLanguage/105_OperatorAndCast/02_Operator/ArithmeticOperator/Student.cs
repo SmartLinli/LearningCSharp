@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.OperatorAndCast
+﻿namespace SmartLin.LearningCSharp.OperatorAndCast
 {
     /// <summary>
     /// 学生；

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.Inheritance
             for (int i = 0; i < users.Length; i++)
             {
                 users[i].Intro();
-                Console.WriteLine("。");
+                WriteLine("。");
             }
         }
     }
