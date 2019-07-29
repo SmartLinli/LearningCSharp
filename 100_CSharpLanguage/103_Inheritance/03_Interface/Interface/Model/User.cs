@@ -2,18 +2,18 @@
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-    /// <summary>
-    /// 性别；
-    /// </summary>
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    /// <summary>
-    /// 用户；
-    /// </summary>
-    public abstract class User                                                      //定义抽象类：
+	/// <summary>
+	/// 性别；
+	/// </summary>
+	public class Gender
+	{
+		public static readonly string MALE = "男";
+		public static readonly string FEMALE = "女";
+	}
+	/// <summary>
+	/// 用户；
+	/// </summary>
+	public abstract class User                                                      //定义抽象类：
     {
         /// <summary>
         /// 编号；

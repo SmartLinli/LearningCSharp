@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -46,11 +47,11 @@ namespace SmartLin.LearningCSharp.Inheritance
             base.Intro();                                                                   //调用基类的虚方法；基类Student未重写更高一层基类User的虚方法Intro，即隐式继承该虚方法，故此处最终调用基类User的虚方法Intro；
             if (this.Class != null)
             {
-                Console.Write("，来自{0}", this.Class.ShortName);
+				Write($"，来自{this.Class.ShortName}");
             }
             else
             {
-                Console.Write("，今天刚入学");
+				Write("，今天刚入学");
             }
         }
         /// <summary>
@@ -59,7 +60,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Undergraduate(string number, string name, Gender gender)
+        public Undergraduate(string number, string name, string gender)
             : base(number, name, gender)                                                    
         {
             ;
@@ -71,7 +72,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="currentClass">班级</param>
-        public Undergraduate(string number, string name, Gender gender, Class currentClass)
+        public Undergraduate(string number, string name, string gender, Class currentClass)
             : this(number, name, gender)                                                    
         {
             this.Class = currentClass;

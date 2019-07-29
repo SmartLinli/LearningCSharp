@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
-    /// <summary>
-    /// 学生；
-    /// </summary>
-    public abstract class Student : User                                //定义抽象类，派生于另一个类以及一个（或若干）接口；
+	/// <summary>
+	/// 学生；
+	/// </summary>
+	public abstract class Student : User                                //定义抽象类，派生于另一个类以及一个（或若干）接口；
     {
         /// <summary>
         /// 学籍；
@@ -25,7 +23,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number"></param>
         /// <param name="name"></param>
         /// <param name="gender"></param>
-        public Student(string number, string name, Gender gender)
+        public Student(string number, string name, string gender)
             : base(number, name, gender)
         {
             ;

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -15,7 +15,7 @@ namespace SmartLin.LearningCSharp.Inheritance
             /*分配导师；*/
             boy.InstructorAssignService.Assign();
             girl.InstructorAssignService.Assign();
-            Console.Read();
+            Read();
         }
     }
 }
