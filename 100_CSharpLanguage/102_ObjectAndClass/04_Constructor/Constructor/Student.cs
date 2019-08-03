@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -62,10 +63,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
         public void Intro()                                                 
         {
-            Console.WriteLine
-                ("我叫{0}{1}。"
-                , this.Name
-                , this.Class != null ? "，来自" + this.Class.ShortName : "");
+			WriteLine
+				($"我叫{this.Name}"
+				+ $"{(this.Class != null ? "，来自" + this.Class.ShortName : "")}。");
         }
         public Student(string number, string name, Gender gender)                       //定义构造函数（重载1）；编译器将不再自动提供默认的（无参数）构造函数；
         {

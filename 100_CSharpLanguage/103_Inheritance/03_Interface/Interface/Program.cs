@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -27,7 +27,7 @@ namespace SmartLin.LearningCSharp.Inheritance
             girl.SubjectTitle = "产科信息管理平台的设计与应用研究";
             msYang.SubmitSubject();
             girl.SubmitSubject();
-            Console.Read();
+            Read();
         }
     }
 }

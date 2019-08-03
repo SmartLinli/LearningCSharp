@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -20,17 +21,13 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             boy.BirthDate = new DateTime(2000, 1, 2);
             boy.PhoneNumber = "18900001111";
             boy.Class = im18;
-            Console.WriteLine
-                ("新生信息：\n学号：{0,-15}姓名：{1}\n性别：{2,-14}生日：{3:D}\n年龄：{4,-15}手机号：{5}\n班级：{6,-13}专业：{7}"
-                , boy.Number
-                , boy.Name
-                , boy.Gender == Gender.MALE ? "男" : "女"
-                , boy.BirthDate
-                , boy.Age
-                , boy.PhoneNumber
-                , boy.Class.ShortName                                                                                                        
-                , boy.Class.Major.Name);
-            Console.Read();
+			WriteLine
+				($"新生信息：\n"
+				+ $"学号：{boy.Number,-15}姓名：{boy.Name}\n"
+				+ $"性别：{(boy.Gender == Gender.MALE ? "男" : "女"),-14}生日：{boy.BirthDate:D}\n"
+				+ $"年龄：{boy.Age,-15}手机号：{boy.PhoneNumber}\n"
+				+ $"班级：{boy.Class.ShortName,-13}专业：{boy.Class.Major.Name}");
+            Read();
         }
     }
 }

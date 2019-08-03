@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
@@ -7,8 +7,8 @@ namespace SmartLin.LearningCSharp.Inheritance
         static void Main()
         {
             object boy = new Student("3180707001", "张三", Gender.MALE);
-            Console.WriteLine("学生姓名：{0}", boy);                        //隐式调用对象的ToString方法；
-            Console.Read();
+            WriteLine($"学生姓名：{boy}");                        //隐式调用对象的ToString方法；
+            Read();
         }
     }
 }

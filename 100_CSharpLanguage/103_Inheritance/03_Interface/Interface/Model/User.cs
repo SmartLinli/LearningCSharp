@@ -95,7 +95,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             if (this._PhoneNumber != null)
             {
-                WriteLine("发送短信至用户手机{0}：{1}\n", this.PhoneNumber, message);
+                WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
             }
             else
             {
@@ -108,7 +108,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="number">编号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public User(string number, string name, Gender gender)                      
+        public User(string number, string name, string gender)                      
         {
             this.Number = number;
             this.Name = name;

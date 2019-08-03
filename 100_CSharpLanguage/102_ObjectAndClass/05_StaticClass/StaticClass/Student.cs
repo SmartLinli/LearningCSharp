@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -73,8 +74,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
         public void Intro()
         {
-            Console.WriteLine
-                ("我叫" + this.Name + (this.Class == null ? "" : "，来自" + this.Class.ShortName) + "。");
+			WriteLine
+				($"我叫{this.Name}"
+				+ $"{(this.Class == null ? "" : "，来自" + this.Class.ShortName + "。")}");
         }
         private Student(string number, string name, Gender gender)                          //定义私有构造函数（重载1）；
         {
@@ -96,8 +98,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             }
             else
             {
-                Console.WriteLine("学号长度应为10位！");
-                Console.Read();
+                WriteLine("学号长度应为10位！");
+                Read();
                 return null;
             }
         }
