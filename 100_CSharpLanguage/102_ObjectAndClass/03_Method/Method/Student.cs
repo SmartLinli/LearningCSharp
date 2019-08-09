@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -86,19 +87,16 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
         public void Intro()                                                 //定义公有方法；
         {
-            Console.WriteLine
-                ("我叫{0}{1}。"
-                , this.Name
-                , this.HasClass ? "，来自" + this.Class.ShortName : "");
+			WriteLine
+				($"我叫{this.Name}"
+				+ $"{(this.HasClass ? "，来自" + this.Class.ShortName : "")}。");
         }
         public void EnrollByMajor(Major newMajor)
         {
             if (this.HasClass)                                              //调用私有属性，实现代码复用，提高代码可读性；
             {
-                Console.WriteLine
-                    ("{0}已被{1}专业录取，不得重复录取。"
-                    , this.Name
-                    , this.Class.Major.Name);
+				WriteLine
+					($"{this.Name}已被{this.Class.Major.Name}专业录取，不得重复录取。");
             }
             else
             {
@@ -106,20 +104,16 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 newClass.Year = DateTime.Now.Year;
                 newClass.Major = newMajor;
                 this.Class = newClass;
-                Console.WriteLine
-                    ("{0}被{1}专业录取，并分配至{2}班。"
-                    , this.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
+				WriteLine
+					($"{this.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
             }
         }
         private bool ValidateForTransferToMajor()                           //定义私有方法；
         {
             if (!this.HasClass)
             {
-                Console.WriteLine
-                    ("{0}尚未被任何专业录取，无法转专业。"
-                    , this.Name);
+				WriteLine
+					($"{this.Name}尚未被任何专业录取，无法转专业。");
             }
             return this.HasClass;
         }
@@ -131,11 +125,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 newClass.Major = newMajor;
                 newClass.Year = year;
                 this.Class = newClass;
-                Console.WriteLine
-                    ("{0}已转至{1}专业，并分配至{2}班。"
-                    , this.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
+				WriteLine
+					($"{this.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
         }
         public void TransferToMajor(Major newMajor)                         //公有方法（重载2）

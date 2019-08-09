@@ -1,8 +1,9 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    class Program
+	class Program
     {
         static void Main()
         { 
@@ -27,7 +28,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             girl.Intro();
             girl.TransferToMajor(acupuncture, 2020);                                            
             girl.Intro();
-            Console.Read();
+            Read();
         }
     }
 }

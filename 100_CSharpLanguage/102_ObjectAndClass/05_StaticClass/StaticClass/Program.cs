@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -19,7 +19,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 
             boy.PhoneNumber = "18900001111";
             SmsService.SendSms(boy.PhoneNumber, "请抓紧评教。");
-            Console.Read();
+            Read();
         }
     }
 }

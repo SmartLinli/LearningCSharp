@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SmartLin.LearningCSharp.ClassAndObject
+﻿namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public class Class
+	public class Class
     {
         public int Year
         {

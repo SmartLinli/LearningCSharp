@@ -1,8 +1,9 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public enum Gender
+	public enum Gender
     {
         FEMALE = 0,
         MALE = 1
@@ -24,7 +25,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 }
                 else
                 {
-                    Console.WriteLine("已有学号，不得更改！");
+                    WriteLine("已有学号，不得更改！");
                 }
             }
         }

@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
     /// <summary>
     /// 专业；
