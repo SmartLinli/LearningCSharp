@@ -1,10 +1,10 @@
 ﻿
 namespace SmartLin.LearningCSharp.Inheritance
 {
-    /// <summary>
-    /// 部门；
-    /// </summary>
-    public class Department
+	/// <summary>
+	/// 部门；
+	/// </summary>
+	public class Department
     {
         /// <summary>
         /// 名称；

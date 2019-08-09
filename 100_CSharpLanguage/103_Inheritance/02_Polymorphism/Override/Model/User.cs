@@ -58,27 +58,13 @@ namespace SmartLin.LearningCSharp.Inheritance
                 return DateTime.Now.Year - this.BirthDate.Year;
             }
         }
-        private string _PhoneNumber;
         /// <summary>
         /// 电话；
         /// </summary>
-        public string PhoneNumber
-        {
-            get
-            {
-                if (this._PhoneNumber != null)
-                {
-                    return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                this._PhoneNumber = value;
-            }
+        public virtual string PhoneNumber                                           //定义虚属性；虚属性在派生类中既可继承，亦可被重写；
+		{
+			get;
+			set;
         }
         /// <summary>
         /// 介绍；
@@ -93,7 +79,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="message">消息</param>
         public virtual void SendSms(string message)                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
         {
-            if (this._PhoneNumber != null)
+            if (this.PhoneNumber != null)
             {
                 WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
             }

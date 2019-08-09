@@ -84,7 +84,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
         {
-            Console.Write("我叫{0}", this.Name);
+            Write("我叫{0}", this.Name);
         }
         /// <summary>
         /// 发送短信；
@@ -94,11 +94,11 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             if (this._PhoneNumber != null)
             {
-                Console.WriteLine("发送短信至用户手机{0}：{1}\n", this.PhoneNumber, message);
+                WriteLine("发送短信至用户手机{0}：{1}\n", this.PhoneNumber, message);
             }
             else
             {
-                Console.WriteLine("用户尚未登记手机号。\n");
+                WriteLine("用户尚未登记手机号。\n");
             }
         }
         /// <summary>

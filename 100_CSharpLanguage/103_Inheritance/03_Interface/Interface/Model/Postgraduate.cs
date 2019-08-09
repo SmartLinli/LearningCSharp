@@ -45,7 +45,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         public sealed override void Register()                                              //重写基类中的虚方法；密封方法不能被重写；
         {
             this.Status = "已注册";                                                         //只有在派生类中才能访问基类的受保护成员；
-            Console.WriteLine
+            WriteLine
                 ("研究生{0}当前学籍为“{1}”"
                 , this.Name
                 , this.Status);
@@ -58,20 +58,20 @@ namespace SmartLin.LearningCSharp.Inheritance
             base.Intro();
             if (this.Supervisor != null)
             {
-                Console.Write("，是{0}老师的研究生", this.Supervisor.Name.Substring(0,1));
+                Write("，是{0}老师的研究生", this.Supervisor.Name.Substring(0,1));
             }
             else
             {
-                Console.Write("，是研究生。");
+                Write("，是研究生。");
             }
-            Console.Write("，研究方向是{0}。", this.Direction);
+            Write("，研究方向是{0}。", this.Direction);
         }
         /// <summary>
         /// 申报课题；
         /// </summary>
         public void SubmitSubject()
         {
-            Console.WriteLine
+            WriteLine
                 ("研究生独立申报校管课题，选题为《{0}》。"
                 , this.SubjectTitle);
         }

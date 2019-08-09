@@ -28,14 +28,14 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public override void Intro()                                                       
         {
-            Console.Write("我是{0}老师", this.Name.Substring(0, 1));
+            Write("我是{0}老师", this.Name.Substring(0, 1));
             if (this.Department != null)
             {
-                Console.Write("，来自{0}", this.Department.Name);
+                Write("，来自{0}", this.Department.Name);
             }
             else
             {
-                Console.Write("，今天刚入职");
+                Write("，今天刚入职");
             }
         }
         /// <summary>

@@ -7,6 +7,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 	/// </summary>
 	public class Faculty : User
 	{
+
 		/// <summary>
 		/// 部门；
 		/// </summary>

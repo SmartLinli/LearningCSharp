@@ -46,11 +46,11 @@ namespace SmartLin.LearningCSharp.Inheritance
             base.Intro();                                                                   //调用基类的虚方法；基类Student未重写更高一层基类User的虚方法Intro，即隐式继承该虚方法，故此处最终调用基类User的虚方法Intro；
             if (this.Class != null)
             {
-                Console.Write("，来自{0}", this.Class.ShortName);
+                Write("，来自{0}", this.Class.ShortName);
             }
             else
             {
-                Console.Write("，今天刚入学");
+                Write("，今天刚入学");
             }
         }
         /// <summary>

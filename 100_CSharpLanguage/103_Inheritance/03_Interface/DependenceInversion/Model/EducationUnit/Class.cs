@@ -2,10 +2,10 @@
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-    /// <summary>
-    /// 班级；
-    /// </summary>
-    public class Class
+	/// <summary>
+	/// 班级；
+	/// </summary>
+	public class Class
     {
         /// <summary>
         /// 年级；

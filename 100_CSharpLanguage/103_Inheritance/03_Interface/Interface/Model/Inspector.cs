@@ -13,7 +13,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="faculty">教职工</param>
         public void Analyse(Faculty faculty)
         {
-            Console.WriteLine
+            WriteLine
                 ("督导对{0}老师教学效果的分析：……\n督导：{1}\n"
                 , faculty.Name
                 , this.Name);
@@ -24,7 +24,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="faculty">教职工</param>
         public void Propose(Faculty faculty)
         {
-            Console.WriteLine
+            WriteLine
                 ("督导对{0}老师今后教学工作的建议：……\n督导：{1}\n"
                 , faculty.Name
                 , this.Name);
@@ -35,7 +35,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="faculty">教职工</param>
         public override void Evaluate(Faculty faculty)
         {
-            Console.WriteLine
+            WriteLine
                 ("督导对{0}老师的评教：\n从大纲、进度、教案、讲稿、教学设计、课堂纪律等方面进行评教……\n督导：{1}\n"
                 , faculty.Name
                 , this.Name);
