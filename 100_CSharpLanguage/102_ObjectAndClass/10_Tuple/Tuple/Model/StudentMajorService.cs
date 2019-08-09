@@ -23,7 +23,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// <param name="student">学生</param>
         /// <param name="newMajor">新专业</param>
         /// <returns>结果</returns>                                                          //使用元组需要添加NuGet包System.ValueTuple
-        public static (bool isSuccess, string message, string warning) EnrollByMajor(this Student student, Major newMajor)
+        public static (bool IsSuccess, string Message, string Warning) EnrollByMajor(this Student student, Major newMajor)
         {                                                                                   //定义该方法的返回类型为元组，并分别定义元组的各字段的类型与名称；
             var result = (isSuccess: false, message: "", warning: "");                      //定义元组对象、各字段名称以及初始值；
             if (!student.HasClass())                                                        //调用私有静态扩展方法，实现代码复用，提高代码可读性；
