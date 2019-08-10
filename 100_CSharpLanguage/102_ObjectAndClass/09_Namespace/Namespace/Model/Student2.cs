@@ -27,7 +27,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         {
             if (number.Length != 10)
             {
-                Console.WriteLine("学号长度应为10位！");
+                WriteLine("学号长度应为10位！");
                 return null;
             }
             else

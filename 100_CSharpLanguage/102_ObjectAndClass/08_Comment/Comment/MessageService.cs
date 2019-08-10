@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -16,11 +16,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             if (email != null)
             {
-                Console.WriteLine("发送电子邮件至{0}：{1}", email, message);
-            }
-            else
+				WriteLine($"发送电子邮件至{email}：{message}");
+			}
+			else
             {
-                Console.WriteLine("尚未登记电子邮件。");
+                WriteLine("尚未登记电子邮件。");
             }
         }
         /// <summary>
@@ -32,11 +32,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             if (phoneNumber != null)
             {
-                Console.WriteLine("发送短信至{0}：{1}", phoneNumber, message);
-            }
-            else
+				WriteLine($"发送短信至{phoneNumber}：{message}");
+			}
+			else
             {
-                Console.WriteLine("尚未登记手机号。");
+                WriteLine("尚未登记手机号。");
             }
         }
     }

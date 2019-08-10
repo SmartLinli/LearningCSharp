@@ -26,7 +26,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             boy.PhoneNumber = "18900001111";
             MessageService.SendSms(boy.PhoneNumber, "请抓紧评教。");
             MessageService.SendSms(girl.PhoneNumber, "请抓紧评教。");
-            Console.Read();
+            Read();
         }
     }
 }

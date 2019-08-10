@@ -1,12 +1,11 @@
 ﻿using System;
-using SmartLin.LearningCSharp.ClassAndObject.Model;                                         //对项目默认命名空间以外的资源访问，可通过添加调用获得便利；
 
 namespace SmartLin.LearningCSharp.ClassAndObject.Model                                      //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
 {
-    /// <summary>
-    /// 班级；
-    /// </summary>
-    public class Class
+	/// <summary>
+	/// 班级；
+	/// </summary>
+	public class Class
     {
         /// <summary>
         /// 年级；
@@ -31,9 +30,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         {
             get
             {
-                return this.Year.ToString() + "级" + this.Major.Name;
-            }
-        }
+				return $"{this.Year}级{this.Major.Name}";
+			}
+		}
         /// <summary>
         /// 简称；
         /// </summary>
@@ -41,9 +40,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         {
             get
             {
-                return this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
-            }
-        }
+				return $"{this.Year % 100}{this.Major.ShortName}";
+			}
+		}
         /// <summary>
         /// 构造函数；
         /// </summary>

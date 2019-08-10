@@ -1,11 +1,9 @@
-﻿using SmartLin.LearningCSharp.ClassAndObject.Model;                                             //对项目默认命名空间以外的资源访问，可通过添加调用获得便利；
-
-namespace SmartLin.LearningCSharp.ClassAndObject.Model                                          //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
+﻿namespace SmartLin.LearningCSharp.ClassAndObject.Model                                          //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
 {
-    /// <summary>
-    /// 专业；
-    /// </summary>
-    public class Major
+	/// <summary>
+	/// 专业；
+	/// </summary>
+	public class Major
     {
         /// <summary>
         /// 名称；

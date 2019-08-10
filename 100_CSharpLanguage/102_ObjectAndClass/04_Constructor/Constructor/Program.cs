@@ -7,9 +7,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     {
         static void Main()
         {
-            Major infomationManagement = new Major("信息管理与信息系统", "信管");           //调用构造函数；
+            Major infomationManagement = new Major("信息管理与信息系统", "信管");				//调用构造函数；
             Class im18 = new Class(infomationManagement, 2018);
-            Student boy = new Student("3180707000", "张三", Gender.MALE, im18)              //调用构造函数（重载2）；
+            Student boy = new Student("3180707000", "张三", Gender.MALE, im18)				//调用构造函数（重载2）；
             {
                 BirthDate = new DateTime(2000, 1, 2),                                       //还可在初始化器中对属性进行赋值；
                 PhoneNumber = "18900001111"

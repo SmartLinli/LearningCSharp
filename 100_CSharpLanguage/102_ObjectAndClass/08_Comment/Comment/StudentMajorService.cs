@@ -1,11 +1,12 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    /// <summary>
-    /// 学生专业服务；
-    /// </summary>
-    public static class StudentMajorService
+	/// <summary>
+	/// 学生专业服务；
+	/// </summary>
+	public static class StudentMajorService
     {
         /// <summary>
         /// 是否有班级；
@@ -28,20 +29,15 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 /*根据指定的新专业，创建新班级，年级则为今年；*/
                 Class newClass = new Class(newMajor, DateTime.Now.Year);
                 student.Class = newClass;
-                Console.WriteLine
-                    ("{0}被{1}专业录取，并分配至{2}班。"
-                    , student.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
-            }
-            else
+				WriteLine
+					($"{student.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
+			}
+			else
             {
-                Console.WriteLine
-                    ("{0}已被{1}专业录取，不得重复录取。"
-                    , student.Name
-                    , student.Class.Major.Name);
-            }
-        }
+				WriteLine
+					($"{student.Name}已被{student.Class.Major.Name}专业录取，不得重复录取。");
+			}
+		}
         /// <summary>
         /// 为转专业进行验证；
         /// </summary>
@@ -55,10 +51,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             }
             else
             {
-                Console.WriteLine
-                    ("{0}尚未被任何专业录取，无法转专业。"
-                    , student.Name);
-                return false;
+				WriteLine
+					($"{student.Name}尚未被任何专业录取，无法转专业。");
+				return false;
             }
         }
         /// <summary>
@@ -74,13 +69,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 /*根据指定的新专业与年级，创建新班级；*/
                 Class newClass = new Class(newMajor, year);
                 student.Class = newClass;
-                Console.WriteLine
-                    ("{0}已转至{1}专业，并分配至{2}班。"
-                    , student.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
-            }
-        }
+				WriteLine
+					($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
+			}
+		}
         /// <summary>
         /// 转专业；
         /// </summary>

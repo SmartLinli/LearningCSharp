@@ -28,7 +28,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
             {
                 Class newClass = new Class(newMajor, DateTime.Now.Year);
                 student.Class = newClass;
-                Console.WriteLine
+                WriteLine
                     ("{0}被{1}专业录取，并分配至{2}班。"
                     , student.Name
                     , newMajor.Name
@@ -36,7 +36,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
             }
             else
             {
-                Console.WriteLine
+                WriteLine
                     ("{0}已被{1}专业录取，不得重复录取。"
                     , student.Name
                     , student.Class.Major.Name);
@@ -55,7 +55,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
             }
             else
             {
-                Console.WriteLine
+                WriteLine
                     ("{0}尚未被任何专业录取，无法转专业。"
                     , student.Name);
                 return false;
@@ -73,7 +73,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
             {
                 Class newClass = new Class(newMajor, year);
                 student.Class = newClass;
-                Console.WriteLine
+                WriteLine
                     ("{0}已转至{1}专业，并分配至{2}班。"
                     , student.Name
                     , newMajor.Name

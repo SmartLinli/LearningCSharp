@@ -1,8 +1,8 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public partial class Student                                                        //定义部分类；                                                
+	public partial class Student                                                        //定义部分类；                                                
     {
         public string Email
         {
@@ -13,11 +13,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             if (this.Email != null)
             {
-                Console.WriteLine("发送电子邮件至{0}：{1}", this.Email, message);
+				WriteLine($"发送电子邮件至{this.Email}：{message}");
             }
             else
             {
-                Console.WriteLine("尚未登记电子邮件。");
+                WriteLine("尚未登记电子邮件。");
             }
         }
     }

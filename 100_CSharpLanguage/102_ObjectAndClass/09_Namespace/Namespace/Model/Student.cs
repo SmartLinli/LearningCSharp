@@ -1,20 +1,20 @@
 ﻿using System;
-using SmartLin.LearningCSharp.ClassAndObject.Model;                                         //对项目默认命名空间以外的资源访问，可通过添加调用获得便利；
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject.Model                                      //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
 {
-    /// <summary>
-    /// 性别；
-    /// </summary>
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    /// <summary>
-    /// 学生；
-    /// </summary>
-    public partial class Student
+	/// <summary>
+	/// 性别；
+	/// </summary>
+	public class Gender
+	{
+		public static readonly string MALE = "男";
+		public static readonly string FEMALE = "女";
+	}
+	/// <summary>
+	/// 学生；
+	/// </summary>
+	public partial class Student
     {
         /// <summary>
         /// 学号；
@@ -35,7 +35,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// <summary>
         /// 性别；
         /// </summary>
-        public Gender Gender
+        public string Gender
         {
             get;
             set;
@@ -106,18 +106,17 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// </summary>
         public void Intro()
         {
-            Console.WriteLine
-                ("我叫{0}{1}。"
-                , this.Name
-                , this.HasClass ? "，来自" + this.Class.ShortName : "");
-        }
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">学号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        private Student(string number, string name, Gender gender)                              //定义私有构造函数（重载1）；
+			WriteLine
+				($"我叫{this.Name}"
+				+ $"{(this.Class == null ? "" : "，来自" + this.Class.ShortName + "。")}");
+		}
+		/// <summary>
+		/// 构造函数；
+		/// </summary>
+		/// <param name="number">学号</param>
+		/// <param name="name">姓名</param>
+		/// <param name="gender">性别</param>
+		private Student(string number, string name, string gender)                              //定义私有构造函数（重载1）；
         {
             this.Number = number;
             this.Name = name;
@@ -130,7 +129,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="currentClass">班级</param>
-        private Student(string number, string name, Gender gender, Class currentClass)          //定义私有构造函数（重载2）；
+        private Student(string number, string name, string gender, Class currentClass)          //定义私有构造函数（重载2）；
             : this(number, name, gender)
         {
             this.Class = currentClass;

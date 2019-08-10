@@ -91,17 +91,14 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
         public static Student Create(string number, string name, Gender gender)             //在非静态类中定义静态方法；
         {
-            if (number.Length == 10)
+            if (number.Length != 10)
             {
-                Student student = new Student(number, name, gender);                        //调用私有构造函数；
-                return student;
-            }
-            else
-            {
-                WriteLine("学号长度应为10位！");
-                Read();
-                return null;
-            }
+				WriteLine("学号长度应为10位！");
+				Read();
+				return null;
+			}
+			Student student = new Student(number, name, gender);							//调用私有构造函数；
+			return student;
         }
         public static Student Create(string number, string name, Gender gender, Class currentClass)
         {

@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Ui                             
         /// <param name="student">学生</param>
         public static void Display(Student student)
         {
-            Console.WriteLine
+            WriteLine
                 ("在校生信息：\n学号：{0,-15}姓名：{1}\n性别：{2,-14}手机号：{5}\n班级：{6,-13}专业：{7}\n"
                 , student.Number
                 , student.Name
