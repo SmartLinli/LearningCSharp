@@ -1,11 +1,11 @@
-﻿using System;
-using SmartLin.LearningCSharp.ClassAndObject.Common;                                        //对项目默认命名空间以外的资源访问，可通过添加调用获得便利；
+﻿using SmartLin.LearningCSharp.ClassAndObject.Common;                                        //对项目默认命名空间以外的资源访问，可通过添加调用获得便利；
 using SmartLin.LearningCSharp.ClassAndObject.Model;
 using SmartLin.LearningCSharp.ClassAndObject.Ui;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    class Program
+	class Program
     {
         static void Main()
         {
