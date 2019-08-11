@@ -37,20 +37,15 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()
         {
             Write($"我是{this.Name.Substring(0, 1)}老师");
-            if (this.Department != null)
-            {
-                Write($"，来自{this.Department.Name}");
-            }
-            else
-            {
-                Write("，今天刚入职");
-            }
-        }
-        /// <summary>
-        /// 评教；
-        /// </summary>
-        /// <param name="faculty">教职工</param>
-        public virtual void Evaluate(Faculty faculty)                                       //实现接口中的方法；
+			Write(this.Department == null ?
+					"，今天刚入职"
+					: $"，来自{this.Department.Name}");
+		}
+		/// <summary>
+		/// 评教；
+		/// </summary>
+		/// <param name="faculty">教职工</param>
+		public virtual void Evaluate(Faculty faculty)                                       //实现接口中的方法；
         {
 			WriteLine
 				($"同行对{faculty.Name}老师的评教：\n从大纲、进度、教案、讲稿、教学设计、课堂纪律等方面进行评教……\n"

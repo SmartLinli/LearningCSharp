@@ -26,11 +26,11 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
 		/// <summary>
 		/// 名称；
 		/// </summary>
-		public string Name => this.Year.ToString() + "级" + this.Major.Name;
+		public string Name => $"{this.Year}级{this.Major.Name}";
 		/// <summary>
 		/// 简称；
 		/// </summary>
-		public string ShortName => this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
+		public string ShortName => $"{this.Year % 100}{this.Major.ShortName}";
 		/// <summary>
 		/// 学生；
 		/// </summary>

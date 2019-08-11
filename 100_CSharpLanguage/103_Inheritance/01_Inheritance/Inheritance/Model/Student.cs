@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
-    /// <summary>
-    /// 学生；
-    /// </summary>
-    public class Student : User                                                 //定义类，派生于另一个类；
+	/// <summary>
+	/// 学生；
+	/// </summary>
+	public class Student : User                                                 //定义类，派生于另一个类；
     {
         /// <summary>
         /// 学籍；

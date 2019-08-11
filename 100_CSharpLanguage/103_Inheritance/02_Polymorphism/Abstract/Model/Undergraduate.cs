@@ -38,14 +38,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()                                                        //重写基类中的虚方法；
         {
             base.Intro();                                                                   //调用基类的虚方法；基类Student未重写更高一层基类User的虚方法Intro，即隐式继承该虚方法，故此处最终调用基类User的虚方法Intro；
-            if (this.Class != null)
-            {
-                Write($"，来自{this.Class.ShortName}。");
-            }
-            else
-            {
-                Write("，今天刚入学。");
-            }
+			Write(this.Class == null ?
+					"，今天刚入学。"
+					: $"，来自{this.Class.ShortName}。");
         }
         /// <summary>
         /// 转专业
@@ -58,11 +53,11 @@ namespace SmartLin.LearningCSharp.Inheritance
             {
                 Class newClass = new Class(newMajor,year);
                 this.Class = newClass;
-                WriteLine("{this.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
+                WriteLine($"{this.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
             else
             {
-                WriteLine("{this.Name}尚未被任何专业录取，无法转专业。");
+                WriteLine($"{this.Name}尚未被任何专业录取，无法转专业。");
             }
         }
         /// <summary>

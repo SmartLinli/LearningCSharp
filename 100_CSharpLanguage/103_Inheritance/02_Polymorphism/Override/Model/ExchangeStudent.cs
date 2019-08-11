@@ -30,21 +30,16 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()                                                        //重写基类中的虚方法；
         {
             base.Intro();                                                                   //调用基类的虚方法；
-            if (this.School != null)
-            {
-                Write($"同时也是来自{this.School}的交换生。");
-            }
-            else
-            {
-                Write("今天刚到福建中医药大学。");
-            }
-        }
-        /// <summary>
-        /// 转专业
-        /// </summary>
-        /// <param name="newMajor">新专业</param>
-        /// <param name="year">年级</param>
-        public new void TransferToMajor(Major newMajor, int year)                           //定义新方法，隐藏基类方法；
+			Write(this.School == null ?
+					"今天刚到福建中医药大学。"
+					: $"同时也是来自{this.School}的交换生。");
+		}
+		/// <summary>
+		/// 转专业
+		/// </summary>
+		/// <param name="newMajor">新专业</param>
+		/// <param name="year">年级</param>
+		public new void TransferToMajor(Major newMajor, int year)                           //定义新方法，隐藏基类方法；
         {
             WriteLine("交换生必须在指定专业就读，不能转专业。\n");
         }

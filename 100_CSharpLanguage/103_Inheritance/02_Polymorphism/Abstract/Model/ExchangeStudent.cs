@@ -30,14 +30,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()                                                        //重写基类中的虚方法；
         {
             base.Intro();                                                                   //调用基类的虚方法；
-            if (this.School != null)
-            {
-                Write($"同时也是来自{this.School}的交换生。");
-            }
-            else
-            {
-                Write("今天刚到福建中医药大学。");
-            }
+			Write(this.School == null ?
+					"今天刚到福建中医药大学。"
+					: $"同时也是来自{this.School}的交换生。");
         }
         /// <summary>
         /// 转专业
