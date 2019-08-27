@@ -41,12 +41,8 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <param name="courseName">课程名称</param>
         private void OnSelectCourse(string courseName)
         {
-            if (this.SelectCourseEvent != null)                                             //若事件非空；
-            {
-                SelectCourseEventArgs e = new SelectCourseEventArgs(courseName);            //创建事件参数；
-                this.SelectCourseEvent(this, e);                                            //触发事件，即调用多播委托中注册的所有事件处理函数；事件必须在类内部触发；
-            }                                                                           
-        }
+			this.SelectCourseEvent?.Invoke(this, new SelectCourseEventArgs(courseName));    //触发事件，即调用多播委托中注册的所有事件处理函数；事件必须在类内部触发；还需根据需要创建事件参数；
+		}
         /// <summary>
         /// 选课；
         /// </summary>
@@ -54,7 +50,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         {
             WriteLine("请输入课程名称：");
             var courseName = ReadLine();
-            this.OnSelectCourse(courseName);                                           //调用能触发事件的方法；
+            this.OnSelectCourse(courseName);												//调用能触发事件的方法；
         }
         /// <summary>
         /// 评教；

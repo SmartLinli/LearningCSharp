@@ -18,7 +18,7 @@ namespace SmartLin.LearningCSharp.Basics                                //声明
             Gender gender = Gender.MALE;                                //枚举将实例化为派生于System.Enum的结构；
             DateTime birthDate = DateTime.Parse("2000-01-02");          //调用DateTime结构提供的Parse方法，将字符串转为日期时间；
             float height = 170;                                         //float类型的变量实际为System.Single结构的实例；整型值可被隐式转为（精度更高）的单精度值；但若输入170.0，将被识别为双精度值，进而无法被隐式转为（精度更低）的单精度值，此时应输入170.0F（或f）；
-            var weight = 60.5m;                                         //匿名类型根据初始化值进行类型推断；初始化器不能为空，也不能再改变变量类型；Decimal类型为128位高精度十进制数，但非基本类型；
+            var weight = 60.5m;                                         //隐式类型根据初始化值进行类型推断；初始化器不能为空，也不能再改变变量类型；Decimal类型为128位高精度十进制数，但非基本类型；
             bool isRegistered = true;                                   //bool类型的变量实际为System.Boolean结构的实例；
             WriteLine(title);                                           //将指定的字符串值（后跟当前行终止符）写入标准输出流；
             WriteLine(number.ToString());                               //int等基本数据类型提供ToString方法，实现转换字符串；
