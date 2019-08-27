@@ -53,15 +53,10 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()                                                 
         {
             base.Intro();
-            if (this.Supervisor != null)
-            {
-                Write($"，是{this.Supervisor.Name.Substring(0, 1)}老师的研究生");
-            }
-            else
-            {
-                Write("，是研究生。");
-            }
-            Write($"，研究方向是{this.Direction}。");
+			Write(this.Supervisor == null ?
+					"，是研究生。"
+					: $"，是{ this.Supervisor.Name.Substring(0, 1)}老师的研究生");
+			Write($"，研究方向是{this.Direction}。");
         }
         /// <summary>
         /// 申报课题；

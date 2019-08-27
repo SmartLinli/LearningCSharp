@@ -30,9 +30,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             get
             {
-                return this.Year.ToString() + "级" + this.Major.Name;
-            }
-        }
+				return $"{this.Year}级{this.Major.Name}";
+			}
+		}
         /// <summary>
         /// 简称；
         /// </summary>
@@ -40,9 +40,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             get
             {
-                return this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
-            }
-        } 
+				return $"{this.Year % 100}{this.Major.ShortName}";
+			}
+		} 
         /// <summary>
         /// 构造函数；
         /// </summary>

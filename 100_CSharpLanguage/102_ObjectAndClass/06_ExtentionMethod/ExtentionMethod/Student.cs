@@ -1,13 +1,14 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    public partial class Student
+	public class Gender
+	{
+		public static readonly string MALE = "男";
+		public static readonly string FEMALE = "女";
+	}
+	public partial class Student
     {
         public string Number
         {
@@ -19,7 +20,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             get;
             set;
         }
-        public Gender Gender
+        public string Gender
         {
             get;
             set;
@@ -74,36 +75,32 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
         public void Intro()                                                                 //定义公有方法；
         {
-            Console.WriteLine
-                ("我叫{0}{1}。"
-                , this.Name
-                , this.HasClass ? "，来自" + this.Class.ShortName : "");
+			WriteLine
+				($"我叫{this.Name}"
+				+ $"{(this.Class == null ? "" : "，来自" + this.Class.ShortName + "。")}");
         }
-        private Student(string number, string name, Gender gender)                          //定义私有构造函数（重载1）；
+        private Student(string number, string name, string gender)                          //定义私有构造函数（重载1）；
         {
             this.Number = number;
             this.Name = name;
             this.Gender = gender;
         }
-        private Student(string number, string name, Gender gender, Class currentClass)      //定义私有构造函数（重载2）；
+        private Student(string number, string name, string gender, Class currentClass)      //定义私有构造函数（重载2）；
             : this(number, name, gender)
         {
             this.Class = currentClass;
         }
-        public static Student Create(string number, string name, Gender gender)             //定义静态方法；
+        public static Student Create(string number, string name, string gender)             //定义静态方法；
         {
-            if (number.Length != 10)
-            {
-                Console.WriteLine("学号长度应为10位！");
-                return null;
-            }
-            else
-            {
-                Student student = new Student(number, name, gender);                        //调用私有构造函数；
-                return student;
-            }
-        }
-        public static Student Create(string number, string name, Gender gender, Class currentClass)
+			if (number.Length != 10)
+			{
+				WriteLine("学号长度应为10位！");
+				return null;
+			}
+			Student student = new Student(number, name, gender);                            //调用私有构造函数；
+			return student;
+		}
+		public static Student Create(string number, string name, string gender, Class currentClass)
         {
             Student student = Create(number, name, gender);                                 //调用本类的静态方法；
             if (student != null)

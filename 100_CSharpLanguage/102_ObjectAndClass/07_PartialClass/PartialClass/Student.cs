@@ -1,13 +1,14 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    public partial class Student                                                    //定义部分类；                                                  
+	public class Gender
+	{
+		public static readonly string MALE = "男";
+		public static readonly string FEMALE = "女";
+	}
+	public partial class Student                                                    //定义部分类；                                                  
     {
         public string Number                                                
         {
@@ -19,7 +20,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             get;
             set;
         }
-        public Gender Gender
+        public string Gender
         {
             get;                                                            
             set;
@@ -62,16 +63,17 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
         public void Intro()                                                 
         {
-            Console.WriteLine
-                ("我叫" + this.Name + (this.Class == null ? "" : "，来自" + this.Class.ShortName) + "。");
-        }
-        public Student(string number, string name, Gender gender)                       
+			WriteLine
+				($"我叫{this.Name}"
+				+ $"{(this.Class == null ? "" : "，来自" + this.Class.ShortName + "。")}");
+		}
+		public Student(string number, string name, string gender)                       
         {
             this.Number = number;
             this.Name = name;
             this.Gender = gender;
         }
-        public Student(string number, string name, Gender gender, Class currentClass)  
+        public Student(string number, string name, string gender, Class currentClass)  
             : this(number, name, gender)                                               
         {                                                                              
             this.Class = currentClass;

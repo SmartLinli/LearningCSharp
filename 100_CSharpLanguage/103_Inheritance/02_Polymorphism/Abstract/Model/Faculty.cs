@@ -29,14 +29,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 		public override void Intro()                                                        //重写基类中的虚方法；
 		{
 			Write($"我是{this.Name.Substring(0, 1)}老师");
-			if (this.Department != null)
-			{
-				Write($"，来自{this.Department.Name}");
-			}
-			else
-			{
-				Write("，今天刚入职");
-			}
+			Write(this.Department == null ?
+					"，今天刚入职"
+					: $"，来自{this.Department.Name}");
 			Write($"，专长是{this.Speciality}。");
 		}
         /// <summary>

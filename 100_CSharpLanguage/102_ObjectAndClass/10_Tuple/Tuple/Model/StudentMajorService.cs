@@ -1,7 +1,7 @@
 ﻿using System;
-using SmartLin.LearningCSharp.ClassAndObject.Model;                                         //对项目默认命名空间以外的资源访问，可通过添加调用获得便利；
+using SmartLin.LearningCSharp.ClassAndObject.Model;                                        
 
-namespace SmartLin.LearningCSharp.ClassAndObject.Model                                      //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
+namespace SmartLin.LearningCSharp.ClassAndObject.Model                                     
 {
     /// <summary>
     /// 学生专业服务；
@@ -46,7 +46,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// </summary>
         /// <param name="student">学生</param>
         /// <returns>是否有效</returns>
-        private static (bool isValid, string warning) ValidateForTransferToMajor(this Student student)
+        private static (bool IsValid, string Warning) ValidateForTransferToMajor(this Student student)
         {
             if (student.HasClass())
             {
@@ -57,30 +57,30 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
                 return (false, $"{student.Name}尚未被任何专业录取，无法转专业。");
             }
         }
-        /// <summary>
-        /// 转专业；
-        /// </summary>
-        /// <param name="student">学生</param>
-        /// <param name="newMajor">新专业</param>
-        /// <param name="year">年级</param>
-        public static void TransferToMajor(this Student student, Major newMajor, int year)
-        {
-            var validationResult = student.ValidateForTransferToMajor();
-            if (validationResult.isValid)
-            {
-                Class newClass = new Class(newMajor, year);
-                student.Class = newClass;
-                Console.WriteLine
-                    ("{0}已转至{1}专业，并分配至{2}班。"
-                    , student.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
-            }
-            else
-            {
-                Console.WriteLine(validationResult.warning);
-            }
-        }
+		/// <summary>
+		/// 转专业；
+		/// </summary>
+		/// <param name="student">学生</param>
+		/// <param name="newMajor">新专业</param>
+		/// <param name="year">年级</param>
+		public static void TransferToMajor(this Student student, Major newMajor, int year)
+		{
+			var (isValid, warning) = student.ValidateForTransferToMajor();                  //直接定义若干变量，对应元组各字段；
+			if (isValid)
+			{
+				Class newClass = new Class(newMajor, year);
+				student.Class = newClass;
+				Console.WriteLine
+					("{0}已转至{1}专业，并分配至{2}班。"
+					, student.Name
+					, newMajor.Name
+					, newClass.ShortName);
+			}
+			else
+			{
+				Console.WriteLine(warning);
+			}
+		}
         /// <summary>
         /// 转专业；
         /// </summary>

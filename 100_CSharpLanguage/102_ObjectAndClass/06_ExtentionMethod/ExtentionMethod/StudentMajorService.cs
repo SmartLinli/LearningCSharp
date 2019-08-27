@@ -1,8 +1,9 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public static class StudentMajorService                                                 //定义静态类；
+	public static class StudentMajorService                                                 //定义静态类；
     {
         private static bool HasClass(this Student student)                                  //定义私有静态方法，并实现扩展方法；
         {
@@ -14,18 +15,13 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             {
                 Class newClass = new Class(newMajor, DateTime.Now.Year);
                 student.Class = newClass;
-                Console.WriteLine
-                    ("{0}被{1}专业录取，并分配至{2}班。"
-                    , student.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
+                WriteLine
+                    ($"{student.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
             }
             else
             {
-                Console.WriteLine
-                    ("{0}已被{1}专业录取，不得重复录取。"
-                    , student.Name
-                    , student.Class.Major.Name);
+                WriteLine
+                    ($"{student.Name}已被{student.Class.Major.Name}专业录取，不得重复录取。");
             }
         }
         private static bool ValidateForTransferToMajor(this Student student)                           
@@ -36,9 +32,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             }
             else
             {
-                Console.WriteLine
-                    ("{0}尚未被任何专业录取，无法转专业。"
-                    , student.Name);
+                WriteLine
+                    ($"{student.Name}尚未被任何专业录取，无法转专业。");
                 return false;
             }
         }
@@ -48,11 +43,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             {
                 Class newClass = new Class(newMajor, year);
                 student.Class = newClass;
-                Console.WriteLine
-                    ("{0}已转至{1}专业，并分配至{2}班。"
-                    , student.Name
-                    , newMajor.Name
-                    , newClass.ShortName);
+				WriteLine
+					($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
         }
         public static void TransferToMajor(this Student student, Major newMajor)            //公有静态扩展方法（重载2）

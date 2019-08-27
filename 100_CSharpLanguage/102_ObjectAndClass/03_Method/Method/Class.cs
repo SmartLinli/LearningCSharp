@@ -16,14 +16,14 @@
         {
             get
             {
-                return this.Year.ToString() + "级" + this.Major.Name;
-            }
-        }
+				return $"{this.Year}级{this.Major.Name}";
+			}
+		}
         public string ShortName
         {
             get
             {
-                return this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
+				return $"{this.Year % 100}{this.Major.ShortName}";
             }
         }
     }
