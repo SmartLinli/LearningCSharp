@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
     /// <summary>
     /// 研究生；
@@ -9,27 +8,17 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 导师；
         /// </summary>
-        public Faculty Supervisor
-        {
-            get;
-            private set;
-        }
+        public Faculty Supervisor { get; private set; }
+		/// <summary>
+		/// 研究方向；
+		/// </summary>
+		public string Direction { get; private set; }
         /// <summary>
-        /// 方向；
-        /// </summary>
-        public string Direction
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 研究方向；
+        /// 指定研究方向；
         /// </summary>
         /// <param name="direction">方向</param>
-        public void ResearchDirection(string direction)
-        {
-            this.Direction = direction;
-        }
+        public void AssignDirection(string direction)
+        =>	this.Direction = direction;
         /// <summary>
         /// 构造函数；
         /// </summary>

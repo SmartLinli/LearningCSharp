@@ -19,60 +19,28 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 编号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;                                                            //派生类无法访问基类的私有成员；
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 性别；
-        /// </summary>
-        public string Gender
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 生日；
-        /// </summary>
-        public DateTime BirthDate
-        {
-            get;
-            set;                                                          
-        }
-        /// <summary>
-        /// 年龄；
-        /// </summary>
-        public int Age
-        {
-            get
-            {
-                return DateTime.Now.Year - this.BirthDate.Year;
-            }
-        }
+        public string Name { get; private set; }
+		/// <summary>
+		/// 性别；
+		/// </summary>
+		public string Gender { get; private set; }
+		/// <summary>
+		/// 生日；
+		/// </summary>
+		public DateTime BirthDate { get; set; }
         /// <summary>
         /// 电话；
         /// </summary>
-        public virtual string PhoneNumber                                           //定义虚属性；虚属性在派生类中既可继承，亦可被重写；
-		{
-			get;
-			set;
-        }
+        public virtual string PhoneNumber { get; set; }                             //定义虚属性；虚属性在派生类中既可继承，亦可被重写；
         /// <summary>
         /// 介绍；
         /// </summary>
         public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
-        {
-            Write($"我叫{this.Name}");
-        }
+        =>	Write($"我叫{this.Name}");
         /// <summary>
         /// 发送短信；
         /// </summary>

@@ -3,16 +3,12 @@
 	/// <summary>
 	/// 学生；
 	/// </summary>
-	public abstract class Student : User                                //定义抽象类，派生于另一个（抽象）类；
+	public abstract class Student : User                                //定义抽象类，派生于指定（抽象）类；
     {
         /// <summary>
         /// 学籍；
         /// </summary>
-        public string Status
-        {
-            get;
-            protected set;                                              //只有在派生类对象中才能访问基类的受保护成员；在基类中亦无法访问受保护成员；
-        }
+        public string Status { get; protected set; }
         /// <summary>
         /// 注册；
         /// </summary>

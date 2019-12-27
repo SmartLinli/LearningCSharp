@@ -17,7 +17,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 				($"研究生信息：\n"
 				+ $"学号：{student.Number,-15}姓名：{student.Name}\n"
 				+ $"性别：{ student.Gender,-14} 生日：{ student.BirthDate:D}\n"
-				+ $"年龄：{student.Age,-15}手机号：{student.PhoneNumber}\n"
+				+ $"手机号：{student.PhoneNumber}\n"
 				+ $"导师：{student.Supervisor.Name,-12}方向：{student.Direction}");
 			student.Intro();
 			WriteLine("\n");

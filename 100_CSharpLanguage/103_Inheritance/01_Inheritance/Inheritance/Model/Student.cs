@@ -1,32 +1,31 @@
-﻿namespace SmartLin.LearningCSharp.Inheritance
+﻿using static System.Console;
+
+namespace SmartLin.LearningCSharp.Inheritance
 {
 	/// <summary>
 	/// 学生；
 	/// </summary>
-	public class Student : User                                                 //定义类，派生于另一个类；
+	public class Student : User                                                 //定义类，派生于指定的基类；
     {
         /// <summary>
         /// 学籍；
         /// </summary>
-        public string Status
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 注册；
-        /// </summary>
-        public void Register()
-        {
-            this.Status = "在读";
-        }
+        public string Status { get; private set; }
+		/// <summary>
+		/// 注册；
+		/// </summary>
+		public void Register()
+		{
+			this.Status = "在读";
+			WriteLine($"{this.Name}当前学籍：{this.Status}\n");
+		}
         /// <summary>
         /// 构造函数；
         /// </summary>
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Student(string number, string name, string gender)               //该构造函数不可缺少，因为本类的派生类只能通过本类的构造函数，间接调用本类的基类的构造函数；
+        public Student(string number, string name, string gender)               
             : base(number, name, gender)                                        //调用基类的构造函数；
         {
             ;

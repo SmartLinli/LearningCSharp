@@ -27,73 +27,31 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            private set;
-        }
+        public string Name { get; private set; }
         /// <summary>
         /// 性别；
         /// </summary>
-        public string Gender
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 生日；
-        /// </summary>
-        public DateTime BirthDate
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// 年龄；
-        /// </summary>
-        public int Age
-        {
-            get
-            {
-                return DateTime.Now.Year - this.BirthDate.Year;
-            }
-        }
-        private string _PhoneNumber;
+        public string Gender { get; private set; }
+		/// <summary>
+		/// 生日；
+		/// </summary>
+		public DateTime BirthDate { get; set; }
         /// <summary>
         /// 电话；
         /// </summary>
-        public string PhoneNumber
-        {
-            get
-            {
-                if (this._PhoneNumber != null)
-                {
-                    return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                this._PhoneNumber = value;
-            }
-        }
+        public string PhoneNumber { get; set; }        
         /// <summary>
         /// 介绍；
         /// </summary>
         public void Intro()
-        {
-            WriteLine($"我叫{this.Name}，来自福建中医药大学。\n");
-        }
+        =>	WriteLine($"我叫{this.Name}，来自福建中医药大学。\n");
         /// <summary>
         /// 发送短信；
         /// </summary>
         /// <param name="message">消息</param>
         public void SendSms(string message)
         {
-            if (this._PhoneNumber != null)
+            if (this.PhoneNumber != null)
             {
                 WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
             }

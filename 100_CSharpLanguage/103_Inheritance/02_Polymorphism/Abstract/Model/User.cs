@@ -19,81 +19,35 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 编号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;                                                            //派生类无法访问基类的私有成员；
-        }
-        /// <summary>
+        public string Number { get; private set; }
+		/// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 性别；
-        /// </summary>
-        public string Gender
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 生日；
-        /// </summary>
-        public DateTime BirthDate
-        {
-            get;
-            set;                                                          
-        }
-        /// <summary>
-        /// 年龄；
-        /// </summary>
-        public int Age
-        {
-            get
-            {
-                return DateTime.Now.Year - this.BirthDate.Year;
-            }
-        }
-        private string _PhoneNumber;
+        public string Name { get; private set; }
+		/// <summary>
+		/// 性别；
+		/// </summary>
+		public string Gender { get; private set; }
+		/// <summary>
+		/// 生日；
+		/// </summary>
+		public DateTime BirthDate { get; set; }
         /// <summary>
         /// 电话；
         /// </summary>
-        public string PhoneNumber
-        {
-            get
-            {
-                if (this._PhoneNumber != null)
-                {
-                    return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                this._PhoneNumber = value;
-            }
-        }
-        /// <summary>
-        /// 介绍；
-        /// </summary>
-        public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
-        {
-            Write($"我叫{this.Name}");
-        }
+        public string PhoneNumber { get; set; }
+		/// <summary>
+		/// 介绍；
+		/// </summary>
+		public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
+        =>	Write($"我叫{this.Name}");
         /// <summary>
         /// 发送短信；
         /// </summary>
         /// <param name="message">消息</param>
-        public virtual void SendSms(string message)                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
-        {
-            if (this._PhoneNumber != null)
+        public virtual void SendSms(string message)                                 //定义虚方法；抽象类可包含虚方法；
+		{
+            if (this.PhoneNumber != null)
             {
                 WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
             }

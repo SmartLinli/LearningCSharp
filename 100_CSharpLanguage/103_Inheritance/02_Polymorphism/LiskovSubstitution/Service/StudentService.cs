@@ -16,8 +16,6 @@ namespace SmartLin.LearningCSharp.Inheritance
             for (int i = 0; i < students.Length; i++)
             {
                 students[i].Register();
-                WriteLine
-                    ($"{students[i].Name}当前学籍为“{students[i].Status}”");
             }
         }
     }

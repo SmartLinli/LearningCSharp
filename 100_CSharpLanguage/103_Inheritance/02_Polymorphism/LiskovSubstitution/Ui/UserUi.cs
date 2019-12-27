@@ -17,7 +17,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 				($"用户信息：\n"
 				+ $"编号：{user.Number,-15}姓名：{user.Name}\n"                               //基类的对象只能访问基类成员；
 				+ $"性别：{user.Gender,-14}生日：{user.BirthDate:D}\n"
-				+ $"年龄：{user.Age,-15}手机号：{user.PhoneNumber}");
+				+ $"手机号：{user.PhoneNumber}");
             user.Intro();
             WriteLine("\n");
         }

@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
     /// <summary>
     /// 本科生；
@@ -9,19 +8,11 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 班级
         /// </summary>
-        public Class Class
-        {
-            get;
-            private set;
-        }
+        public string Class { get; set; }
         /// <summary>
         /// 本科生导师；
         /// </summary>
-        public Faculty Instructor
-        {
-            get;
-            set;
-        }
+        public Faculty Instructor { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>
@@ -40,7 +31,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="currentClass">班级</param>
-        public Undergraduate(string number, string name, string gender, Class currentClass)
+        public Undergraduate(string number, string name, string gender, string currentClass)
             : this(number, name, gender)                                                    //调用本类的构造函数；
         {
             this.Class = currentClass;

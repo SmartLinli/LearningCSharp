@@ -17,8 +17,8 @@ namespace SmartLin.LearningCSharp.Inheritance
 				($"教职工信息：\n"
 				+ $"工号：{faculty.Number,-15}姓名：{faculty.Name}\n"
 				+ $"性别：{faculty.Gender,-14}生日：{faculty.BirthDate:D}\n"
-				+ $"年龄：{faculty.Age,-15}手机号：{faculty.PhoneNumber}\n"
-				+ $"部门：{faculty.Department.Name}\n专长：{faculty.Speciality}");
+				+ $"手机号：{faculty.PhoneNumber}\n"
+				+ $"部门：{faculty.Department}\n专长：{faculty.Speciality}");
 			faculty.Intro();
 			WriteLine("\n");
 		}
