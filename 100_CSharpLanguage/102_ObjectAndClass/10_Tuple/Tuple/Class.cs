@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SmartLin.LearningCSharp.ClassAndObject.Model                                     
+namespace SmartLin.LearningCSharp.ClassAndObject
 {
 	/// <summary>
 	/// 班级；
@@ -10,39 +10,21 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model
 		/// <summary>
 		/// 年级；
 		/// </summary>
-		public int Year
-		{
-			get;
-			private set;
-		}
+		public int Year { get; private set; }
 		/// <summary>
 		/// 专业；
 		/// </summary>
-		public Major Major
-		{
-			get;
-			private set;
-		}
+		public Major Major { get; private set; }
 		/// <summary>
 		/// 名称；
 		/// </summary>
 		public string Name
-		{
-			get
-			{
-				return $"{this.Year}级{this.Major.Name}";
-			}
-		}
+		=>	$"{this.Year}级{this.Major.Name}";
 		/// <summary>
 		/// 简称；
 		/// </summary>
 		public string ShortName
-		{
-			get
-			{
-				return $"{this.Year % 100}{this.Major.ShortName}";
-			}
-		}
+		=>	this.Year.ToString().Substring(2, 2) + this.Major.ShortName;
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

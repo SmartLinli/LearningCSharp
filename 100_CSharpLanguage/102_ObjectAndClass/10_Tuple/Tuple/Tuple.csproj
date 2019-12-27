@@ -56,15 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Class.cs" />
-    <Compile Include="Common\MessageService.cs" />
-    <Compile Include="Model\Major.cs" />
+    <Compile Include="Class.cs" />
+    <Compile Include="Major.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Student.cs" />
-    <Compile Include="Model\Student2.cs" />
-    <Compile Include="Model\StudentMajorService.cs" />
-    <Compile Include="Ui\StudentUi.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentMajorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

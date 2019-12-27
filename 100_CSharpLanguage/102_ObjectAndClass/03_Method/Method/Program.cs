@@ -15,11 +15,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             acupuncture.ShortName = "针灸";
 
             Student girl = new Student();
-            girl.Number = "3190707001";
             girl.Name = "李四";
-            girl.Gender = Gender.FEMALE;
-            girl.BirthDate = new DateTime(2001, 2, 3);
-            girl.PhoneNumber = "18933334444";
             
             girl.Intro();                                                                   //调用方法；
             girl.TransferToMajor(infomationManagement);

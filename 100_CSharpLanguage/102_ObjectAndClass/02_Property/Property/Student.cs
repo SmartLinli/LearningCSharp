@@ -41,17 +41,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 this._Name = value;
             }
         }
-        public Gender Gender
-        {
-            get;                                                    //自动实现属性；
-            set;
-        }
-        public DateTime BirthDate
-        {
-            get;
-            set;
-        }
-        public int Age
+        public Gender Gender { get; set; }							//自动实现属性；
+		public DateTime BirthDate { get; set; }
+		public int Age
         {                                                                   
             get
             {
@@ -77,10 +69,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 this._PhoneNumber = value;
             }
         }
-        public Class Class
-        {
-            get;
-            set;
-        }
-    }
+        public Class Class { get; set; }
+	}
 }

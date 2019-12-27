@@ -1,5 +1,5 @@
-﻿using static System.Console;
-using System;
+﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {

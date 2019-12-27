@@ -1,10 +1,10 @@
 ﻿namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    /// <summary>
-    /// 专业；
-    /// </summary>
-    public class Major
-    {
+	/// <summary>
+	/// 专业；
+	/// </summary>
+	public class Major
+	{
 		/// <summary>
 		/// 名称；
 		/// </summary>
@@ -19,9 +19,9 @@
 		/// <param name="name">名称</param>
 		/// <param name="shortName">简称</param>
 		public Major(string name, string shortName)
-        {
-            this.Name = name;
-            this.ShortName = shortName;
-        }
-    }
+		{
+			this.Name = name;
+			this.ShortName = shortName;
+		}
+	}
 }

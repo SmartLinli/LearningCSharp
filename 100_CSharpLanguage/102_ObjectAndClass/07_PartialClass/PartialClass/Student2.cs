@@ -4,11 +4,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 {
 	public partial class Student                                                        //定义部分类；                                                
     {
-        public string Email
-        {
-            get;
-            set;
-        }
+        public string Email { get; set; }
         public void SendEmail(string message)
         {
             if (this.Email != null)

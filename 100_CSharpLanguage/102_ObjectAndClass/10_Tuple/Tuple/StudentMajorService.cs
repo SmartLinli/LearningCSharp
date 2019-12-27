@@ -1,12 +1,11 @@
 ﻿using System;
-using SmartLin.LearningCSharp.ClassAndObject.Model;                                        
 
-namespace SmartLin.LearningCSharp.ClassAndObject.Model                                     
+namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    /// <summary>
-    /// 学生专业服务；
-    /// </summary>
-    public static class StudentMajorService
+	/// <summary>
+	/// 学生专业服务；
+	/// </summary>
+	public static class StudentMajorService
     {
         /// <summary>
         /// 是否有班级；
@@ -14,9 +13,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model
         /// <param name="student"></param>
         /// <returns></returns>
         private static bool HasClass(this Student student)
-        {
-            return student.Class != null;
-        }
+        =>	student.Class != null;
         /// <summary>
         /// 被指定专业录取；
         /// </summary>

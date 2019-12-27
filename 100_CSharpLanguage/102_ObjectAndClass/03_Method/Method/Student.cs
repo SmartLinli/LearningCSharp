@@ -3,136 +3,54 @@ using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
-    public class Student
-    {
-        private string _Number;
-        public string Number
+	public class Student
+	{
+		public string Name { get; set; }
+		public Class Class { get; private set; }                            //set访问器的访问级别为私有，只能允许该类的方法访问；
+		private bool HasClass                                               //定义私有属性；
+		=>	this.Class != null;
+        private bool ValidateTransferToMajor()								//定义私有方法；
         {
-            get
+            if (!this.HasClass)
             {
-                return this._Number;
+				WriteLine($"{this.Name}尚未被任何专业录取，无法转专业。");
             }
-            set
-            {
-                if (this._Number == null)
-                {
-                    this._Number = value;
-                }
-            }
-        }
-        private string _Name;
-        public string Name
-        {
-            get
-            {
-                return this._Name;
-            }
-            set
-            {
-                this._Name = value;
-            }
-        }
-        public Gender Gender
-        {
-            get;
-            set;
-        }
-        public DateTime BirthDate
-        {
-            get;
-            set;
-        }
-        public int Age
-        {
-            get
-            {
-                return DateTime.Now.Year - this.BirthDate.Year;
-            }
-        }
-        private string _PhoneNumber;
-        public string PhoneNumber
-        {
-            get
-            {
-                if (this._PhoneNumber != null)
-                {
-                    return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                this._PhoneNumber = value;
-            }
-        }
-        public Class Class
-        {
-            get;
-            private set;                                                    //set访问器的访问级别为私有，只能允许该类的方法访问；
-        }
-        private bool HasClass                                               //定义私有属性；
-        {
-            get
-            {
-                return this.Class != null;
-            }
+            return this.HasClass;
         }
         public void Intro()                                                 //定义公有方法；
-        {
-			WriteLine
+        =>	WriteLine														//通过表达式体，定义只有单语句的方法；
 				($"我叫{this.Name}"
 				+ $"{(this.HasClass ? "，来自" + this.Class.ShortName : "")}。");
-        }
         public void EnrollByMajor(Major newMajor)
         {
             if (this.HasClass)                                              //调用私有属性，实现代码复用，提高代码可读性；
             {
-				WriteLine
-					($"{this.Name}已被{this.Class.Major.Name}专业录取，不得重复录取。");
+				WriteLine($"{this.Name}已被{this.Class.Major.Name}专业录取，不得重复录取。");
             }
             else
             {
                 Class newClass = new Class();
                 newClass.Year = DateTime.Now.Year;
                 newClass.Major = newMajor;
-                this.Class = newClass;
-				WriteLine
-					($"{this.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
+                this.Class = newClass;										//访问属性的私有访问器，实现代码的封装；
+				WriteLine($"{this.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
             }
         }
-        private bool ValidateForTransferToMajor()                           //定义私有方法；
-        {
-            if (!this.HasClass)
-            {
-				WriteLine
-					($"{this.Name}尚未被任何专业录取，无法转专业。");
-            }
-            return this.HasClass;
-        }
-        public void TransferToMajor(Major newMajor, int year)               //公有方法（重载1）
-        {
-            if (this.ValidateForTransferToMajor())                          //调用私有方法，实现代码复用；
+        public void TransferToMajor(Major newMajor, int year)               //定义公有方法（重载1）
+		{
+            if (this.ValidateTransferToMajor())								//调用私有方法，实现代码复用；
             {
                 Class newClass = new Class();
                 newClass.Major = newMajor;
                 newClass.Year = year;
                 this.Class = newClass;
-				WriteLine
-					($"{this.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
+				WriteLine($"{this.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
         }
-        public void TransferToMajor(Major newMajor)                         //公有方法（重载2）
-        {
-            if (this.ValidateForTransferToMajor())
-            {
+        public void TransferToMajor(Major newMajor)                         //定义公有方法（重载2）
+		{
+            if (this.ValidateTransferToMajor())                             //调用私有方法，实现代码复用；
+			{
                 int newClassYear = this.Class.Year + 1;
                 this.TransferToMajor(newMajor, newClassYear);               //调用另一重载方法，实现代码复用；
             }

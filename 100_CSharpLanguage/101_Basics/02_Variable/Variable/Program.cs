@@ -10,10 +10,10 @@ namespace SmartLin.LearningCSharp.Basics                                //声明
             FEMALE = 0,                                                 //枚举名称及其值；默认值为0；
             MALE = 10                                                   //枚举值之间若留有较大余地，可便于增加新枚举；
         }
-        static void Main()                                              //声明静态方法Main，这是程序的唯一起点；注意大小写；作为可执行程序的起点，Main所在类不应也不必实例化，故Main应为静态方法；
+        static void Main()                                              
         {                                                               //C#没有内置预定义类型，而是依赖.Net框架提供的通用类型系统（CTS）；
             const string title = "新生信息：";							//使用const声明常量（即使用过程中不会发生变化的变量）；
-            int number = 31807001;                                      //int类型的变量实际为System.Int32结构的实例；此类类型为值类型；
+            int number = 31907001;                                      //int类型的变量实际为System.Int32结构的实例；此类类型为值类型；
             string name = "张三";										//string类型的变量实际为System.String类的实例；此类类型为引用类型；
             Gender gender = Gender.MALE;                                //枚举将实例化为派生于System.Enum的结构；
             DateTime birthDate = DateTime.Parse("2000-01-02");          //调用DateTime结构提供的Parse方法，将字符串转为日期时间；

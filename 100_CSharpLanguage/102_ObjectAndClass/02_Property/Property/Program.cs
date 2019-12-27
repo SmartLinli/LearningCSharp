@@ -14,8 +14,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             im18.Year = 2018;
             im18.Major = infomationManagement;                                                  
             Student boy = new Student();
-            boy.Number = "3180707000";
-            boy.Number = "3180707001";                                                          //已有学号无法更改；
+            boy.Number = "3190707001";
+            boy.Number = "3190707000";                                                          //已有学号无法更改；
             boy.Name = "张三";
             boy.Gender = Gender.MALE;
             boy.BirthDate = new DateTime(2000, 1, 2);

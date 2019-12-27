@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 	/// 性别；
 	/// </summary>
 	public class Gender
-	{	
+	{
 		public static readonly string MALE = "男";
 		public static readonly string FEMALE = "女";
 	}
@@ -15,7 +15,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 	/// 学生；
 	/// </summary>
 	public partial class Student
-    {
+	{
 		/// <summary>
 		/// 学号；
 		/// </summary>
@@ -32,11 +32,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		/// 班级；
 		/// </summary>
 		public Class Class { get; internal set; }
-        /// <summary>
-        /// 介绍；
-        /// </summary>
-        public void Intro()
-        =>	WriteLine
+		/// <summary>
+		/// 介绍；
+		/// </summary>
+		public void Intro()
+		=>	WriteLine
 				($"我叫{this.Name}"
 				+ $"{(this.Class == null ? "" : "，来自" + this.Class.ShortName + "。")}");
 		/// <summary>
@@ -45,23 +45,23 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		/// <param name="number">学号</param>
 		/// <param name="name">姓名</param>
 		/// <param name="gender">性别</param>
-		public Student(string number, string name, string gender)                              
-        {
-            this.Number = number;
-            this.Name = name;
-            this.Gender = gender;
-        }
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">学号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        /// <param name="currentClass">班级</param>
-        public Student(string number, string name, string gender, Class currentClass)          
-            : this(number, name, gender)
-        {
-            this.Class = currentClass;
-        }
-    }
+		public Student(string number, string name, string gender)
+		{
+			this.Number = number;
+			this.Name = name;
+			this.Gender = gender;
+		}
+		/// <summary>
+		/// 构造函数；
+		/// </summary>
+		/// <param name="number">学号</param>
+		/// <param name="name">姓名</param>
+		/// <param name="gender">性别</param>
+		/// <param name="currentClass">班级</param>
+		public Student(string number, string name, string gender, Class currentClass)
+			: this(number, name, gender)
+		{
+			this.Class = currentClass;
+		}
+	}
 }

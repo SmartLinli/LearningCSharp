@@ -1,5 +1,4 @@
 ﻿using System;
-using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
@@ -10,63 +9,14 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     }
     public class Student                                                    
     {
-        public string Number                                                
-        {
-            get;
-            private set;
-        }
-        public string Name
-        {
-            get;
-            set;
-        }
-        public Gender Gender
-        {
-            get;                                                            
-            set;
-        }
-        public DateTime BirthDate
-        {
-            get;
-            set;
-        }
-        public int Age
-        {
-            get
-            {
-                return DateTime.Now.Year - this.BirthDate.Year;
-            }
-        }
-        private string _PhoneNumber;
-        public string PhoneNumber
-        {
-            get
-            {
-                if (this._PhoneNumber != null)
-                {
-                    return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                this._PhoneNumber = value;
-            }
-        }
-        public Class Class
-        {
-            get;
-            private set;                                                    
-        }
-        public void Intro()                                                 
-        {
-			WriteLine
-				($"我叫{this.Name}"
-				+ $"{(this.Class != null ? "，来自" + this.Class.ShortName : "")}。");
-        }
+		public string Number { get; private set; }
+		public string Name { get; private set; }
+		public Gender Gender { get; private set; }
+		public DateTime BirthDate { get; set; }
+		public int Age
+		=>	DateTime.Now.Year - this.BirthDate.Year;
+		public string PhoneNumber { get; set; }
+		public Class Class { get; private set; }
         public Student(string number, string name, Gender gender)                       //定义构造函数（重载1）；编译器将不再自动提供默认的（无参数）构造函数；
         {
             this.Number = number;

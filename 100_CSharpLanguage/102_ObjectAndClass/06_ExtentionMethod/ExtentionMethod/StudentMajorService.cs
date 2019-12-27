@@ -15,13 +15,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             {
                 Class newClass = new Class(newMajor, DateTime.Now.Year);
                 student.Class = newClass;
-                WriteLine
-                    ($"{student.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
+                WriteLine($"{student.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
             }
             else
             {
-                WriteLine
-                    ($"{student.Name}已被{student.Class.Major.Name}专业录取，不得重复录取。");
+                WriteLine($"{student.Name}已被{student.Class.Major.Name}专业录取，不得重复录取。");
             }
         }
         private static bool ValidateForTransferToMajor(this Student student)                           
@@ -32,8 +30,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             }
             else
             {
-                WriteLine
-                    ($"{student.Name}尚未被任何专业录取，无法转专业。");
+                WriteLine($"{student.Name}尚未被任何专业录取，无法转专业。");
                 return false;
             }
         }
@@ -43,8 +40,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             {
                 Class newClass = new Class(newMajor, year);
                 student.Class = newClass;
-				WriteLine
-					($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
+				WriteLine($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
         }
         public static void TransferToMajor(this Student student, Major newMajor)            //公有静态扩展方法（重载2）

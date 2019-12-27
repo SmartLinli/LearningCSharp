@@ -18,9 +18,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             
             Major acupuncture = new Major("针灸学", "针灸");
             boy.TransferToMajor(acupuncture);
-            
-            boy.PhoneNumber = "18900001111";
-            Read();
+			Read();
         }
     }
 }

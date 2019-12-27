@@ -13,10 +13,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
             Class im18 = new Class(infomationManagement, 2018);
             /*创建学生并显示*/
-            Student boy = Student.Create("3180707000", "张三", Gender.MALE, im18);          //调用类的静态方法；    
-            StudentUi.Display(boy);                                                         //调用静态类的静态方法；
+            Student boy = new Student("3180707000", "张三", Gender.MALE, im18);          
+            StudentUi.Display(boy);                                                      
             /*创建新生、录取并显示*/
-            Student girl = Student.Create("3190707000", "李四", Gender.FEMALE);
+            Student girl = new Student("3200707000", "李四", Gender.FEMALE);
             girl.EnrollByMajor(infomationManagement);
             StudentUi.Display(girl);
             /*学生转专业*/

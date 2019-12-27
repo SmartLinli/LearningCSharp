@@ -11,10 +11,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             infomationManagement.Name = "信息管理与信息系统";
             infomationManagement.ShortName = "信管";
             Class im18 = new Class();
-            im18.Year = 2018;
+            im18.Year = 2019;
             im18.Major = infomationManagement;                                                  //将其它对象赋予该对象的字段；
             Student boy = new Student();
-            boy.Number = "3180707000";
+            boy.Number = "3190707001";
             boy.Name = "张三";
             boy.Gender = Gender.MALE;
             boy.BirthDate = new DateTime(2000, 1, 2);
