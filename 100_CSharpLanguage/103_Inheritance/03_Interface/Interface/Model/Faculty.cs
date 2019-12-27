@@ -8,39 +8,9 @@ namespace SmartLin.LearningCSharp.Inheritance
     public class Faculty : User, IEvaluate, IScientificSubject                              //定义类，派生于另一个类以及一个（或若干）接口；
     {
         /// <summary>
-        /// 部门；
-        /// </summary>
-        public Department Department
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 专长；
-        /// </summary>
-        public string Speciality
-        {
-            get;
-            set;
-        }
-        /// <summary>
         /// 课题选题；
         /// </summary>
-        public string SubjectTitle                                                          //实现接口中的属性；
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// 介绍；
-        /// </summary>
-        public override void Intro()
-        {
-            Write($"我是{this.Name.Substring(0, 1)}老师");
-			Write(this.Department == null ?
-					"，今天刚入职"
-					: $"，来自{this.Department.Name}");
-		}
+        public string SubjectTitle { get; set; }                                            //实现接口中的属性；
 		/// <summary>
 		/// 评教；
 		/// </summary>
@@ -54,11 +24,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 申报课题；
         /// </summary>
-        public void SubmitSubject()
-        {
-            WriteLine
-                ("教师独立申报厅级或以上级别课题，选题为《{0}》。"
-                , this.SubjectTitle);
+        public void SubmitSubject()                                                         //实现接口中的方法；
+		{
+			WriteLine($"教师{this.Name}申报厅级或以上级别课题，选题为《{this.SubjectTitle}》。");
         }
         /// <summary>
         /// 构造函数；
@@ -70,18 +38,6 @@ namespace SmartLin.LearningCSharp.Inheritance
             : base(number, name, gender)
         {
             ;
-        }
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">工号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        /// <param name="department">部门</param>
-        public Faculty(string number, string name, string gender, Department department)
-            : this(number, name, gender)
-        {
-            this.Department = department;
         }
     }
 }

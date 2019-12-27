@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public void Assign()
         {
-            WriteLine("将从本学院教职工中随机分配导师。\n");
+            WriteLine("将从本学院教职工中随机分配导师……\n");
         }
     }
 }

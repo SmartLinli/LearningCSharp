@@ -8,23 +8,15 @@
         /// <summary>
         /// 主讲；
         /// </summary>
-        public Faculty Lecturer
-        {
-            get;
-            set;
-        }
+        public Faculty Lecturer { get; set; }
         /// <summary>
         /// 观众；
         /// </summary>
-        public IEvaluate[] Audiences
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// 评教；
-        /// </summary>
-        public void Evaluate()
+        public IEvaluate[] Audiences { get; set; }
+		/// <summary>
+		/// 评教；
+		/// </summary>
+		public void Evaluate()
         {
             for (int i = 0; i < this.Audiences.Length; i++)
             {

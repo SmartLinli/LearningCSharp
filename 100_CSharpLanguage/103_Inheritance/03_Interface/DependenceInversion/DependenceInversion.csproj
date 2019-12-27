@@ -54,15 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\IStudentInstructorService.cs" />
-    <Compile Include="Model\EducationUnit\Class.cs" />
-    <Compile Include="Model\EducationUnit\Department.cs" />
-    <Compile Include="Model\EducationUnit\Major.cs" />
-    <Compile Include="Model\Faculty.cs" />
     <Compile Include="Model\Undergraduate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Student.cs" />
-    <Compile Include="Model\User.cs" />
     <Compile Include="Service\AssignInstructorByRandom.cs" />
     <Compile Include="Service\InstructorAssignBySelection.cs" />
   </ItemGroup>
