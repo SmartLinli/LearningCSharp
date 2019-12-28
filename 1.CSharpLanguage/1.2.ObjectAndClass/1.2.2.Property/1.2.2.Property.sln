@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyProperty", "ReadOnlyProperty\ReadOnlyProperty.csproj", "{51FAEA4E-C996-44E1-A802-453D8361C1FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2.1.FieldAndProperty", "1.2.2.1.FieldAndProperty", "{D3BF734D-4C1F-47D2-8E5B-CF44B35A4875}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2.2.HandlingDataWithinProperty", "1.2.2.2.HandlingDataWithinProperty", "{279F2005-BA31-48F7-AF5B-EC59F651770F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2.3.AutoImplementedProperty", "1.2.2.3.AutoImplementedProperty", "{E46E2EA8-15E0-4092-B635-C7172F7C9F74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2.4.ReadOnlyProperty", "1.2.2.4.ReadOnlyProperty", "{A938D4D1-A17F-4E52-A195-BD017EC7CC30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldAndProperty", "FieldAndProperty\FieldAndProperty.csproj", "{023ECF3B-6D65-438C-A29D-650A9AFCCE8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandlingDataWithinProperty", "HandlingDataWithinProperty\HandlingDataWithinProperty.csproj", "{98E2E5D2-BD66-4354-BE36-1868C4FB034C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoImplementedProperty", "AutoImplementedProperty\AutoImplementedProperty.csproj", "{AFD97E4E-28AC-445A-A7E2-E56DD03E260E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51FAEA4E-C996-44E1-A802-453D8361C1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FAEA4E-C996-44E1-A802-453D8361C1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FAEA4E-C996-44E1-A802-453D8361C1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FAEA4E-C996-44E1-A802-453D8361C1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023ECF3B-6D65-438C-A29D-650A9AFCCE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023ECF3B-6D65-438C-A29D-650A9AFCCE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023ECF3B-6D65-438C-A29D-650A9AFCCE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023ECF3B-6D65-438C-A29D-650A9AFCCE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E2E5D2-BD66-4354-BE36-1868C4FB034C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E2E5D2-BD66-4354-BE36-1868C4FB034C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E2E5D2-BD66-4354-BE36-1868C4FB034C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E2E5D2-BD66-4354-BE36-1868C4FB034C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD97E4E-28AC-445A-A7E2-E56DD03E260E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD97E4E-28AC-445A-A7E2-E56DD03E260E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD97E4E-28AC-445A-A7E2-E56DD03E260E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD97E4E-28AC-445A-A7E2-E56DD03E260E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51FAEA4E-C996-44E1-A802-453D8361C1FA} = {A938D4D1-A17F-4E52-A195-BD017EC7CC30}
+		{023ECF3B-6D65-438C-A29D-650A9AFCCE8A} = {D3BF734D-4C1F-47D2-8E5B-CF44B35A4875}
+		{98E2E5D2-BD66-4354-BE36-1868C4FB034C} = {279F2005-BA31-48F7-AF5B-EC59F651770F}
+		{AFD97E4E-28AC-445A-A7E2-E56DD03E260E} = {E46E2EA8-15E0-4092-B635-C7172F7C9F74}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D924CA1E-3941-40AE-973D-9B37C01C811B}
+	EndGlobalSection
+EndGlobal
