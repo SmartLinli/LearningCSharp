@@ -7,8 +7,8 @@ namespace SmartLin.LearningCSharp.Basics                                //声明
     {
         enum Gender                                                     //声明枚举
         {                                                               //枚举实质为用户定义的整数类型；
-            FEMALE = 0,                                                 //枚举名称及其值；默认值为0；
-            MALE = 10                                                   //枚举值之间若留有较大余地，可便于增加新枚举；
+            FEMALE,														//枚举名称；
+            MALE														
         }
         static void Main()                                              
         {                                                               //C#没有内置预定义类型，而是依赖.Net框架提供的通用类型系统（CTS）；

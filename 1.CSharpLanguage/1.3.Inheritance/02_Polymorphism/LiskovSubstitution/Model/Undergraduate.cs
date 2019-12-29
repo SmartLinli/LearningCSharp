@@ -34,7 +34,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 					: $"，来自{this.Class}。");
 		}
 		/// <summary>
-		/// 转专业
+		/// 转专业；
 		/// </summary>
 		/// <param name="newClass">新班级</param>
 		public void TransferToMajor(string newClass)
