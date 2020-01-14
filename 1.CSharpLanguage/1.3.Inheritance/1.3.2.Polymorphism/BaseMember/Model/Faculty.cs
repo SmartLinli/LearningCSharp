@@ -24,7 +24,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 			Write(this.Department == null ?
 					"，今天刚入职"
 					: $"，来自{this.Department}");
-			Write($"，专长是{this.Speciality}。");
+			WriteLine($"，专长是{this.Speciality}。");
 		}
 		/// <summary>
 		/// 构造函数；

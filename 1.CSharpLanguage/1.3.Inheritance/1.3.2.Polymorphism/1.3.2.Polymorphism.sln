@@ -9,6 +9,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution", "LiskovSubstitution\LiskovSubstitution.csproj", "{7E9CF6DE-8EFA-42E0-B9DC-43905EA18B5A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.1.Override", "1.3.2.1.Override", "{E692CAD1-80A2-49F5-8011-C196C4498D64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.2.BaseMember", "1.3.2.2.BaseMember", "{AD6A7B4B-0F1A-4C44-96DC-8AC063FEC07D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseMember", "BaseMember\BaseMember.csproj", "{D0A2F877-4650-4E08-9F41-C96B296DA4E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.3.HideBaseMember", "1.3.2.3.HideBaseMember", "{D7114005-EE4D-412D-AB31-388B9050D895}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.4.OverrideProperty", "1.3.2.4.OverrideProperty", "{EB88B318-706A-45AC-B057-214180D33130}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.5.Abstract", "1.3.2.5.Abstract", "{DE961708-94B8-443F-A04A-7B952127FF62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.6.LiskovSubstitution", "1.3.2.6.LiskovSubstitution", "{889AE54D-2072-4F42-AC94-F7C1077242DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +41,19 @@ Global
 		{7E9CF6DE-8EFA-42E0-B9DC-43905EA18B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E9CF6DE-8EFA-42E0-B9DC-43905EA18B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E9CF6DE-8EFA-42E0-B9DC-43905EA18B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A2F877-4650-4E08-9F41-C96B296DA4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A2F877-4650-4E08-9F41-C96B296DA4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A2F877-4650-4E08-9F41-C96B296DA4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A2F877-4650-4E08-9F41-C96B296DA4E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F38F7D0-DCD1-4DCB-A3D8-11E48DA1F5D3} = {E692CAD1-80A2-49F5-8011-C196C4498D64}
+		{210E3B46-AB98-4AFE-B7AA-2AB7B3E8E1D5} = {DE961708-94B8-443F-A04A-7B952127FF62}
+		{7E9CF6DE-8EFA-42E0-B9DC-43905EA18B5A} = {889AE54D-2072-4F42-AC94-F7C1077242DC}
+		{D0A2F877-4650-4E08-9F41-C96B296DA4E9} = {AD6A7B4B-0F1A-4C44-96DC-8AC063FEC07D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28D4C328-7504-4B47-8E7F-7CD4D697B7BF}

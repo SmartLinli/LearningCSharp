@@ -12,7 +12,7 @@
         /// <summary>
         /// 本科生导师；
         /// </summary>
-        public Faculty Instructor { get; set; }
+        public string Instructor { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>

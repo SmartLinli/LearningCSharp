@@ -5,23 +5,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 {
 	public class Student
 	{
-		/// <summary>
-		/// 姓名；
-		/// </summary>
 		public string Name { get; set; }
-		/// <summary>
-		/// 姓名；
-		/// </summary>
 		public Class Class { get; private set; }                            //将set访问器的访问性定义为私有，实现只读属性；
-		/// <summary>
-		/// 是否有班级；
-		/// </summary>
 		private bool HasClass                                               
 		=>	this.Class != null;
-		/// <summary>
-		/// 验证转专业；
-		/// </summary>
-		/// <returns>是否能转专业</returns>
 		private bool ValidateTransferToMajor()								//定义私有方法；
         {
             if (!this.HasClass)
@@ -30,17 +17,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             }
             return this.HasClass;
         }
-		/// <summary>
-		/// 介绍；
-		/// </summary>
         public void Intro()                                                 
         =>	WriteLine														
 				($"我叫{this.Name}"
 				+ $"{(this.HasClass ? "，来自" + this.Class.ShortName : "")}。");
-		/// <summary>
-		/// 录取专业；
-		/// </summary>
-		/// <param name="newMajor">新专业</param>
         public void EnrollByMajor(Major newMajor)
         {
             if (this.HasClass)                                              
@@ -56,11 +36,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 				WriteLine($"{this.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
             }
         }
-		/// <summary>
-		/// 转专业；
-		/// </summary>
-		/// <param name="newMajor">新专业</param>
-		/// <param name="year">年级</param>
 		public void TransferToMajor(Major newMajor, int year)               //定义公有方法（重载1）
 		{
             if (this.ValidateTransferToMajor())								//调用私有方法，提高代码复用；
@@ -72,10 +47,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 				WriteLine($"{this.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
         }
-		/// <summary>
-		/// 转专业；
-		/// </summary>
-		/// <param name="newMajor">新专业</param>
 		public void TransferToMajor(Major newMajor)                         //定义公有方法（重载2）
 		{
             if (this.ValidateTransferToMajor())                             //调用私有方法，提高代码复用；

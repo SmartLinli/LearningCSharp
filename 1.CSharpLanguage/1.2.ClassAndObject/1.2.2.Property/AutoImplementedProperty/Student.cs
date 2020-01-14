@@ -3,23 +3,14 @@ using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 性别；
-	/// </summary>
 	public enum Gender
     {
         FEMALE,
         MALE
     }
-	/// <summary>
-	/// 学生；
-	/// </summary>
     public class Student                                                    
     {
         private string _Number;
-		/// <summary>
-		/// 学号；
-		/// </summary>
 		public string Number                                        
         {
             get                                                     
@@ -38,22 +29,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 }
             }
         }
-		/// <summary>
-		/// 姓名；
-		/// </summary>
 		public string Name { get; set; }                            //自动实现属性；
-		/// <summary>
-		/// 性别；
-		/// </summary>
 		public Gender Gender { get; set; }							
-		/// <summary>
-		/// 生日；
-		/// </summary>
 		public DateTime BirthDate { get; set; }
         private string _PhoneNumber;
-		/// <summary>
-		/// 电话；
-		/// </summary>
         public string PhoneNumber
         {
             get

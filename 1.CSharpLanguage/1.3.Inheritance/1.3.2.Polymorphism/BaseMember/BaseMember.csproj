@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02CA1F15-ABD6-436A-B3CF-32DAC8618656}</ProjectGuid>
+    <ProjectGuid>{D0A2F877-4650-4E08-9F41-C96B296DA4E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SmartLin.LearningCSharp.Inheritance</RootNamespace>
-    <AssemblyName>MultiLevel</AssemblyName>
+    <AssemblyName>Override</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ExchangeStudent.cs" />
+    <Compile Include="Model\Faculty.cs" />
     <Compile Include="Model\Postgraduate.cs" />
     <Compile Include="Model\Undergraduate.cs" />
     <Compile Include="Program.cs" />

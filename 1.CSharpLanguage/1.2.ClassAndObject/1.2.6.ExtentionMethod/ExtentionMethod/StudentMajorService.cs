@@ -3,25 +3,12 @@ using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 学生专业服务；
-	/// </summary>
 	public static class StudentMajorService                                                 //定义静态类；扩展方法必须定义在静态类中；
     {
-		/// <summary>
-		/// 是否有班级；
-		/// </summary>
-		/// <param name="student">学生</param>
-		/// <returns>是否有班级</returns>
 		private static bool HasClass(this Student student)                                  //定义私有静态方法，并通过首个参数定义，对其所属类实现扩展方法；
         {
             return student.Class != null;
         }
-		/// <summary>
-		/// 录取；
-		/// </summary>
-		/// <param name="student">学生</param>
-		/// <param name="newMajor">新专业</param>
         public static void EnrollByMajor(this Student student, Major newMajor)              //定义公有静态方法，实现扩展方法；
         {
             if (!student.HasClass())                                                        //调用私有静态扩展方法，实现代码复用，提高代码可读性；
@@ -35,11 +22,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 WriteLine($"{student.Name}已被{student.Class.Major.Name}专业录取，不得重复录取。");
             }
         }
-		/// <summary>
-		/// 验证转专业；
-		/// </summary>
-		/// <param name="student">学生</param>
-		/// <returns>是否可转专业</returns>
         private static bool ValidateForTransferToMajor(this Student student)                           
         {
             if (student.HasClass())
@@ -52,12 +34,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 return false;
             }
         }
-		/// <summary>
-		/// 转专业；
-		/// </summary>
-		/// <param name="student">学生</param>
-		/// <param name="newMajor">新专业</param>
-		/// <param name="year">年级</param>
         public static void TransferToMajor(this Student student, Major newMajor, int year)  //公有静态扩展方法（重载1）
         {
             if (student.ValidateForTransferToMajor())                                       //调用私有静态扩展方法，实现代码复用；
@@ -67,11 +43,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 				WriteLine($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
             }
         }
-		/// <summary>
-		/// 转专业；
-		/// </summary>
-		/// <param name="student">学生</param>
-		/// <param name="newMajor">新专业</param>
 		public static void TransferToMajor(this Student student, Major newMajor)            //公有静态扩展方法（重载2）
         {
             if (student.ValidateForTransferToMajor())

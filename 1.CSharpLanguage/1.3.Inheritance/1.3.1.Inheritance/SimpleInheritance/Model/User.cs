@@ -47,14 +47,12 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="message">消息</param>
         public void SendSms(string message)
         {
-            if (this.PhoneNumber != null)
-            {
-                WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
-            }
-            else
-            {
-                WriteLine("用户尚未登记手机号。\n");
-            }
+			if (this.PhoneNumber == null)
+			{
+				WriteLine("用户尚未登记手机号。\n");
+				return;
+			}
+			WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
         }
     }
 }

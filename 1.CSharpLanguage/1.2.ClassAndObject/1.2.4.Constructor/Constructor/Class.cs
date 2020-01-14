@@ -2,9 +2,6 @@
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 班级；
-	/// </summary>
     public class Class
     {
         public int Year { get; private set; }

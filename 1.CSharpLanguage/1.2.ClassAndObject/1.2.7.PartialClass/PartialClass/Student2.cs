@@ -2,9 +2,6 @@
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 学生；
-	/// </summary>
 	public partial class Student                                                        //定义部分类；                                                
     {
         public string Email { get; set; }

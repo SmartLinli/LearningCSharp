@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 	/// </summary>
 	public class Student : User                                                 
     {
-		public void SetPhoneNumber(string newPhoneNumber)
+		public void ModifyPhoneNumber(string newPhoneNumber)
 		{
 			WriteLine("请输入短信验证码……");
 			this.PhoneNumber = newPhoneNumber;                                  //基类的受保护成员只能被派生类实例访问，从而将相关操作封装在派生类中；

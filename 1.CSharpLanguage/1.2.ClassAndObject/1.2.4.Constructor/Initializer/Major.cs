@@ -1,8 +1,5 @@
 ﻿namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 班级；
-	/// </summary>
     public class Major
     {
         public string Name { get; private set; }

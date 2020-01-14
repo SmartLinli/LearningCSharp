@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 导师；
         /// </summary>
-        public Faculty Supervisor { get; set; }
+        public string Supervisor { get; set; }
 		/// <summary>
 		/// 研究方向；
 		/// </summary>

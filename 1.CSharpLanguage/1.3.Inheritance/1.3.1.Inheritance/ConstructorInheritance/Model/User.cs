@@ -47,22 +47,20 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="message">消息</param>
         public void SendSms(string message)
         {
-            if (this.PhoneNumber != null)
-            {
-                WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
-            }
-            else
-            {
-                WriteLine("用户尚未登记手机号。\n");
-            }
-        }
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">编号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        public User(string number, string name, string gender)								//定义基类的构造函数；
+			if (this.PhoneNumber == null)
+			{
+				WriteLine("用户尚未登记手机号。\n");
+				return;
+			}
+			WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
+		}
+		/// <summary>
+		/// 构造函数；
+		/// </summary>
+		/// <param name="number">编号</param>
+		/// <param name="name">姓名</param>
+		/// <param name="gender">性别</param>
+		public User(string number, string name, string gender)								//定义基类的构造函数；
         {
             this.Number = number;
             this.Name = name;

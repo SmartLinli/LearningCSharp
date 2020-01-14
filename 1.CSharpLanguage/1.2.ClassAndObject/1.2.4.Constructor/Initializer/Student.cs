@@ -2,17 +2,11 @@
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 性别；
-	/// </summary>
     public enum Gender
     {
         FEMALE,
         MALE
     }
-	/// <summary>
-	/// 学生；
-	/// </summary>
     public class Student                                                    
     {
 		public string Number { get; }                                                   

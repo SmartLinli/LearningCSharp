@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 				BirthDate = new DateTime(2000, 1, 2),
 			};
 			boy.Intro();
-			boy.SetPhoneNumber("18900001111");
+			boy.ModifyPhoneNumber("18900001111");
 			boy.SendSms("请及时评教。");
 			Read();
 		}

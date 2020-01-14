@@ -3,17 +3,11 @@ using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 性别； 
-	/// </summary>
 	public class Gender
 	{
 		public static readonly string MALE = "男";
 		public static readonly string FEMALE = "女";
 	}
-	/// <summary>
-	/// 学生；
-	/// </summary>
 	public partial class Student
     {
 		public string Number { get; private set; }

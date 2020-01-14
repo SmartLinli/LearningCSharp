@@ -2,26 +2,17 @@
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 性别；
-	/// </summary>
 	public enum Gender
     {
         FEMALE,
         MALE
     }
-	/// <summary>
-	/// 民族；
-	/// </summary>
     public class Nationality
     {
         public static readonly string HAN = "汉族";                                         //定义静态只读字段并初始化；
         public static readonly string QIANG = "羌族";
         public static readonly string SHE = "畲族";
     }
-	/// <summary>
-	/// 学生；
-	/// </summary>
     public class Student
     {
 		public string Number { get; private set; }

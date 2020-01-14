@@ -1,4 +1,6 @@
-﻿namespace SmartLin.LearningCSharp.Inheritance
+﻿using static System.Console;
+
+namespace SmartLin.LearningCSharp.Inheritance
 {
 	/// <summary>
 	/// 学生；
@@ -29,25 +31,21 @@
 		/// <summary>
 		/// 学籍；
 		/// </summary>
-		public string Status
-        {
-            get;
-            protected set;                                              //只有派生类实例才能访问基类的受保护成员；
-        }
+		public string Status { get; protected set; }					//只有派生类实例才能访问基类的受保护成员；
         /// <summary>
         /// 注册；
         /// </summary>
         public virtual void Register()
         {
             ;
-        }                                                   
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">学号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        public Student(string number, string name, string gender)
+        }
+		/// <summary>
+		/// 构造函数；
+		/// </summary>
+		/// <param name="number">学号</param>
+		/// <param name="name">姓名</param>
+		/// <param name="gender">性别</param>
+		public Student(string number, string name, string gender)
             : base(number, name, gender)
         {
             ;

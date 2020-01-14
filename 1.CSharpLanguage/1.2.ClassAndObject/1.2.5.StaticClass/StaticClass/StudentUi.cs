@@ -2,15 +2,8 @@
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 学生界面；
-	/// </summary>
     public static class StudentUi                                                           //定义静态类；
     {
-		/// <summary>
-		/// 显示；
-		/// </summary>
-		/// <param name="student">学生</param>
         public static void Display(Student student)                                         //定义静态方法；
         {
 			WriteLine

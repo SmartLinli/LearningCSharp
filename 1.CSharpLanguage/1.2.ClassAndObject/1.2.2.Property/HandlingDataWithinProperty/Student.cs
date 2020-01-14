@@ -3,17 +3,11 @@ using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	/// <summary>
-	/// 性别；
-	/// </summary>
 	public enum Gender
     {
         FEMALE,
         MALE
     }
-	/// <summary>
-	/// 学生；
-	/// </summary>
     public class Student                                                    
     {
         private string _Number;                                     //定义私有字段，用于保存相应属性所用的数据；只能在所属的类中访问私有成员；
