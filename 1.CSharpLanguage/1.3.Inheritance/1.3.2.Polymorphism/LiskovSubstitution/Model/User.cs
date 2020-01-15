@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 	/// <summary>
 	/// 用户；
 	/// </summary>
-	public class User
+	public abstract class User
 	{
 		/// <summary>
 		/// 编号；
@@ -47,14 +47,12 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <param name="message">消息</param>
 		public virtual void SendSms(string message)                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
 		{
-			if (this.PhoneNumber != null)
+			if (this.PhoneNumber == null)
 			{
-				WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
+				WriteLine("用户尚未登记手机号。");
+				return;
 			}
-			else
-			{
-				WriteLine("用户尚未登记手机号。\n");
-			}
+			WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}");
 		}
 		/// <summary>
 		/// 构造函数；

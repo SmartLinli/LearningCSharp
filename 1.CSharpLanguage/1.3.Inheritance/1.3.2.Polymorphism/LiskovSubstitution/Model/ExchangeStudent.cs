@@ -8,9 +8,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 	public sealed class ExchangeStudent : Undergraduate                                     //定义密封类；密封类不能被继承；
 	{
 		/// <summary>
-		/// 学校；
+		/// 来源学校；
 		/// </summary>
-		public string School { get; set; }
+		public string SourceSchool { get; private set; }
 		/// <summary>
 		/// 注册；
 		/// </summary>
@@ -26,28 +26,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 		public override void Intro()                                                        //重写基类中的虚方法；
 		{
 			base.Intro();                                                                   //调用基类的虚方法；
-			Write(this.School == null ?
+			Write(this.SourceSchool == null ?
 					"今天刚到福建中医药大学。"
-					: $"同时也是来自{this.School}的交换生。");
-		}
-		/// <summary>
-		/// 转专业
-		/// </summary>
-		/// <param name="newClass">新班级</param>
-		public new void TransferToMajor(string newClass)                                    //定义新方法，隐藏基类方法；
-		{
-			WriteLine("交换生必须在指定专业就读，不能转专业。\n");
-		}
-		/// <summary>
-		/// 构造函数；
-		/// </summary>
-		/// <param name="number">学号</param>
-		/// <param name="name">姓名</param>
-		/// <param name="gender">性别</param>
-		private ExchangeStudent(string number, string name, string gender)
-			: base(number, name, gender)
-		{
-			;
+					: $"同时也是来自{this.SourceSchool}的交换生。");
 		}
 		/// <summary>
 		/// 构造函数；
@@ -56,11 +37,11 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <param name="name">姓名</param>
 		/// <param name="gender">性别</param>
 		/// <param name="currentClass">班级</param>
-		/// <param name="school">学校</param>
-		public ExchangeStudent(string number, string name, string gender, string currentClass, string school)
+		/// <param name="sourceSchool">学校</param>
+		public ExchangeStudent(string number, string name, string gender, string currentClass, string sourceSchool)
 			: base(number, name, gender, currentClass)
 		{
-			this.School = school;
+			this.SourceSchool = sourceSchool;
 		}
 	}
 }

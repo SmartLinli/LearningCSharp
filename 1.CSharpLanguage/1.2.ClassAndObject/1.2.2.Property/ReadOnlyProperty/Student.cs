@@ -19,14 +19,12 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			}
 			set
 			{
-				if (this._Number == null)
-				{
-					this._Number = value;
-				}
-				else
+				if (this._Number != null)
 				{
 					WriteLine("已有学号，不得更改！");
+					return;
 				}
+				this._Number = value;
 			}
 		}
 		public string Name { get; set; }
@@ -48,10 +46,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 				{
 					return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
 				}
-				else
-				{
-					return null;
-				}
+				return null;
 			}
 			set
 			{

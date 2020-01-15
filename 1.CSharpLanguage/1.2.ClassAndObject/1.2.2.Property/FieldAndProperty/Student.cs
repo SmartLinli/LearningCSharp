@@ -15,7 +15,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             get                                                     //get访问器用于读取属性；get访问器不包含任何参数；
             {
                 return this._Number;                                //返回类的当前实例的相应字段；
-            }
+			}
             set                                                     //set访问器用于写入属性；
             {                                                       
                 this._Number = value;								//set访问器包含隐式参数value；

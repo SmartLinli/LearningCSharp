@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 导师；
         /// </summary>
-        public string Supervisor { get; set; }
+        public string Supervisor { get; private set; }
 		/// <summary>
 		/// 研究方向；
 		/// </summary>
@@ -30,10 +30,11 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <param name="number">学号</param>
 		/// <param name="name">姓名</param>
 		/// <param name="gender">性别</param>
+		/// <param name="supervisor">导师</param>
 		public Postgraduate(string number, string name, string gender)
-            : base(number, name, gender)                                                   
-        {
-            ;
-        }
-    }
+			: base(number, name, gender)
+		{
+			;
+		}
+	}
 }

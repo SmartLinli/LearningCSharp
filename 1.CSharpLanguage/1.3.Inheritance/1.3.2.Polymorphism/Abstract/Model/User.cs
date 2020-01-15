@@ -28,10 +28,6 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// 性别；
 		/// </summary>
 		public string Gender { get; private set; }
-		/// <summary>
-		/// 生日；
-		/// </summary>
-		public DateTime BirthDate { get; set; }
         /// <summary>
         /// 电话；
         /// </summary>
@@ -47,22 +43,20 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="message">消息</param>
         public virtual void SendSms(string message)                                 //定义虚方法；抽象类可包含虚方法；
 		{
-            if (this.PhoneNumber != null)
-            {
-                WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}\n");
-            }
-            else
-            {
-                WriteLine("用户尚未登记手机号。\n");
-            }
-        }
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">编号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        public User(string number, string name, string gender)                      //抽象类不能被实例化，但可提供构造函数，便于派生类调用；                 
+			if (this.PhoneNumber == null)
+			{
+				WriteLine("用户尚未登记手机号。");
+				return;
+			}
+			WriteLine($"发送短信至用户手机{this.PhoneNumber}：{message}");
+		}
+		/// <summary>
+		/// 构造函数；
+		/// </summary>
+		/// <param name="number">编号</param>
+		/// <param name="name">姓名</param>
+		/// <param name="gender">性别</param>
+		public User(string number, string name, string gender)                      //抽象类不能被实例化，但可提供构造函数，便于派生类调用；                 
         {
             this.Number = number;
             this.Name = name;

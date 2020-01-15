@@ -27,17 +27,6 @@ namespace SmartLin.LearningCSharp.Inheritance
 			Write($"，专长是{this.Speciality}。");
 		}
 		/// <summary>
-		/// 构造函数；
-		/// </summary>
-		/// <param name="number">工号</param>
-		/// <param name="name">姓名</param>
-		/// <param name="gender">性别</param>
-		public Faculty(string number, string name, string gender)
-			: base(number, name, gender)                                                    //调用基类的构造函数；
-		{
-			;
-		}
-		/// <summary>
 		///  构造函数；
 		/// </summary>
 		/// <param name="number">工号</param>
@@ -45,7 +34,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <param name="gender">性别</param>
 		/// <param name="department">部门</param>
 		public Faculty(string number, string name, string gender, string department)
-			: this(number, name, gender)                                                    //调用本类的构造函数；
+			: base(number, name, gender)                                                    //调用本类的构造函数；
 		{
 			this.Department = department;
 		}

@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.Inheritance
             for (int i = 0; i < users.Length; i++)
             {
                 users[i].Intro();
-                WriteLine("。");
+                WriteLine();
             }
         }
     }

@@ -9,9 +9,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             Student boy = new Student("3180707000", "张三", Gender.MALE)              //派生类的构造函数实际调用基类的构造函数；
 			{
-                BirthDate = new DateTime(2000, 1, 2),
-                PhoneNumber = "18900001111",
+                PhoneNumber = "18900001111"
 			};
+			Student girl = new Student("2190757001", "李四", Gender.FEMALE, "15955559999");
 			boy.Intro();                                                             
 			boy.SendSms("请及时评教。");
 			Read();

@@ -8,7 +8,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
             Class im18 = new Class(infomationManagement, 2018);
-            Student boy = Student.Create("3180707000", "张三", Gender.MALE, im18);          //无需实例化非静态类，即可调用其静态方法，从而实现创造行为模式等设计模式；
+            Student boy = Student.Create("3180707000", "张三", Gender.MALE, im18);          //无需实例化非静态类，即可调用其静态方法，从而实现创造行为类设计模式；
 			if (boy == null)
             {
                 return;

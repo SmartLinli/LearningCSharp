@@ -14,6 +14,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         public Gender Gender;
         public DateTime BirthDate;
         public string PhoneNumber;
-        public Class Class;                                         //类的数据成员的类型可以是其它类；
-    }
+        public Class Class;                                         //类的数据成员可以是其它类的对象；
+	}
 }

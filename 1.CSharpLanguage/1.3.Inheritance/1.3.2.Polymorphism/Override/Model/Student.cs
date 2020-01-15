@@ -8,37 +8,16 @@ namespace SmartLin.LearningCSharp.Inheritance
 	public class Student : User
     {
 		/// <summary>
-		/// 电话号码；
-		/// </summary>
-		public override string PhoneNumber                              //重写基类中的虚属性；
-		{
-			get
-			{
-				if (base.PhoneNumber != null)							//访问基类的属性；
-				{
-					return base.PhoneNumber.Substring(0, 3) + "****" + base.PhoneNumber.Substring(7, 4);
-				}
-				else
-				{
-					return null;
-				}
-			}
-			set
-			{
-				base.PhoneNumber = value;
-			}
-		}
-		/// <summary>
 		/// 学籍；
 		/// </summary>
-		public string Status { get; protected set; }					//只有派生类实例才能访问基类的受保护成员；
-        /// <summary>
-        /// 注册；
-        /// </summary>
-        public virtual void Register()
-        {
-            ;
-        }
+		public string Status { get; set; }                    
+		/// <summary>
+		/// 介绍；
+		/// </summary>
+		public override void Intro()                                                        //重写基类中的虚方法；
+		{
+			WriteLine($"我叫{this.Name}，是福建中医药大学在校生。");
+		}
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

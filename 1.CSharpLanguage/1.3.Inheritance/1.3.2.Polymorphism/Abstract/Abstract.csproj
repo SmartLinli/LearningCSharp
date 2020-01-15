@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ExchangeStudent.cs" />
     <Compile Include="Model\Postgraduate.cs" />
     <Compile Include="Model\Undergraduate.cs" />
     <Compile Include="Program.cs" />

@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectedMember", "Protecte
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.4.ProtectedMember", "1.3.1.4.ProtectedMember", "{DF7142A0-87A7-4A5A-A967-D99108B6195B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.7.Sealed", "1.3.1.7.Sealed", "{398CBC87-30FA-4E48-BBC5-02C0FF4F54D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -5,12 +5,12 @@ namespace SmartLin.LearningCSharp.Inheritance
     /// <summary>
     /// 交换生；
     /// </summary>
-    public sealed class ExchangeStudent : Undergraduate                                     //定义密封类；密封类不能被继承；
+    public class ExchangeStudent : Undergraduate                                    
     {
         /// <summary>
         /// 来源学校；
         /// </summary>
-        public string SourceSchool { get; set; }
+        public string SourceSchool { get; private set; }
         /// <summary>
         /// 介绍；
         /// </summary>
@@ -18,20 +18,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         {
             base.Intro();                                                                   //调用基类方法；
 			WriteLine(this.SourceSchool == null ?
-						"，我还是交换生。"
-						: $"，我还是来自{this.SourceSchool}的交换生。");
+						"我还是交换生。"
+						: $"我还是来自{this.SourceSchool}的交换生。");
 		}
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        /// <param name="number">学号</param>
-        /// <param name="name">姓名</param>
-        /// <param name="gender">性别</param>
-        private ExchangeStudent(string number, string name, string gender)
-            : base(number, name, gender)
-        {
-            ;
-        }
         /// <summary>
         /// 构造函数；
         /// </summary>

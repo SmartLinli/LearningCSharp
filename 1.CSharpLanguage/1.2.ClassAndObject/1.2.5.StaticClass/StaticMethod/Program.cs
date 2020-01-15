@@ -6,9 +6,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     {
         static void Main()
         {
-            Major infomationManagement = new Major("信息管理与信息系统", "信管");
-            Class im18 = new Class(infomationManagement, 2018);
-			Student boy = new Student("3190707000", "张三", Gender.MALE, im18)
+			Student boy = new Student("3190707000", "张三", Gender.MALE)
 			{
 				PhoneNumber = "18900001111"
 			};

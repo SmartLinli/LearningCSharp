@@ -49,20 +49,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <param name="number">学号</param>
 		/// <param name="name">姓名</param>
 		/// <param name="gender">性别</param>
-		private Postgraduate(string number, string name, string gender)
-			: base(number, name, gender)
-		{
-			;
-		}
-		/// <summary>
-		/// 构造函数；
-		/// </summary>
-		/// <param name="number">学号</param>
-		/// <param name="name">姓名</param>
-		/// <param name="gender">性别</param>
 		/// <param name="supervisor">导师</param>
 		public Postgraduate(string number, string name, string gender, Faculty supervisor)
-			: this(number, name, gender)
+			: base(number, name, gender)
 		{
 			this.Supervisor = supervisor;
 		}

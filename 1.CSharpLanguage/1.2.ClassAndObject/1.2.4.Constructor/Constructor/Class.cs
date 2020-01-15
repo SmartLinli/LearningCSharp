@@ -15,10 +15,5 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             this.Year = year;
             this.Major = major;
         }
-        public Class(Major major)
-            : this(major, DateTime.Now.Year)
-        {
-            ;
-        }
     }
 }
