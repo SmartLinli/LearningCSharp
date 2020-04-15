@@ -30,10 +30,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         private void OnSelectCourse(string courseName)
         {
 			var e = new SelectCourseEventArgs(courseName);
-			if (this.SelectCourseEvent!=null)
-			{
-				this.SelectCourseEvent(this, e);											//触发事件，即调用多播委托中注册的所有事件处理函数；事件必须在类内部触发；还需根据需要创建事件参数；
-			}
+			this.SelectCourseEvent?.Invoke(this, e);                                        //触发事件，即调用多播委托中注册的所有事件处理函数；事件必须在类内部触发；还需根据需要创建事件参数；
 		}
         /// <summary>
         /// 选课；

@@ -30,11 +30,9 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         {
             WriteLine("请输入课程名称：");
             var courseName = ReadLine();
-            if (this.AfterSelectCourse != null)                             //若委托对象非空；
-            {
-                this.AfterSelectCourse(this, courseName);                   //执行委托，并按委托签名提供参数；多播委托将依次调用各个函数，但只能返回最后1个函数的结果；
-            }
-        }
+			WriteLine($"成功选修《{courseName}》");
+			this.AfterSelectCourse?.Invoke(this, courseName);               //执行委托，并按委托签名提供参数；多播委托将依次调用各个函数，但只返回最后1个函数的结果；
+		}
         /// <summary>
         /// 评教；
         /// </summary>

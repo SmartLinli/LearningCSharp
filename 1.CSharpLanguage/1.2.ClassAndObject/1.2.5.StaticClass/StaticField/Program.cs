@@ -11,7 +11,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			Student boy = new Student("3190707000", "张三", Gender.MALE, im18)            
 			{
 				PhoneNumber = "18900001111",
-				Nationality = Nationality.HAN                                              //调用类的静态字段；
+				Nationality = Nationality.QIANG                                              //调用类的静态字段；
 			};
 			WriteLine
 				($"新生信息：\n"
