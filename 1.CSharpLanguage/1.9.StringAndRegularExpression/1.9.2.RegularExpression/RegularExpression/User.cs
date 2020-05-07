@@ -1,46 +1,34 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.StringAndRegularExpression
 {
-    /// <summary>
-    /// 用户；
-    /// </summary>
-    public class User
+	/// <summary>
+	/// 用户；
+	/// </summary>
+	public class User
     {
         /// <summary>
         /// 学号/工号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 密码；
         /// 由大小写字母与数字构成；
         /// </summary>
-        public string Password
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// 邮箱；
-        /// </summary>
-        public string Email
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// 加密；
-        /// 将密码中每个字符替换为前1个字符；
-        /// </summary>
-        /// <param name="plainText">明文</param>
-        /// <returns>密文</returns>
-        private static string Encrypt(string plainText)        
+        public string Password { get; private set; }
+		/// <summary>
+		/// 邮箱；
+		/// </summary>
+		public string Email { get; private set; }
+		/// <summary>
+		/// 加密；
+		/// 将密码中每个字符替换为前1个字符；
+		/// </summary>
+		/// <param name="plainText">明文</param>
+		/// <returns>密文</returns>
+		private static string Encrypt(string plainText)        
         {
             StringBuilder cipherTextBuilder = new StringBuilder(plainText);                 
             for (int i = 'a'; i <= 'z'; i++)
@@ -109,17 +97,17 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         {
             if (!CheckNumber(number))
             {
-                Console.WriteLine("错误：用户账号应为10位学号或7位工号，且应全为数字！");
+                WriteLine("错误：用户账号应为10位学号或7位工号，且应全为数字！");
                 return null;
             }
             if (!CheckPassword(password))
             {
-                Console.WriteLine("错误：用户密码应为6～20位，支持大、小写字母与数字，不能全为大、小写字母或数字！");
+                WriteLine("错误：用户密码应为6～20位，支持大、小写字母与数字，不能全为大、小写字母或数字！");
                 return null;
             }
             if (!CheckEmail(email))
             {
-                Console.WriteLine("错误：用户邮箱应为正确的邮箱格式！");
+                WriteLine("错误：用户邮箱应为正确的邮箱格式！");
                 return null;
             }
             User newUser = new User();
@@ -135,7 +123,7 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         {
             if (!CheckPassword(newPassword))
             {
-                Console.WriteLine("错误：用户密码应为6～20位，支持大小写字母与数字，不能全为字母或数字！");
+                WriteLine("错误：用户密码应为6～20位，支持大小写字母与数字，不能全为字母或数字！");
                 return false;
             }
             this.Password = Encrypt(newPassword);
