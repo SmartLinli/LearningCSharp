@@ -36,8 +36,8 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
             for (int i = 'a'; i <= 'z'; i++)                                                //遍历26个小写字母对应的十进制ASCII码；
             {
                 char
-                    oldLowerCaseLetter = (char)i                                            //基于ASCII码创建原字母、对应的前1个字母；
-                    , newLowerCaseLetter = (char)(i - 1);
+                    oldLowerCaseLetter = (char)i //b                                           //基于ASCII码创建原字母、对应的前1个字母；
+                    , newLowerCaseLetter = (char)(i - 1);//a
                 cipherText =
                     cipherText.Replace(oldLowerCaseLetter, newLowerCaseLetter);             //调用string类的Replace方法，将字符串中所有指定字符替换为新字符；
             }                                                                               //字符串对象是不可变对象，每次修改都将创建新字符串对象，导致消耗较多资源；
