@@ -15,16 +15,16 @@ namespace ConditionalStatement
 			Write("请输入评教成绩：");
 			var input = ReadLine();
 			isNumeral = float.TryParse(input, out float rate);
-			/*if (!isNumeral)
+			if (isNumeral)
 			{
-				WriteLine("评教成绩应为数值！");
+				WriteLine("警告：评教成绩应为数值！");
 				Read();
 				return;
-			}*/
+			}
 			#region 调试断言
 			Debug.Assert                                                                //调试断言将在表达式为假的情况下中断程序，并将信息显示在输出窗口与对话框；
 				(isNumeral
-				, $"当前输入{input}未能转为数值，流程不应通过if语句。"
+				, $"当前输入{input}并非数值，流程不应通过if语句。"
 				, "请检查if语句。");
 			#endregion
 			isValidFraction = (rate % 1) == 0.5 || (rate % 1) == 0;
