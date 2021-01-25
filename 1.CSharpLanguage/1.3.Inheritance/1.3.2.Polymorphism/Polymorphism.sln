@@ -9,29 +9,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution", "LiskovSubstitution\LiskovSubstitution.csproj", "{7E9CF6DE-8EFA-42E0-B9DC-43905EA18B5A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.2.Override", "1.3.2.2.Override", "{E692CAD1-80A2-49F5-8011-C196C4498D64}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Override", "2.Override", "{E692CAD1-80A2-49F5-8011-C196C4498D64}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.4.BaseMember", "1.3.2.4.BaseMember", "{AD6A7B4B-0F1A-4C44-96DC-8AC063FEC07D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.BaseMember", "4.BaseMember", "{AD6A7B4B-0F1A-4C44-96DC-8AC063FEC07D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseMember", "BaseMember\BaseMember.csproj", "{D0A2F877-4650-4E08-9F41-C96B296DA4E9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.5.HideBaseMember", "1.3.2.5.HideBaseMember", "{D7114005-EE4D-412D-AB31-388B9050D895}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.HideBaseMember", "5.HideBaseMember", "{D7114005-EE4D-412D-AB31-388B9050D895}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.6.OverrideProperty", "1.3.2.6.OverrideProperty", "{EB88B318-706A-45AC-B057-214180D33130}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.OverrideProperty", "6.OverrideProperty", "{EB88B318-706A-45AC-B057-214180D33130}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.8.Abstract", "1.3.2.8.Abstract", "{DE961708-94B8-443F-A04A-7B952127FF62}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.Abstract", "8.Abstract", "{DE961708-94B8-443F-A04A-7B952127FF62}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.9.LiskovSubstitution", "1.3.2.9.LiskovSubstitution", "{889AE54D-2072-4F42-AC94-F7C1077242DC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9.LiskovSubstitution", "9.LiskovSubstitution", "{889AE54D-2072-4F42-AC94-F7C1077242DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideBaseMember", "HideBaseMember\HideBaseMember.csproj", "{89FD9C06-392A-4EF0-B1C1-6D76D43E3711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideProperty", "OverrideProperty\OverrideProperty.csproj", "{76909C18-86B1-4156-9728-FD46656134EB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.1.Virtual", "1.3.2.1.Virtual", "{4BC35CDE-C48A-47D1-9B1E-54DE08C731BC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Virtual", "1.Virtual", "{4BC35CDE-C48A-47D1-9B1E-54DE08C731BC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.3.OverrideInMultiLevel", "1.3.2.3.OverrideInMultiLevel", "{23647132-7B39-46A0-B722-BAA2C8418476}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.OverrideInMultiLevel", "3.OverrideInMultiLevel", "{23647132-7B39-46A0-B722-BAA2C8418476}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.2.7.VirtualWithoutImplement", "1.3.2.7.VirtualWithoutImplement", "{5A2E6385-904A-4453-A30A-CBC5280C3FFF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.VirtualWithoutImplement", "7.VirtualWithoutImplement", "{5A2E6385-904A-4453-A30A-CBC5280C3FFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual", "Virtual\Virtual.csproj", "{E588E41D-5EA5-4E35-BCCB-56BC700ED473}"
 EndProject

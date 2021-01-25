@@ -21,7 +21,7 @@ namespace SmartLin.LearningCSharp.Basics
 				return;
 			}
 			isValidFraction = (rate % 1) == 0.5 || (rate % 1) == 0;
-			if (!isValidFraction)
+			if (isValidFraction)
 			{
 				WriteLine("评教成绩小数部分只能为.5！");
 				Read();

@@ -7,12 +7,12 @@ namespace SmartLin.LearningCSharp.Basics
     {
         enum Gender                                                                 
         {                                                                           
-            FEMALE = 0,                                                             
+            FEMALE = 0,                                                             //可为枚举名称指定值；
             MALE = 1
         }
         static void Main()                                                          
         {
-            WriteLine("请分别输入学号、姓名、性别、生日、身高、体重、是否注册：");      //调用Console的WriteLine方法，将字符串输出至控制台，以行终止符结束；
+            WriteLine("请分别输入学号、姓名、性别、生日、身高、体重、是否注册：");       //调用Console的WriteLine方法，将字符串输出至控制台，以行终止符结束；
             var number = int.Parse(ReadLine());                                     //调用Console的ReadLine方法，从控制台读取输入流，以回车结束，并返回字符串；调用int类型的Parse方法将字符串转为整型；
             var name = ReadLine();                                                  //调用Console的ReadLine方法，从控制台读取输入流，以回车结束，并返回字符串；
             var gender = (Gender)int.Parse(ReadLine());                             //输入字符串转为整型后，通过强制类型转换，按照枚举值转为相应的枚举名称；

@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructor", "Constructor\Constructor.csproj", "{51FAEA4E-C996-44E1-A802-453D8361C1FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.4.1.Constructor", "1.2.4.1.Constructor", "{A1BFA1E7-CD73-4260-A504-4DA0A6DB2866}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Constructor", "1.Constructor", "{A1BFA1E7-CD73-4260-A504-4DA0A6DB2866}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.4.2.ConstructorOverload", "1.2.4.2.ConstructorOverload", "{7DF1F294-60BD-45D5-B530-132514F6ED06}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ConstructorOverload", "2.ConstructorOverload", "{7DF1F294-60BD-45D5-B530-132514F6ED06}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorOverload", "ConstructorOverload\ConstructorOverload.csproj", "{DE486DEA-49D0-4B08-937E-235BE8BBB576}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.4.3.Initializer", "1.2.4.3.Initializer", "{F2D19563-5477-44EE-945F-A41DA10E7727}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Initializer", "3.Initializer", "{F2D19563-5477-44EE-945F-A41DA10E7727}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Initializer", "Initializer\Initializer.csproj", "{283CBE70-B26D-4124-B532-B16C328F2533}"
 EndProject

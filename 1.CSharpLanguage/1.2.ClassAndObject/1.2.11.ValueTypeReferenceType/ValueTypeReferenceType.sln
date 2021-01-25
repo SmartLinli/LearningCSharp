@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTypeReferenceType", "V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringAsReferenceType", "StringAsReferenceType\StringAsReferenceType.csproj", "{C0334A82-B108-4A17-BFD7-35E5EDA52FBB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.ValueTypeReferenceType", "1.ValueTypeReferenceType", "{38ED6590-3405-4548-8057-FBF2BF196D23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.StringAsReferenceType", "2.StringAsReferenceType", "{DF5272BC-61A8-4155-A9EA-B7608D8EE2C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0453DD64-15B7-4278-99C2-798ACFDDA988} = {38ED6590-3405-4548-8057-FBF2BF196D23}
+		{C0334A82-B108-4A17-BFD7-35E5EDA52FBB} = {DF5272BC-61A8-4155-A9EA-B7608D8EE2C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30A776D1-6AA0-47AB-B0E0-8959D70B77B2}

@@ -5,29 +5,29 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleInheritance", "SimpleInheritance\SimpleInheritance.csproj", "{2F38F7D0-DCD1-4DCB-A3D8-11E48DA1F5D3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.1.SimpleInheritance", "1.3.1.1.SimpleInheritance", "{CFF688FB-E589-4EA4-8BB0-A67C87A3527F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.SimpleInheritance", "1.SimpleInheritance", "{CFF688FB-E589-4EA4-8BB0-A67C87A3527F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.6.MultiLevel", "1.3.1.6.MultiLevel", "{3903FEF7-000D-458E-B38D-6DDF42291CBE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.MultiLevel", "6.MultiLevel", "{3903FEF7-000D-458E-B38D-6DDF42291CBE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.5.MultiBranch", "1.3.1.5.MultiBranch", "{4B54CD7D-E8FB-471E-AE53-148D9333A399}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.MultiBranch", "5.MultiBranch", "{4B54CD7D-E8FB-471E-AE53-148D9333A399}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiLevel", "MultiLevel\MultiLevel.csproj", "{02CA1F15-ABD6-436A-B3CF-32DAC8618656}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiBranch", "MultiBranch\MultiBranch.csproj", "{D780796D-9F72-42E0-B01A-ED2EA22405C9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.2.BaseConstructor", "1.3.1.2.BaseConstructor", "{E1F05230-6A66-4B79-839A-5179A94AC96D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.BaseConstructor", "2.BaseConstructor", "{E1F05230-6A66-4B79-839A-5179A94AC96D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConstructor", "ConstructorInheritance\BaseConstructor.csproj", "{99383617-D486-4B35-886C-55238A0FF97A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConstructor", "BaseConstructor\BaseConstructor.csproj", "{99383617-D486-4B35-886C-55238A0FF97A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.3.PrivateMember", "1.3.1.3.PrivateMember", "{C00DCE3B-9E27-4BF9-9896-76D40C8344CD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.PrivateMember", "3.PrivateMember", "{C00DCE3B-9E27-4BF9-9896-76D40C8344CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateMember", "PrivateMember\PrivateMember.csproj", "{ED8B18D1-6440-4A2B-9413-24DD7B86D8B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectedMember", "ProtectedMember\ProtectedMember.csproj", "{469FACD9-4DD9-4D01-9884-7742BB0C0277}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.4.ProtectedMember", "1.3.1.4.ProtectedMember", "{DF7142A0-87A7-4A5A-A967-D99108B6195B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.ProtectedMember", "4.ProtectedMember", "{DF7142A0-87A7-4A5A-A967-D99108B6195B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1.7.Sealed", "1.3.1.7.Sealed", "{398CBC87-30FA-4E48-BBC5-02C0FF4F54D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Sealed", "7.Sealed", "{398CBC87-30FA-4E48-BBC5-02C0FF4F54D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
