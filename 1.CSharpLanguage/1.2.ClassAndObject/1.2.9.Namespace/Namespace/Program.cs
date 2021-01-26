@@ -9,23 +9,20 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     {
         static void Main()
         {
-            /*创建专业、班级*/
+            /*定义专业、班级；*/
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
-            Class im18 = new Class(infomationManagement, 2018);
-            /*创建学生并显示*/
-            Student boy = new Student("3180707000", "张三", Gender.MALE, im18);          
-            StudentUi.Display(boy);                                                      
-            /*创建新生、录取并显示*/
-            Student girl = new Student("3200707000", "李四", Gender.FEMALE);
-            girl.EnrollByMajor(infomationManagement);
+            Class im20 = new Class(infomationManagement, 2020);
+            /*定义学生并显示*/
+            Student girl = new Student("3200707002", "储艺", Gender.FEMALE, im20);
             StudentUi.Display(girl);
-            /*学生转专业*/
-            Major acupuncture = new Major("针灸学", "针灸");
-            boy.TransferToMajor(acupuncture);
+            /*定义新生；录取；显示；*/
+            Student newGuy = new Student("3210707001", "张三", Gender.MALE);
+            newGuy.EnrollByMajor(infomationManagement);
+            StudentUi.Display(newGuy);
             /*发送短信*/
-            boy.PhoneNumber = "18900001111";
-            MessageService.SendSms(boy.PhoneNumber, "请抓紧评教。");
-            MessageService.SendSms(girl.PhoneNumber, "请抓紧评教。");
+            girl.PhoneNumber = "18900001111";
+            MessageService.SendSms(girl.PhoneNumber, "请按时钉钉打卡。");
+            MessageService.SendSms(newGuy.PhoneNumber, "请按时钉钉打卡。");
             Read();
         }
     }

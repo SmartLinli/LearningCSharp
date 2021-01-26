@@ -22,7 +22,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			girl.EnrollByMajor(infomationManagement); 
             girl.EnrollByMajor(acupuncture);
             girl.Intro();
-            girl.TransferToMajor(acupuncture, 2020);                                            
+            girl.TransferToMajor(acupuncture, 2021);                                            
             girl.Intro();
             Read();
         }

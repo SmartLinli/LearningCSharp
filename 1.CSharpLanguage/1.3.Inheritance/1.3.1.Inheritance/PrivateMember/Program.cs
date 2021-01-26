@@ -7,9 +7,9 @@ namespace SmartLin.LearningCSharp.Inheritance
     {
         static void Main()
         {
-			Student boy = new Student("3180707000", "张三", Gender.MALE)              
+			Student boy = new Student("3210707000", "张三", Gender.MALE)              
 			{
-				BirthDate = new DateTime(2000, 1, 2),
+				BirthDate = new DateTime(2003, 1, 2),
 				PhoneNumber = "18900001111",
 			};
 			boy.Intro();

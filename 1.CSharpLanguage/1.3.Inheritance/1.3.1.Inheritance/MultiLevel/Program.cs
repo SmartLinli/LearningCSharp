@@ -6,9 +6,9 @@ namespace SmartLin.LearningCSharp.Inheritance
     {
         static void Main()
         {
-			Undergraduate boy = new Undergraduate("3190707000", "张三", Gender.MALE)
+			Undergraduate boy = new Undergraduate("3210707000", "张三", Gender.MALE)
 			{
-				Class = "19信管",
+				Class = "21信管",
 				Instructor = "林立"                                                                      //派生类访问自身的属性；
 			};
 			Postgraduate girl = new Postgraduate("2190757001", "李四", Gender.FEMALE);

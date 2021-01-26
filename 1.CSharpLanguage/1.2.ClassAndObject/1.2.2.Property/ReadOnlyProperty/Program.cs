@@ -10,17 +10,16 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             Major infomationManagement = new Major();                                           
             infomationManagement.Name = "信息管理与信息系统";                                   
             infomationManagement.ShortName = "信管";
-            Class im18 = new Class();
-            im18.Year = 2018;
-            im18.Major = infomationManagement;                                                  
+            Class im21 = new Class();
+            im21.Year = 2021;
+            im21.Major = infomationManagement;                                                  
             Student boy = new Student();
-            boy.Number = "3190707001";
-            boy.Number = "3190707000";                                                          //已有学号无法更改；
+            boy.Number = "3210707001";
             boy.Name = "张三";
             boy.Gender = Gender.MALE;
-            boy.BirthDate = new DateTime(2000, 1, 2);
+            boy.BirthDate = new DateTime(2003, 1, 2);
             boy.PhoneNumber = "18900001111";
-            boy.Class = im18;
+            boy.Class = im21;
 			WriteLine
 				($"新生信息：\n"
 				+ $"学号：{boy.Number,-15}姓名：{boy.Name}\n"

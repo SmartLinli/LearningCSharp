@@ -1,13 +1,12 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-	class Program
+    class Program
     {
         static void Main()
         {
-            Student boy = new Student("3180707000", "张三", Gender.MALE)              //派生类的构造函数实际调用基类的构造函数；
+            Student boy = new Student("3210707000", "张三", Gender.MALE)              //派生类的构造函数实际调用基类的构造函数；
 			{
                 PhoneNumber = "18900001111"
 			};

@@ -8,11 +8,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         static void Main()
         {
             Student boy = new Student();
-            boy.Number = "3190707001";												//向对象的属性赋值；
-            boy.Number = "3190707000";                                                          
+            boy.Number = "3210707001";												//向对象的属性赋值；
             boy.Name = "张三";
             boy.Gender = Gender.MALE;
-            boy.BirthDate = new DateTime(2000, 1, 2);
+            boy.BirthDate = new DateTime(2003, 1, 2);
             boy.PhoneNumber = "18900001111";
 			WriteLine
 				($"新生信息：\n"

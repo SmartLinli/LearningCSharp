@@ -9,14 +9,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		public Class Class { get; private set; }                            //将set访问器的访问性定义为私有，实现只读属性；
 		private bool HasClass                                               
 		=>	this.Class != null;
-		private bool ValidateTransferToMajor()								//定义私有方法；
-        {
-            if (!this.HasClass)
-            {
-				WriteLine($"{this.Name}尚未被任何专业录取，无法转专业。");
-            }
-            return this.HasClass;
-        }
         public void Intro()                                                 
         =>	WriteLine														
 				($"我叫{this.Name}"

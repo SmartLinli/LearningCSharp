@@ -36,7 +36,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
 		public void TransferToMajor(Major newMajor, int year)               //定义公有方法（重载1）
 		{
-			if (this.ValidateTransferToMajor())								//调用私有方法，提高代码复用；
+			if (!this.ValidateTransferToMajor())							//调用私有方法，提高代码复用；
 				return;
             Class newClass = new Class();
             newClass.Major = newMajor;
@@ -46,7 +46,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         }
 		public void TransferToMajor(Major newMajor)                         //定义公有方法（重载2）
 		{
-			if (this.ValidateTransferToMajor())								//调用私有方法，提高代码复用；
+			if (!this.ValidateTransferToMajor())							//调用私有方法，提高代码复用；
 				return;
 			int newClassYear = this.Class.Year + 1;
             this.TransferToMajor(newMajor, newClassYear);					//调用另一重载方法，提高代码复用；

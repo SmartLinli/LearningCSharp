@@ -13,9 +13,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 				PhoneNumber = "13599995555",
 				Department = "人文与管理学院",
 			};
-			Student boy = new Student("3190707000", "张三", Gender.MALE)
+			Student boy = new Student("3210707000", "张三", Gender.MALE)
 			{
-				BirthDate = new DateTime(2000, 1, 2),
+				BirthDate = new DateTime(2003, 1, 2),
 				PhoneNumber = "18900001111",
 				Class = "19信管",
 			};

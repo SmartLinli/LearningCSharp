@@ -8,11 +8,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		static void Main()
 		{
 			Student boy = new Student();
-			boy.Number = "3190707001";
-			boy.Number = "3190707000";                                                          //已有学号无法更改；实际信息以及处理过程被隐藏，实现了封装；
+			boy.Number = "3210707001";
+			boy.Number = "3210707000";                                                          //已有学号无法更改；实际信息以及处理过程被隐藏，实现了封装；
 			boy.Name = "张三";
 			boy.Gender = Gender.MALE;
-			boy.BirthDate = new DateTime(2000, 1, 2);
+			boy.BirthDate = new DateTime(2003, 1, 2);
 			boy.PhoneNumber = "18900001111";
 			WriteLine
 				($"新生信息：\n"
