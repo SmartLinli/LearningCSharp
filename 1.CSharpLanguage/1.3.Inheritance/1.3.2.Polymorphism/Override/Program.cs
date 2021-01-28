@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 			{
 				Speciality = "数据仓库与数据挖掘、医学统计"
 			};
-			Student boy = new Student("3190707000", "张三", Gender.MALE);
+			Student boy = new Student("3210707000", "张三", Gender.MALE);
 
 			msYang.Intro();                                                                         //调用派生类重写的方法；
             boy.Intro();

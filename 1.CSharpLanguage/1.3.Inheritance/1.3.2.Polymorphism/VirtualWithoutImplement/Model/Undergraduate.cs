@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public override void Register()                                                     //重写基类中的虚方法；
+		public override void Register()                                                   //重写基类中的虚方法；
 		{
 			this.Status = "在读";                                                         //只有派生类实例才能访问基类的受保护成员；
 			WriteLine($"本科生{this.Name}当前学籍为“{this.Status}”");

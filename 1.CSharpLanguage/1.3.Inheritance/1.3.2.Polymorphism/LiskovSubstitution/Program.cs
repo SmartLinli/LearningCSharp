@@ -13,21 +13,21 @@ namespace SmartLin.LearningCSharp.Inheritance
 				BirthDate = new DateTime(1975, 12, 1),
 				Speciality = "数据仓库与数据挖掘、医学统计"
 			};
-			Undergraduate boy = new Undergraduate("3190707000", "张三", Gender.MALE, "19信管")
+			Undergraduate boy = new Undergraduate("3210707000", "张三", Gender.MALE, "21信管")
 			{
-				BirthDate = new DateTime(2000, 1, 2),
+				BirthDate = new DateTime(2003, 1, 2),
 				PhoneNumber = "18900001111",
 			};
 			Postgraduate girl = new Postgraduate("2190757001", "李四", Gender.FEMALE, msYang);
 			girl.AssignDirection("数据可视化");
-			ExchangeStudent newGuy = new ExchangeStudent("20190531001", "王五", Gender.MALE, "19信管", "江西中医药大学");
+			ExchangeStudent newGuy = new ExchangeStudent("20200531001", "王五", Gender.MALE, "20信管", "江西中医药大学");
 			/*显示；介绍所有用户；批量注册；*/
 			UserUi.Display(boy);																//基类的类型同样适用于派生类；
 			StudentUi.Display(boy);
 			UndergraduateUi.Display(newGuy);
 			UserService.IntroduceAll(new User[] { msYang, boy, girl, newGuy });                 //基类的类型同样适用于派生类；
 			WriteLine();
-			StudentService.RegisterAll(new Student[] { boy, girl, newGuy });
+            StudentService.RegisterAll(boy, girl, newGuy);
 			Read();
 		}
 	}

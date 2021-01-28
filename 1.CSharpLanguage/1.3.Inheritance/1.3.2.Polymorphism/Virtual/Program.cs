@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 			{
 				PhoneNumber = "13322223333"
 			}; 
-			Student boy = new Student("3190707000", "张三", Gender.MALE)
+			Student boy = new Student("3210707000", "张三", Gender.MALE)
 			{
 				PhoneNumber = "15955559999"
 			};
