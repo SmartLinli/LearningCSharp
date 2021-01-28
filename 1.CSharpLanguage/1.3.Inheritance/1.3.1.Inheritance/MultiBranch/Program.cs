@@ -17,7 +17,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 			{
 				BirthDate = new DateTime(2003, 1, 2),
 				PhoneNumber = "18900001111",
-				Class = "19信管",
+				Class = "21信管",
 			};
 			mrLin.Intro();                                                          
 			WriteLine($"目前任教于{mrLin.Department}。\n");
