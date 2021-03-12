@@ -7,13 +7,14 @@ namespace SmartLin.LearningCSharp.Basics
         static void Main()
         {
             int MinRate = 0, MaxRate = 5;
+            float rate = 0;
 			bool
 				isNumeral = false,
 				isValidFraction = false,
 				isWithinRange = false;
             Write("请输入评教成绩：");
             var input = ReadLine();
-            isNumeral = float.TryParse(input, out float rate);
+            isNumeral = float.TryParse(input, out rate);
 			if (!isNumeral)
 			{
 				WriteLine("评教成绩应为数值！");
