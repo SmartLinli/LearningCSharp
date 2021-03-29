@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         FEMALE,
         MALE 
     }
-    class Student                                                   //定义类（默认为内部类）；
+    class Student                                                   //定义类（默认访问性为内部）；
     {
         public string Number;                                       //定义公有字段；
         public string Name;

@@ -15,7 +15,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             boy.PhoneNumber = "18900001111";
 			WriteLine
 				($"新生信息：\n"
-				+ $"学号：{boy.Number,-15}姓名：{boy.Name}\n"						//访问对象的属性；                                 
+				+ $"学号：{boy.Number,-15}姓名：{boy.Name}\n"						    //访问对象的属性；                                 
 				+ $"性别：{(boy.Gender == Gender.MALE ? "男" : "女"),-14}生日：{boy.BirthDate:D}\n"
 				+ $"手机：{boy.PhoneNumber}\n");                                              
 			Read();

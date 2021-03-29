@@ -35,13 +35,13 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		{
 			get
 			{
-				if (this._PhoneNumber != null)                      
-				{
-					return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-				}
-				return null;
-			}
-			set
+                if (this._PhoneNumber == null)                      
+                {
+                    return null;
+                }
+                return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
+            }
+            set
 			{
 				this._PhoneNumber = value;
 			}

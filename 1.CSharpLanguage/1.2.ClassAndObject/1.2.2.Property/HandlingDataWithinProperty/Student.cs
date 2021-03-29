@@ -35,12 +35,12 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             get
             {
-                if (this._PhoneNumber != null)                      //若手机号不为空，方可进行字符串处理，否则导致异常；
+                if (this._PhoneNumber == null)                      //若手机号不为空，方可进行字符串处理，否则导致异常；
                 {
-                    return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
+                    return null; 
                 }
-                return null;
-			}
+                return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
+            }
             set
             {
                 this._PhoneNumber = value;

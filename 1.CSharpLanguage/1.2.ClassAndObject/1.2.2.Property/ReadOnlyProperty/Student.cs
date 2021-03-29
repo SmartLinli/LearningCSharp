@@ -35,20 +35,20 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			get
 			{
 				return DateTime.Now.Year - this.BirthDate.Year;
-			}                                                       //省略set访问器，亦可实现只读属性；
+			}                                                       //省略set访问器，可实现只读属性；
 		}
 		private string _PhoneNumber;
 		public string PhoneNumber
 		{
 			get
 			{
-				if (this._PhoneNumber != null)                      
-				{
-					return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-				}
-				return null;
-			}
-			set
+                if (this._PhoneNumber == null)
+                {
+                    return null;
+                }
+                return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
+            }
+            set
 			{
 				this._PhoneNumber = value;
 			}
