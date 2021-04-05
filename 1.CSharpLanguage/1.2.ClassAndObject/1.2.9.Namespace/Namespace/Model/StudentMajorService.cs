@@ -20,7 +20,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// </summary>
         /// <param name="student">学生</param>
         /// <param name="newMajor">新专业</param>
-        public static void EnrollByMajor(this Student student, Major newMajor)            
+        public static void EnrollBy(this Student student, Major newMajor)            
         {
             if (!student.HasClass())                                                      
             {
@@ -59,7 +59,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// <param name="student">学生</param>
         /// <param name="newMajor">新专业</param>
         /// <param name="year">年级</param>
-        public static void TransferToMajor(this Student student, Major newMajor, int year)  
+        public static void TransferTo(this Student student, Major newMajor, int year)  
         {
             if (student.ValidateForTransferToMajor())                                       
             {
@@ -74,12 +74,12 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// </summary>
         /// <param name="student">学生</param>
         /// <param name="newMajor">新专业</param>
-        public static void TransferToMajor(this Student student, Major newMajor)            
+        public static void TransferTo(this Student student, Major newMajor)            
         {
             if (student.ValidateForTransferToMajor())
             {
                 int newClassYear = student.Class.Year + 1;
-                student.TransferToMajor(newMajor, newClassYear);                            
+                student.TransferTo(newMajor, newClassYear);                            
             }
         }
     }

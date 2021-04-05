@@ -33,13 +33,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		/// </summary>
 		public Class Class { get; internal set; }
 		/// <summary>
-		/// 介绍；
-		/// </summary>
-		public void Intro()
-		=>	WriteLine
-				($"我叫{this.Name}"
-				+ $"{(this.Class == null ? "" : "，来自" + this.Class.ShortName + "。")}");
-		/// <summary>
 		/// 构造函数；
 		/// </summary>
 		/// <param name="number">学号</param>

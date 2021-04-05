@@ -11,7 +11,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             Class im21 = new Class(infomationManagement, 2021);
             /*定义新生、录取并显示消息*/
             Student newGuy = new Student("3210707000", "张三", Gender.MALE);
-            var result= newGuy.EnrollByMajor(infomationManagement);                          
+            var result= newGuy.EnrollBy(infomationManagement);                          
             if (result.IsSuccess)
             {
                 WriteLine($"消息：{result.Message}");

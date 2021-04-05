@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.FieldAndProperty", "1.Fie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.HandlingDataWithinProperty", "2.HandlingDataWithinProperty", "{279F2005-BA31-48F7-AF5B-EC59F651770F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.AutoImplementedProperty", "3.AutoImplementedProperty", "{E46E2EA8-15E0-4092-B635-C7172F7C9F74}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.AutoImplementedProperty", "4.AutoImplementedProperty", "{E46E2EA8-15E0-4092-B635-C7172F7C9F74}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.ReadOnlyProperty", "4.ReadOnlyProperty", "{A938D4D1-A17F-4E52-A195-BD017EC7CC30}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.ReadOnlyProperty", "3.ReadOnlyProperty", "{A938D4D1-A17F-4E52-A195-BD017EC7CC30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldAndProperty", "FieldAndProperty\FieldAndProperty.csproj", "{023ECF3B-6D65-438C-A29D-650A9AFCCE8A}"
 EndProject
