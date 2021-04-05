@@ -1,9 +1,8 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	class Program
+    class Program
     {
         static void Main()
         { 

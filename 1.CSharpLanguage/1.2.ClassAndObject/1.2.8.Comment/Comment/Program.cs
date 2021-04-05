@@ -14,10 +14,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             girl.Intro();
             /*学生转专业；*/
             Major acupuncture = new Major("针灸学", "针灸");
-            girl.TransferToMajor(acupuncture);
+            girl.TransferTo(acupuncture);
 			/*定义新生；录取；介绍；*/
 			Student newGuy = new Student("3210707001", "张三", Gender.MALE);
-            newGuy.EnrollByMajor(infomationManagement);
+            newGuy.EnrollBy(infomationManagement);
             newGuy.Intro();
             Read();
         }

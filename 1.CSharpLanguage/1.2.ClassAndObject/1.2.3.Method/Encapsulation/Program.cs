@@ -17,11 +17,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             girl.Name = "李四";
             
             girl.Intro();                                                               //调用方法；
-			girl.TransferToMajor(infomationManagement, 2021);                           //实际信息以及处理过程被隐藏，实现了封装；
-			girl.EnrollByMajor(infomationManagement); 
-            girl.EnrollByMajor(acupuncture);
+			girl.TransferTo(infomationManagement, 2021);                           //实际信息以及处理过程被隐藏，实现了封装；
+			girl.EnrollBy(infomationManagement); 
+            girl.EnrollBy(acupuncture);
             girl.Intro();
-            girl.TransferToMajor(acupuncture, 2021);                                            
+            girl.TransferTo(acupuncture, 2021);                                            
             girl.Intro();
             Read();
         }

@@ -17,7 +17,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             StudentUi.Display(girl);
             /*定义新生；录取；显示；*/
             Student newGuy = new Student("3210707001", "张三", Gender.MALE);
-            newGuy.EnrollByMajor(infomationManagement);
+            newGuy.EnrollBy(infomationManagement);
             StudentUi.Display(newGuy);
             /*发送短信*/
             girl.PhoneNumber = "18900001111";

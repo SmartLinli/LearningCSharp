@@ -11,10 +11,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			Major acupuncture = new Major("针灸学", "针灸");
 
 			Student boy = Student.Create("3210707001", "张三", Gender.MALE, im21);        
-			boy.TransferToMajor(acupuncture);											//调用扩展方法；
+			boy.TransferTo(acupuncture);											//调用扩展方法；
 
 			Student girl = Student.Create("3210707002", "李四", Gender.FEMALE);
-            girl.EnrollByMajor(infomationManagement);
+            girl.EnrollBy(infomationManagement);
             
 			Read();
         }
