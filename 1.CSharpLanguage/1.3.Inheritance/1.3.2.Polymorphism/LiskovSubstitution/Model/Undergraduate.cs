@@ -18,21 +18,19 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public override void Register()                                                     //重写基类中的虚方法；
+		public override void Register()                                                     
 		{
-			this.Status = "在读";															//只有派生类实例才能访问基类的受保护成员；
+			this.Status = "在读";															
 			WriteLine($"本科生{this.Name}当前学籍为“{this.Status}”");
 		}
-		/// <summary>
-		/// 介绍；
-		/// </summary>
-		public override void Intro()                                                        //重写基类中的虚方法；
-		{
-			base.Intro();                                                                   //调用基类的虚方法；基类Student未重写更高一层基类User的虚方法Intro，即隐式继承该虚方法，故此处最终调用基类User的虚方法Intro；
-			Write(this.Class == null ?
-					"，今天刚入学。"
-					: $"，来自{this.Class}。");
-		}
+        /// <summary>
+        /// 介绍；
+        /// </summary>
+        public override void Intro()                                                        
+        {
+            base.Intro();                                                                   //调用基类的虚方法；由于本类的基类Student未重写更高一层基类User的虚方法Intro，则基类Student隐式继承基类User的虚方法Intro，故此处最终调用基类User的虚方法Intro；
+            Write(this.Class == null ? "，今天刚入学。" : $"，来自{this.Class}。");
+        }
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

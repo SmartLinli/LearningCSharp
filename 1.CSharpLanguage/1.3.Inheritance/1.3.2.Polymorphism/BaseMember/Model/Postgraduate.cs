@@ -23,17 +23,16 @@ namespace SmartLin.LearningCSharp.Inheritance
 		{
 			this.Direction = direction;
 		}
-		/// <summary>
-		/// 介绍；
-		/// </summary>
-		public override void Intro()
-		{
-			base.Intro();
-			Write(this.Supervisor == null ?
-					"，是研究生。"
-					: $"，是{ this.Supervisor.Name}老师的研究生");
-			Write($"，研究方向是{this.Direction}。");
-		}
+        /// <summary>
+        /// 介绍；
+        /// </summary>
+        public override void Intro()
+        {
+            base.Intro();
+            Write
+                (this.Supervisor == null ? "，是研究生。" : $"，是{ this.Supervisor.Name}老师的研究生" +
+                $"，研究方向是{this.Direction}。");
+        }
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

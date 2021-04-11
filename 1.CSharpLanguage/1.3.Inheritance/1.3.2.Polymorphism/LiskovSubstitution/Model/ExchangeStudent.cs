@@ -14,22 +14,20 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public override void Register()                                                     //重写基类中的虚方法；
+		public override void Register()                                                     
 		{
-			this.Status = "交换生";                                                         //只有派生类实例能访问基类的受保护成员；
+			this.Status = "交换生";                                                         
 			WriteLine
 				($"交换生{this.Name}当前学籍为“{this.Status}”");
 		}
-		/// <summary>
-		/// 介绍；
-		/// </summary>
-		public override void Intro()                                                        //重写基类中的虚方法；
-		{
-			base.Intro();                                                                   //调用基类的虚方法；
-			Write(this.SourceSchool == null ?
-					"今天刚到福建中医药大学。"
-					: $"同时也是来自{this.SourceSchool}的交换生。");
-		}
+        /// <summary>
+        /// 介绍；
+        /// </summary>
+        public override void Intro()                                                        
+        {
+            base.Intro();                                                                   
+            Write(this.SourceSchool == null ? "今天刚到福建中医药大学。" : $"同时也是来自{this.SourceSchool}的交换生。");
+        }
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

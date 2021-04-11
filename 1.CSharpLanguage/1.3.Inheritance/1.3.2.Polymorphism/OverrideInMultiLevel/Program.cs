@@ -17,9 +17,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 
 			msYang.Intro();
 			boy.Intro();
-			WriteLine();
 			girl.Intro();
-			WriteLine();
 			newGuy.Intro();
 			Read();
 		}

@@ -9,10 +9,10 @@ namespace SmartLin.LearningCSharp.Inheritance
 			Undergraduate boy = new Undergraduate("3210707000", "张三", Gender.MALE)
 			{
 				Class = "21信管",
-				Instructor = "林立"                                                                      //派生类访问自身的属性；
+				Instructor = "林立"                                                                     //派生类访问自身的属性；
 			};
 			Postgraduate girl = new Postgraduate("2190757001", "李四", Gender.FEMALE);
-			boy.Intro();																				//派生类调用基类的方法；
+			boy.Intro();																				//派生类调用顶层基类的方法；
 			girl.Intro();
 			boy.Register();                                                                             //派生类调用基类的方法；
             girl.Register();

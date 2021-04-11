@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 	{
 		static void Main()
 		{
-			Student boy = new Student()                                             //派生类调用基类的构造函数；
+			Student boy = new Student()                                             
             {
 				Number = "3210707000",												//派生类访问基类的属性；
 				Name = "张三",

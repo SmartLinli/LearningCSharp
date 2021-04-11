@@ -26,23 +26,22 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public sealed override void Register()                                              //重写基类中的虚方法；密封方法不能被重写；
-		{
-			this.Status = "已注册";                                                         //只有在派生类中才能访问基类的受保护成员；
+		public sealed override void Register()                                              //重写基类中的密封虚方法；密封方法不能被重写；
+        {
+			this.Status = "已注册";                                                         
 			WriteLine
 				($"研究生{this.Name}当前学籍为“{this.Status}”");
 		}
-		/// <summary>
-		/// 介绍；
-		/// </summary>
-		public override void Intro()
-		{
-			base.Intro();
-			Write(this.Supervisor == null ?
-					"，是研究生。"
-					: $"，是{ this.Supervisor.Name}老师的研究生。");
-			Write($"研究方向是{this.Direction}。");
-		}
+        /// <summary>
+        /// 介绍；
+        /// </summary>
+        public override void Intro()
+        {
+            base.Intro();
+            Write
+                (this.Supervisor == null ? "，是研究生。" : $"，是{ this.Supervisor.Name}老师的研究生。" +
+                $"研究方向是{this.Direction}。");
+        }
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

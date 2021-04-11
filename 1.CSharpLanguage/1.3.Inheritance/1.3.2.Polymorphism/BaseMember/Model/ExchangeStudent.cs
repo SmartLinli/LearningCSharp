@@ -17,10 +17,8 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()                                                        //重写基类方法；
         {
             base.Intro();                                                                   //调用基类方法；
-			WriteLine(this.SourceSchool == null ?
-						"我还是交换生。"
-						: $"我还是来自{this.SourceSchool}的交换生。");
-		}
+            WriteLine(this.SourceSchool == null ? "我还是交换生。" : $"我还是来自{this.SourceSchool}的交换生。");
+        }
         /// <summary>
         /// 构造函数；
         /// </summary>
