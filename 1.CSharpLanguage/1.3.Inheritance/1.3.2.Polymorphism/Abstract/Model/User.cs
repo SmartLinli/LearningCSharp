@@ -35,7 +35,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 介绍；
 		/// </summary>
-		public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
+		public virtual void Intro()                                                 
         =>	Write($"我叫{this.Name}");
         /// <summary>
         /// 发送短信；

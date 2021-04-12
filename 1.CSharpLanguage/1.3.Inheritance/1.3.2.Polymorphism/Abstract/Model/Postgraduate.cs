@@ -5,8 +5,8 @@ namespace SmartLin.LearningCSharp.Inheritance
 	/// <summary>
 	/// 研究生；
 	/// </summary>
-	public class Postgraduate : Student
-	{
+	public class Postgraduate : Student                                                     //定义派生类，继承抽象类；
+    {
 		/// <summary>
 		/// 导师；
 		/// </summary>
@@ -14,8 +14,8 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public override void Register()                                              
-		{
+		public override void Register()                                                     //重写基类中的抽象方法；
+        {
 			this.Status = "已注册";                                                         
 			WriteLine
 				($"研究生{this.Name}当前学籍为“{this.Status}”");

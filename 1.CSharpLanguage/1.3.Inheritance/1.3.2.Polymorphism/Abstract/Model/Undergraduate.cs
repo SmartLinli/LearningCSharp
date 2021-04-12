@@ -5,7 +5,7 @@ namespace SmartLin.LearningCSharp.Inheritance
     /// <summary>
     /// 本科生；
     /// </summary>
-    public class Undergraduate : Student
+    public class Undergraduate : Student                                                    //定义派生类，继承抽象类；
     {
         /// <summary>
         /// 班级
@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public override void Register()                                                     //重写基类中的抽象方法；
         {
-            this.Status = "在读";															//只有在派生类中才能访问基类的受保护成员；
+            this.Status = "在读";															
             WriteLine
                 ($"本科生{this.Name}当前学籍为“{this.Status}”");
         }

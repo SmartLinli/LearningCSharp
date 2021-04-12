@@ -31,17 +31,17 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 电话；
         /// </summary>
-        public virtual string PhoneNumber { get; set; }                             //定义虚属性；虚属性在派生类中既可继承，亦可被重写；
+        public virtual string PhoneNumber { get; set; }                             
         /// <summary>
         /// 介绍；
         /// </summary>
-        public virtual void Intro()                                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
+        public virtual void Intro()                                                 
         =>	Write($"我叫{this.Name}");
         /// <summary>
         /// 发送短信；
         /// </summary>
         /// <param name="message">消息</param>
-        public virtual void SendSms(string message)                                 //定义虚方法；虚方法在派生类中既可继承，亦可被重写；
+        public virtual void SendSms(string message)                                 
         {
 			if (this.PhoneNumber == null)
 			{

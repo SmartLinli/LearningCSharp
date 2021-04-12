@@ -3,7 +3,7 @@
 	/// <summary>
 	/// 学生；
 	/// </summary>
-	public abstract class Student : User                                //定义抽象类，派生于指定（抽象）类；
+	public abstract class Student : User                                //定义抽象类;抽象类可继承类或抽象类；
     {
         /// <summary>
         /// 学籍；

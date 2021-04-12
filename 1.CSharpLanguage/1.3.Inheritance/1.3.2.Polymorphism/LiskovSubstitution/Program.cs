@@ -20,12 +20,15 @@ namespace SmartLin.LearningCSharp.Inheritance
 			};
 			Postgraduate girl = new Postgraduate("2190757001", "李四", Gender.FEMALE, msYang);
 			girl.AssignDirection("数据可视化");
-			ExchangeStudent newGuy = new ExchangeStudent("20200531001", "王五", Gender.MALE, "20信管", "江西中医药大学");
+            ExchangeStudent newGuy = new ExchangeStudent("20200531001", "王五", Gender.MALE, "20信管", "江西中医药大学")
+            {
+                Instructor = msYang
+            };
 			/*显示；介绍所有用户；批量注册；*/
-			UserUi.Display(boy);																//基类的类型同样适用于派生类；
+			UserUi.Display(boy);																
 			StudentUi.Display(boy);
 			UndergraduateUi.Display(newGuy);
-			UserService.IntroduceAll(new User[] { msYang, boy, girl, newGuy });                 //基类的类型同样适用于派生类；
+			UserService.IntroduceAll(new User[] { msYang, boy, girl, newGuy });                 
 			WriteLine();
             StudentService.RegisterAll(boy, girl, newGuy);
 			Read();
