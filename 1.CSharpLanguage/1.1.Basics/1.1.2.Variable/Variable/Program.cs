@@ -8,9 +8,9 @@ namespace SmartLin.LearningCSharp.Basics                                //声明
         enum Gender                                                     //声明枚举
         {                                                               //枚举实质为用户定义的整数类型；
             FEMALE,														//定义枚举名称；
-            MALE														
+            MALE
         }
-        static void Main()                                              
+        static void Main()
         {                                                               //C#没有内置预定义类型，而是依赖.Net框架提供的通用类型系统（CTS）；
             const string title = "新生信息：";							//使用const声明常量（即使用过程中不会发生变化的变量）；string类型的变量实际为System.String类的实例；
             int number = 32107001;                                      //int类型的变量实际为System.Int32结构的实例；此类类型为值类型；
@@ -21,10 +21,10 @@ namespace SmartLin.LearningCSharp.Basics                                //声明
             decimal weight = 60.5m;                                     //Decimal类型为128位高精度十进制数，但非基本类型；
             bool isRegistered = true;                                   //bool类型的变量实际为System.Boolean结构的实例；
             WriteLine(title);                                           //将对象写入标准输出流；
-            WriteLine(number);                               
+            WriteLine(number);
             WriteLine(name);
             WriteLine(gender);
-            WriteLine(birthDate);                   
+            WriteLine(birthDate);
             WriteLine(height);
             WriteLine(weight);
             WriteLine(isRegistered);
