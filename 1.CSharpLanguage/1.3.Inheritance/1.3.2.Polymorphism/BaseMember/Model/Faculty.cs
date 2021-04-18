@@ -18,7 +18,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 介绍；
 		/// </summary>
-		public override void Intro()                                                        //重写基类中的虚方法；
+		public override void Intro()                                                       
 		{
             WriteLine
                 ($"我是{this.Name.Substring(0, 1)}老师" +

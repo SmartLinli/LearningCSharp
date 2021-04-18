@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public override void Register()                                                     //重写基类中的虚方法；
+		public override void Register()                                                     //基类重写过的抽象方法，还可在派生类中被重写；
 		{
 			this.Status = "交换生";                                                         
 			WriteLine

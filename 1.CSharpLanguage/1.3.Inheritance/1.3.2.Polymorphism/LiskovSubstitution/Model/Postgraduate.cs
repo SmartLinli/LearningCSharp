@@ -26,7 +26,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 注册；
 		/// </summary>
-		public sealed override void Register()                                              //重写基类中的密封虚方法；密封方法不能被重写；
+		public sealed override void Register()                                              //密封方法不能被重写；
         {
 			this.Status = "已注册";                                                         
 			WriteLine

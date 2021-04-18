@@ -8,7 +8,7 @@
 		/// <summary>
 		/// 学籍；
 		/// </summary>
-		public string Status { get; protected set; }					//只有派生类实例才能访问基类的受保护成员；
+		public string Status { get; protected set; }					
         /// <summary>
         /// 构造函数；
         /// </summary>

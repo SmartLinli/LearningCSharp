@@ -23,7 +23,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <param name="gender">性别</param>
 		/// <param name="department">部门</param>
 		public Faculty(string number, string name, string gender, string department)
-			: base(number, name, gender)                                                    //调用本类的构造函数；
+			: base(number, name, gender)                                                    
 		{
 			this.Department = department;
 		}
