@@ -1,7 +1,7 @@
 ﻿namespace SmartLin.LearningCSharp.Inheritance
 {
     /// <summary>
-    /// 导师服务；
+    /// 学生导师服务；
     /// </summary>
     public interface IStudentInstructorService
 	{

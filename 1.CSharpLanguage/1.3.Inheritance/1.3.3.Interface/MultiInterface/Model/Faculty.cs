@@ -21,7 +21,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 评教；
 		/// </summary>
-		/// <param name="faculty">教职工</param>
+		/// <param name="faculty">被评教的教职工</param>
 		public virtual void Evaluate(Faculty faculty)                                       //实现接口中的方法；
         {
 			WriteLine

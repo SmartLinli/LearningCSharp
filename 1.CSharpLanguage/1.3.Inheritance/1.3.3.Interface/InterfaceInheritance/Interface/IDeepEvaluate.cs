@@ -8,12 +8,12 @@
         /// <summary>
         /// 分析；
         /// </summary>
-        /// <param name="faculty">教职工</param>
+        /// <param name="faculty">被评教的教职工</param>
         void Analyse(Faculty faculty);
         /// <summary>
         /// 建议；
         /// </summary>
-        /// <param name="faculty">教职工</param>
+        /// <param name="faculty">被评教的教职工</param>
         void Propose(Faculty faculty);
     }
 }

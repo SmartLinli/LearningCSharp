@@ -3,9 +3,9 @@
 namespace SmartLin.LearningCSharp.Inheritance
 {
     /// <summary>
-    /// 导师按志愿分配；
+    /// 按志愿分配导师；
     /// </summary>
-    public class InstructorAssignBySelection : IStudentInstructorService
+    public class AssignInstructorBySelection : IStudentInstructorService
     {
         /// <summary>
         /// 分配；

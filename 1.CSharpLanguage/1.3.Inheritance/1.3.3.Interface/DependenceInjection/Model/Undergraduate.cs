@@ -18,7 +18,7 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// <summary>
 		/// 导师服务；
 		/// </summary>
-		public IStudentInstructorService InstructorService { private get; set; }              //将派生于指定接口的不同对象赋予（注入）该属性，从而实现不同的行为；
+		public IStudentInstructorService InstructorService { private get; set; }              //将实现了指定接口的不同对象赋予（注入）该属性，从而实现不同的行为；
 		/// <summary>
 		/// 分配导师；
 		/// </summary>

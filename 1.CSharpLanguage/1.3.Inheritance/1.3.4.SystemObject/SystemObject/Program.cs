@@ -6,8 +6,8 @@ namespace SmartLin.LearningCSharp.Inheritance
     {
         static void Main()
         {
-            object boy = new Student("3180707001", "张三", Gender.MALE);
-            WriteLine($"学生姓名：{boy}");                        //隐式调用对象的ToString方法；
+            object boy = new Student("3210707001", "张三");
+            WriteLine($"学生姓名：{boy}");                        //此处WriteLine的参数类型为字符串，首先将隐式调用参数的ToString方法，进而调用学生类重写的ToString方法；
             Read();
         }
     }

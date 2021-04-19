@@ -10,12 +10,12 @@ namespace SmartLin.LearningCSharp.Inheritance
             Faculty msYang = new Faculty("2002010", "杨雪梅");
 			Faculty mrHuang = new Faculty("2011044", "黄至辉");									
             Student girl = new Student("2190757001", "李四");
+            IEvaluate[] audiences = new IEvaluate[] { msYang, mrHuang, girl };          //对象的类型为接口（数组）；
             OpenLesson oop = new OpenLesson()
             {
                 Lecturer = mrLin,
-                Audiences = new IEvaluate[] { msYang, mrHuang, girl }                           //通过接口声明对象类型；
+                Audiences = audiences                           
             };
-
             oop.Evaluate();
             Read();
         }
