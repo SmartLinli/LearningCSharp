@@ -31,7 +31,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <summary>
         /// 电话；
         /// </summary>
-        public virtual string PhoneNumber { get; set; }                             
+        public string PhoneNumber { get; set; }                             
         /// <summary>
         /// 介绍；
         /// </summary>
