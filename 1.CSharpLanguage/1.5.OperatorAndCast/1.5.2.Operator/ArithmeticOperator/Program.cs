@@ -6,20 +6,20 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
     {
         static void Main()
         {
-            Student newStudent = new Student("3180707001", "周林好");
+            Student newStudent = new Student("3200707001", "闭敏媛");
             Student[] newStudents =                                                    
-            {                                                                      
-                new Student("3180707002", "林钦妹")
-                ,new Student("3180707003", "胡方珍")
-                ,new Student("3180707004", "谢永成")
-                ,new Student("3180707005", "龙禹吉")
-            };
-            Class im18 = new Class("18信管");
-            im18 += newStudent;
-            im18 += newStudents;
-            foreach (Student student in im18)
             {
-                WriteLine("{0,-12}{1}", student.Number, student.Name);
+                new Student("3200707002", "储艺"),
+                new Student("3200707003", "胡江彬"),
+                new Student("3200707004", "林金川"),
+                new Student("3200707005", "王泉井")
+            };
+            Class im20 = new Class("20信管");
+            im20 += newStudent;
+            im20 += newStudents;
+            foreach (Student student in im20)
+            {
+                WriteLine($"{student.Number,-12}{student.Name}");
             }
             Read();
         }

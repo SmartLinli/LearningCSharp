@@ -53,15 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs" />
-    <Compile Include="StudentService3.cs" />
-    <Compile Include="StudentUi.cs" />
-    <Compile Include="Major.cs" />
+    <Compile Include="Model\Class.cs" />
+    <Compile Include="Service\StudentService3.cs" />
+    <Compile Include="Service\StudentUi.cs" />
+    <Compile Include="Model\Major.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentService.cs" />
-    <Compile Include="StudentService2.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Service\StudentService.cs" />
+    <Compile Include="Service\StudentService2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

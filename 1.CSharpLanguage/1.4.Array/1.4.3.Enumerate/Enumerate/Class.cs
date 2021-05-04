@@ -10,42 +10,34 @@ namespace SmartLin.LearningCSharp.Array
         /// <summary>
         /// 初始学生数；
         /// </summary>
-        private int _InitialStudentCount = 5;                                       
+        private int _InitialStudentCount = 5;
         /// <summary>
         /// 当前学生数；
         /// </summary>
-        private int _CurrentStudentCount = 0;                                       
+        private int _CurrentStudentCount = 0;
         /// <summary>
         /// 简称；
         /// </summary>
-        public string ShortName
-        {
-            get;
-            set;
-        }
+        public string ShortName { get; set; }
         /// <summary>
         /// 学生；
         /// </summary>
-        public Student[] Students
-        {
-            get;
-            private set;
-        }
+        public Student[] Students { get; private set; }
         /// <summary>
         /// 添加学生；
         /// </summary>
         /// <param name="newStudent">新学生</param>
         public void AddStudent(Student newStudent)
         {
-            if (this._CurrentStudentCount >= this._InitialStudentCount)             
+            if (this._CurrentStudentCount >= this._InitialStudentCount)
             {
-                this._InitialStudentCount *= 2;                                     
-                Student[] newStudents = new Student[this._InitialStudentCount];     
-                this.Students.CopyTo(newStudents, 0);                               
-                this.Students = newStudents;                                        
+                this._InitialStudentCount *= 2;
+                Student[] newStudents = new Student[this._InitialStudentCount];
+                this.Students.CopyTo(newStudents, 0);
+                this.Students = newStudents;
             }
-            this.Students[this._CurrentStudentCount] = newStudent;                  
-            this._CurrentStudentCount++;                                            
+            this.Students[this._CurrentStudentCount] = newStudent;
+            this._CurrentStudentCount++;
         }
         /// <summary>
         /// 添加多名学生；
@@ -62,7 +54,7 @@ namespace SmartLin.LearningCSharp.Array
         /// 获取枚举
         /// </summary>
         /// <returns>枚举</returns>
-        public IEnumerator GetEnumerator()                                          //实现IEnumerable接口的GetEnumerator方法（但类无需继承IEnumerable接口）；
+        public IEnumerator GetEnumerator()                                          //实现IEnumerable接口的GetEnumerator方法（但类无需实现IEnumerable接口）；
         {
             foreach (Student student in this.Students)
             {

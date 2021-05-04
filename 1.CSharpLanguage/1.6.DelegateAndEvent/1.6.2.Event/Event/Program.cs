@@ -6,9 +6,9 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
 	{
 		static void Main()
 		{
-			Student student = new Student("3180707001", "周林好")
+			Student student = new Student("3200707001", "闭敏媛")
 			{
-				PhoneNumber = "15659911355"
+				PhoneNumber = "15699996666"
 			};
 			BookOrderManager bookOrderManager = new BookOrderManager();
 			student.SelectCourseEvent += bookOrderManager.AddBookOrder;                  //为事件注册处理函数；事件不能通过=赋值，必须通过+=注册（订阅）；

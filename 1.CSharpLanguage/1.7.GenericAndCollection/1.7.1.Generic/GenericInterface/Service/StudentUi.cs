@@ -12,8 +12,8 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 		/// </summary>
 		/// <param name="student">学生</param>
 		public void Display(Student student)                                //实现泛型接口中的方法；
-			=> WriteLine
-				("在校生信息：\n"
-				+ $"学号：{student.Number,-15}姓名：{student.Name,-15}性别：{student.Gender}");
+		=>  WriteLine
+				("在校生信息：\n" +
+                $"学号：{student.Number,-15}姓名：{student.Name,-15}性别：{student.Gender}");
 	}
 }

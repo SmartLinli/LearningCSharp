@@ -12,7 +12,7 @@
         /// <returns>是否匹配</returns>
         public delegate bool Match(Student student);                                        //定义委托；
         /// <summary>
-        /// 操作委托；
+        /// 操作；
         /// </summary>
         /// <param name="student">学生</param>
         public delegate void Operation(Student student);                                    //定义委托；
@@ -56,7 +56,7 @@
         {
             foreach (Student student in students)
             {
-                modify(student);                                                                    //调用委托；
+                modify(student);                                                            //调用委托；
             }
             return students;
         }

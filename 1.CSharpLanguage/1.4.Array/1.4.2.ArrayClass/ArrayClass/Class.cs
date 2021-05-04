@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.ArrayClass
     public class Class
     {
         /// <summary>
-        /// 初始学生数；
+        /// 最大学生数；
         /// </summary>
         private int _MaxStudentCount = 5;
         /// <summary>
@@ -56,7 +56,7 @@ namespace SmartLin.LearningCSharp.ArrayClass
         public Class(string shortName)
         {
             this.ShortName = shortName;
-            this.Students = new Student[_MaxStudentCount];
+            this.Students = new Student[this._MaxStudentCount];
             this._CurrentStudentCount = 0;
         }
     }

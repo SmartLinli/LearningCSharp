@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
 		/// </summary>
 		/// <param name="student">学生</param>
 		private static void Display(Student student)
-			=> WriteLine
+		=>  WriteLine
 				($"学号：{student.Number,-15}姓名：{student.Name}\n"
 				+ $"性别：{student.Gender,-14}生日：{student.BirthDate:D}\n"
 				+ $"年龄：{student.Age,-15}手机号：{student.PhoneNumber}");

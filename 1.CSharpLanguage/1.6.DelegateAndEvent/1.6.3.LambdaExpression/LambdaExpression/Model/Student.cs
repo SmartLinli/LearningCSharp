@@ -34,15 +34,15 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
 		/// <summary>
 		/// 年龄；
 		/// </summary>
-		public int Age => DateTime.Now.Year - this.BirthDate.Year;                      //可在属性中直接使用Lambda表达式，实现只读属性；  
+		public int Age => DateTime.Now.Year - this.BirthDate.Year;                      //可在属性中直接使用表达式体，实现只读属性；  
 		private string _PhoneNumber;
 		/// <summary>
 		/// 电话；
 		/// </summary>
 		public string PhoneNumber
 		{
-			get => this._PhoneNumber != null ?                                          //可分别在get、set访问器中使用Lambda表达式；
-					this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4)
+			get => this._PhoneNumber != null ?                                          //可分别在get、set访问器中使用表达式体；
+                    this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4)
 					: null;
 			set => this._PhoneNumber = value;
 		}
@@ -67,6 +67,6 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
 		/// <param name="birthDate">生日</param>
 		public Student(string number, string name, string gender, DateTime birthDate)
 			: this(number, name, gender) 
-			=> this.BirthDate = birthDate;												//可在构造函数中直接使用Lambda表达式
-	}
+			=> this.BirthDate = birthDate;                                              //可在构造函数中直接使用表达式体；
+    }
 }

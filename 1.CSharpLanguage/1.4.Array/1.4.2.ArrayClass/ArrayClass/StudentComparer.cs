@@ -12,8 +12,8 @@ namespace SmartLin.LearningCSharp.ArrayClass
         /// </summary>
         public enum CompareType                                                 //使用枚举表达不同的排序选项；
         {
-            NUMBER
-            , NAME
+            NUMBER,
+            NAME
         }
         /// <summary>
         /// 比较类型

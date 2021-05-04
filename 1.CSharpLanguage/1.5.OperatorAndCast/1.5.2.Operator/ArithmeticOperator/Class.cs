@@ -18,34 +18,26 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <summary>
         /// 简称；
         /// </summary>
-        public string ShortName
-        {
-            get;
-            set;
-        }
+        public string ShortName { get; set; }
         /// <summary>
         /// 学生；
         /// </summary>
-        public Student[] Students
-        {
-            get;
-            private set;
-        }
+        public Student[] Students { get; private set; }
         /// <summary>
         /// 添加学生；
         /// </summary>
         /// <param name="newStudent">新学生</param>
         public void AddStudent(Student newStudent)
         {
-            if (this._CurrentStudentCount >= this._InitialStudentCount)            
+            if (this._CurrentStudentCount >= this._InitialStudentCount)
             {
-                this._InitialStudentCount *= 2;                                    
-                Student[] newStudents = new Student[this._InitialStudentCount];    
-                this.Students.CopyTo(newStudents, 0);                              
-                this.Students = newStudents;                                       
+                this._InitialStudentCount *= 2;
+                Student[] newStudents = new Student[this._InitialStudentCount];
+                this.Students.CopyTo(newStudents, 0);
+                this.Students = newStudents;
             }
-            this.Students[this._CurrentStudentCount] = newStudent;                 
-            this._CurrentStudentCount++;                                           
+            this.Students[this._CurrentStudentCount] = newStudent;
+            this._CurrentStudentCount++;
         }
         /// <summary>
         /// 添加多名学生；
@@ -62,11 +54,11 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// 获取枚举器；
         /// </summary>
         /// <returns>枚举器</returns>
-        public IEnumerator GetEnumerator()                                         
+        public IEnumerator GetEnumerator()
         {
             foreach (Student student in this.Students)
             {
-                yield return student;                                              
+                yield return student;
             }
         }
         /// <summary>

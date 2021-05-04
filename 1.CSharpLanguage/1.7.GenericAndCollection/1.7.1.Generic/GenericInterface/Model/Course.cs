@@ -16,14 +16,14 @@
 		/// <summary>
 		/// 学分；
 		/// </summary>
-		public float Credit { get; private set; }
+		public double Credit { get; private set; }
 		/// <summary>
 		/// 构造函数；
 		/// </summary>
 		/// <param name="number">课程号</param>
 		/// <param name="name">名称</param>
 		/// <param name="credit">；</param>
-		public Course(string number, string name,float credit)
+		public Course(string number, string name,double credit)
         {
             this.Number = number;
             this.Name = name;
