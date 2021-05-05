@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArithmeticOperator", "Arith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexOperator", "IndexOperator\IndexOperator.csproj", "{8BA8D51D-4C49-4BF7-AEBB-1690313FA8AA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.ComparisonOperator", "1.ComparisonOperator", "{23C06124-77F0-4C11-9F67-CF16F8A37991}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ArithmeticOperator", "2.ArithmeticOperator", "{73D0F688-0D9A-4667-80C6-3ECCD5B3656C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.IndexOperator", "3.IndexOperator", "{454711EC-77B2-4064-A764-1E64F7F536FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F9EE884-6E5F-4030-843A-78B3235EC57F} = {23C06124-77F0-4C11-9F67-CF16F8A37991}
+		{6C7E2B09-B4FF-4D7A-B926-F411496CCF03} = {73D0F688-0D9A-4667-80C6-3ECCD5B3656C}
+		{8BA8D51D-4C49-4BF7-AEBB-1690313FA8AA} = {454711EC-77B2-4064-A764-1E64F7F536FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FE1A041-121E-4EE5-ABC6-69683B781956}

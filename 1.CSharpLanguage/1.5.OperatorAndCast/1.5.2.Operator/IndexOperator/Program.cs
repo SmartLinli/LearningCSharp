@@ -18,7 +18,7 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
             im20 += newStudents;
 			/*查找学生*/
 			WriteLine
-				($"查得学生{im20["3200707001"].Name}。");                          //通过索引器获取数组元素；
+				($"查得学生{im20["3200707001"].Name}。");                           //通过索引器获取数组元素；
             /*修改学生*/
             im20["3200707002"].Name = "储艺";                                      //通过索引器获取数组元素，并修改其属性；             
             WriteLine

@@ -20,7 +20,7 @@
         /// <returns>是否相等</returns>
         public override bool Equals(object obj)							//重写基类object的Equals方法；
         {
-            if (obj == null)											//若比较对象为空值，则双方不等；
+            if (obj == null)											//若比较对象为空值，则双方不等；若直接使用==运算符与null比较，将导致栈溢出，而object类的==运算符中已使用is来进行比较，不会溢出；
             {
                 return false;
             }
