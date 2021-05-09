@@ -27,7 +27,7 @@ namespace SmartLin.LearningCSharp.ArrayClass
                 new Student("3200707010", "朱素清"),
                 new Student("3200707011", "何延斌")
             };
-            im20.AddStudents(newStudents);                                              
+            im20.AddStudents(newStudents);
 			/*排序；*/
 			Array.Sort(im20.Students);                                                  //调用Array类的Sort静态方法，对数组进行冒泡排序，该数组还需实现IComparable接口；
             Array.Sort                                                                  //调用Sort方法的另一重载，实现更多排序选项；该方法还需一个实现了IComparer<>的类作为参数，用于实现更多排序选项；
@@ -37,7 +37,7 @@ namespace SmartLin.LearningCSharp.ArrayClass
 			{
                 if (student is null)                                                    //foreach无法跳过空值元素，若不加以判断可能导致异常；
                     continue;
-				WriteLine($"{student.Number,-12}{student.Name}");
+                WriteLine($"{student.Number,-12}{student.Name}");
 			}
 			Read();
 		}
