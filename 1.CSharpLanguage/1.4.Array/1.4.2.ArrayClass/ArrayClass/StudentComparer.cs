@@ -27,6 +27,10 @@ namespace SmartLin.LearningCSharp.ArrayClass
         /// <returns>大小</returns>
         public int Compare(Student student, Student otherStudent)               //实现IComparer<>接口的方法Compare，用于实现更多排序选项；
         {
+            if (otherStudent is null)                                           //该方法不会跳过空值，必须自行处理空值，否则比较时将导致异常；
+            {
+                otherStudent = new Student(string.Empty, string.Empty);
+            }
             switch (this.Type)
             {
                 case CompareType.NUMBER:

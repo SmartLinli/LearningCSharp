@@ -58,6 +58,8 @@ namespace SmartLin.LearningCSharp.Array
         {
             foreach (Student student in this.Students)
             {
+                if (student is null)                                                //foreach无法跳过空值元素，若不加以判断可能导致异常；
+                    continue;
                 yield return student;                                               //yield用于创建枚举器，供foreach语句迭代访问；
             }
         }
