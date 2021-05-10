@@ -38,7 +38,6 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                     results[i] = student;
                     i++;
                 }
-
             }
             return results;
         }

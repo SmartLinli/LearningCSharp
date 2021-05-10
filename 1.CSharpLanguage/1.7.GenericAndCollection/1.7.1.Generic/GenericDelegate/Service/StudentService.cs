@@ -30,7 +30,6 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                     results[i] = student;
                     i++;
                 }
-
             }
             return results;
         }

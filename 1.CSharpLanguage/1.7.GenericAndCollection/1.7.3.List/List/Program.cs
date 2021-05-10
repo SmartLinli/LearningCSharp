@@ -47,14 +47,15 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                     });
             students.Insert                                                                             //在指定位置插入元素；
                 (13, new Student("3200707014", "谢蓝叶", Gender.FEMALE, new DateTime(2002, 7, 10)));
-			/*
+            /*
             students.Remove                                                                             //查找指定元素并删除；
                 (new Student("3200707001", null, 0));                                                   //查找时将调用equals方法进行匹配；若未重写equals方法，将调用object类的equals方法；
             students.RemoveAll                                                                          //查找满足条件的所有元素并删除；
                 (s => s.BirthDate.Value.Year >= 2002);                                                  //条件通过委托指定；
             students.Clear();                                                                           //清除所有元素；
             */
-			students.FindAll                                                                            //查找满足条件的所有元素；
+            WriteLine("查找2002年之前出生的学生：");
+            students.FindAll                                                                            //查找满足条件的所有元素；
 				(s => s.BirthDate.Value.Year < 2002)                                                    //若调用Find方法，则只返回满足条件的第一项元素；
 				.ForEach                                                                                //迭代每个元素；
 				(s => WriteLine                                                                         //并通过委托执行指定的操作；
@@ -62,6 +63,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             string studentNumber = "3200707100";
 			WriteLine																					//满足条件的元素是否存在；
 				($"该班{(students.Exists(s => s.Number == studentNumber) ? "" : "不")}存在学号为{studentNumber}的学生。");
+            WriteLine("排序结果：");
             students.Sort();                                                                            //元素必须实现IComparable接口，方可调用无参的Sort方法；
             students.Sort((s, s2) => s.Name.CompareTo(s2.Name));                                        //通过委托指定排序选项；
             students.Reverse();                                                                         //倒转顺序；

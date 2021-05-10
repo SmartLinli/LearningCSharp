@@ -70,7 +70,6 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                     results[i] = element;
                     i++;
                 }
-
             }
             return new GenericContainer<T>(results);
         }

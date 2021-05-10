@@ -39,7 +39,6 @@
                     results[i] = student;
                     i++;
                 }
-
             }
             return results;
         }
