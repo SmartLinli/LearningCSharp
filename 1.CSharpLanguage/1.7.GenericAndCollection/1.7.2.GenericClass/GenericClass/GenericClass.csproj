@@ -53,14 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericContainer.cs" />
+    <Compile Include="Common\GenericContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmsManager.cs" />
-    <Compile Include="StudentService.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentUi.cs" />
-    <Compile Include="IEntity.cs" />
+    <Compile Include="Service\SmsManager.cs" />
+    <Compile Include="Service\StudentService.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Service\StudentUi.cs" />
+    <Compile Include="Model\IEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

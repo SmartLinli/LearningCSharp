@@ -8,34 +8,34 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         static void Main()
         {
             Student[] students =                                                    
-            {                                                                      
-                new Student("3180707001", "周林好", Gender.FEMALE, new DateTime(2000, 4, 17))
-                , new Student("3180707002", "林钦妹", Gender.FEMALE, new DateTime(1999, 10, 18))
-                , new Student("3180707003", "胡方珍", Gender.FEMALE, new DateTime(2000, 1, 22))
-                , new Student("3180707004", "谢永成", Gender.MALE, new DateTime(2000, 3, 2))
-                , new Student("3180707005", "龙禹吉", Gender.FEMALE, new DateTime(1999, 8, 10))
-                , new Student("3180707006", "陈雯婷", Gender.FEMALE, new DateTime(2000, 8, 24))
-                , new Student("3180707007", "李乐健", Gender.MALE, new DateTime(2000, 7, 10))
-                , new Student("3180707008", "李志杰", Gender.MALE, new DateTime(2001, 1, 14))
-                , new Student("3180707009", "刘燕婷", Gender.FEMALE, new DateTime(2000, 9, 28))
-                , new Student("3180707010", "梁婷", Gender.FEMALE, new DateTime(1999, 6, 12))
+            {
+                new Student("3200707001", "闭敏媛", Gender.FEMALE, new DateTime(2001, 7, 21))
+                , new Student("3200707002", "储艺", Gender.FEMALE, new DateTime(2001, 7, 12))
+                , new Student("3200707003", "胡江彬", Gender.FEMALE, new DateTime(2000, 9, 6))
+                , new Student("3200707004", "林金川", Gender.MALE, new DateTime(2001, 7, 18))
+                , new Student("3200707005", "王泉井", Gender.FEMALE, new DateTime(2000, 10, 12))
+                , new Student("3200707006", "刘伯铭", Gender.FEMALE, new DateTime(2002, 2, 17))
+                , new Student("3200707007", "王子驭", Gender.MALE, new DateTime(2002, 7, 29))
+                , new Student("3200707009", "郑喻文", Gender.MALE, new DateTime(2002, 5, 11))
+                , new Student("3200707010", "朱素清", Gender.FEMALE, new DateTime(2002, 5, 17))
+                , new Student("3200707011", "何延斌", Gender.FEMALE, new DateTime(2002, 12, 17))
             };
-            GenericContainer<Student> im18Students = new GenericContainer<Student>();
-            im18Students.Add(students);
-            im18Students.ForEach(StudentService.Register);
-            foreach (Student student in im18Students)
+            GenericContainer<Student> im20Students = new GenericContainer<Student>();
+            im20Students.Add(students);
+            im20Students.ForEach(StudentService.Register);
+            foreach (Student student in im20Students)
             {
                 SmsManager.Inform(student, "请做好开学准备");
             }
             StudentUi.Display
-                ("查找学号为3180707001的学生"
-                , im18Students["3180707001"]);
+                ("查找学号为3200707001的学生"
+                , im20Students["查找学号为3200707001的学生"]);
             StudentUi.Display
                 ("查找姓李的学生"
-                , im18Students.Find(s => s.Name.Substring(0, 1) == "李"));
+                , im20Students.Find(s => s.Name.Substring(0, 1) == "李"));
             StudentUi.Display
                 ("将所有男生改为女性"
-                , im18Students
+                , im20Students
                     .Find(s => s.Gender == Gender.MALE)
                     .ForEach(s => s.Gender = Gender.FEMALE));
             Read();

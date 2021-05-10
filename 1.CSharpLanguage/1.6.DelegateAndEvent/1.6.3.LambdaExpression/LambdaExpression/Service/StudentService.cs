@@ -34,25 +34,22 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>多名学生</returns>
         public static Student[] FindByName(this Student[] students, string studentName)
         {
-            Student[] tempResults = new Student[students.Length];
-            int tempResultCount = 0;
-            foreach (Student student in students)
+            int resultsCount = 0;
+            foreach (var student in students)
+            {
+                if (student.Name == studentName)
+                    resultsCount++;
+            }
+            Student[] results = new Student[resultsCount];
+            int i = 0;
+            foreach (var student in students)
             {
                 if (student.Name == studentName)
                 {
-                    tempResults[tempResultCount] = student;
-                    tempResultCount++;
+                    results[i] = student;
+                    i++;
                 }
-            }
-            Student[] results = new Student[tempResultCount];
-            int resultsCount = 0;
-            foreach (Student student in tempResults)
-            {
-                if (student != null)
-                {
-                    results[resultsCount] = student;
-                    resultsCount++;
-                }
+
             }
             return results;
         }
@@ -64,25 +61,22 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>多名学生</returns>
         public static Student[] FindByGender(this Student[] students, string gender)
         {
-            Student[] tempResults = new Student[students.Length];
-            int tempResultCount = 0;
-            foreach (Student student in students)
+            int resultsCount = 0;
+            foreach (var student in students)
+            {
+                if (student.Gender == gender)
+                    resultsCount++;
+            }
+            Student[] results = new Student[resultsCount];
+            int i = 0;
+            foreach (var student in students)
             {
                 if (student.Gender == gender)
                 {
-                    tempResults[tempResultCount] = student;
-                    tempResultCount++;
+                    results[i] = student;
+                    i++;
                 }
-            }
-            Student[] results = new Student[tempResultCount];
-            int resultsCount = 0;
-            foreach (Student student in tempResults)
-            {
-                if (student != null)
-                {
-                    results[resultsCount] = student;
-                    resultsCount++;
-                }
+
             }
             return results;
         }
@@ -94,25 +88,22 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>多名学生</returns>
         public static Student[] FindByBirthDateEarlierThan(this Student[] students, DateTime date)
         {
-            Student[] tempResults = new Student[students.Length];
-            int tempResultCount = 0;
-            foreach (Student student in students)
+            int resultsCount = 0;
+            foreach (var student in students)
+            {
+                if (student.BirthDate <= date)
+                    resultsCount++;
+            }
+            Student[] results = new Student[resultsCount];
+            int i = 0;
+            foreach (var student in students)
             {
                 if (student.BirthDate <= date)
                 {
-                    tempResults[tempResultCount] = student;
-                    tempResultCount++;
+                    results[i] = student;
+                    i++;
                 }
-            }
-            Student[] results = new Student[tempResultCount];
-            int resultsCount = 0;
-            foreach (Student student in tempResults)
-            {
-                if (student != null)
-                {
-                    results[resultsCount] = student;
-                    resultsCount++;
-                }
+
             }
             return results;
         }

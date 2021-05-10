@@ -24,25 +24,22 @@
         /// <returns>多名学生</returns>
         public static Student[] Find(this Student[] students, Match match)                  //使用委托作为参数；
         {
-            Student[] tempResults = new Student[students.Length];
-            int tempResultCount = 0;
-            foreach (Student student in students)
-            {
-                if (match(student))                                                         //调用委托；
-                {
-                    tempResults[tempResultCount] = student;
-                    tempResultCount++;
-                }
-            }
-            Student[] results = new Student[tempResultCount];
             int resultsCount = 0;
-            foreach (Student student in tempResults)
+            foreach (var student in students)
             {
-                if (student != null)
-                {
-                    results[resultsCount] = student;
+                if (match(student))
                     resultsCount++;
+            }
+            Student[] results = new Student[resultsCount];
+            int i = 0;
+            foreach (var student in students)
+            {
+                if (match(student))
+                {
+                    results[i] = student;
+                    i++;
                 }
+
             }
             return results;
         }

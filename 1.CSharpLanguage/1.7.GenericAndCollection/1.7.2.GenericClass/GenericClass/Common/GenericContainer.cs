@@ -55,25 +55,22 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <returns>通用容器</returns>
         public GenericContainer<T> Find(Func<T, bool> match)
         {
-            T[] tempResults = new T[this.Elements.Length];
-            int tempResultCount = 0;
-            foreach (T element in this.Elements)
+            int resultsCount = 0;
+            foreach (var element in this.Elements)
+            {
+                if (match(element))
+                    resultsCount++;
+            }
+            T[] results = new T[resultsCount];
+            int i = 0;
+            foreach (var element in this.Elements)
             {
                 if (match(element))
                 {
-                    tempResults[tempResultCount] = element;
-                    tempResultCount++;
+                    results[i] = element;
+                    i++;
                 }
-            }
-            T[] results = new T[tempResultCount];
-            int resultsCount = 0;
-            foreach (T element in tempResults)
-            {
-                if (element != null)
-                {
-                    results[resultsCount] = element;
-                    resultsCount++;
-                }
+
             }
             return new GenericContainer<T>(results);
         }
@@ -98,6 +95,8 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         {
             foreach (T element in this.Elements)
             {
+                if (element == null)
+                    continue;
                 yield return element;
             }
         }

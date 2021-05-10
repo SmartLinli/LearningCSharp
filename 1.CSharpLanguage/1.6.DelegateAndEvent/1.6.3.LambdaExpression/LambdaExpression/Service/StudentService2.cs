@@ -23,25 +23,22 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>多名学生</returns>
         public static Student[] FindBy(this Student[] students, MatchWithValue match, object value)    //使用委托作为参数；
         {
-            Student[] tempResults = new Student[students.Length];
-            int tempResultCount = 0;
-            foreach (Student student in students)
-            {
-                if (match(student, value))                                                             //调用委托；
-                {
-                    tempResults[tempResultCount] = student;
-                    tempResultCount++;
-                }
-            }
-            Student[] results = new Student[tempResultCount];
             int resultsCount = 0;
-            foreach (Student student in tempResults)
+            foreach (var student in students)
             {
-                if (student != null)
-                {
-                    results[resultsCount] = student;
+                if (match(student, value))
                     resultsCount++;
+            }
+            Student[] results = new Student[resultsCount];
+            int i = 0;
+            foreach (var student in students)
+            {
+                if (match(student, value))
+                {
+                    results[i] = student;
+                    i++;
                 }
+
             }
             return results;
         }
@@ -64,8 +61,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>是否满足</returns>
         public static bool FindByGender(Student student, object value)
         {
-            string studentGender = value as string;
-            return student.Gender == studentGender;
+            return student.Gender == (value as string);
         }
         /// <summary>
         /// 生日早于某日作为条件；
@@ -74,9 +70,6 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <param name="value">条件值</param>
         /// <returns>是否满足</returns>
         public static bool FindByBirthDateEarlierThan(Student student, object value)
-        {
-            DateTime studentBirthDate = (DateTime)value;
-            return student.BirthDate <= studentBirthDate;
-        }
+        =>  student.BirthDate <= (DateTime)value;
     }
 }
