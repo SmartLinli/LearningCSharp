@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Button", "Button\Button.csproj", "{74313352-3CD7-411C-A22E-9DE4C9EF8FDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonEnable", "Button\ButtonEnable.csproj", "{74313352-3CD7-411C-A22E-9DE4C9EF8FDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotKey", "HotKey\HotKey.csproj", "{42F187CF-1B0A-48C5-B24E-C84ECCC0058C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ButtonEnable", "2.ButtonEnable", "{34E3C77A-2A41-481B-8052-C4FFD8974261}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.HotKey", "4.HotKey", "{4ED28A5F-F05E-4FA2-B3F5-8A8A404AA2CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonClick", "ButtonClick\ButtonClick.csproj", "{2E1E95D1-33D2-4B20-9429-F962AE02D6AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.ButtonClick", "1.ButtonClick", "{651ACA00-DCEC-4E2A-8592-1E6D6E9B0B19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.MessageBoxButton", "3.MessageBoxButton", "{B6416258-A95B-45E7-805E-CCB287AB46AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxButton", "MessageBoxButton\MessageBoxButton.csproj", "{2673D039-8FCF-4C7C-8690-42372FACF30D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +33,23 @@ Global
 		{42F187CF-1B0A-48C5-B24E-C84ECCC0058C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42F187CF-1B0A-48C5-B24E-C84ECCC0058C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42F187CF-1B0A-48C5-B24E-C84ECCC0058C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1E95D1-33D2-4B20-9429-F962AE02D6AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1E95D1-33D2-4B20-9429-F962AE02D6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1E95D1-33D2-4B20-9429-F962AE02D6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1E95D1-33D2-4B20-9429-F962AE02D6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2673D039-8FCF-4C7C-8690-42372FACF30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2673D039-8FCF-4C7C-8690-42372FACF30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2673D039-8FCF-4C7C-8690-42372FACF30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2673D039-8FCF-4C7C-8690-42372FACF30D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74313352-3CD7-411C-A22E-9DE4C9EF8FDE} = {34E3C77A-2A41-481B-8052-C4FFD8974261}
+		{42F187CF-1B0A-48C5-B24E-C84ECCC0058C} = {4ED28A5F-F05E-4FA2-B3F5-8A8A404AA2CF}
+		{2E1E95D1-33D2-4B20-9429-F962AE02D6AA} = {651ACA00-DCEC-4E2A-8592-1E6D6E9B0B19}
+		{2673D039-8FCF-4C7C-8690-42372FACF30D} = {B6416258-A95B-45E7-805E-CCB287AB46AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {859D5BF3-C8C4-420F-ABD6-DF1A3036A03C}

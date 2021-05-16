@@ -15,6 +15,5 @@ namespace SmartLin.LearningCSharp.FormAndControl
             InitializeComponent();
             MessageBox.Show(string.Format("即将进入{0}。", this.Text));         //消息框派生于Form类；
         }
-
     }
 }

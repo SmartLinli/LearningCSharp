@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Course.cs" />
-    <Compile Include="Model\CourseService.cs" />
+    <Compile Include="Repository\CourseRepository.cs" />
     <Compile Include="Ui\frm_CourseManagement.cs">
       <SubType>Form</SubType>
     </Compile>

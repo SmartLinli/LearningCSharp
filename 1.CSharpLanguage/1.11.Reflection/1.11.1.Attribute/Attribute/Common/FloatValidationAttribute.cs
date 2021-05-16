@@ -10,27 +10,15 @@ namespace SmartLin.LearningCSharp.Reflection
         /// <summary>
         /// 最小值；
         /// </summary>
-        public float MinValue
-        {
-            get;
-            private set;
-        }
+        public float MinValue { get; private set; }
         /// <summary>
         /// 最大值；
         /// </summary>
-        public float MaxValue
-        {
-            get;
-            private set;
-        }
+        public float MaxValue { get; private set; }
         /// <summary>
         /// 描述；
         /// </summary>
-        public string Description
-        {
-            get;
-            set;
-        }
+        public string Description { get; set; }
         /// <summary>
         /// 验证；
         /// </summary>
@@ -42,12 +30,7 @@ namespace SmartLin.LearningCSharp.Reflection
             if (value < this.MinValue || value > this.MaxValue)
             {
                 throw new ApplicationException
-                    (string.Format
-                        ("{0}当前值为{1}，超过范围{2}～{3}"
-                        , this.Description
-                        , value
-                        , this.MinValue
-                        , this.MaxValue));
+                    ($"{this.Description}当前值为{value}，超过范围{this.MinValue}～{this.MaxValue}");
             }
             return true;
         }

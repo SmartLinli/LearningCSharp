@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 课程仓储；

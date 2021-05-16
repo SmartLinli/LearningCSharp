@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 用户服务；
@@ -9,24 +8,20 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <summary>
         /// 用户；
         /// </summary>
-        private static User User
-        {
-            get;
-            set;
-        }
+        private static User User { get; set; }
         /// <summary>
         /// 获取用户；
         /// </summary>
         /// <param name="number">学号/工号</param>
         /// <param name="name">姓名</param>
         /// <returns>用户</returns>
-        public static User GetUser(string number, string name)
+        public static User GetUser(string number)
         {
             if (User == null)
             {
                 User = new User();
                 User.Number = number;
-                User.Name = name;
+                User.Name = "张三";
             }
             return User;
         }

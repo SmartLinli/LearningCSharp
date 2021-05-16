@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
     {
         static void Main()
         {
-            Course oop = new Course("2060316", "面向对象程序设计", 4.5f);
+            Course oop = new Course("2060316", "面向对象程序设计");
             oop.Name = "C#程序设计";
             oop.Name = ".Net程序设计";
             oop.RestoreName();

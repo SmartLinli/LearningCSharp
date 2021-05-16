@@ -10,19 +10,11 @@ namespace SmartLin.LearningCSharp.Reflection
         /// <summary>
         /// 最大长度；
         /// </summary>
-        public int MaxLength
-        {
-            get;
-            private set;
-        }
+        public int MaxLength { get; private set; }
         /// <summary>
         /// 描述；
         /// </summary>
-        public string Description
-        {
-            get;
-            set;
-        }
+        public string Description { get; set; }
         /// <summary>
         /// 验证；
         /// </summary>
@@ -34,11 +26,7 @@ namespace SmartLin.LearningCSharp.Reflection
             if (value.Length > this.MaxLength)
             {
                 throw new ApplicationException
-                    (string.Format
-                        ("{0}当前长度为{1}，超过最大长度{2}"
-                        , this.Description
-                        , value.Length                        
-                        , this.MaxLength));
+                    ($"{this.Description}当前长度为{value.Length}，超过最大长度{this.MaxLength}");
             }
             return true;
         }

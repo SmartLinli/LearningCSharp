@@ -9,21 +9,21 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         static void Main()
         {
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
-            Class im18 = new Class(infomationManagement, 2018);
+            Class im20 = new Class(infomationManagement, 2020);
             Major publicServiceAdministration = new Major("公共事业管理", "公管");
-            Class psa18 = new Class(publicServiceAdministration, 2018);
+            Class psa20 = new Class(publicServiceAdministration, 2020);
             List<Student> studentsList = new List<Student>()                                    //定义泛型列表对象；
-            {                                                                      
-                new Student("3180707001", "周林好", Gender.FEMALE, im18)
-                , new Student("3180707002", "林钦妹", Gender.FEMALE, im18)
-                , new Student("3180707003", "胡方珍", Gender.FEMALE, im18)
-                , new Student("3180707004", "谢永成", Gender.MALE, im18)
-                , new Student("3180707005", "龙禹吉", Gender.FEMALE, im18)
-                , new Student("3180708001", "袁建波", Gender.MALE, psa18)
-                , new Student("3180708002", "欧璐谣", Gender.FEMALE, psa18)
-                , new Student("3180708003", "贲筠斯", Gender.FEMALE, psa18)
-                , new Student("3180708004", "蓝侦衔", Gender.MALE, psa18)
-                , new Student("3180708005", "任紫钰", Gender.FEMALE, psa18)
+            {
+                new Student("3200707001", "闭敏媛", Gender.FEMALE, im20),
+                new Student("3200707002", "储艺", Gender.FEMALE, im20),
+                new Student("3200707003", "胡江彬", Gender.FEMALE, im20),
+                new Student("3200707004", "林金川", Gender.MALE, im20),
+                new Student("3200707005", "王泉井", Gender.FEMALE, im20),
+                new Student("3200708001", "陈静怡", Gender.FEMALE, psa20),
+                new Student("3200708002", "程黄朝", Gender.MALE, psa20),
+                new Student("3200708003", "金国燕", Gender.FEMALE, psa20),
+                new Student("3200708004", "李毅", Gender.FEMALE, psa20),
+                new Student("3200708005", "李成芳", Gender.FEMALE, psa20)
             };
             Lookup<Class, Student> studentsLookupByClass =
                 (Lookup<Class, Student>)studentsList.ToLookup(s => s.Class);                    //Lookup类必须借助ToLookup方法来创建，并在参数中指定键；创建的结果为ILookup接口，还需通过显式类型转换将之转为Lookup类；

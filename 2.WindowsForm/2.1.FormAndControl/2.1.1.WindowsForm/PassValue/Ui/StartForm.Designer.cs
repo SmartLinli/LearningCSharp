@@ -37,10 +37,11 @@
             this.ClientSize = new System.Drawing.Size(320, 240);
             this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = Properties.Resources.YellowSmiley_16px;
+            this.Icon = global::SmartLin.LearningCSharp.FormAndControl.Properties.Resources.YellowSmiley_16px;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "启动窗体";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.ResumeLayout(false);
 
         }

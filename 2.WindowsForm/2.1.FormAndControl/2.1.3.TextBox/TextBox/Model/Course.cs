@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 课程；
@@ -9,41 +8,19 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <summary>
         /// 课程号；
         /// </summary>
-        public string Number
-        {
-            get;
-            set;
-        }
+        public string Number { get; set; }
         /// <summary>
         /// 名称；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 学分；
         /// </summary>
-        public float Credit
-        {
-            get;
-            set;
-        }
+        public float Credit { get; set; }
         /// <summary>
         /// 描述；
         /// </summary>
-        public string Description
-        {
-            get
-            {
-                return string.Format
-                    ("课程编号{0}，名称《{1}》，学分{2}分。"
-                    , this.Number
-                    , this.Name
-                    , this.Credit);
-            }
-        }
+        public string Description => $"课程编号{this.Number}，名称《{this.Name}》，学分{this.Credit}分。";
         /// <summary>
         /// 构造函数；
         /// </summary>

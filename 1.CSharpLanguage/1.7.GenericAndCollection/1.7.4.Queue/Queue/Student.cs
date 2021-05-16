@@ -9,19 +9,11 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <summary>
         /// 学号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>

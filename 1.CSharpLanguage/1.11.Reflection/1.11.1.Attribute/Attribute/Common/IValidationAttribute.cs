@@ -9,11 +9,7 @@ namespace SmartLin.LearningCSharp.Reflection
         /// <summary>
         /// 属性描述；
         /// </summary>
-        string Description
-        {
-            get;
-            set;
-        }
+        string Description { get; set; }
         /// <summary>
         /// 验证
         /// </summary>

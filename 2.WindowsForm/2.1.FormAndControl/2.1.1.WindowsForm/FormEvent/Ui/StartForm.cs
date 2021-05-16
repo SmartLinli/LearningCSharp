@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
     /// <summary>
     /// 启动窗体；
     /// </summary>
-    public partial class StartForm : Form                                       
+    public partial class StartForm : Form
     {
         /// <summary>
         /// 构造函数
@@ -33,9 +33,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e">窗体关闭事件参数</param>
         private void StartForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show
-                (string.Format("{0}即将关闭。", this.Text)
-                , "消息");                                                                 
+            MessageBox.Show($"{this.Text}即将关闭。", "消息");
             MainForm mainForm = new MainForm();                                             //定义主窗体对象；
             mainForm.Show();                                                                //主窗体显示；
         }

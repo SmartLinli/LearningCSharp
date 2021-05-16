@@ -10,20 +10,12 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         /// <summary>
         /// 学号/工号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 密码；
         /// 由大小写字母与数字构成；
         /// </summary>
-        public string Password
-        {
-            get;
-            private set;
-        }
+        public string Password { get; private set; }
         /// <summary>
         /// 加密；
         /// 将明文中每个字符替换为前1个字符；
@@ -36,7 +28,7 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
             for (int i = 'a'; i <= 'z'; i++)                                                //遍历26个小写字母对应的十进制ASCII码；
             {
                 char
-                    oldLowerCaseLetter = (char)i //b                                           //基于ASCII码创建原字母、对应的前1个字母；
+                    oldLowerCaseLetter = (char)i//b                                         //基于ASCII码创建原字母、对应的前1个字母；
                     , newLowerCaseLetter = (char)(i - 1);//a
                 cipherText =
                     cipherText.Replace(oldLowerCaseLetter, newLowerCaseLetter);             //调用string类的Replace方法，将字符串中所有指定字符替换为新字符；

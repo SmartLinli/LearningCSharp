@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Reflection
 {
@@ -7,32 +8,24 @@ namespace SmartLin.LearningCSharp.Reflection
         static void Main()
         {
             User newUser = User.Register
-                ("3180707001"
+                ("3210707001"
                 , "MyPassword7001"
-                , CryptoService.Create("ReverseCrypto"));  
-            Console.WriteLine
-                ("用户{0}注册成功，加密后的密码为：{1}\n"
-                , newUser.Number
-                , newUser.Password);
+                , CryptoService.Create("ReverseCrypto"));
+            WriteLine($"用户{newUser.Number}注册成功，加密后的密码为：{newUser.Password}\n");
 
             User newUser2 = User.Register
-                ("3180707002"
+                ("3210707002"
                 , "MyPassword7002"
                 , CryptoService.Create("LeftShiftCrypto"));
-            Console.WriteLine
-                ("用户{0}注册成功，加密后的密码为：{1}\n"
-                , newUser2.Number
-                , newUser2.Password);
+            WriteLine($"用户{newUser2.Number}注册成功，加密后的密码为：{newUser2.Password}\n");
 
             User newUser3 = User.Register
-                ("3180707003"
+                ("3210707003"
                 , "MyPassword7003"
                 , CryptoService.Create("HexadecimalCrypto"));
-            Console.WriteLine
-                ("用户{0}注册成功，加密后的密码为：{1}\n"
-                , newUser3.Number
-                , newUser3.Password);
-            Console.Read();
+            WriteLine
+                ($"用户{newUser3.Number}注册成功，加密后的密码为：{newUser3.Password}\n");
+            Read();
         }
     }
 }

@@ -6,10 +6,10 @@ namespace SmartLin.LearningCSharp.Linq
     /// <summary>
     /// 性别；
     /// </summary>
-    public enum Gender
+    public class Gender
     {
-        FEMALE = 0,
-        MALE = 1
+        public static readonly string MALE = "男";
+        public static readonly string FEMALE = "女";
     }
     /// <summary>
     /// 学生；
@@ -19,35 +19,19 @@ namespace SmartLin.LearningCSharp.Linq
         /// <summary>
         /// 学号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 性别；
         /// </summary>
-        public Gender Gender
-        {
-            get;
-            set;
-        }
+        public string Gender { get; set; }
         /// <summary>
         /// 生日；
         /// </summary>
-        public DateTime? BirthDate
-        {
-            get;
-            set;
-        }
+        public DateTime? BirthDate { get; set; }
         /// <summary>
         /// 年龄；
         /// </summary>
@@ -68,50 +52,30 @@ namespace SmartLin.LearningCSharp.Linq
         /// <summary>
         /// 身高；
         /// </summary>
-        public float Height
-        {
-            get;
-            set;
-        }
+        public float Height { get; set; }
         /// <summary>
         /// 体重；
         /// </summary>
-        public float Weight
-        {
-            get;
-            set;
-        }
+        public float Weight { get; set; }
         /// <summary>
         /// 班级；
         /// </summary>
-        public Class Class
-        {
-            get;
-            set;
-        }
+        public Class Class { get; set; }
         /// <summary>
         /// 修读课程；
         /// </summary>
-        public List<Course> LearningCourses
-        {
-            get;
-            set;
-        }
+        public List<Course> LearningCourses { get; set; }
         /// <summary>
         /// 导师工号；
         /// </summary>
-        public string InstructorNumber
-        {
-            get;
-            set;
-        }
+        public string InstructorNumber { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Student(string number, string name, Gender gender)
+        public Student(string number, string name, string gender)
         {
             this.Number = number;
             this.Name = name;
@@ -125,7 +89,7 @@ namespace SmartLin.LearningCSharp.Linq
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
         /// <param name="birthDate">生日</param>
-        public Student(string number, string name, Gender gender, DateTime birthDate, Class currentClass)
+        public Student(string number, string name, string gender, DateTime birthDate, Class currentClass)
             : this(number, name, gender)
         {
             this.BirthDate = birthDate;

@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.ErrorAndException
 {
@@ -28,13 +29,13 @@ namespace SmartLin.LearningCSharp.ErrorAndException
         /// <param name="emailAddress">电子邮件地址</param>
         public static void SendEmail(string emailAddress)
         {
-            if (emailAddress == null || emailAddress == "" || emailAddress.Contains("_invalid"))    
+            if (string.IsNullOrEmpty( emailAddress) || emailAddress.Contains("_invalid"))    
             {
                 throw new SendEmailException("邮件地址无效！");                                     //抛出自定义异常，并传递异常消息；                     
             }
             else
             {
-                Console.WriteLine("已发送邮件至{0}。", emailAddress);
+                WriteLine("已发送邮件至{0}。", emailAddress);
             }
         }
     }

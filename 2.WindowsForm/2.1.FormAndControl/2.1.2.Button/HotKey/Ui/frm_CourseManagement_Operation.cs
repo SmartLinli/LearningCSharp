@@ -8,40 +8,25 @@ namespace SmartLin.LearningCSharp.FormAndControl
     public partial class frm_CourseManagement
     {
         /// <summary>
-        /// 刷新课程按钮；
-        /// </summary>
-        private void RefreshCourseButtons()
-        {
-            this.btn_Previous.Enabled = CourseService.HasPrevious;                      //设置按钮是否启用；
-            this.btn_Next.Enabled = CourseService.HasNext;
-            this.btn_CurrentCourse.Text = CourseService.GetCurrentCourse().Name;
-        }
-        /// <summary>
         /// 重置控件；
         /// </summary>
         private void ResetControls()
         {
-            this.btn_Modify.Enabled = true;
+            this.btn_Reset.Enabled = false;
+            this.btn_Modify.Enabled = false;
             this.btn_Submit.Enabled = false;
             this.btn_Abort.Enabled = false;
             this.AcceptButton = this.btn_Modify;
             this.CancelButton = null;
         }
         /// <summary>
-        /// 获取上一门课程；
+        /// 载入课程；
         /// </summary>
-        private void GetPreviousCourse()
+        private void LoadCourse()
         {
-            CourseService.Previous();
-            this.RefreshCourseButtons();
-        }
-        /// <summary>
-        /// 获取下一门课程；
-        /// </summary>
-        private void GetNextCourse()
-        {
-            CourseService.Next();
-            this.RefreshCourseButtons();
+            this.btn_CurrentCourse.Text = CourseRepository.Find("2060316").Name;
+            this.btn_Reset.Enabled = true;
+            this.btn_Modify.Enabled = true;
         }
         /// <summary>
         /// 修改；
@@ -59,13 +44,13 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void Submit()
         {
-            DialogResult messageboxResult =                                                 //定义对话框操作结果，用于接收消息框操作结果；
+            DialogResult messageboxResult =                                              //定义对话框操作结果，用于接收消息框操作结果；
                 MessageBox.Show
                 ("您确定要提交吗？"
                 , "提示"
-                , MessageBoxButtons.YesNo                                                   //消息框按钮；
-                , MessageBoxIcon.Question);                                                 //消息框图标；
-            if (messageboxResult == DialogResult.Yes)                                       //若消息框操作结果为是；
+                , MessageBoxButtons.YesNo                                                //消息框按钮；
+                , MessageBoxIcon.Question);                                              //消息框图标；
+            if (messageboxResult == DialogResult.Yes)                                    //若消息框操作结果为是；
             {
                 MessageBox.Show
                     ("已提交。"
@@ -134,12 +119,12 @@ namespace SmartLin.LearningCSharp.FormAndControl
             {
                 case Keys.Left:
                     {
-                        this.btn_Previous.PerformClick();
+                        this.btn_Reset.PerformClick();
                         return true;                                                    //完成按键处理；
                     }
                 case Keys.Right:
                     {
-                        this.btn_Next.PerformClick();
+                        this.btn_Load.PerformClick();
                         return true;
                     }
             }

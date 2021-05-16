@@ -20,13 +20,7 @@ namespace SmartLin.LearningCSharp.Reflection
         /// 接收器链中的下一个消息接收器；
         /// </summary>
         private IMessageSink _NextSink;
-        public IMessageSink NextSink
-        {
-            get
-            {
-                return this._NextSink;
-            }
-        }
+        public IMessageSink NextSink => this._NextSink;
         /// <summary>
         /// 调用方法前验证；
         /// </summary>

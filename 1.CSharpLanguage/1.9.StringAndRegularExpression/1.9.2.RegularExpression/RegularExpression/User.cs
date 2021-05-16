@@ -56,9 +56,10 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
                     cipherTextBuilder.Replace(oldDigit, newDigit);
             }
             return cipherTextBuilder.ToString();                                            
-        }                                                                                   
+        }
         /// <summary>
         /// 检查学号/工号；
+        /// 学号应为10位数字；工号应为7位数字；
         /// </summary>
         /// <param name="number">学号/工号</param>
         /// <returns>是否有效</returns>
@@ -69,6 +70,7 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         }
         /// <summary>
         /// 检查密码；
+        /// 密码应为6～20位，支持大、小写字母与数字，不能全为大、小写字母或数字；
         /// </summary>
         /// <param name="password">密码</param>
         /// <returns>是否有效</returns>
@@ -79,6 +81,7 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         }
         /// <summary>
         /// 检查邮箱；
+        /// 邮箱格式应为“用户名@域名.后缀”；
         /// </summary>
         /// <param name="email">邮箱</param>
         /// <returns>是否有效</returns>

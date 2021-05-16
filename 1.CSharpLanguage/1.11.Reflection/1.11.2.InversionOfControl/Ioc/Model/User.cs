@@ -10,27 +10,15 @@ namespace SmartLin.LearningCSharp.Reflection
         /// <summary>
         /// 学号/工号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 密码；
         /// </summary>
-        public string Password
-        {
-            get;
-            private set;
-        }
+        public string Password { get; private set; }
         /// <summary>
         /// 加密器；
         /// </summary>
-        public ICrypto Crypto
-        {
-            get;
-            set;
-        }
+        public ICrypto Crypto { get; set; }
         /// <summary>
         /// 注册；
         /// </summary>

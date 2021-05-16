@@ -1,5 +1,6 @@
 ﻿using System;
 using System .Collections.Generic;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Reflection
 {
@@ -19,11 +20,11 @@ namespace SmartLin.LearningCSharp.Reflection
                 try
                 {
                     ValidationService.Validate(course);
-                    Console.WriteLine("课程{0}《{1}》信息正确。\n", course.Number, course.Name);
+                    WriteLine("课程{0}《{1}》信息正确。\n", course.Number, course.Name);
                 }
                 catch (ApplicationException ex)
                 {
-                    Console.WriteLine("错误：课程{0}《{1}》信息有误，{2}。\n", course.Number, course.Name, ex.Message);
+                    WriteLine("错误：课程{0}《{1}》信息有误，{2}。\n", course.Number, course.Name, ex.Message);
                 }
             }
 
@@ -39,14 +40,14 @@ namespace SmartLin.LearningCSharp.Reflection
                 try
                 {
                     ValidationService.Validate(book);
-                    Console.WriteLine("教材{0}《{1}》信息正确。\n", book.Isbn, book.Name);
+                    WriteLine("教材{0}《{1}》信息正确。\n", book.Isbn, book.Name);
                 }
                 catch (ApplicationException ex)
                 {
-                    Console.WriteLine("错误：教材{0}《{1}》信息有误，{2}。\n", book.Isbn, book.Name, ex.Message);
+                    WriteLine("错误：教材{0}《{1}》信息有误，{2}。\n", book.Isbn, book.Name, ex.Message);
                 }
             }
-            Console.Read();
+            Read();
         }
     }
 }

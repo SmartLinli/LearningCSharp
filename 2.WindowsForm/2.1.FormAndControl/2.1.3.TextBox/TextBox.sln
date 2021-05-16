@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBox", "TextBox\TextBox.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAndValidation", "EventAndValidation\EventAndValidation.csproj", "{54F40027-EC9E-4862-BAB0-37DF8655001D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.TextBox", "1.TextBox", "{24FF442B-53CE-4631-B33D-46E590A9C09D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.EventAndValidation", "2.EventAndValidation", "{230F897B-9071-4E11-BA76-8762835A39C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{295004DF-70C4-4D69-93FE-4CF90562DAF2} = {24FF442B-53CE-4631-B33D-46E590A9C09D}
+		{54F40027-EC9E-4862-BAB0-37DF8655001D} = {230F897B-9071-4E11-BA76-8762835A39C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5301C1B2-78EA-45BD-8823-6817C76B4CDF}

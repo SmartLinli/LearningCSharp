@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.Reflection
 {
@@ -9,13 +10,13 @@ namespace SmartLin.LearningCSharp.Reflection
             try
             {
                 Course course = Course.Create("2060316", "面向对象程序设计", 4.5f);
-                Console.WriteLine("课程{0}《{1}》创建成功。", course.Number, course.Name);
+                WriteLine($"课程{course.Number}《{course.Name}》创建成功。");
             }
             catch (ApplicationException ex)
             {
-                Console.WriteLine("错误：{0}。\n课程创建失败。", ex.Message);
+                WriteLine($"错误：{ex.Message}。\n课程创建失败。");
             }
-            Console.Read();
+            Read();
         }
     }
 }

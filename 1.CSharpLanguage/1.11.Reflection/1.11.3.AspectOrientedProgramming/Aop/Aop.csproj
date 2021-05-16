@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ValidationAop.cs" />
-    <Compile Include="Course.cs" />
+    <Compile Include="Model\Course.cs" />
     <Compile Include="Common\IValidationAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

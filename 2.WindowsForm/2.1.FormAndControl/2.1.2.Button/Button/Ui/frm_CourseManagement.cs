@@ -14,53 +14,26 @@ namespace SmartLin.LearningCSharp.FormAndControl
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.RefreshCourseButtons();
-            this.ResetControls();
+            this.btn_Reset.Enabled = false;                                             //设置按钮是否启用；
         }
         /// <summary>
-        /// 点击上一条按钮；
+        /// 点击复位按钮；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Previous_Click(object sender, EventArgs e)
+        private void btn_Reset_Click(object sender, EventArgs e)
         {
-            this.GetPreviousCourse();
+            this.btn_Reset.Enabled = false;                                             
         }
         /// <summary>
-        /// 点击下一条按钮；
+        /// 点击载入按钮；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Next_Click(object sender, EventArgs e)
+        private void btn_Load_Click(object sender, EventArgs e)
         {
-            this.GetNextCourse();
-        }
-        /// <summary>
-        /// 点击修改按钮；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Modify_Click(object sender, EventArgs e)
-        {
-            this.Modify();
-        }
-        /// <summary>
-        /// 点击提交按钮；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Submit_Click(object sender, EventArgs e)
-        {
-            this.Submit();
-        }
-        /// <summary>
-        /// 点击放弃按钮；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Abort_Click(object sender, EventArgs e)
-        {
-            this.Abort();
+            this.btn_CurrentCourse.Text = CourseRepository.Find("2060316").Name;
+            this.btn_Reset.Enabled = true;
         }
     }
 }

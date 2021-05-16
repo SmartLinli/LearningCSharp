@@ -15,26 +15,25 @@ namespace SmartLin.LearningCSharp.FormAndControl
         {
             InitializeComponent();
             this.KeyDown += this.frm_CourseManagement_KeyDown;
-            this.RefreshCourseButtons();
             this.ResetControls();
         }
         /// <summary>
-        /// 点击上一条按钮；
+        /// 点击复位按钮；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Previous_Click(object sender, EventArgs e)
+        private void btn_Reset_Click(object sender, EventArgs e)
         {
-            this.GetPreviousCourse();
+            this.ResetControls();
         }
         /// <summary>
-        /// 点击下一条按钮；
+        /// 点击载入按钮；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Next_Click(object sender, EventArgs e)
+        private void btn_Load_Click(object sender, EventArgs e)
         {
-            this.GetNextCourse();
+            this.LoadCourse();
         }
         /// <summary>
         /// 点击修改按钮；

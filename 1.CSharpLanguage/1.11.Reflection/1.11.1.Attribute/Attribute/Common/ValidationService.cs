@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SmartLin.LearningCSharp.Reflection
+﻿namespace SmartLin.LearningCSharp.Reflection
 {
     /// <summary>
     /// 验证服务；
