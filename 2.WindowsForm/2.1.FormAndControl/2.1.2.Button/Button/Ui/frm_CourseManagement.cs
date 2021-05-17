@@ -23,7 +23,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            this.btn_Reset.Enabled = false;                                             
+            this.btn_Reset.Enabled = false;
+            this.btn_CurrentCourse.Text = "当前课程";
         }
         /// <summary>
         /// 点击载入按钮；

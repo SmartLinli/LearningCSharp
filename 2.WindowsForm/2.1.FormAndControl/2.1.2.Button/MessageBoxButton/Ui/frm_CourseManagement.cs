@@ -25,8 +25,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.btn_Modify.Enabled = false;
             this.btn_Submit.Enabled = false;
             this.btn_Abort.Enabled = false;
-            this.AcceptButton = this.btn_Modify;
-            this.CancelButton = null;
+            this.btn_CurrentCourse.Text = "当前课程";
         }
         /// <summary>
         /// 点击复位按钮；
