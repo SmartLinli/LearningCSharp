@@ -14,37 +14,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.ResetControls();
+            this.ResetValidationResult();
             this.LoadCourse();
-            this.PrepareControls();
+            this.ConfigConttrols();
         }        
-        /// <summary>
-        /// 文本框验证期间；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TextBox_Validating(object sender, EventArgs e)
-        {
-            this.Validate(sender as TextBox);
-        }        
-        /// <summary>
-        /// 课程号文本框按键敲击；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txb_CourseNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            this.ValidateKeyPress(e);
-        }        
-        /// <summary>
-        /// 学分文本框文本更改；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txb_CourseCredit_TextChanged(object sender, EventArgs e)
-        {
-             this.ValidateText(this.txb_CourseCredit);
-        }
         /// <summary>
         /// 提交按钮点击；
         /// </summary>
@@ -61,7 +34,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Abort_Click(object sender, EventArgs e)
         {
-            this.ResetControls();
+            this.ResetValidationResult();
             this.LoadCourse();
         }
     }

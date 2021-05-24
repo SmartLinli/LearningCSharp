@@ -20,17 +20,6 @@
             base.Dispose(disposing);
         }
 
-        /// <summary>
-        /// 准备控件；
-        /// </summary>
-        private void PrepareControls()
-        {
-            this.btn_Abort.CausesValidation = false;                                    //该按钮不引起验证；                         
-            this.txb_CourseNumber.Validating += this.TextBox_Validating;                //订阅文本框验证期间事件；
-            this.txb_CourseName.Validating += this.TextBox_Validating;
-            this.txb_CourseNumber.KeyPress += this.txb_CourseNumber_KeyPress;           //订阅文本框按键敲击事件；
-            this.txb_CourseCredit.TextChanged += this.txb_CourseCredit_TextChanged;     //订阅文本框文本更改事件；
-        }
 
         #region Windows 窗体设计器生成的代码
 
@@ -124,9 +113,7 @@
 
         #endregion
 
-        [ValidationMapping("Course", "Number")]
         private System.Windows.Forms.TextBox txb_CourseNumber;
-        [ValidationMapping("Course", "Name")]
         private System.Windows.Forms.TextBox txb_CourseName;
         private System.Windows.Forms.TextBox txb_CourseCredit;
         private System.Windows.Forms.TextBox txb_CourseDescription;

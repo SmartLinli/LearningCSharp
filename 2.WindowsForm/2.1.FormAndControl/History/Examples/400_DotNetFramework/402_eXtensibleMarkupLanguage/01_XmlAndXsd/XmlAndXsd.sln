@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xml", "Xml", "{68878844-6089-4F87-A330-E61274889278}"
+	ProjectSection(SolutionItems) = preProject
+		Xml\Courses.xml = Xml\Courses.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xsd", "Xsd", "{1B85E9B3-5E5A-450D-9163-1264E743CCD9}"
+	ProjectSection(SolutionItems) = preProject
+		Xsd\Course.xsd = Xsd\Course.xsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26078A08-9163-4CAE-8024-0EFC2AD56D45}
+	EndGlobalSection
+EndGlobal

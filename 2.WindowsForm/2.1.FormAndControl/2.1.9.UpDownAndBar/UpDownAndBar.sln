@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackBar", "TrackBar\TrackB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding", "Binding\Binding.csproj", "{4EF7BC40-55C8-4090-B0EC-3C3EDCC55538}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.NumericUpDown", "1.NumericUpDown", "{D5267BD5-0070-435E-8FE9-DA73209817BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Binding", "3.Binding", "{E5239E3B-DFE1-4ED9-8FFB-7B45BBFE1B8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.TrackBar", "2.TrackBar", "{487E61AF-5D2D-48B9-A761-0E875AE315C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13020ACA-C151-4CF0-90B9-59F104B9ED3B} = {D5267BD5-0070-435E-8FE9-DA73209817BB}
+		{9672B402-E7FC-4672-8733-2306AEFCB272} = {487E61AF-5D2D-48B9-A761-0E875AE315C3}
+		{4EF7BC40-55C8-4090-B0EC-3C3EDCC55538} = {E5239E3B-DFE1-4ED9-8FFB-7B45BBFE1B8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4518D96-06E4-4C8D-8F90-E8DF2C006237}

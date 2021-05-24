@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void LoadCourse()
         {
-            this._Course = CourseRepository.Get();
+            this._Course = CourseRepository.Find("2060316");
             this.txb_CourseNumber.Text = this._Course.Number;                       //写入文本框文本；
             this.txb_CourseName.Text = this._Course.Name;
             this.txb_CourseCredit.Text = this._Course.Credit.ToString();

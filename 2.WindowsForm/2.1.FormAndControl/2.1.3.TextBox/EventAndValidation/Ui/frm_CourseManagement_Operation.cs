@@ -13,9 +13,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private Course _Course;
         /// <summary>
-        /// 重置控件；
+        /// 重置验证结果；
         /// </summary>
-        private void ResetControls()
+        private void ResetValidationResult()
         {
             this.txb_CourseNumber.Tag = true;                                           //将验证结果写入文本框的标签；标签可接受object类型的对象；
             this.txb_CourseName.Tag = true;
@@ -27,27 +27,46 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void LoadCourse()
         {
-            this._Course = CourseRepository.Get();
+            this._Course = CourseRepository.Find("2060316");
             this.txb_CourseNumber.Text = this._Course.Number;                           //写入文本框文本；
             this.txb_CourseName.Text = this._Course.Name;
             this.txb_CourseCredit.Text = this._Course.Credit.ToString();
             this.txb_CourseDescription.Text = this._Course.Description;
         }
         /// <summary>
-        /// 验证；
+        /// 配置控件；
         /// </summary>
-        /// <param name="textBox">文本框</param>
-        private void Validate(TextBox textBox) 
+        private void ConfigConttrols()
         {
-            try
+            this.btn_Abort.CausesValidation = false;                                    //该按钮不引起验证；    
+            this.txb_CourseNumber.AccessibleName = "课程号";                            //设置控件名称；可用于存放描述；
+            this.txb_CourseNumber.AccessibleDescription = "7";                          //设置控件说明；可用于存放最大字符串长度；
+            this.txb_CourseNumber.KeyPress += this.ValidateInt;                         //订阅文本框按键敲击事件；
+            this.txb_CourseNumber.Validating += this.ValidateTextBoxStringLength;       //订阅文本框验证期间事件；
+            this.txb_CourseName.AccessibleName = "课程名称";
+            this.txb_CourseName.AccessibleDescription = "10";
+            this.txb_CourseName.Validating += this.ValidateTextBoxStringLength;
+            this.txb_CourseCredit.TextChanged += this.ValidateFloat;                    //订阅文本框文本更改事件；
+        }
+        /// <summary>
+        /// 验证文本框字符串长度；
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ValidateTextBoxStringLength(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            string textBoxName = textBox.AccessibleName;
+            int currentLength = textBox.Text.Length;
+            int maxLength = int.Parse(textBox.AccessibleDescription);
+            if (textBox.Text.Length <= maxLength)
             {
-                ValidationService.ValidateControl(this, textBox);                       //利用特性实现验证；
                 textBox.Tag = true;                                                     //将验证结果写入文本框的标签；标签可接受object类型的对象；
             }
-            catch (ApplicationException ex)
+            else
             {
                 MessageBox.Show
-                    (ex.Message
+                    ($"{textBoxName}当前长度为{currentLength}，超出最大长度{maxLength}"
                     , "错误"
                     , MessageBoxButtons.OK
                     , MessageBoxIcon.Error);
@@ -58,10 +77,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.AfterValidate();
         }
         /// <summary>
-        /// 验证按键；
+        /// 验证整数；
         /// </summary>
-        /// <param name="e">按键事件参数</param>
-        private void ValidateKeyPress(KeyPressEventArgs e)
+        private void ValidateInt(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)                   //若按键并非数字或退格键；
             {
@@ -69,11 +87,11 @@ namespace SmartLin.LearningCSharp.FormAndControl
             }
         }
         /// <summary>
-        /// 验证文本；
+        /// 验证浮点数；
         /// </summary>
-        /// <param name="textBox">文本框</param>
-        private void ValidateText(TextBox textBox)
+        private void ValidateFloat(object sender, EventArgs e)
         {
+            TextBox textBox = sender as TextBox;
             try
             {
                 float.Parse(textBox.Text);

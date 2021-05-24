@@ -1,0 +1,26 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace SmartLin.LearningCSharp.FormAndControl
+{
+    static class Program
+    {
+        /// <summary>
+        /// 应用程序的主入口点。
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            StartForm startForm = new StartForm();                          //定义启动窗体对象；
+            MainForm main = new MainForm();                                 //定义主窗体对象；
+            MessageBox.Show(string.Format("即将进入{0}。", startForm.Text));
+            startForm.Show();                                               //启动窗体显示；窗体将在新线程中启动；
+            MessageBox.Show(string.Format("即将进入{0}。", main.Text));
+            startForm.Close();                                              //启动窗体关闭；
+            main.Show();                                                    //主窗体显示；
+            Application.Run();                                              //调用Application类的Run静态方法启动应用程序；窗体关闭后，应用程序不会结束，需在最后1个窗体关闭时调用Application类的Exit静态方法才能结束应用程序；
+        }
+    }
+}

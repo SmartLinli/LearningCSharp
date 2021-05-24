@@ -117,12 +117,12 @@ namespace SmartLin.LearningCSharp.FormAndControl
         {
             switch (keyData)                                                            //判断按键；
             {
-                case Keys.Left:
+                case Keys.Back:
                     {
                         this.btn_Reset.PerformClick();
                         return true;                                                    //完成按键处理；
                     }
-                case Keys.Right:
+                case Keys.Space:
                     {
                         this.btn_Load.PerformClick();
                         return true;

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonEnable", "Button\ButtonEnable.csproj", "{74313352-3CD7-411C-A22E-9DE4C9EF8FDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonEnable", "ButtonEnable\ButtonEnable.csproj", "{74313352-3CD7-411C-A22E-9DE4C9EF8FDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotKey", "HotKey\HotKey.csproj", "{42F187CF-1B0A-48C5-B24E-C84ECCC0058C}"
 EndProject

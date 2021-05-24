@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Courses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Course">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Number" type="xs:string" />
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Credit" type="xs:decimal" />
+              <xs:element name="TotalHour" type="xs:unsignedByte" />
+              <xs:element name="TheoreticalHour" type="xs:unsignedByte" />
+              <xs:element name="ExperimentalHour" type="xs:unsignedByte" />
+              <xs:element name="IsAvailable" type="xs:boolean" />
+              <xs:element name="HasExperiment" type="xs:boolean" />
+              <xs:element name="HasMooc" type="xs:boolean" />
+              <xs:element name="FormativeAssessments">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="FormativeAssessment" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Type" type="xs:string" />
+              <xs:element name="LearningType" type="xs:string" />
+              <xs:element name="AppraisalType" type="xs:string" />
+              <xs:element name="AppraisalForm" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
