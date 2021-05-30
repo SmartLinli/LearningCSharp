@@ -37,6 +37,5 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.ResetControls();
             this.LoadCourse();
         }
-
     }
 }

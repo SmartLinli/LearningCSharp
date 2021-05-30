@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBox", "CheckBox\CheckB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckedListBox", "CheckedListBox\CheckedListBox.csproj", "{13020ACA-C151-4CF0-90B9-59F104B9ED3B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.CheckBox", "1.CheckBox", "{AD669A72-273A-4F75-A197-D2782A9FB0C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.CheckedListBox", "2.CheckedListBox", "{C400085C-3011-42BD-8DB6-3FE95D9F83C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54F40027-EC9E-4862-BAB0-37DF8655001D} = {AD669A72-273A-4F75-A197-D2782A9FB0C2}
+		{13020ACA-C151-4CF0-90B9-59F104B9ED3B} = {C400085C-3011-42BD-8DB6-3FE95D9F83C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B140CD5-D27B-4BDA-A130-5612A479F981}

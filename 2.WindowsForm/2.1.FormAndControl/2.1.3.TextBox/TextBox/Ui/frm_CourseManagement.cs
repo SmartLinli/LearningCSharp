@@ -34,6 +34,5 @@ namespace SmartLin.LearningCSharp.FormAndControl
         {
             this.LoadCourse();
         }
-
     }
 }

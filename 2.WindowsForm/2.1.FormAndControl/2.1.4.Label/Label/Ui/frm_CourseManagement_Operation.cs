@@ -36,7 +36,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void LoadCourse()
         {
             this._Course = CourseRepository.Find("2060316");
-            this.txb_CourseNumber.Text = this._Course.Number;                           //写入文本框文本；
+            this.txb_CourseNumber.Text = this._Course.Number;                           
             this.txb_CourseName.Text = this._Course.Name;
             this.txb_CourseCredit.Text = this._Course.Credit.ToString();
             this.txb_CourseDescription.Text = this._Course.Description;
@@ -92,9 +92,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void ValidateInt(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)                   //若按键并非数字或退格键；
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)                   
             {
-                e.Handled = true;                                                       //不接收按键输入的字符；
+                e.Handled = true;                                                       
             }
         }
         /// <summary>

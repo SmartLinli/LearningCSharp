@@ -1,18 +1,11 @@
-﻿
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 课程类型；
     /// </summary>
     public class CourseType
     {
-        /// <summary>
-        /// 公共课；
-        /// </summary>
         public const string PUBLIC = "公共课";
-        /// <summary>
-        /// 专业课；
-        /// </summary>
         public const string PROFESSIONAL = "专业课";
     }
     /// <summary>
@@ -20,25 +13,19 @@ namespace SmartLin.LearningCSharp.FormAndControl
     /// </summary>
     public class CourseLearningType
     {
-        /// <summary>
-        /// 必修课
-        /// </summary>
         public const string COMPULSORY = "必修课";
-        /// <summary>
-        /// 选修课；
-        /// </summary>
         public const string OPTIONAL = "选修课";
-    }    
+    }
     /// <summary>
-    /// 形成性评价
+    /// 课程服务；
     /// </summary>
-    public class FormativeAssessment
+    public class CourseService
     {
         /// <summary>
-        /// 获取形成性评价；
+        /// 获取所有形成性评价；
         /// </summary>
         /// <returns></returns>
-        public static string[] All
+        public static string[] GetAllFormativeAssessment
         {
             get
             {

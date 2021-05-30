@@ -1,16 +1,15 @@
-﻿
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 形成性评价
     /// </summary>
-    public class FormativeAssessment
+    public class CourseService
     {
         /// <summary>
-        /// 获取形成性评价；
+        /// 获取所有形成性评价；
         /// </summary>
         /// <returns></returns>
-        public static string[] All
+        public static string[] GetAllFormativeAssessment
         {
             get
             {
