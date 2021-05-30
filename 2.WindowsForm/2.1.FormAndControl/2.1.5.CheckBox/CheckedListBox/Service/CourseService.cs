@@ -1,7 +1,7 @@
 ﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
-    /// 形成性评价
+    /// 课程服务；
     /// </summary>
     public class CourseService
     {
