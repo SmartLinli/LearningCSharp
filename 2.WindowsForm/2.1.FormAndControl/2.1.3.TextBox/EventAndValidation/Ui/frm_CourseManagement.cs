@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
             InitializeComponent();
             this.ResetValidationResult();
             this.LoadCourse();
-            this.ConfigConttrols();
+            this.ConfigControls();
         }        
         /// <summary>
         /// 提交按钮点击；

@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
             InitializeComponent();
             this.ResetControls();
             this.LoadCourse();
-            this.ConfigConttrols();
+            this.ConfigControls();
         }
         /// <summary>
         /// 必修课单选按钮选中状态更改；

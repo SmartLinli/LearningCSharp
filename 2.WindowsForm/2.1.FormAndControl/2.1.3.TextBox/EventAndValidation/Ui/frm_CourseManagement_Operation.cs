@@ -36,7 +36,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <summary>
         /// 配置控件；
         /// </summary>
-        private void ConfigConttrols()
+        private void ConfigControls()
         {
             this.btn_Abort.CausesValidation = false;                                    //该按钮不引起验证；    
             this.txb_CourseNumber.AccessibleName = "课程号";                            //设置控件名称；可用于存放描述；
