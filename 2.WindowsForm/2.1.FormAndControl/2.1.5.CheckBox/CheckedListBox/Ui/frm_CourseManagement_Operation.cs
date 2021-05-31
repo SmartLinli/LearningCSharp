@@ -136,7 +136,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
                 && (bool)this.txb_CourseCredit.Tag;
         }
         /// <summary>
-        /// 批量添加应选中的项目；
+        /// 向多选列表框批量添加项目，并选中指定的项目；
         /// </summary>
         /// <param name="checkedListBox">多选列表框</param>
         /// <param name="selectedItems">应选中项目</param>
