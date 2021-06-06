@@ -22,21 +22,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             base.Dispose(disposing);
         }
 
-        /// <summary>
-        /// 准备控件；
-        /// </summary>
-        private void PrepareControls()
-        {
-            this.btn_Abort.CausesValidation = false;                                    //该按钮不引起验证；                         
-            this.txb_CourseNumber.Validating += this.TextBox_Validating;                //订阅文本框验证期间事件；
-            this.txb_CourseName.Validating += this.TextBox_Validating;
-            this.txb_CourseNumber.KeyPress += this.txb_CourseNumber_KeyPress;           //订阅文本框按键敲击事件；
-            this.nud_CourseCredit.Increment = 0.5m;
-            ValidationService.SetMaxMinValue<NumericUpDown>(this, nud_CourseCredit);
-            this.tkb_TheoreticalHour.SmallChange = 8;                                   //设置滑动条滚动1段刻度所改变的值；
-            this.tkb_TheoreticalHour.TickFrequency = 8;                                 //设置滑动条刻度数量；
-        }
-
         #region Windows 窗体设计器生成的代码
 
         /// <summary>
@@ -179,9 +164,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             // 
             // tkb_TheoreticalHour
             // 
+            this.tkb_TheoreticalHour.BackColor = System.Drawing.SystemColors.Window;
             this.tkb_TheoreticalHour.Location = new System.Drawing.Point(57, 185);
             this.tkb_TheoreticalHour.Name = "tkb_TheoreticalHour";
-            this.tkb_TheoreticalHour.Size = new System.Drawing.Size(120, 42);
+            this.tkb_TheoreticalHour.Size = new System.Drawing.Size(120, 45);
             this.tkb_TheoreticalHour.TabIndex = 4;
             this.tkb_TheoreticalHour.Scroll += new System.EventHandler(this.tkb_TheoreticalHour_Scroll);
             // 
@@ -403,10 +389,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseNumberError);
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseNameError);
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseCreditError);
-            this.tbp_CourseBasicInfo.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseBasicInfo.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseBasicInfo.Name = "tbp_CourseBasicInfo";
             this.tbp_CourseBasicInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseBasicInfo.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseBasicInfo.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseBasicInfo.TabIndex = 0;
             this.tbp_CourseBasicInfo.Text = "基本信息";
             this.tbp_CourseBasicInfo.UseVisualStyleBackColor = true;
@@ -418,10 +404,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseTeachingElement.Controls.Add(this.ckb_HasMooc);
             this.tbp_CourseTeachingElement.Controls.Add(this.ckb_IsAvailable);
             this.tbp_CourseTeachingElement.Controls.Add(this.lbl_FormativeAssessment);
-            this.tbp_CourseTeachingElement.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseTeachingElement.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseTeachingElement.Name = "tbp_CourseTeachingElement";
             this.tbp_CourseTeachingElement.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseTeachingElement.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseTeachingElement.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseTeachingElement.TabIndex = 1;
             this.tbp_CourseTeachingElement.Text = "教学要素";
             this.tbp_CourseTeachingElement.UseVisualStyleBackColor = true;
@@ -434,10 +420,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseLearningRequirement.Controls.Add(this.gpb_CourseLearningType);
             this.tbp_CourseLearningRequirement.Controls.Add(this.lbl_CourseAppraisalForm);
             this.tbp_CourseLearningRequirement.Controls.Add(this.lbl_CourseAppraisalType);
-            this.tbp_CourseLearningRequirement.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseLearningRequirement.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseLearningRequirement.Name = "tbp_CourseLearningRequirement";
             this.tbp_CourseLearningRequirement.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseLearningRequirement.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseLearningRequirement.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseLearningRequirement.TabIndex = 2;
             this.tbp_CourseLearningRequirement.Text = "学习要求";
             this.tbp_CourseLearningRequirement.UseVisualStyleBackColor = true;
@@ -446,10 +432,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             // 
             this.tbp_CourseDescription.Controls.Add(this.lbl_CourseDescription);
             this.tbp_CourseDescription.Controls.Add(this.txb_CourseDescription);
-            this.tbp_CourseDescription.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseDescription.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseDescription.Name = "tbp_CourseDescription";
             this.tbp_CourseDescription.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseDescription.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseDescription.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseDescription.TabIndex = 3;
             this.tbp_CourseDescription.Text = "描述";
             this.tbp_CourseDescription.UseVisualStyleBackColor = true;
@@ -497,11 +483,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private System.Windows.Forms.Label lbl_CourseNumberError;
         private System.Windows.Forms.Label lbl_CourseNameError;
         private System.Windows.Forms.Label lbl_CourseCreditError;
-        [ValidationMapping("Course", "Number", MessageControlName = "lbl_CourseNumberError")]
         private System.Windows.Forms.TextBox txb_CourseNumber;
-        [ValidationMapping("Course", "Name", MessageControlName = "lbl_CourseNameError")]
         private System.Windows.Forms.TextBox txb_CourseName;
-        [ValidationMapping("Course", "Credit", MessageControlName = "lbl_CourseCreditError")]
         private System.Windows.Forms.NumericUpDown nud_CourseCredit;
         private System.Windows.Forms.TrackBar tkb_TheoreticalHour;
         private System.Windows.Forms.Label lbl_CourseHourDistribution;

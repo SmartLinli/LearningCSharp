@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 课程仓储；
@@ -7,10 +6,11 @@ namespace SmartLin.LearningCSharp.FormAndControl
     public class CourseRepository
     {
         /// <summary>
-        /// 获取；
+        /// 查找；
         /// </summary>
+        /// <param name="number">课程号</param>
         /// <returns>课程</returns>
-        public static Course Get()
+        public static Course Find(string number)
         {
             return
                 new Course("2060316", "面向对象程序设计", 4.5m)
@@ -30,6 +30,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
                     AppraisalType = CourseAppraisalType.EXAMINATION,
                     AppraisalForm = CourseAppraisalType.Examination.COMPUTER,
                 };
-        }        
+        }
     }
 }
