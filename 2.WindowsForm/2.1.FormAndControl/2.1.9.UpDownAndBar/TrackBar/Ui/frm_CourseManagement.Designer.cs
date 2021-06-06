@@ -22,19 +22,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             base.Dispose(disposing);
         }
 
-        /// <summary>
-        /// 准备控件；
-        /// </summary>
-        private void PrepareControls()
-        {
-            this.btn_Abort.CausesValidation = false;                                    //该按钮不引起验证；                         
-            this.txb_CourseNumber.Validating += this.TextBox_Validating;                //订阅文本框验证期间事件；
-            this.txb_CourseName.Validating += this.TextBox_Validating;
-            this.txb_CourseNumber.KeyPress += this.txb_CourseNumber_KeyPress;           //订阅文本框按键敲击事件；
-            this.nud_CourseCredit.Increment = 0.5m;
-            ValidationService.SetMaxMinValue<NumericUpDown>(this, nud_CourseCredit);
-        }
-
         #region Windows 窗体设计器生成的代码
 
         /// <summary>
@@ -497,11 +484,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private System.Windows.Forms.Label lbl_CourseNumberError;
         private System.Windows.Forms.Label lbl_CourseNameError;
         private System.Windows.Forms.Label lbl_CourseCreditError;
-        [ValidationMapping("Course", "Number", MessageControlName = "lbl_CourseNumberError")]
         private System.Windows.Forms.TextBox txb_CourseNumber;
-        [ValidationMapping("Course", "Name", MessageControlName = "lbl_CourseNameError")]
         private System.Windows.Forms.TextBox txb_CourseName;
-        [ValidationMapping("Course", "Credit", MessageControlName = "lbl_CourseCreditError")]
         private System.Windows.Forms.NumericUpDown nud_CourseCredit;
         private System.Windows.Forms.TrackBar tkb_TheoreticalHour;
         private System.Windows.Forms.Label lbl_CourseHourDistribution;

@@ -16,38 +16,18 @@ namespace SmartLin.LearningCSharp.FormAndControl
             InitializeComponent();
             this.ResetControls();
             this.LoadCourse();
-            this.PrepareControls();
-        }
-        /// <summary>
-        /// 文本框验证期间；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TextBox_Validating(object sender, EventArgs e)
-        {
-            this.Validate(sender as TextBox);
-        }
-        /// <summary>
-        /// 课程号文本框按键敲击；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txb_CourseNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            this.ValidateKeyPress(e);
+            this.ConfigControls();
         }
         /// <summary>
         /// 学分数字增减框值更改；
-        /// 该方法低内聚，高耦合；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void nud_CourseCredit_ValueChanged(object sender, EventArgs e)
         {
-            this.Validate(sender as NumericUpDown);
             this._Course.Credit = this.nud_CourseCredit.Value;
-            this.RefreshCourseHourDistribution(this.lbl_CourseHourDistribution);
-            this.RefreshCourseTheoreticalHour(this.tkb_TheoreticalHour);                        
+            this.RefreshCourseHourDistribution();
+            this.RefreshCourseTheoreticalHour();                        
         }
         /// <summary>
         /// 理论课时滑动条滚动；
@@ -57,7 +37,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void tkb_TheoreticalHour_Scroll(object sender, EventArgs e)
         {
             this._Course.TheoreticalHour = this.tkb_TheoreticalHour.Value;
-            this.RefreshCourseHourDistribution(this.lbl_CourseHourDistribution);
+            this.RefreshCourseHourDistribution();
         }
         /// <summary>
         /// 必修课单选按钮选中状态更改；
@@ -85,9 +65,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void lsb_CourseAppraisalType_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.ListBoxLoadSubItems
-                (this.lsb_CourseAppraisalType
-                , this.lsb_CourseAppraisalForm
-                , CourseAppraisalType.GetForms);
+                (this.lsb_CourseAppraisalType,
+                 this.lsb_CourseAppraisalForm,
+                 CourseAppraisalType.GetAllForms);
         }
         /// <summary>
         /// 提交按钮点击；

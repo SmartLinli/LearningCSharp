@@ -116,9 +116,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void ValidateInt(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)                   //若按键并非数字或退格键；
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)                   
             {
-                e.Handled = true;                                                       //不接收按键输入的字符；
+                e.Handled = true;                                                       
             }
         }
         /// <summary>
@@ -147,8 +147,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void AfterValidate()
         {
-            this.btn_Submit.Enabled =                                                   //若所有已验证文本框均已通过验证，则启动提交按钮；
-                (bool)this.txb_CourseNumber.Tag                                         //获取所有已验证文本框的标签，并转为逻辑值；
+            this.btn_Submit.Enabled =                                                   
+                (bool)this.txb_CourseNumber.Tag                                         
                 && (bool)this.txb_CourseName.Tag
                 && (bool)this.txb_CourseCredit.Tag;
         }
