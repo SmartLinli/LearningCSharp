@@ -191,9 +191,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             // 
             // tkb_TheoreticalHour
             // 
+            this.tkb_TheoreticalHour.BackColor = System.Drawing.SystemColors.Window;
             this.tkb_TheoreticalHour.Location = new System.Drawing.Point(57, 185);
             this.tkb_TheoreticalHour.Name = "tkb_TheoreticalHour";
-            this.tkb_TheoreticalHour.Size = new System.Drawing.Size(120, 42);
+            this.tkb_TheoreticalHour.Size = new System.Drawing.Size(120, 45);
             this.tkb_TheoreticalHour.TabIndex = 4;
             this.tkb_TheoreticalHour.Scroll += new System.EventHandler(this.tkb_TheoreticalHour_Scroll);
             // 
@@ -416,10 +417,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseNumberError);
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseNameError);
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseCreditError);
-            this.tbp_CourseBasicInfo.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseBasicInfo.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseBasicInfo.Name = "tbp_CourseBasicInfo";
             this.tbp_CourseBasicInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseBasicInfo.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseBasicInfo.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseBasicInfo.TabIndex = 0;
             this.tbp_CourseBasicInfo.Text = "基本信息";
             this.tbp_CourseBasicInfo.UseVisualStyleBackColor = true;
@@ -431,10 +432,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseTeachingElement.Controls.Add(this.ckb_HasMooc);
             this.tbp_CourseTeachingElement.Controls.Add(this.ckb_IsAvailable);
             this.tbp_CourseTeachingElement.Controls.Add(this.lbl_FormativeAssessment);
-            this.tbp_CourseTeachingElement.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseTeachingElement.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseTeachingElement.Name = "tbp_CourseTeachingElement";
             this.tbp_CourseTeachingElement.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseTeachingElement.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseTeachingElement.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseTeachingElement.TabIndex = 1;
             this.tbp_CourseTeachingElement.Text = "教学要素";
             this.tbp_CourseTeachingElement.UseVisualStyleBackColor = true;
@@ -447,10 +448,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseLearningRequirement.Controls.Add(this.gpb_CourseLearningType);
             this.tbp_CourseLearningRequirement.Controls.Add(this.lbl_CourseAppraisalForm);
             this.tbp_CourseLearningRequirement.Controls.Add(this.lbl_CourseAppraisalType);
-            this.tbp_CourseLearningRequirement.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseLearningRequirement.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseLearningRequirement.Name = "tbp_CourseLearningRequirement";
             this.tbp_CourseLearningRequirement.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseLearningRequirement.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseLearningRequirement.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseLearningRequirement.TabIndex = 2;
             this.tbp_CourseLearningRequirement.Text = "学习要求";
             this.tbp_CourseLearningRequirement.UseVisualStyleBackColor = true;
@@ -459,10 +460,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             // 
             this.tbp_CourseDescription.Controls.Add(this.lbl_CourseDescription);
             this.tbp_CourseDescription.Controls.Add(this.txb_CourseDescription);
-            this.tbp_CourseDescription.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseDescription.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseDescription.Name = "tbp_CourseDescription";
             this.tbp_CourseDescription.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseDescription.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseDescription.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseDescription.TabIndex = 3;
             this.tbp_CourseDescription.Text = "描述";
             this.tbp_CourseDescription.UseVisualStyleBackColor = true;
@@ -473,16 +474,17 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseSyllabus.Controls.Add(this.btn_OpenRtf);
             this.tbp_CourseSyllabus.Controls.Add(this.btn_SaveRtf);
             this.tbp_CourseSyllabus.Controls.Add(this.rtb_CourseSyllabus);
-            this.tbp_CourseSyllabus.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseSyllabus.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseSyllabus.Name = "tbp_CourseSyllabus";
             this.tbp_CourseSyllabus.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseSyllabus.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseSyllabus.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseSyllabus.TabIndex = 4;
             this.tbp_CourseSyllabus.Text = "教学大纲";
             this.tbp_CourseSyllabus.UseVisualStyleBackColor = true;
             // 
             // ts_CourseSyllabus
             // 
+            this.ts_CourseSyllabus.BackColor = System.Drawing.SystemColors.Window;
             this.ts_CourseSyllabus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsb_Bold,
             this.tsb_Italic,
@@ -491,7 +493,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tsb_Font});
             this.ts_CourseSyllabus.Location = new System.Drawing.Point(3, 3);
             this.ts_CourseSyllabus.Name = "ts_CourseSyllabus";
-            this.ts_CourseSyllabus.Paint += this.ToolStrip_Paint;
             this.ts_CourseSyllabus.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.ts_CourseSyllabus.Size = new System.Drawing.Size(278, 25);
             this.ts_CourseSyllabus.TabIndex = 8;
