@@ -9,7 +9,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         static void Main()
         {
-            Application.Run(new frm_Center());                               //创建窗体对象，并由Application类的Run静态方法启动窗体；该窗体关闭后，应用程序亦将结束；
+            Application.Run(new frm_Center());                              
         }
     }
 }

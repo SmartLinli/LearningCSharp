@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SmartLin.LearningCSharp.FormAndControl
+﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
     /// <summary>
     /// 用户仓储；
@@ -9,11 +6,11 @@ namespace SmartLin.LearningCSharp.FormAndControl
     public static class UserRepository
     {
         /// <summary>
-        /// 获取用户；
+        /// 查找用户；
         /// </summary>
         /// <param name="number">学号/工号</param>
         /// <returns>用户</returns>
-        public static User GetUser(string number)
+        public static User Find(string number)
         {
             User user = new User()
             {

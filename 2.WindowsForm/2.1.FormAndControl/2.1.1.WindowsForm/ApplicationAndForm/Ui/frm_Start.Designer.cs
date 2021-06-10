@@ -1,6 +1,6 @@
 ﻿namespace SmartLin.LearningCSharp.FormAndControl
 {
-    partial class StartForm                                                                     //本文件中的代码为自动生成；
+    partial class frm_Start                                                                     //本文件中的代码为自动生成；
     {
         /// <summary>
         /// 必需的设计器变量。
