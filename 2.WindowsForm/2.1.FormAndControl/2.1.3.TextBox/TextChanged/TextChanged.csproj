@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{42F187CF-1B0A-48C5-B24E-C84ECCC0058C}</ProjectGuid>
+    <ProjectGuid>{79E80794-EF53-4B72-9492-8348E912DCEE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SmartLin.LearningCSharp.FormAndControl</RootNamespace>
-    <AssemblyName>HotKey</AssemblyName>
+    <AssemblyName>TextChanged</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -56,14 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Course.cs" />
-    <Compile Include="Repository\CourseRepository.cs" />
     <Compile Include="Ui\frm_CourseManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ui\frm_CourseManagement.Designer.cs">
       <DependentUpon>frm_CourseManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Course.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ui\frm_CourseManagement.resx">
@@ -89,6 +88,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Repository\CourseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Briefcase_16px.ico" />

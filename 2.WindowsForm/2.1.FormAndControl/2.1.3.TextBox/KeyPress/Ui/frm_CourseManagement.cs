@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.ComponentModel;
 
 namespace SmartLin.LearningCSharp.FormAndControl
 {
@@ -19,32 +18,19 @@ namespace SmartLin.LearningCSharp.FormAndControl
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.AcceptButton = this.btn_Submit;
-            this.txb_CourseNumber.Tag = true;                                           //将验证结果写入文本框的标签；标签可接受object类型的对象；
-            this.txb_CourseNumber.Validating += txb_CourseNumber_Validating;
+            this.txb_CourseNumber.KeyPress += txb_CourseNumber_KeyPress; ;              //订阅文本框按键敲击事件；
         }
         /// <summary>
-        /// 课程号文本框验证；
+        /// 在课程号文本框中敲击按键；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txb_CourseNumber_Validating(object sender, CancelEventArgs e)
+        private void txb_CourseNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int currentLength = this.txb_CourseNumber.Text.Length;
-            int maxLength = Course.MaxLengthOfNumber;
-            if (currentLength > maxLength)
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)                   //若按键并非数字或退格键；
             {
-                this.txb_CourseNumber.Tag = false;
-                MessageBox.Show
-                    ($"课程号当前长度为{currentLength}，超出最大长度{maxLength}"
-                    , "错误"
-                    , MessageBoxButtons.OK
-                    , MessageBoxIcon.Error);
-                this.txb_CourseNumber.Focus();
-                this.txb_CourseNumber.SelectAll();
-                return;
+                e.Handled = true;                                                       //不接收按键输入的字符；
             }
-            this.txb_CourseNumber.Tag = true;
         }
         /// <summary>
         /// 载入按钮点击；
@@ -54,7 +40,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void btn_Load_Click(object sender, EventArgs e)
         {
             this._Course = CourseRepository.Find("2060316");
-            this.txb_CourseNumber.Text = this._Course.Number;
+            this.txb_CourseNumber.Text = this._Course.Number;                       
             this.txb_CourseName.Text = this._Course.Name;
             this.txb_CourseCredit.Text = this._Course.Credit.ToString();
             this.txb_CourseDescription.Text = this._Course.Description;
@@ -66,13 +52,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            bool courseNumberIsValid = (bool)this.txb_CourseNumber.Tag;
-            if (!courseNumberIsValid)
-            {
-                MessageBox.Show("请检查课程号格式是否正确！");
-                return;
-            }
-            this._Course.Number = this.txb_CourseNumber.Text;
+            this._Course.Number = this.txb_CourseNumber.Text;                       
             this._Course.Name = this.txb_CourseName.Text;
             this._Course.Credit = float.Parse(this.txb_CourseCredit.Text);
             this.txb_CourseDescription.Text = this._Course.Description;

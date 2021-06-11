@@ -19,9 +19,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.AcceptButton = this.btn_Submit;
-            this.txb_CourseNumber.Tag = true;                                           //将验证结果写入文本框的标签；标签可接受object类型的对象；
-            this.txb_CourseNumber.Validating += txb_CourseNumber_Validating;
+            this.txb_CourseNumber.Validating += txb_CourseNumber_Validating; ;       //订阅文本框验证事件；
         }
         /// <summary>
         /// 课程号文本框验证；
@@ -34,17 +32,14 @@ namespace SmartLin.LearningCSharp.FormAndControl
             int maxLength = Course.MaxLengthOfNumber;
             if (currentLength > maxLength)
             {
-                this.txb_CourseNumber.Tag = false;
                 MessageBox.Show
                     ($"课程号当前长度为{currentLength}，超出最大长度{maxLength}"
                     , "错误"
                     , MessageBoxButtons.OK
                     , MessageBoxIcon.Error);
-                this.txb_CourseNumber.Focus();
-                this.txb_CourseNumber.SelectAll();
-                return;
+                this.txb_CourseNumber.Focus();                                      //文本框获得焦点；
+                this.txb_CourseNumber.SelectAll();                                  //文本框选中所有文本；
             }
-            this.txb_CourseNumber.Tag = true;
         }
         /// <summary>
         /// 载入按钮点击；
@@ -66,12 +61,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            bool courseNumberIsValid = (bool)this.txb_CourseNumber.Tag;
-            if (!courseNumberIsValid)
-            {
-                MessageBox.Show("请检查课程号格式是否正确！");
-                return;
-            }
             this._Course.Number = this.txb_CourseNumber.Text;
             this._Course.Name = this.txb_CourseName.Text;
             this._Course.Credit = float.Parse(this.txb_CourseCredit.Text);

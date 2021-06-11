@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Load = new System.Windows.Forms.Button();
-            this.btn_CurrentCourse = new System.Windows.Forms.Button();
+            this.btn_Submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_Reset
-            // 
-            this.btn_Reset.Location = new System.Drawing.Point(25, 25);
-            this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(75, 25);
-            this.btn_Reset.TabIndex = 0;
-            this.btn_Reset.Text = "复位";
-            this.btn_Reset.UseVisualStyleBackColor = true;
-            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Load
             // 
-            this.btn_Load.Location = new System.Drawing.Point(225, 25);
+            this.btn_Load.Location = new System.Drawing.Point(37, 22);
             this.btn_Load.Name = "btn_Load";
             this.btn_Load.Size = new System.Drawing.Size(75, 25);
             this.btn_Load.TabIndex = 0;
@@ -54,24 +43,24 @@
             this.btn_Load.UseVisualStyleBackColor = true;
             this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
             // 
-            // btn_CurrentCourse
+            // btn_Submit
             // 
-            this.btn_CurrentCourse.Location = new System.Drawing.Point(125, 25);
-            this.btn_CurrentCourse.Name = "btn_CurrentCourse";
-            this.btn_CurrentCourse.Size = new System.Drawing.Size(75, 25);
-            this.btn_CurrentCourse.TabIndex = 0;
-            this.btn_CurrentCourse.TabStop = false;
-            this.btn_CurrentCourse.Text = "当前课程";
-            this.btn_CurrentCourse.UseVisualStyleBackColor = true;
+            this.btn_Submit.Location = new System.Drawing.Point(214, 22);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(75, 25);
+            this.btn_Submit.TabIndex = 1;
+            this.btn_Submit.TabStop = false;
+            this.btn_Submit.Text = "提交";
+            this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click_1);
             // 
             // frm_CourseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 72);
-            this.Controls.Add(this.btn_CurrentCourse);
+            this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.btn_Load);
-            this.Controls.Add(this.btn_Reset);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = global::SmartLin.LearningCSharp.FormAndControl.Properties.Resources.Briefcase_16px;
             this.KeyPreview = true;
@@ -84,10 +73,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.Button btn_Load;
-        private System.Windows.Forms.Button btn_CurrentCourse;
+        private System.Windows.Forms.Button btn_Submit;
     }
 }
 

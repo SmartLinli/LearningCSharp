@@ -22,10 +22,6 @@
         /// </summary>
         public string Description => $"课程编号{this.Number}，名称《{this.Name}》，学分{this.Credit}分。";
         /// <summary>
-        /// 课程号最大长度；
-        /// </summary>
-        public const int MaxLengthOfNumber = 7;
-        /// <summary>
         /// 构造函数；
         /// </summary>
         /// <param name="number">课程号</param>
