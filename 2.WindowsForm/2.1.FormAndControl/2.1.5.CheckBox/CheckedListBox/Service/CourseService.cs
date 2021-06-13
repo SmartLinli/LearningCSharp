@@ -9,7 +9,7 @@
         /// 获取所有形成性评价；
         /// </summary>
         /// <returns></returns>
-        public static string[] GetAllFormativeAssessment
+        public static string[] GetAllFormativeAssessments
         {
             get
             {

@@ -10,10 +10,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
     public partial class frm_CourseManagement
     {
         /// <summary>
-        /// 课程；
-        /// </summary>
-        private Course _Course;
-        /// <summary>
         /// 错误消息标签字典；
         /// </summary>
         private Dictionary<string, Label> _ErrorMessageLabels;
@@ -28,7 +24,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.txb_CourseNumber.Tag = true;
             this.txb_CourseName.Tag = true;
             this.txb_CourseCredit.Tag = true;
-            this.btn_Submit.Enabled = true;
+            this.btn_Load.Enabled = true;
         }
         /// <summary>
         /// 载入课程；
@@ -46,14 +42,14 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.AddRangeWithCheckedItem
                 (this.clb_FormativeAssessment,
                  this._Course.FormativeAssessments,
-                 CourseService.GetAllFormativeAssessment);
+                 CourseService.GetAllFormativeAssessments);
         }
         /// <summary>
         /// 配置控件；
         /// </summary>
         private void ConfigControls()
         {
-            this.btn_Abort.CausesValidation = false;
+            this.btn_Submit.CausesValidation = false;
             this.txb_CourseNumber.AccessibleName = "课程号";
             this.txb_CourseNumber.AccessibleDescription = "7";
             this.txb_CourseNumber.KeyPress += this.ValidateInt;
@@ -130,7 +126,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private void AfterValidate()
         {
-            this.btn_Submit.Enabled =
+            this.btn_Load.Enabled =
                 (bool)this.txb_CourseNumber.Tag
                 && (bool)this.txb_CourseName.Tag
                 && (bool)this.txb_CourseCredit.Tag;

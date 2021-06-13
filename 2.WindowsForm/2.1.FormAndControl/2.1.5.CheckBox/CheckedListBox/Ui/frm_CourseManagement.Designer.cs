@@ -39,8 +39,8 @@
             this.txb_CourseName = new System.Windows.Forms.TextBox();
             this.txb_CourseCredit = new System.Windows.Forms.TextBox();
             this.txb_CourseDescription = new System.Windows.Forms.TextBox();
+            this.btn_Load = new System.Windows.Forms.Button();
             this.btn_Submit = new System.Windows.Forms.Button();
-            this.btn_Abort = new System.Windows.Forms.Button();
             this.ckb_IsAvailable = new System.Windows.Forms.CheckBox();
             this.ckb_HasExperiment = new System.Windows.Forms.CheckBox();
             this.ckb_HasMooc = new System.Windows.Forms.CheckBox();
@@ -142,31 +142,31 @@
             this.txb_CourseDescription.Size = new System.Drawing.Size(195, 69);
             this.txb_CourseDescription.TabIndex = 3;
             // 
+            // btn_Load
+            // 
+            this.btn_Load.Location = new System.Drawing.Point(67, 269);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(75, 23);
+            this.btn_Load.TabIndex = 4;
+            this.btn_Load.Text = "载入";
+            this.btn_Load.UseVisualStyleBackColor = true;
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+            // 
             // btn_Submit
             // 
-            this.btn_Submit.Location = new System.Drawing.Point(67, 269);
+            this.btn_Submit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Submit.Location = new System.Drawing.Point(187, 269);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(75, 23);
-            this.btn_Submit.TabIndex = 4;
+            this.btn_Submit.TabIndex = 5;
             this.btn_Submit.Text = "提交";
             this.btn_Submit.UseVisualStyleBackColor = true;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
-            // btn_Abort
-            // 
-            this.btn_Abort.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Abort.Location = new System.Drawing.Point(187, 269);
-            this.btn_Abort.Name = "btn_Abort";
-            this.btn_Abort.Size = new System.Drawing.Size(75, 23);
-            this.btn_Abort.TabIndex = 5;
-            this.btn_Abort.Text = "放弃";
-            this.btn_Abort.UseVisualStyleBackColor = true;
-            this.btn_Abort.Click += new System.EventHandler(this.btn_Abort_Click);
-            // 
             // ckb_IsAvailable
             // 
             this.ckb_IsAvailable.AutoSize = true;
-            this.ckb_IsAvailable.Location = new System.Drawing.Point(293, 19);
+            this.ckb_IsAvailable.Location = new System.Drawing.Point(293, 16);
             this.ckb_IsAvailable.Name = "ckb_IsAvailable";
             this.ckb_IsAvailable.Size = new System.Drawing.Size(72, 16);
             this.ckb_IsAvailable.TabIndex = 8;
@@ -176,7 +176,7 @@
             // ckb_HasExperiment
             // 
             this.ckb_HasExperiment.AutoSize = true;
-            this.ckb_HasExperiment.Location = new System.Drawing.Point(293, 42);
+            this.ckb_HasExperiment.Location = new System.Drawing.Point(293, 43);
             this.ckb_HasExperiment.Name = "ckb_HasExperiment";
             this.ckb_HasExperiment.Size = new System.Drawing.Size(96, 16);
             this.ckb_HasExperiment.TabIndex = 6;
@@ -186,7 +186,7 @@
             // ckb_HasMooc
             // 
             this.ckb_HasMooc.AutoSize = true;
-            this.ckb_HasMooc.Location = new System.Drawing.Point(293, 65);
+            this.ckb_HasMooc.Location = new System.Drawing.Point(293, 69);
             this.ckb_HasMooc.Name = "ckb_HasMooc";
             this.ckb_HasMooc.Size = new System.Drawing.Size(96, 16);
             this.ckb_HasMooc.TabIndex = 7;
@@ -213,10 +213,10 @@
             // 
             // frm_CourseManagement
             // 
-            this.AcceptButton = this.btn_Submit;
+            this.AcceptButton = this.btn_Load;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_Abort;
+            this.CancelButton = this.btn_Submit;
             this.ClientSize = new System.Drawing.Size(549, 304);
             this.Controls.Add(this.lbl_FormativeAssessment);
             this.Controls.Add(this.clb_FormativeAssessment);
@@ -226,8 +226,8 @@
             this.Controls.Add(this.lbl_CourseCreditError);
             this.Controls.Add(this.lbl_CourseNameError);
             this.Controls.Add(this.lbl_CourseNumberError);
-            this.Controls.Add(this.btn_Abort);
             this.Controls.Add(this.btn_Submit);
+            this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.txb_CourseDescription);
             this.Controls.Add(this.txb_CourseCredit);
             this.Controls.Add(this.txb_CourseName);
@@ -260,8 +260,8 @@
         private System.Windows.Forms.TextBox txb_CourseName;
         private System.Windows.Forms.TextBox txb_CourseCredit;
         private System.Windows.Forms.TextBox txb_CourseDescription;
+        private System.Windows.Forms.Button btn_Load;
         private System.Windows.Forms.Button btn_Submit;
-        private System.Windows.Forms.Button btn_Abort;
         private System.Windows.Forms.CheckBox ckb_IsAvailable;
         private System.Windows.Forms.CheckBox ckb_HasExperiment;
         private System.Windows.Forms.CheckBox ckb_HasMooc;

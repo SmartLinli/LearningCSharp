@@ -39,8 +39,8 @@
             this.txb_CourseName = new System.Windows.Forms.TextBox();
             this.txb_CourseCredit = new System.Windows.Forms.TextBox();
             this.txb_CourseDescription = new System.Windows.Forms.TextBox();
+            this.btn_Load = new System.Windows.Forms.Button();
             this.btn_Submit = new System.Windows.Forms.Button();
-            this.btn_Abort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_CourseNumber
@@ -136,39 +136,37 @@
             this.txb_CourseDescription.Size = new System.Drawing.Size(195, 69);
             this.txb_CourseDescription.TabIndex = 3;
             // 
+            // btn_Load
+            // 
+            this.btn_Load.Location = new System.Drawing.Point(67, 269);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(75, 23);
+            this.btn_Load.TabIndex = 4;
+            this.btn_Load.Text = "载入";
+            this.btn_Load.UseVisualStyleBackColor = true;
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+            // 
             // btn_Submit
             // 
-            this.btn_Submit.Location = new System.Drawing.Point(67, 269);
+            this.btn_Submit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Submit.Location = new System.Drawing.Point(187, 269);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(75, 23);
-            this.btn_Submit.TabIndex = 4;
+            this.btn_Submit.TabIndex = 5;
             this.btn_Submit.Text = "提交";
             this.btn_Submit.UseVisualStyleBackColor = true;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
-            // btn_Abort
-            // 
-            this.btn_Abort.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Abort.Location = new System.Drawing.Point(187, 269);
-            this.btn_Abort.Name = "btn_Abort";
-            this.btn_Abort.Size = new System.Drawing.Size(75, 23);
-            this.btn_Abort.TabIndex = 5;
-            this.btn_Abort.Text = "放弃";
-            this.btn_Abort.UseVisualStyleBackColor = true;
-            this.btn_Abort.Click += new System.EventHandler(this.btn_Abort_Click);
-            // 
             // frm_CourseManagement
             // 
-            this.AcceptButton = this.btn_Submit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_Abort;
             this.ClientSize = new System.Drawing.Size(292, 304);
             this.Controls.Add(this.lbl_CourseCreditError);
             this.Controls.Add(this.lbl_CourseNameError);
             this.Controls.Add(this.lbl_CourseNumberError);
-            this.Controls.Add(this.btn_Abort);
             this.Controls.Add(this.btn_Submit);
+            this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.txb_CourseDescription);
             this.Controls.Add(this.txb_CourseCredit);
             this.Controls.Add(this.txb_CourseName);
@@ -201,8 +199,8 @@
         private System.Windows.Forms.TextBox txb_CourseName;
         private System.Windows.Forms.TextBox txb_CourseCredit;
         private System.Windows.Forms.TextBox txb_CourseDescription;
+        private System.Windows.Forms.Button btn_Load;
         private System.Windows.Forms.Button btn_Submit;
-        private System.Windows.Forms.Button btn_Abort;
 
     }
 }
