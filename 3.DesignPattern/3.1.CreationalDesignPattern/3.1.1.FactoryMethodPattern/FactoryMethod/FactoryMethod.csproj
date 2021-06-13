@@ -53,15 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcmAppointment.cs" />
-    <Compile Include="ExaminationAppointment.cs" />
-    <Compile Include="ExerciseAppointment.cs" />
-    <Compile Include="LaboratoryAppointment.cs" />
-    <Compile Include="AcmAppointmentFactoryMethod.cs" />
+    <Compile Include="Model\AcmAppointment.cs" />
+    <Compile Include="Model\ExaminationAppointment.cs" />
+    <Compile Include="Model\ExerciseAppointment.cs" />
+    <Compile Include="Model\LaboratoryAppointment.cs" />
+    <Compile Include="Service\AcmAppointmentFactoryMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ExerciseAppointmentFactoryMethod.cs" />
-    <Compile Include="ExaminationAppointmentFactoryMethod.cs" />
+    <Compile Include="Service\ExerciseAppointmentFactoryMethod.cs" />
+    <Compile Include="Service\ExaminationAppointmentFactoryMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -14,13 +14,7 @@ namespace SmartLin.LearningCSharp.PrototypePattern
         /// <summary>
         /// 是否存在备份；
         /// </summary>
-        public bool HasBackup
-        {
-            get
-            {
-                return this._Courses.Count > 0;
-            }
-        }
+        public bool HasBackup => this._Courses.Count > 0;
         /// <summary>
         /// 备份
         /// </summary>

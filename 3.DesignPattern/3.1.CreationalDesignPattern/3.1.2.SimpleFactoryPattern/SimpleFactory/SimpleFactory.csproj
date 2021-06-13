@@ -53,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcmAppointment.cs" />
-    <Compile Include="ExaminationAppointment.cs" />
-    <Compile Include="ExerciseAppointment.cs" />
-    <Compile Include="LaboratoryAppointment.cs" />
-    <Compile Include="LaboratoryAppointmentSimpleFactory.cs" />
+    <Compile Include="Model\AcmAppointment.cs" />
+    <Compile Include="Model\ExaminationAppointment.cs" />
+    <Compile Include="Model\ExerciseAppointment.cs" />
+    <Compile Include="Model\LaboratoryAppointment.cs" />
+    <Compile Include="Service\LaboratoryAppointmentSimpleFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

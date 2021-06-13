@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.BuilderPattern
+﻿namespace SmartLin.LearningCSharp.BuilderPattern
 {
     /// <summary>
     /// 课程；
@@ -9,27 +8,15 @@ namespace SmartLin.LearningCSharp.BuilderPattern
         /// <summary>
         /// 课程号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 名称；
         /// </summary>
-        public string Name
-        {
-            get;
-            private set;
-        }
+        public string Name { get; private set; }
         /// <summary>
         /// 学分；
         /// </summary>
-        public float Credit
-        {
-            get;
-            set;
-        }
+        public float Credit { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>

@@ -17,13 +17,13 @@ namespace SmartLin.LearningCSharp.FactoryPattern
             {
                new LaboratoryStaff()
                {
-                   Number="1996012",
-                   Name="李胜旭"
+                   Number = "1996012",
+                   Name = "李胜旭"
                },
                new LaboratoryStaff()
                {
-                   Number="2018121",
-                   Name="黄焯"
+                   Number = "2021013",
+                   Name = "王颖"
                }
             };
             return laboratoryStaffs;

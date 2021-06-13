@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.FactoryPattern
 {
@@ -6,11 +7,19 @@ namespace SmartLin.LearningCSharp.FactoryPattern
     {
         static void Main()
         {
-            /*Exercise：上机练习预约, Examination：上机考试预约, Acm：程序竞赛训练预约*/
-            LaboratoryAppointment appointment = 
-                LaboratoryAppointmentSimpleFactory.Create("Examination");               //定义简单工厂，并创建指定的产品；
+            Write
+                ($"欢迎使用机房预约{Environment.NewLine}" +
+                 $"1、上机练习预约{Environment.NewLine}" +
+                 $"2、上机考试预约{Environment.NewLine}" +
+                 $"3、程序竞赛训练预约{Environment.NewLine}" +
+                  "请输入序号：");
+            string appointmentTypeNumber = ReadLine();
+            LaboratoryAppointment appointment =
+                LaboratoryAppointmentSimpleFactory.Create(appointmentTypeNumber);               //定义简单工厂，并创建指定的产品；
+            if (appointment == null)
+                return;
             appointment.ShowResult();
-            Console.Read();
+            Read();
         }
     }
 }

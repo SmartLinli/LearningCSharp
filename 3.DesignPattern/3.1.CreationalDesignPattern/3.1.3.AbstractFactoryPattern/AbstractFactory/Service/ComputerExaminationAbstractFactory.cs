@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.FactoryPattern
 {
@@ -15,24 +16,25 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         public IExaminationRoom CreateExaminationRoom()
         {
             IExaminationRoom laboratory = null;
-            Console.Write("请输入上机考试人数：");
-            var examineeCount = int.Parse(Console.ReadLine());
+            Write("请输入上机考试人数：");
+            var examineeCount = int.Parse(ReadLine());
             var availableLaboratorys = from l in LaboratoryRepository.GetAll()
                                        where
                                             (l.HasClapboard && l.SeatAmount > examineeCount + 5)
                                             || (!l.HasClapboard && l.SeatAmount > examineeCount * 2 + 10)
                                        orderby l.SeatAmount, l.Number
                                        select l;
-            Console.Write("上机考试可用机房有：");
+            Write("上机考试可用机房有：");
             foreach (var availableLaboratory in availableLaboratorys)
             {
-                Console.Write("{0} ", availableLaboratory.Number);
+                Write($"{availableLaboratory.Number} ");
             }
-            Console.Write("\n请选择机房并输入门牌号：");
-            var laboratoryNumber = Console.ReadLine();
-            laboratory = (from r in availableLaboratorys
-                          where r.Number == laboratoryNumber
-                          select r).FirstOrDefault();
+            Write($"{Environment.NewLine}请选择机房并输入门牌号：");
+            var laboratoryNumber = ReadLine();
+            laboratory = (from l in availableLaboratorys
+                          where l.Number == laboratoryNumber
+                          select l)
+                          .FirstOrDefault();
             return laboratory;
         }
         /// <summary>
@@ -44,16 +46,17 @@ namespace SmartLin.LearningCSharp.FactoryPattern
             IInvigilator laboratoryStaff = null;
             var availableLaboratoryStaffs = from l in LaboratoryStaffRepository.GetAll()
                                             select l;
-            Console.WriteLine("上机考试可选监考人员有：");
+            WriteLine("上机考试可选监考人员有：");
             foreach (var availableLaboratoryStaff in availableLaboratoryStaffs)
             {
-                Console.WriteLine("工号：{0,-10}姓名：{1} ", availableLaboratoryStaff.Number, availableLaboratoryStaff.Name);
+                WriteLine($"工号：{availableLaboratoryStaff.Number,-10}姓名：{availableLaboratoryStaff.Name}；");
             }
-            Console.Write("请选择监考人员并输入工号：");
-            var laboratoryStaffNumber = Console.ReadLine();
+            Write("请选择监考人员并输入工号：");
+            var laboratoryStaffNumber = ReadLine();
             laboratoryStaff = (from l in availableLaboratoryStaffs
                                where l.Number == laboratoryStaffNumber
-                               select l).FirstOrDefault();
+                               select l)
+                               .FirstOrDefault();
             return laboratoryStaff;
         }
     }

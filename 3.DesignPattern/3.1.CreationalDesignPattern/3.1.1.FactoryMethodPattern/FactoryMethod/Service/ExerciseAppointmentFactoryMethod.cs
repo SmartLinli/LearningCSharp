@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.FactoryPattern
 {
@@ -14,12 +15,12 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         public static LaboratoryAppointment Create()
         {
             LaboratoryAppointment appointment = new ExerciseAppointment();
-            Console.Write("预约上机练习：\n请输入预约人学号：");
-            appointment.StudentNumber = Console.ReadLine();
-            Console.Write("请输入预约时间：");
-            appointment.StartTime = Convert.ToDateTime(Console.ReadLine());
-            Console.Write("请输入预约时长（1～3小时）：");
-            var hour = int.Parse(Console.ReadLine());
+            Write($"预约上机练习：{Environment.NewLine}请输入预约人学号：");
+            appointment.StudentNumber = ReadLine();
+            Write("请输入预约时间：");
+            appointment.StartTime = Convert.ToDateTime(ReadLine());
+            Write("请输入预约时长（1～3小时）：");
+            var hour = int.Parse(ReadLine());
             hour = hour > 3 ? 3 : hour;
             hour = hour < 1 ? 1 : hour;
             appointment.Endtime = appointment.StartTime.AddHours(hour);

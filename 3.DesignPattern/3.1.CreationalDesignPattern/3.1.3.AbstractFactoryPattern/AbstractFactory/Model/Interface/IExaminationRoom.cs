@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.FactoryPattern
+﻿namespace SmartLin.LearningCSharp.FactoryPattern
 {
     /// <summary>
     /// 考场；
@@ -9,19 +8,11 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         /// <summary>
         /// 门牌号；
         /// </summary>
-        string Number
-        {
-            get;
-            set;
-        }
+        string Number { get; set; }
         /// <summary>
         /// 座位数；
         /// </summary>
-        int SeatAmount
-        {
-            get;
-            set;
-        }
+        int SeatAmount { get; set; }
         /// <summary>
         /// 显示结果；
         /// </summary>

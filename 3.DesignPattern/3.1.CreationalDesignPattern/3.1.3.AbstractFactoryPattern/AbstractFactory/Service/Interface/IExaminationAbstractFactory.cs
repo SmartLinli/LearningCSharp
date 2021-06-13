@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.FactoryPattern
+﻿namespace SmartLin.LearningCSharp.FactoryPattern
 {
     /// <summary>
     /// 考试抽象工厂；

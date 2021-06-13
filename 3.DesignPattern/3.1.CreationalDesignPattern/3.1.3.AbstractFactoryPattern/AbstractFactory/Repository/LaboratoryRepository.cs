@@ -23,7 +23,7 @@ namespace SmartLin.LearningCSharp.FactoryPattern
                },
                new Laboratory()
                {
-                   Number = "1313B",
+                   Number = "1313C",
                    SeatAmount = 80,
                    HasClapboard = true
                },

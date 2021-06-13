@@ -11,35 +11,19 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         /// <summary>
         /// 预约人学号；
         /// </summary>
-        public string StudentNumber
-        {
-            get;
-            set;
-        }
+        public string StudentNumber { get; set; }
         /// <summary>
         /// 同学学号；
         /// </summary>
-        public List<string> MateStudentNumbers
-        {
-            get;
-            set;
-        }
+        public List<string> MateStudentNumbers { get; set; }
         /// <summary>
         /// 起始时间；
         /// </summary>
-        public DateTime StartTime
-        {
-            get;
-            set;
-        }
+        public DateTime StartTime { get; set; }
         /// <summary>
         /// 结束时间；
         /// </summary>
-        public DateTime Endtime
-        {
-            get;
-            set;
-        }
+        public DateTime Endtime { get; set; }
         /// <summary>
         /// 显示结果；
         /// </summary>

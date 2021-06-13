@@ -17,23 +17,23 @@ namespace SmartLin.LearningCSharp.BuilderPattern
             {
                new Faculty()
                {
-                   Number="2004034",
-                   Name="林立"
+                   Number = "2004034",
+                   Name = "林立"
                },
                new Faculty()
                {
-                   Number="2004034",
-                   Name="陈林"
+                   Number = "2004034",
+                   Name = "陈林"
                },
                new Faculty()
                {
-                   Number="2004013",
-                   Name="林翰"
+                   Number = "2004013",
+                   Name = "林翰"
                },
                new Faculty()
                {
-                   Number="2005003",
-                   Name="陈斯歆"
+                   Number = "2005003",
+                   Name = "陈斯歆"
                }
             };
             return teachers;

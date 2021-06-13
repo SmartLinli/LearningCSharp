@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.PrototypePattern
 {
@@ -14,7 +11,7 @@ namespace SmartLin.LearningCSharp.PrototypePattern
             Course oop = new Course("2060316", "面向对象程序设计", 4.5f);
             oop.Display();
 
-            Console.WriteLine("开始备份：");
+            WriteLine("开始备份：");
             oop = courseManager.Backup(oop);                                                    //通过原型管理器，保存对象的复制品；
             oop.Number += "_2";
             oop.Display();
@@ -27,14 +24,14 @@ namespace SmartLin.LearningCSharp.PrototypePattern
             oop.Credit += 0.5f;
             oop.Display();
 
-            Console.WriteLine("开始还原：");
+            WriteLine("开始还原：");
             while (courseManager.HasBackup)
             {
                 oop = courseManager.Restore();                                                  //从原型管理器获取对象的复制品；
                 oop.Display();
             }         
 
-            Console.Read();
+            Read();
         }
     }
 }

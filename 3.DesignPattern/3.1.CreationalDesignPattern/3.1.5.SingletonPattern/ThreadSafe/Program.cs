@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.SingletonPattern
 {
@@ -12,13 +9,13 @@ namespace SmartLin.LearningCSharp.SingletonPattern
             while (true)
             {
 
-                Console.Write(SequentialNumberService.Instance.GetSequentialNumber());
-                if (Console.ReadLine() == "x")
+                Write(SequentialNumberService.Instance.GetSequentialNumber());
+                if (ReadLine() == "x")
                 {
                     break;
                 }
             }
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

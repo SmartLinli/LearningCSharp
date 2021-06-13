@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.FactoryPattern
 {
@@ -10,25 +11,17 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         /// <summary>
         /// 工号；
         /// </summary>
-        public string Number
-        {
-            get;
-            set;
-        }
+        public string Number { get; set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 显示结果；
         /// </summary>
         public void ShowResult()
         {
-            Console.WriteLine("\n笔试监考人员为：{0}\n", this.Name);
+            WriteLine($"笔试监考人员为：{this.Name}{Environment.NewLine}");
         }
     }
 }

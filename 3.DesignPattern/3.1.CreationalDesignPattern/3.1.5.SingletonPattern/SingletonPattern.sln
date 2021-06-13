@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "Singlet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafe", "ThreadSafe\ThreadSafe.csproj", "{CD5353E8-88D5-46BA-9577-64490C5569CC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.SingletonPattern", "1.SingletonPattern", "{B5A088F1-1156-49AE-A13F-73A34E6DE826}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ThreadSafe", "2.ThreadSafe", "{BCED2253-F376-4766-8ACC-885894452FE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF55DF36-1428-4AB8-84A0-9400AD478097} = {B5A088F1-1156-49AE-A13F-73A34E6DE826}
+		{CD5353E8-88D5-46BA-9577-64490C5569CC} = {BCED2253-F376-4766-8ACC-885894452FE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85245ED6-C358-43DF-B14A-CB9B029A88C0}

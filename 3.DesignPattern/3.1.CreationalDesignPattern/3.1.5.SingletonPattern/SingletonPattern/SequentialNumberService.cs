@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.SingletonPattern
+﻿namespace SmartLin.LearningCSharp.SingletonPattern
 {
     /// <summary>
     /// 流水号服务；

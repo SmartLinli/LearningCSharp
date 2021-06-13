@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.BuilderPattern
+﻿namespace SmartLin.LearningCSharp.BuilderPattern
 {
     /// <summary>
     /// 考试；

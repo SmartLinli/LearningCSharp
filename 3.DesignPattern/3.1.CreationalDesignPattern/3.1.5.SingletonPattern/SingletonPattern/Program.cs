@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.SingletonPattern
 {
@@ -6,16 +7,16 @@ namespace SmartLin.LearningCSharp.SingletonPattern
     {
         static void Main()
         {
-            Console.WriteLine("首次执行：");
+            WriteLine("首次执行：");
             while (true)
             {
-                Console.Write(SequentialNumberService.GetSequentialNumber());
-                if (Console.ReadLine() == "x")
+                Write(SequentialNumberService.GetSequentialNumber());
+                if (ReadLine() == "x")
                 {
                     break;
                 }
             }
-            Console.WriteLine("再次执行：");
+            WriteLine("再次执行：");
             Execute();
         }
         /// <summary>
@@ -25,8 +26,8 @@ namespace SmartLin.LearningCSharp.SingletonPattern
         {
             while (true)
             {
-                Console.Write(SequentialNumberService.GetSequentialNumber());
-                if (Console.ReadLine() == "x")
+                Write(SequentialNumberService.GetSequentialNumber());
+                if (ReadLine() == "x")
                 {
                     break;
                 }

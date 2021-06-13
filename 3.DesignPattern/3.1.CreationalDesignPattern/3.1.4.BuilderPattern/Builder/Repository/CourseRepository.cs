@@ -15,9 +15,9 @@ namespace SmartLin.LearningCSharp.BuilderPattern
         {
             List<Course> courses = new List<Course>()
             {
-                new Course("2060089","英语1",4f)
-                ,new Course("1190012","军事理论",2f)
-                ,new Course("2020136","线性代数",2.5f)
+                new Course("2060089", "英语1", 4f),
+                new Course("1190012", "军事理论", 2f),
+                new Course("2020136", "线性代数", 2.5f)
             };
             return courses;
         }
