@@ -27,9 +27,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void btn_Load_Click(object sender, EventArgs e)
         {
             this._Course = CourseRepository.Find("2060316");
-            this.txb_CourseNumber.Text = this._Course.Number;
-            this.txb_CourseName.Text = this._Course.Name;
-            this.txb_CourseCredit.Text = this._Course.Credit.ToString();
             this.txb_CourseDescription.Text = this._Course.Description;
             this.ckb_IsAvailable.Checked = this._Course.IsAvailable;                    //多选按钮的选中状态与逻辑类型的变量对应；
             this.ckb_HasExperiment.Checked = this._Course.HasExperiment;
@@ -42,9 +39,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            this._Course.Number = this.txb_CourseNumber.Text;
-            this._Course.Name = this.txb_CourseName.Text;
-            this._Course.Credit = float.Parse(this.txb_CourseCredit.Text);
             this._Course.IsAvailable = this.ckb_IsAvailable.Checked;
             this._Course.HasExperiment = this.ckb_HasExperiment.Checked;
             this._Course.HasMooc = this.ckb_HasMooc.Checked;

@@ -73,7 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\DecimalValidationAttribute.cs" />
     <Compile Include="Service\CourseService.cs" />
     <Compile Include="Ui\frm_CourseManagement.cs">
       <SubType>Form</SubType>
@@ -108,13 +107,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Repository\CourseRepository.cs" />
-    <Compile Include="Common\IValidationAttribute.cs" />
-    <Compile Include="Common\StringValidationAttribute.cs" />
-    <Compile Include="Common\ValidationMappingAttribute.cs" />
-    <Compile Include="Common\ValidationService.cs" />
-    <Compile Include="Ui\frm_CourseManagement_Operation.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Briefcase_16px.ico" />

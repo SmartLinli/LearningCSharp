@@ -39,8 +39,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.txb_CourseNumber = new System.Windows.Forms.TextBox();
             this.txb_CourseName = new System.Windows.Forms.TextBox();
             this.nud_CourseCredit = new System.Windows.Forms.NumericUpDown();
+            this.btn_Load = new System.Windows.Forms.Button();
             this.btn_Submit = new System.Windows.Forms.Button();
-            this.btn_Abort = new System.Windows.Forms.Button();
             this.ckb_IsAvailable = new System.Windows.Forms.CheckBox();
             this.ckb_HasExperiment = new System.Windows.Forms.CheckBox();
             this.ckb_HasMooc = new System.Windows.Forms.CheckBox();
@@ -149,26 +149,26 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.nud_CourseCredit.Size = new System.Drawing.Size(120, 21);
             this.nud_CourseCredit.TabIndex = 3;
             // 
+            // btn_Load
+            // 
+            this.btn_Load.Location = new System.Drawing.Point(12, 288);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(75, 23);
+            this.btn_Load.TabIndex = 4;
+            this.btn_Load.Text = "载入";
+            this.btn_Load.UseVisualStyleBackColor = true;
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+            // 
             // btn_Submit
             // 
-            this.btn_Submit.Location = new System.Drawing.Point(12, 288);
+            this.btn_Submit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Submit.Location = new System.Drawing.Point(229, 288);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(75, 23);
-            this.btn_Submit.TabIndex = 4;
+            this.btn_Submit.TabIndex = 5;
             this.btn_Submit.Text = "提交";
             this.btn_Submit.UseVisualStyleBackColor = true;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
-            // 
-            // btn_Abort
-            // 
-            this.btn_Abort.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Abort.Location = new System.Drawing.Point(229, 288);
-            this.btn_Abort.Name = "btn_Abort";
-            this.btn_Abort.Size = new System.Drawing.Size(75, 23);
-            this.btn_Abort.TabIndex = 5;
-            this.btn_Abort.Text = "放弃";
-            this.btn_Abort.UseVisualStyleBackColor = true;
-            this.btn_Abort.Click += new System.EventHandler(this.btn_Abort_Click);
             // 
             // ckb_IsAvailable
             // 
@@ -272,7 +272,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.rdb_IsOptional.TabStop = true;
             this.rdb_IsOptional.Text = "选修课";
             this.rdb_IsOptional.UseVisualStyleBackColor = true;
-            this.rdb_IsOptional.CheckedChanged += new System.EventHandler(this.rdb_IsOptional_CheckedChanged);
             // 
             // rdb_IsCompulsory
             // 
@@ -284,7 +283,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.rdb_IsCompulsory.TabStop = true;
             this.rdb_IsCompulsory.Text = "必修课";
             this.rdb_IsCompulsory.UseVisualStyleBackColor = true;
-            this.rdb_IsCompulsory.CheckedChanged += new System.EventHandler(this.rdb_IsCompulsory_CheckedChanged);
             // 
             // lbl_CourseAppraisalType
             // 
@@ -312,7 +310,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.lsb_CourseAppraisalType.Name = "lsb_CourseAppraisalType";
             this.lsb_CourseAppraisalType.Size = new System.Drawing.Size(80, 112);
             this.lsb_CourseAppraisalType.TabIndex = 15;
-            this.lsb_CourseAppraisalType.SelectedIndexChanged += new System.EventHandler(this.lsb_CourseAppraisalType_SelectedIndexChanged);
             // 
             // lsb_CourseAppraisalForm
             // 
@@ -365,10 +362,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseNumberError);
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseNameError);
             this.tbp_CourseBasicInfo.Controls.Add(this.lbl_CourseCreditError);
-            this.tbp_CourseBasicInfo.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseBasicInfo.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseBasicInfo.Name = "tbp_CourseBasicInfo";
             this.tbp_CourseBasicInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseBasicInfo.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseBasicInfo.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseBasicInfo.TabIndex = 0;
             this.tbp_CourseBasicInfo.Text = "基本信息";
             this.tbp_CourseBasicInfo.UseVisualStyleBackColor = true;
@@ -380,10 +377,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseTeachingElement.Controls.Add(this.ckb_HasMooc);
             this.tbp_CourseTeachingElement.Controls.Add(this.ckb_IsAvailable);
             this.tbp_CourseTeachingElement.Controls.Add(this.lbl_FormativeAssessment);
-            this.tbp_CourseTeachingElement.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseTeachingElement.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseTeachingElement.Name = "tbp_CourseTeachingElement";
             this.tbp_CourseTeachingElement.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseTeachingElement.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseTeachingElement.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseTeachingElement.TabIndex = 1;
             this.tbp_CourseTeachingElement.Text = "教学要素";
             this.tbp_CourseTeachingElement.UseVisualStyleBackColor = true;
@@ -396,10 +393,10 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.tbp_CourseLearningRequirement.Controls.Add(this.gpb_CourseLearningType);
             this.tbp_CourseLearningRequirement.Controls.Add(this.lbl_CourseAppraisalForm);
             this.tbp_CourseLearningRequirement.Controls.Add(this.lbl_CourseAppraisalType);
-            this.tbp_CourseLearningRequirement.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseLearningRequirement.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseLearningRequirement.Name = "tbp_CourseLearningRequirement";
             this.tbp_CourseLearningRequirement.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseLearningRequirement.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseLearningRequirement.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseLearningRequirement.TabIndex = 2;
             this.tbp_CourseLearningRequirement.Text = "学习要求";
             this.tbp_CourseLearningRequirement.UseVisualStyleBackColor = true;
@@ -408,24 +405,24 @@ namespace SmartLin.LearningCSharp.FormAndControl
             // 
             this.tbp_CourseDescription.Controls.Add(this.lbl_CourseDescription);
             this.tbp_CourseDescription.Controls.Add(this.txb_CourseDescription);
-            this.tbp_CourseDescription.Location = new System.Drawing.Point(4, 21);
+            this.tbp_CourseDescription.Location = new System.Drawing.Point(4, 22);
             this.tbp_CourseDescription.Name = "tbp_CourseDescription";
             this.tbp_CourseDescription.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_CourseDescription.Size = new System.Drawing.Size(284, 247);
+            this.tbp_CourseDescription.Size = new System.Drawing.Size(284, 246);
             this.tbp_CourseDescription.TabIndex = 3;
             this.tbp_CourseDescription.Text = "描述";
             this.tbp_CourseDescription.UseVisualStyleBackColor = true;
             // 
             // frm_CourseManagement
             // 
-            this.AcceptButton = this.btn_Submit;
+            this.AcceptButton = this.btn_Load;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_Abort;
+            this.CancelButton = this.btn_Submit;
             this.ClientSize = new System.Drawing.Size(317, 323);
             this.Controls.Add(this.tbc_Course);
-            this.Controls.Add(this.btn_Abort);
             this.Controls.Add(this.btn_Submit);
+            this.Controls.Add(this.btn_Load);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = global::SmartLin.LearningCSharp.FormAndControl.Properties.Resources.Briefcase_16px;
             this.MaximizeBox = false;
@@ -461,8 +458,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private System.Windows.Forms.TextBox txb_CourseNumber;
         private System.Windows.Forms.TextBox txb_CourseName;
         private System.Windows.Forms.NumericUpDown nud_CourseCredit;
+        private System.Windows.Forms.Button btn_Load;
         private System.Windows.Forms.Button btn_Submit;
-        private System.Windows.Forms.Button btn_Abort;
         private System.Windows.Forms.CheckBox ckb_IsAvailable;
         private System.Windows.Forms.CheckBox ckb_HasExperiment;
         private System.Windows.Forms.CheckBox ckb_HasMooc;

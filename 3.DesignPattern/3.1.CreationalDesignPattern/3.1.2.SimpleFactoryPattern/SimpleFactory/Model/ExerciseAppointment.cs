@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         public override void ShowResult()
         {
             WriteLine
-                ($"上机练习预约成功。{Environment.NewLine }" +
+                ($"上机练习预约成功。{Environment.NewLine}" +
                  $"预约人：{this.StudentNumber}，预约时段：{this.StartTime}～{this.Endtime}。");
             Read();
         }

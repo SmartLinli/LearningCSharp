@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Text;
 
 namespace SmartLin.LearningCSharp.FormAndControl
@@ -7,7 +6,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
     /// <summary>
     /// 课程；
     /// </summary>
-    public class Course : INotifyPropertyChanged
+    public class Course
     {
         /// <summary>
         /// 课程号；
@@ -20,37 +19,11 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <summary>
         /// 学分；
         /// </summary>
-        private decimal _Credit;
-        /// <summary>
-        /// 学分；
-        /// </summary>
-        public decimal Credit
-        {
-            get => this._Credit;
-            set
-            {
-                this._Credit = value;
-                this.TheoreticalHour = this._TheoreticalHour;
-                this.OnPropertyChanged("TotalHour");
-            }
-        }
-        private int _TheoreticalHour;
+        public decimal Credit { get; set; }
         /// <summary>
         /// 理论课时；
         /// </summary>
-        public int TheoreticalHour
-        {
-            get => this._TheoreticalHour;
-            set
-            {
-                this._TheoreticalHour = (value > this.TotalHour ? this.TotalHour : value);
-                this.OnPropertyChanged("CourseHourDistribution");
-            }
-        }
-        /// <summary>
-        /// 实验课时；
-        /// </summary>
-        public int ExperimentalHour => this.TotalHour - this._TheoreticalHour;
+        public int TheoreticalHour { get; set; }
         /// <summary>
         /// 总课时；
         /// </summary>
@@ -59,7 +32,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// 课时分配；
         /// </summary>
         public string CourseHourDistribution =>
-            $"课时分配：理论课{this.TheoreticalHour}节，实验课{this.ExperimentalHour}节，共{this.TotalHour}节。";
+            $"总课时{this.TotalHour}节，其中理论课{this.TheoreticalHour}节。";
         /// <summary>
         /// 是否启用；
         /// </summary>
@@ -102,7 +75,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.AppendFormat
                     ($"课程编号{this.Number}，名称《{this.Name}》。{Environment.NewLine}" +
-                     $"总课时{this.TotalHour}节，其中理论课{this.TheoreticalHour}节、实验课{this.ExperimentalHour}节。{Environment.NewLine}" +
+                     $"{this.CourseHourDistribution}。{Environment.NewLine}" +
                      $"课程目前{(this.IsAvailable ? "已" : "未")}启用。" +
                      $"{(this.HasExperiment ? "" : "不")}包含实验教学；" +
                      $"{(this.HasMooc ? "" : "不")}包含慕课教学。{Environment.NewLine}" +
@@ -121,17 +94,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
             }
         }
         /// <summary>
-        /// 属性更改事件；
+        /// 教学大纲；
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 当属性更改时；
-        /// </summary>
-        /// <param name="propertyName"></param>
-        public void OnPropertyChanged(string propertyName)
-        {
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        public string Syllabus { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>

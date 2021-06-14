@@ -39,17 +39,17 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.clb_FormativeAssessment.Items.AddRange(restItems);                                 //批量添加剩余项目；
         }
         /// <summary>
-        /// 返回形成性评价；
+        /// 保存形成性评价；
         /// </summary>
         /// <returns></returns>
-        private string[] ReturnFormativeAssessments()
+        private void SaveFormativeAssessments()
         {
             List<string> itemList = new List<string>();
             foreach (var item in this.clb_FormativeAssessment.CheckedItems)                         //遍历多选列表框中所有选中项目；
             {
                 itemList.Add(item.ToString());                                                      //将项目加入列表；
             }
-            return itemList.ToArray();                                                              //将列表转为数组；
+            this._Course.FormativeAssessments = itemList.ToArray();                                                              //将列表转为数组；
         }
         /// <summary>
         /// 载入按钮点击；
@@ -59,13 +59,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void btn_Load_Click(object sender, EventArgs e)
         {
             this._Course = CourseRepository.Find("2060316");
-            this.txb_CourseNumber.Text = this._Course.Number;
-            this.txb_CourseName.Text = this._Course.Name;
-            this.txb_CourseCredit.Text = this._Course.Credit.ToString();
             this.txb_CourseDescription.Text = this._Course.Description;
-            this.ckb_IsAvailable.Checked = this._Course.IsAvailable;                                   
-            this.ckb_HasExperiment.Checked = this._Course.HasExperiment;
-            this.ckb_HasMooc.Checked = this._Course.HasMooc;
             this.LoadFormativeAssessments();
         }
         /// <summary>
@@ -75,13 +69,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            this._Course.Number = this.txb_CourseNumber.Text;                           //读取文本框文本；        
-            this._Course.Name = this.txb_CourseName.Text;
-            this._Course.Credit = float.Parse(this.txb_CourseCredit.Text);
-            this._Course.IsAvailable = this.ckb_IsAvailable.Checked;
-            this._Course.HasExperiment = this.ckb_HasExperiment.Checked;
-            this._Course.HasMooc = this.ckb_HasMooc.Checked;
-            this._Course.FormativeAssessments =ReturnFormativeAssessments();
+            this.SaveFormativeAssessments();
             this.txb_CourseDescription.Text = this._Course.Description;
             MessageBox.Show("课程已提交");
         }

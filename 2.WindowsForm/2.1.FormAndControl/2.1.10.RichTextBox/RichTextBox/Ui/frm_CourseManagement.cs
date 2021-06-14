@@ -10,62 +10,38 @@ namespace SmartLin.LearningCSharp.FormAndControl
     public partial class frm_CourseManagement : Form
     {
         /// <summary>
+        /// 课程；
+        /// </summary>
+        private Course _Course;
+        /// <summary>
         /// 构造函数；
         /// </summary>
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.ResetControls();
-            this.LoadCourse();
-            this.ConfigControls();
         }
         /// <summary>
-        /// 学分数字增减框值更改；
+        /// 设置字体样式；
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void nud_CourseCredit_ValueChanged(object sender, EventArgs e)
+        /// <param name="fontStyle">字体样式</param>
+        private void SetFontStyle(FontStyle fontStyle)
         {
-            this.BindingWriteValue(sender, "Value");
-        }
-        /// <summary>
-        /// 理论课时滑动条滚动；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void tkb_TheoreticalHour_Scroll(object sender, EventArgs e)
-        {
-            this.BindingWriteValue(sender, "Value");
-        }
-        /// <summary>
-        /// 必修课单选按钮选中状态更改；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void rdb_IsCompulsory_CheckedChanged(object sender, EventArgs e)
-        {
-            this._Course.LearningType = (sender as RadioButton).Text;                       //获取单选按钮的文本；
-        }
-        /// <summary>
-        /// 选修课单选按钮选中状态更改；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void rdb_IsOptional_CheckedChanged(object sender, EventArgs e)
-        {
-            this._Course.LearningType = (sender as RadioButton).Text;
-        }
-        /// <summary>
-        /// 课程考核类型列表框更改选中序号；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void lsb_CourseAppraisalType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.ListBoxLoadSubItems
-                (this.lsb_CourseAppraisalType,
-                 this.lsb_CourseAppraisalForm,
-                 CourseAppraisalType.GetAllForms);
+            Font currentFont = this.rtb_CourseSyllabus.SelectionFont;                           //获取富文本框选中文字的字体；
+            if (currentFont == null)                                                            //若未选中文字；
+            {
+                return;
+            }
+            bool currentFontHasFontStyle =                                                      //通过位运算，判断当前字体是否包含指定的字体风格；
+                Convert.ToBoolean((int)(currentFont.Style & fontStyle));                        //字体风格枚举值均为2的整数次方，便于通过位运算进行字体风格的操作；
+            if (currentFontHasFontStyle)                                                        //若当前字体已包含指定的字体风格；
+            {
+                currentFont = new Font(currentFont, currentFont.Style & ~fontStyle);            //去除指定的字体风格；
+            }
+            else
+            {
+                currentFont = new Font(currentFont, currentFont.Style | fontStyle);             //加入指定的字体风格；
+            }
+            this.rtb_CourseSyllabus.SelectionFont = currentFont;                                //设置富文本框选中文字的字体；
         }
         /// <summary>
         /// 粗体按钮点击；
@@ -74,7 +50,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Bold_Click(object sender, EventArgs e)
         {
-            this.SetFontStyle(this.rtb_CourseSyllabus, FontStyle.Bold);
+            this.SetFontStyle(FontStyle.Bold);
         }
         /// <summary>
         /// 斜体按钮点击；
@@ -83,7 +59,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Italic_Click(object sender, EventArgs e)
         {
-            this.SetFontStyle(this.rtb_CourseSyllabus, FontStyle.Italic);
+            this.SetFontStyle(FontStyle.Italic);
         }
         /// <summary>
         /// 下划线按钮点击；
@@ -92,7 +68,18 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Underlined_Click(object sender, EventArgs e)
         {
-            this.SetFontStyle(this.rtb_CourseSyllabus, FontStyle.Underline);
+            this.SetFontStyle(FontStyle.Underline);
+        }
+        /// <summary>
+        /// 载入按钮点击；
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Load_Click(object sender, EventArgs e)
+        {
+            this._Course = CourseRepository.Find("2060316");
+            this.txb_CourseDescription.Text = this._Course.Description;
+            this.rtb_CourseSyllabus.Rtf = this._Course.Syllabus;                                //设置富文本框的格式化文本；
         }
         /// <summary>
         /// 提交按钮点击；
@@ -101,17 +88,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            this.SubmitCourse();
-        }
-        /// <summary>
-        /// 放弃按钮点击；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Abort_Click(object sender, EventArgs e)
-        {
-            this.LoadCourse();
-            this.ResetControls();
+            this._Course.Syllabus = this.rtb_CourseSyllabus.Rtf;                                //获取富文本框的格式化文本；
+            this.txb_CourseDescription.Text = this._Course.Description;
+            MessageBox.Show("课程已提交"); 
         }
     }
 }

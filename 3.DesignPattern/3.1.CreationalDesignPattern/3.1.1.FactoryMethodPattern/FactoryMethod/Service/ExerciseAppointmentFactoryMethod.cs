@@ -15,10 +15,11 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         public static LaboratoryAppointment Create()
         {
             LaboratoryAppointment appointment = new ExerciseAppointment();
-            Write($"预约上机练习：{Environment.NewLine}请输入预约人学号：");
+            WriteLine("预约上机练习：");
+            Write("请输入预约人学号：");
             appointment.StudentNumber = ReadLine();
             Write("请输入预约时间：");
-            appointment.StartTime = Convert.ToDateTime(ReadLine());
+            appointment.StartTime = DateTime.Parse(ReadLine());
             Write("请输入预约时长（1～3小时）：");
             var hour = int.Parse(ReadLine());
             hour = hour > 3 ? 3 : hour;

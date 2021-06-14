@@ -14,10 +14,8 @@ namespace SmartLin.LearningCSharp.FactoryPattern
                  $"3、程序竞赛训练预约{Environment.NewLine}" +
                   "请输入序号：");
             string appointmentTypeNumber = ReadLine();
-            LaboratoryAppointment appointment =
+            var appointment =
                 LaboratoryAppointmentSimpleFactory.Create(appointmentTypeNumber);               //定义简单工厂，并创建指定的产品；
-            if (appointment == null)
-                return;
             appointment.ShowResult();
             Read();
         }

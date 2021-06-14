@@ -9,25 +9,15 @@ namespace SmartLin.LearningCSharp.FormAndControl
     public partial class frm_CourseManagement : Form
     {
         /// <summary>
+        /// 课程；
+        /// </summary>
+        private Course _Course;
+        /// <summary>
         /// 构造函数；
         /// </summary>
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.ResetControls();
-            this.LoadCourse();
-            this.ConfigControls();
-        }
-        /// <summary>
-        /// 学分数字增减框值更改；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void nud_CourseCredit_ValueChanged(object sender, EventArgs e)
-        {
-            this._Course.Credit = this.nud_CourseCredit.Value;
-            this.RefreshCourseHourDistribution();
-            this.RefreshCourseTheoreticalHour();                        
         }
         /// <summary>
         /// 理论课时滑动条滚动；
@@ -37,37 +27,23 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void tkb_TheoreticalHour_Scroll(object sender, EventArgs e)
         {
             this._Course.TheoreticalHour = this.tkb_TheoreticalHour.Value;
-            this.RefreshCourseHourDistribution();
+            this.lbl_CourseHourDistribution.Text = this._Course.CourseHourDistribution;
         }
         /// <summary>
-        /// 必修课单选按钮选中状态更改；
+        /// 载入按钮点击；
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void rdb_IsCompulsory_CheckedChanged(object sender, EventArgs e)
+        private void btn_Load_Click(object sender, EventArgs e)
         {
-            this._Course.LearningType = (sender as RadioButton).Text;                     //获取单选按钮的文本；
-        }
-        /// <summary>
-        /// 选修课单选按钮选中状态更改；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void rdb_IsOptional_CheckedChanged(object sender, EventArgs e)
-        {
-            this._Course.LearningType = (sender as RadioButton).Text;
-        }
-        /// <summary>
-        /// 课程考核类型列表框更改选中序号；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void lsb_CourseAppraisalType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.ListBoxLoadSubItems
-                (this.lsb_CourseAppraisalType,
-                 this.lsb_CourseAppraisalForm,
-                 CourseAppraisalType.GetAllForms);
+            this._Course = CourseRepository.Find("2060316");
+            this.txb_CourseDescription.Text = this._Course.Description;
+            this.lbl_CourseHourDistribution.Text = this._Course.CourseHourDistribution;
+            this.tkb_TheoreticalHour.Minimum = 0;                                       //设置滑动条最小值；
+            this.tkb_TheoreticalHour.Maximum = this._Course.TotalHour;                  //设置滑动条最大值；
+            this.tkb_TheoreticalHour.SmallChange = 1;                                   //设置滑动条滚动1段刻度所改变的值；
+            this.tkb_TheoreticalHour.TickFrequency = this._Course.TotalHour / 8;        //设置滑动条刻度数量；
+            this.tkb_TheoreticalHour.Value = this._Course.TheoreticalHour;              //设置滑动条的值；
         }
         /// <summary>
         /// 提交按钮点击；
@@ -76,17 +52,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            this.SubmitCourse();
-        }
-        /// <summary>
-        /// 放弃按钮点击；
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Abort_Click(object sender, EventArgs e)
-        {
-            this.ResetControls();
-            this.LoadCourse();
+            this._Course.TheoreticalHour = this.tkb_TheoreticalHour.Value;
+            this.txb_CourseDescription.Text = this._Course.Description;
+            MessageBox.Show("课程已提交");
         }
     }
 }

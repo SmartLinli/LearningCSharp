@@ -16,7 +16,8 @@ namespace SmartLin.LearningCSharp.FactoryPattern
         public static LaboratoryAppointment Create()
         {
             LaboratoryAppointment appointment = new AcmAppointment();
-            Write($"预约程序竞赛训练：{Environment.NewLine}请输入预约人学号：");
+            WriteLine("预约程序竞赛训练：");
+            Write("请输入预约人学号：");
             appointment.StudentNumber = ReadLine();
             appointment.MateStudentNumbers = new List<string>();
             while (true)
@@ -30,7 +31,7 @@ namespace SmartLin.LearningCSharp.FactoryPattern
                 appointment.MateStudentNumbers.Add(intput);
             }
             Write("请输入预约时间：");
-            appointment.StartTime = Convert.ToDateTime(Console.ReadLine());
+            appointment.StartTime = DateTime.Parse(Console.ReadLine());
             Write("请输入预约时长（2～5小时）：");
             var hour = int.Parse(Console.ReadLine());
             hour = hour > 5 ? 5 : hour;
