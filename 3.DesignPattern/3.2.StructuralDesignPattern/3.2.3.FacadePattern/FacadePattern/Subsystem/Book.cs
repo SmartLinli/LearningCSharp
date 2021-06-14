@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.FacadePattern
 {
@@ -13,10 +13,10 @@ namespace SmartLin.LearningCSharp.FacadePattern
         /// <param name="newStudent">新生</param>
         public static void Apply(Student newStudent)
         {
-            Console.WriteLine("{0}有以下教材需要申领：", newStudent.Name);
-            Console.WriteLine("《计算机导论》");
-            Console.WriteLine("《C程序设计（第三版）》");
-            Console.WriteLine();
+            WriteLine($"{newStudent.Name}有以下教材需要申领：");
+            WriteLine("《计算机导论》");
+            WriteLine("《C程序设计（第三版）》");
+            WriteLine();
         }
     }
 }

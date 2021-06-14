@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.FacadePattern
 {
@@ -13,9 +13,9 @@ namespace SmartLin.LearningCSharp.FacadePattern
         /// <param name="newStudent">新生</param>
         public static void PayIn(Student newStudent)
         {
-            Console.Write("请输入充值金额：");
-            var amount = decimal.Parse(Console.ReadLine());
-            Console.WriteLine("{0}成功充值{1}元。\n", newStudent.Name, amount);
+            Write("请输入充值金额：");
+            var amount = decimal.Parse(ReadLine());
+            WriteLine($"{newStudent.Name}成功充值{amount}元。\n");
         }
     }
 }

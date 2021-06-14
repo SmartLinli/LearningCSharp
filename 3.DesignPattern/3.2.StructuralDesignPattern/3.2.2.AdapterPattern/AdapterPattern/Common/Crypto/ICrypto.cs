@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.AdapterPattern
+﻿namespace SmartLin.LearningCSharp.AdapterPattern
 {
     /// <summary>
     /// 加密器；

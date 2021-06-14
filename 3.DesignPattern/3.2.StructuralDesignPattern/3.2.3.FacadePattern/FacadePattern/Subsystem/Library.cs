@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.FacadePattern
 {
@@ -13,7 +13,7 @@ namespace SmartLin.LearningCSharp.FacadePattern
         /// <param name="newStudent">新生</param>
         public static void Active(Student newStudent)
         {
-            Console.WriteLine("读者{0}已激活。\n", newStudent.Name);
+            WriteLine($"读者{newStudent.Name}已激活。\n");
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.FacadePattern
 {
@@ -9,9 +6,9 @@ namespace SmartLin.LearningCSharp.FacadePattern
     {
         static void Main()
         {
-            Student newStudent = new Student("3190707001", "张三", Gender.MALE);
+            Student newStudent = new Student("3210707001", "张三", Gender.MALE);
             StudentAffairOffice.WelCome(newStudent);
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

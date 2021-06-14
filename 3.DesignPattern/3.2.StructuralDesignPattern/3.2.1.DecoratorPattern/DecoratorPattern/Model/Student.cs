@@ -1,43 +1,30 @@
-﻿
-namespace SmartLin.LearningCSharp.FacadePattern
+﻿using static System.Console;
+
+namespace SmartLin.LearningCSharp.DecoratorPattern
 {
-    /// <summary>
-    /// 性别；
-    /// </summary>
-    public enum Gender
-    {
-        FEMALE = 0,
-        MALE = 1
-    }
     /// <summary>
     /// 学生；
     /// </summary>
-    public partial class Student
+    public class Student                                                    //被装饰者；
     {
         /// <summary>
         /// 学号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
+        public string Name { get; set; }
+        /// <summary>
+        /// 介绍；
+        /// </summary>
+        public virtual void Intro()
         {
-            get;
-            set;
+            WriteLine($"我叫{this.Name}。");
         }
         /// <summary>
-        /// 性别；
+        /// 构造函数；
         /// </summary>
-        public Gender Gender
-        {
-            get;
-            set;
-        }        
         public Student()
         {
             ;
@@ -48,11 +35,10 @@ namespace SmartLin.LearningCSharp.FacadePattern
         /// <param name="number">学号</param>
         /// <param name="name">姓名</param>
         /// <param name="gender">性别</param>
-        public Student(string number, string name, Gender gender)
+        public Student(string number, string name)
         {
             this.Number = number;
             this.Name = name;
-            this.Gender = gender;
         }
     }
 }

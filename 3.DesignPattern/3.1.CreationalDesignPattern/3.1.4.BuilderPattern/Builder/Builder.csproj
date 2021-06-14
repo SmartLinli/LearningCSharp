@@ -61,7 +61,6 @@
     <Compile Include="Repository\CourseRepository.cs" />
     <Compile Include="Repository\TeacherRepository.cs" />
     <Compile Include="Service\HonestyExaminationDirector.cs" />
-    <Compile Include="Service\Interface\IExaminationBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ClassRoomRepository.cs" />

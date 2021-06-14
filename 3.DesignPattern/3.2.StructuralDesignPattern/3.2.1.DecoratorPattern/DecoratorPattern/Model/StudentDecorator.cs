@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.DecoratorPattern
+﻿namespace SmartLin.LearningCSharp.DecoratorPattern
 {
     /// <summary>
     /// 学生装饰者；

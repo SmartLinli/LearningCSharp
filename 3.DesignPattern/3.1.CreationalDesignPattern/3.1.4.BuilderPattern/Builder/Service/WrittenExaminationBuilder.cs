@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.BuilderPattern
     /// <summary>
     /// 笔试建造者；
     /// </summary>
-    public class WrittenExaminationBuilder : IExaminationBuilder
+    public class WrittenExaminationBuilder 
     {
         /// <summary>
         /// 笔试；

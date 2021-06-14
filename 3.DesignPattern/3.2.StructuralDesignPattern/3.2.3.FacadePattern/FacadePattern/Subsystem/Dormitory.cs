@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.FacadePattern
 {
@@ -17,12 +17,12 @@ namespace SmartLin.LearningCSharp.FacadePattern
             {
                 case Gender.FEMALE:
                     {
-                        Console.WriteLine("{0}分配至女生宿舍。\n", newStudent.Name);
+                        WriteLine($"{newStudent.Name}分配至女生宿舍。\n");
                     }
                     break;
                 case Gender.MALE:
                     {
-                        Console.WriteLine("{0}分配至男生宿舍。\n", newStudent.Name);
+                        WriteLine($"{newStudent.Name}分配至男生宿舍。\n");
                     }
                     break;
                 default:

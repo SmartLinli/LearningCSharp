@@ -8,7 +8,6 @@ namespace SmartLin.LearningCSharp.SingletonPattern
         {
             while (true)
             {
-
                 Write(SequentialNumberService.Instance.GetSequentialNumber());
                 if (ReadLine() == "x")
                 {
