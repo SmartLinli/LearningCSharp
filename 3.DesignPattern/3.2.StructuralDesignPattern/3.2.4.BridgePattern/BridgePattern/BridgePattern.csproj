@@ -53,12 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassroomCourse.cs" />
-    <Compile Include="AbstractCourse.cs" />
-    <Compile Include="CourseOperationPaperless.cs" />
-    <Compile Include="CourseOperationWritten.cs" />
-    <Compile Include="ICourseOperation.cs" />
-    <Compile Include="OnlineCourse.cs" />
+    <Compile Include="Model\ClassroomCourse.cs" />
+    <Compile Include="Model\AbstractCourse.cs" />
+    <Compile Include="Model\CourseOperationPaperless.cs" />
+    <Compile Include="Model\CourseOperationWritten.cs" />
+    <Compile Include="Model\ICourseOperation.cs" />
+    <Compile Include="Model\OnlineCourse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

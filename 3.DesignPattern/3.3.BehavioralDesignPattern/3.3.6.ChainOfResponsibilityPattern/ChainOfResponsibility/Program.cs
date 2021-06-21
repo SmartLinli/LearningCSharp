@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
 {
@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
             Request request = new Request()                                         //定义请求；
             {
                 Applicant = student,
-                Content = "免修课程"
+                Content = "申请免修《面向对象程序设计》"
             };
             TeachingAffairOfficeApprover mrJiang =                                  //定义各级审批者；
                 new TeachingAffairOfficeApprover("1997023", "江澍");
@@ -25,7 +25,7 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
                 NextApprover = mrJin
             };
             msYang.Handle(request);                                                 //从基层审批者开始处理请求；
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

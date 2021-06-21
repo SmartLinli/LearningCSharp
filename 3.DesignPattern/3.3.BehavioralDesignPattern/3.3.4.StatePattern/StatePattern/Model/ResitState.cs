@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.StatePattern
 {
@@ -14,11 +14,7 @@ namespace SmartLin.LearningCSharp.StatePattern
         public override void Grading(decimal score)                                     //实现抽象方法，用于改变上下文对象的状态；
         {
             this.Examinee.Score = score;
-            Console.WriteLine
-                ("考生{0}：补考{1}及格{2}。"
-                , this.Examinee.Name
-                , this.Examinee.IsPassed ? "已" : "未"
-                , this.Examinee.IsPassed ? "" : "，应参加重修");
+            WriteLine($"考生{this.Examinee.Name}：补考{(this.Examinee.IsPassed ? "已" : "未")}及格{(this.Examinee.IsPassed ? "" : "，应参加重修")}。");
             if (this.Examinee.IsPassed)
             {
                 this.Examinee.State = new PassedState(this.Examinee);

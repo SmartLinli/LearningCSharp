@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.CommandPattern
 {
@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.CommandPattern
         /// </summary>
         public void EvaluationAggregate()
         {
-            Console.WriteLine("汇总统计每名教师的各课程、班级的评教得分……\n");
+            WriteLine("汇总统计每名教师的各课程、班级的评教得分……");
         }
     }
 }

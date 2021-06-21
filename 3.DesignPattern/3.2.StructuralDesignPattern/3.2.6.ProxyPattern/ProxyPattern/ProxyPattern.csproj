@@ -53,9 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course.cs" />
-    <Compile Include="CourseProxy.cs" />
-    <Compile Include="ICourse.cs" />
+    <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\CourseProxy.cs" />
+    <Compile Include="Model\ICourse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.CompositePattern
 {
@@ -11,19 +11,11 @@ namespace SmartLin.LearningCSharp.CompositePattern
         /// <summary>
         /// 部门；
         /// </summary>
-        public string Department
-        {
-            get;
-            set;
-        }
+        public string Department { get; set; }
         /// <summary>
         /// 职责；
         /// </summary>
-        public string Duty
-        {
-            get;
-            set;
-        }
+        public string Duty { get; set; }
         /// <summary>
         /// 下属；
         /// </summary>
@@ -42,12 +34,12 @@ namespace SmartLin.LearningCSharp.CompositePattern
         /// <param name="level">层级</param>
         public override void Intro(int level)
         {
-            Console.WriteLine
+            WriteLine
                 (new string('-', level - 1)
-                + string.Format("{0}{1}{2}", this.Department, this.Duty, this.Name));
+                + $"{this.Department}{this.Duty}{this.Name}");
             foreach (var subordinate in this._Subordinate)                              //遍历子节点（包括叶节点）；
             {
-                subordinate.Intro(level + 2);
+                subordinate.Intro(level + 1);
             }
         }
         /// <summary>

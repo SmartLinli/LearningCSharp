@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
+﻿namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
 {
     /// <summary>
     /// 请求；
@@ -9,18 +8,10 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
         /// <summary>
         /// 申请人；
         /// </summary>
-        public Student Applicant
-        {
-            get;
-            set;
-        }
+        public Student Applicant { get; set; }
         /// <summary>
         /// 内容；
         /// </summary>
-        public string Content
-        {
-            get;
-            set;
-        }
+        public string Content { get; set; }
     }
 }

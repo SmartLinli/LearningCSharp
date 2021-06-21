@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.TemplateMethod
 {
@@ -8,7 +8,7 @@ namespace SmartLin.LearningCSharp.TemplateMethod
         {
             ExaminationArrangementTemplate oopExam = new ComputerExaminationArrangement();      //定义具体模板；
             oopExam.DeclareExamination();                                                       //调用（继承自抽象模板的）模板方法；
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

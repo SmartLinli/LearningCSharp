@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.CommandPattern
+﻿namespace SmartLin.LearningCSharp.CommandPattern
 {
     /// <summary>
     /// 学工处命令；

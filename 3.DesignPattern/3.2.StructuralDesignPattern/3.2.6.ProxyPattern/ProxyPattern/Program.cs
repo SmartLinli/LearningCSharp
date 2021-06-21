@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ProxyPattern
 {
@@ -7,10 +7,10 @@ namespace SmartLin.LearningCSharp.ProxyPattern
         static void Main()
         {
 
-            Course oop = new Course("2060316", "面向对象程序设计", 4.5f);               //定义真实对象；
+            Course oop = new Course("2060316", "面向对象程序设计", 4.5f);                //定义真实对象；
             CourseProxy oopProxy = new CourseProxy(oop);                                //定义代理对象；
             oopProxy.Update();                                                          //调用代理对象的方法；
-            Console.Read();
+            Read();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
+﻿namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
 {
     /// <summary>
     /// 抽象审批者；
@@ -9,11 +8,7 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
         /// <summary>
         /// 下一审批者；
         /// </summary>
-        public AbstractApprover NextApprover                                //定义下一审批者，用于转交本审批者无法处理的请求；
-        {
-            get;
-            set;
-        }
+        public AbstractApprover NextApprover { get; set; }                  //定义下一审批者，用于转交本审批者无法处理的请求；
         /// <summary>
         /// 处理；
         /// </summary>

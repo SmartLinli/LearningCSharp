@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.CompositePattern
 {
@@ -13,9 +13,7 @@ namespace SmartLin.LearningCSharp.CompositePattern
         /// <param name="level">层级</param>
         public override void Intro(int level)
         {
-            Console.WriteLine
-                  (new string('-', level)
-                  + string.Format("{0}", this.Name));
+            WriteLine(new string('-', level) + $"{this.Name}");
         }
         /// <summary>
         /// 构造函数；

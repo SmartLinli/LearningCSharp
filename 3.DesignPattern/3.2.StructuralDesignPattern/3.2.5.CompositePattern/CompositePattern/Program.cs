@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using static System.Console;
 
 namespace SmartLin.LearningCSharp.CompositePattern
 {
@@ -11,7 +9,7 @@ namespace SmartLin.LearningCSharp.CompositePattern
         {
             List<Student> students = StudentRepository.GetAll();
             students[0].Intro(1);
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

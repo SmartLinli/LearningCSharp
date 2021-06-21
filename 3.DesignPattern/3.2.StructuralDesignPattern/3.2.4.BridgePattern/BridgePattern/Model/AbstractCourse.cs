@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.BridgePattern
+﻿namespace SmartLin.LearningCSharp.BridgePattern
 {
     /// <summary>
     /// 课程；
@@ -9,19 +8,11 @@ namespace SmartLin.LearningCSharp.BridgePattern
         /// <summary>
         /// 课程号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 名称；
         /// </summary>
-        public string Name
-        {
-            get;
-            private set;
-        }
+        public string Name { get; private set; }
         /// <summary>
         /// 课程运行实现者；
         /// </summary>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.CommandPattern
 {
@@ -15,7 +12,7 @@ namespace SmartLin.LearningCSharp.CommandPattern
         /// </summary>
         public void BudgeAudit()
         {
-            Console.WriteLine("审核下学年各项教学经费预算……\n");
+            WriteLine("审核下学年各项教学经费预算……");
         }
     }
 }

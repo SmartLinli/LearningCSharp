@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.TemplateMethod
 {
@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.TemplateMethod
         /// <summary>
         /// 考试；
         /// </summary>
-        protected IExamination _Examination;                                                    
+        protected IExamination _Examination;
         /// <summary>
         /// 指定课程；
         /// </summary>
@@ -28,20 +28,17 @@ namespace SmartLin.LearningCSharp.TemplateMethod
         /// </summary>
         protected virtual void PrintPaper()                                                     //抽象模板中的基本方法可为虚方法，由派生类重写或继承；
         {
-            Console.WriteLine("请上传试卷文件……");
-            Console.ReadLine();
-            Console.Write("输入印制份数：");
-            Console.ReadLine();
+            WriteLine("请上传试卷文件……");
+            ReadLine();
+            Write("输入印制份数：");
+            ReadLine();
         }
         /// <summary>
         /// 通知监考人员；
         /// </summary>
         protected virtual void InformInvigilator()
         {
-            Console.WriteLine
-                ("发送短信至手机{0}：{1}老师，您有监考任务，请登录系统查看详细安排。\n"
-                , this._Examination.Invigilator.PhoneNumber
-                , this._Examination.Invigilator.Name);
+            WriteLine($"发送短信至手机{this._Examination.Invigilator.PhoneNumber}：{this._Examination.Invigilator.Name}老师，您有监考任务，请登录系统查看详细安排。\n");
         }
         /// <summary>
         /// 申报考试；
@@ -54,7 +51,7 @@ namespace SmartLin.LearningCSharp.TemplateMethod
             this.AssignInvigilator();
             this.PrintPaper();
             this.InformInvigilator();
-            return this._Examination;                                     
+            return this._Examination;
         }
     }
 }

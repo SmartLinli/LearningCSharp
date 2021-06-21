@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.StatePattern
+﻿namespace SmartLin.LearningCSharp.StatePattern
 {
     /// <summary>
     /// 抽象状态；
@@ -9,11 +8,7 @@ namespace SmartLin.LearningCSharp.StatePattern
         /// <summary>
         /// 考生；
         /// </summary>
-        public Examinee Examinee                                        //引用上下文对象；
-        {
-            get;
-            set;
-        }
+        public Examinee Examinee { get; set; }                          //引用上下文对象；
         /// <summary>
         /// 评分；
         /// </summary>

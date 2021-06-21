@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ObserverPattern
 {
@@ -14,23 +14,19 @@ namespace SmartLin.LearningCSharp.ObserverPattern
         /// <summary>
         /// 是否已评教；
         /// </summary>
-        public bool HasEvaluated
-        {
-            get;
-            private set;
-        }
+        public bool HasEvaluated { get; private set; }
         /// <summary>
-        /// 获取成绩；
+        /// 查询成绩；
         /// </summary>
         public void GetScore()
         {
             if (this.HasEvaluated)
             {
-                Console.WriteLine("成绩查询结果：{0}。\n", this._Numeral);
+                WriteLine($"成绩查询结果：{this._Numeral}。\n");
             }
             else
             {
-                Console.WriteLine("尚未评教，无法查询成绩！\n");
+                WriteLine($"尚未评教，无法查询成绩！\n");
             }
         }
         /// <summary>

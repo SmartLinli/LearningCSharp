@@ -10,11 +10,7 @@ namespace SmartLin.LearningCSharp.ObserverPattern
         /// <summary>
         /// 教职工（评教对象）
         /// </summary>
-        public Faculty Faculty
-        {
-            get;
-            set;
-        }
+        public Faculty Faculty { get; set; }
         /// <summary>
         /// 构造函数
         /// </summary>

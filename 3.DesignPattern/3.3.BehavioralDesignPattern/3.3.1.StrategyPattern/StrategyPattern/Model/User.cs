@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace SmartLin.LearningCSharp.StrategyPattern
+﻿namespace SmartLin.LearningCSharp.StrategyPattern
 {
     /// <summary>
     /// 用户；
@@ -10,27 +8,15 @@ namespace SmartLin.LearningCSharp.StrategyPattern
         /// <summary>
         /// 学号/工号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 密码；
         /// </summary>
-        public string Password
-        {
-            get;
-            private set;
-        }
+        public string Password { get; private set; }
         /// <summary>
         /// 加密器；
         /// </summary>
-        public ICrypto Crypto
-        {
-            get;
-            set;
-        }
+        public ICrypto Crypto { get; set; }
         /// <summary>
         /// 创建；
         /// </summary>

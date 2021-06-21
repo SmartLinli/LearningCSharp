@@ -1,28 +1,23 @@
-﻿using System;
-
-namespace ExaminationAffair
+﻿namespace SmartLin.LearningCSharp.CompositePattern
 {
     /// <summary>
     /// 学生；
     /// </summary>
-    public class Student
+    public abstract class Student
     {
         /// <summary>
         /// 学号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }        
+        public string Name { get; set; }
+        /// <summary>
+        /// 介绍；
+        /// </summary>
+        /// <param name="level">层级</param>
+        public abstract void Intro(int level);
         /// <summary>
         /// 构造函数；
         /// </summary>

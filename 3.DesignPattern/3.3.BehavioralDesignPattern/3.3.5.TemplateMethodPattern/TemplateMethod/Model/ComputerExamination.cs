@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.TemplateMethod
+﻿namespace SmartLin.LearningCSharp.TemplateMethod
 {
 
     /// <summary>
@@ -10,26 +9,14 @@ namespace SmartLin.LearningCSharp.TemplateMethod
         /// <summary>
         /// 课程；
         /// </summary>
-        public Course Course
-        {
-            get;
-            set;
-        }
+        public Course Course { get; set; }
         /// <summary>
         /// 考场；
         /// </summary>
-        public IExaminationRoom Room
-        {
-            get;
-            set;
-        }
+        public IExaminationRoom Room { get; set; }
         /// <summary>
         /// 监考人员；
         /// </summary>
-        public IFaculty Invigilator
-        {
-            get;
-            set;
-        }
+        public IFaculty Invigilator { get; set; }
     }
 }

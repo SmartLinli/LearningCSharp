@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.TemplateMethod
+﻿namespace SmartLin.LearningCSharp.TemplateMethod
 {
     /// <summary>
     /// 考场；
@@ -9,18 +8,10 @@ namespace SmartLin.LearningCSharp.TemplateMethod
         /// <summary>
         /// 门牌号；
         /// </summary>
-        string Number
-        {
-            get;
-            set;
-        }
+        string Number { get; set; }
         /// <summary>
         /// 座位数；
         /// </summary>
-        int SeatAmount
-        {
-            get;
-            set;
-        }
+        int SeatAmount { get; set; }
     }
 }

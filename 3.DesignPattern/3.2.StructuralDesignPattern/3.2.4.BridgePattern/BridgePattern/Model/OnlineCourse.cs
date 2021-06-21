@@ -1,27 +1,22 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.BridgePattern
 {
     /// <summary>
     /// 在线课程；
     /// </summary>
-    public class OnlineCourse : AbstractCourse                                              //定义修正抽象角色；
+    public class OnlineCourse : AbstractCourse                                              //定义扩充抽象角色；
     {
         /// <summary>
         /// 来源；
         /// </summary>
-        public string Source
-        {
-            get;
-            set;
-        }
+        public string Source { get; set; }
         /// <summary>
         /// 作业；
         /// </summary>
         public override void Exercise()
         {
-            Console.WriteLine
-                ("在线课程《{0}》（来源：{1}）作业：", this.Name, this.Source);             //实现修正抽象角色的特有运行；
+            WriteLine($"在线课程《{this.Name}》（来源：{this.Source}）作业：");               //实现扩充抽象角色的特有运行；
             this._OperationImplementor.Exercise();                                          //调用实现者的方法，实现指定实现者的特有运行；
         }
         /// <summary>
@@ -29,8 +24,7 @@ namespace SmartLin.LearningCSharp.BridgePattern
         /// </summary>
         public override void Examine()
         {
-            Console.WriteLine
-                ("在线课程《{0}》（来源：{1}）考试：", this.Name, this.Source);
+            WriteLine($"在线课程《{this.Name}》（来源：{this.Source}）考试：");
             this._OperationImplementor.Examine();
         }
         /// <summary>

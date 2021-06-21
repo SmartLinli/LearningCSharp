@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.CommandPattern
 {
@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.CommandPattern
         /// </summary>
         public void OverallScore()
         {
-            Console.WriteLine("计算每名学生本学年综合成绩以及排名……\n");
+            WriteLine("计算每名学生本学年综合成绩以及排名……");
         }
     }
 }

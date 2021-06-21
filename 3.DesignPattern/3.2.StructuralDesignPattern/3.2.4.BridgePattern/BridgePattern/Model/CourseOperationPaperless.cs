@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.BridgePattern
 {
@@ -12,16 +12,14 @@ namespace SmartLin.LearningCSharp.BridgePattern
         /// </summary>
         public void Exercise()
         {
-            Console.WriteLine
-                ("--完成配套习题，将代码文件上传至代码托管平台，将学习笔记发布至博客。");
+            WriteLine("--完成配套习题；将代码文件上传至代码托管平台；将学习笔记发布至博客。");
         }
         /// <summary>
         /// 考试；
         /// </summary>
         public void Examine()
         {
-            Console.WriteLine
-                ("--在机房安排开卷上机考试。可自行拷贝文档资料，但机房屏蔽外网。请带齐三证。");
+            WriteLine("--在机房安排闭卷上机考试。不得自行拷贝文档资料，屏蔽外网。请带齐三证。");
         }
     }
 }

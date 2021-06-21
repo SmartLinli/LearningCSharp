@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace ExaminationAffair
 {
@@ -11,7 +11,7 @@ namespace ExaminationAffair
             student.Grading(58m);
             student.Grading(59m);
             student.Grading(60m);
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.StrategyPattern
+﻿namespace SmartLin.LearningCSharp.StrategyPattern
 {
     /// <summary>
     /// 加密器；

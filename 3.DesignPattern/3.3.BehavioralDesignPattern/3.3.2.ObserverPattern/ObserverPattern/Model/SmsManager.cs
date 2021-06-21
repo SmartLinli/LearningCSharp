@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ObserverPattern
 {
@@ -16,10 +16,7 @@ namespace SmartLin.LearningCSharp.ObserverPattern
         {
             Student student = sender as Student;
             Faculty faculty = e.Faculty;
-            Console.WriteLine
-                ("\n发送短信至手机{0}：学生{1}已对您评教。\n"
-                , faculty.PhoneNumber
-                , student.Name);
+            WriteLine($"\n发送短信至手机{faculty.PhoneNumber}：学生{student.Name}已对您评教。\n");
         }
     }
 }

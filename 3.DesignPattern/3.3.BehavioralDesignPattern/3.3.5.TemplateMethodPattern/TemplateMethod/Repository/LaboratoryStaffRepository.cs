@@ -17,15 +17,15 @@ namespace SmartLin.LearningCSharp.TemplateMethod
             {
                new LaboratoryStaff()
                {
-                   Number="1996012",
-                   Name="李胜旭",
-                   PhoneNumber="18905011828"
+                   Number = "1996012",
+                   Name = "李胜旭",
+                   PhoneNumber = "18905011828"
                },
                new LaboratoryStaff()
                {
-                   Number="2018121",
-                   Name="黄焯",
-                   PhoneNumber="13950218104"
+                   Number = "2018121",
+                   Name = "黄焯",
+                   PhoneNumber = "13950218104"
                }
             };
             return laboratoryStaffs;

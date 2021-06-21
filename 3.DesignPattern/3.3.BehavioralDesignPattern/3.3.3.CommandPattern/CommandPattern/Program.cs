@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.CommandPattern
 {
@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.CommandPattern
             };
             CommandInvoker.AddCommands(commands);
             CommandInvoker.Invoke();                                        //请求执行命令；
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }

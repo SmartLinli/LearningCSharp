@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.TemplateMethod
+﻿namespace SmartLin.LearningCSharp.TemplateMethod
 {
     /// <summary>
     /// 监考；
@@ -9,26 +8,14 @@ namespace SmartLin.LearningCSharp.TemplateMethod
         /// <summary>
         /// 工号；
         /// </summary>
-        string Number
-        {
-            get;
-            set;
-        }
+        string Number { get; set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        string Name
-        {
-            get;
-            set;
-        }
+        string Name { get; set; }
         /// <summary>
         /// 手机号码；
         /// </summary>
-        string PhoneNumber
-        {
-            get;
-            set;
-        }
+        string PhoneNumber { get; set; }
     }
 }

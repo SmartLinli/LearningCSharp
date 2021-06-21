@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ProxyPattern
 {
@@ -14,48 +14,28 @@ namespace SmartLin.LearningCSharp.ProxyPattern
         /// <summary>
         /// 课程号；
         /// </summary>
-        public string Number
-        {
-            get;
-            set;
-        }
+        public string Number { get; set; }
         /// <summary>
         /// 名称；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 学分；
         /// </summary>
-        public float Credit
-        {
-            get;
-            set;
-        }
+        public float Credit { get; set; }
         /// <summary>
         /// 更新前；
         /// </summary>
         private void BeforeUpdate()
         {
-            Console.WriteLine
-                ("课程修改前：{0}《{1}》{2}\n已备份。",
-                this._Course.Number
-                , this._Course.Name
-                , this._Course.Credit);
+            WriteLine($"课程修改前：{this._Course.Number}《{this._Course.Name}》（{this._Course.Credit}）已备份。");
         }
         /// <summary>
         /// 更新后；
         /// </summary>
         private void AfterUpdate()
         {
-            Console.WriteLine
-                ("课程修改后：{0}《{1}》{2}\n已记录日志。"
-                , this._Course.Number
-                , this._Course.Name
-                , this._Course.Credit);
+            WriteLine($"课程修改后：{this._Course.Number}《{this._Course.Name}》（{this._Course.Credit}）已记录日志。");
         }
         /// <summary>
         /// 更新；

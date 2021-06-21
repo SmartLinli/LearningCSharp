@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ObserverPattern
 {
@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.ObserverPattern
             score.GetScore();
             student.Evaluate(mrLin);                                    //事件只能由类的方法来触发；
             score.GetScore();
-            Console.Read();
+            Read();
         }
     }
 }

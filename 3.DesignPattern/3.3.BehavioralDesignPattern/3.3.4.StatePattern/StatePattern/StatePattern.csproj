@@ -53,15 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractState.cs" />
-    <Compile Include="Examinee.cs" />
-    <Compile Include="NormalState.cs" />
-    <Compile Include="PassedState.cs" />
+    <Compile Include="Model\AbstractState.cs" />
+    <Compile Include="Model\Examinee.cs" />
+    <Compile Include="Model\NormalState.cs" />
+    <Compile Include="Model\PassedState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResitState.cs" />
-    <Compile Include="RetakingState.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Model\ResitState.cs" />
+    <Compile Include="Model\RetakingState.cs" />
+    <Compile Include="Model\Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

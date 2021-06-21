@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
+﻿namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
 {
     /// <summary>
     /// 教职工；
@@ -9,19 +8,11 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
         /// <summary>
         /// 工号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 构造函数；
         /// </summary>

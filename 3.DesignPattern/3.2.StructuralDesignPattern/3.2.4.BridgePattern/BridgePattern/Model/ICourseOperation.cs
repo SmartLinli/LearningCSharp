@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.BridgePattern
+﻿namespace SmartLin.LearningCSharp.BridgePattern
 {
     /// <summary>
     /// 课程运行；

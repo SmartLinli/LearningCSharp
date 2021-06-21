@@ -1,5 +1,4 @@
-﻿
-namespace SmartLin.LearningCSharp.StatePattern
+﻿namespace SmartLin.LearningCSharp.StatePattern
 {
     /// <summary>
     /// 考生；
@@ -9,29 +8,16 @@ namespace SmartLin.LearningCSharp.StatePattern
         /// <summary>
         /// 成绩；
         /// </summary>
-        public decimal Score
-        {
-            get;
-            set;
-        }
+        public decimal Score { get; set; }
         /// <summary>
         /// 是否及格； 
         /// </summary>
         public bool IsPassed
-        {
-            get
-            {
-                return this.Score >= 60;
-            }
-        }
+        =>  this.Score >= 60;
         /// <summary>
         /// 状态； 
         /// </summary>
-        public AbstractState State                                      //引用具体状态；
-        {
-            get;
-            set;
-        }
+        public AbstractState State { get; set; }                                    //引用具体状态；
         /// <summary>
         /// 评分
         /// </summary>

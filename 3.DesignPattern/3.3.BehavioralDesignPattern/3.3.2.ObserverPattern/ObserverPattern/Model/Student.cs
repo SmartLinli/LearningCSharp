@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ObserverPattern
 {
@@ -10,19 +10,11 @@ namespace SmartLin.LearningCSharp.ObserverPattern
         /// <summary>
         /// 学号；
         /// </summary>
-        public string Number
-        {
-            get;
-            private set;
-        }
+        public string Number { get; private set; }
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
         /// <summary>
         /// 评教事件；
         /// </summary>
@@ -33,10 +25,10 @@ namespace SmartLin.LearningCSharp.ObserverPattern
         /// <param name="faculty">教职工</param>
         public void OnEvaluateEvent(Faculty faculty)
         {
-            if (this.EvaluateEvent != null)                                             //若事件非空；
+            //if (this.EvaluateEvent != null)                                             //若事件非空；
             {
                 EvaluateEventArgs e = new EvaluateEventArgs(faculty);                   //创建评教事件参数；
-                this.EvaluateEvent(this, e);                                            //触发事件，即调用多播委托中注册的所有事件处理函数；事件必须在类内部触发；
+                this.EvaluateEvent?.Invoke(this, e);                                            //触发事件，即调用多播委托中注册的所有事件处理函数；事件必须在类内部触发；
             }
         }
         /// <summary>
@@ -45,8 +37,8 @@ namespace SmartLin.LearningCSharp.ObserverPattern
         /// <param name="faculty">教职工</param>
         public void Evaluate(Faculty faculty)
         {
-            Console.WriteLine("请输入对{0}老师的评教分数：", faculty.Name);
-            Console.ReadLine();
+            WriteLine($"请输入对{faculty.Name}老师的评教分数：");
+            ReadLine();
             this.OnEvaluateEvent(faculty);                                              //调用能触发事件的方法；
         }
         /// <summary>
