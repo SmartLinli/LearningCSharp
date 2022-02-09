@@ -1,5 +1,5 @@
-﻿using System;                                                           //调用命名空间System中的类型；可对using进行删除和排序；
-																		//System包含最常用的.NET类型；
+﻿using System;                                                           //调用命名空间System；System包含最常用的.NET类型；
+																		//可对using进行删除和排序；
 namespace SmartLin.LearningCSharp.Basics                                //声明命名空间；命名空间非必需；
 {
 	class Program                                                       //声明类；Main所在类的名称不限；
