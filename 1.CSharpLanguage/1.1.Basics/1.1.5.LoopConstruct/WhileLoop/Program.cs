@@ -14,7 +14,7 @@ namespace SmartLin.LearningCSharp.Basics
 				var input = ReadLine();
 				isValid = float.TryParse(input, out rate);                  
 			}
-			WriteLine($"评教成绩{rate}已保存。");
+			Write($"评教成绩{rate}已保存。");
 			Read();
 		}
 	}

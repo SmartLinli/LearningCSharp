@@ -11,18 +11,18 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             /*定义专业、班级；*/
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
-            Class im20 = new Class(infomationManagement, 2020);
+            Class im22 = new Class(infomationManagement, 2022);
             /*定义学生并显示*/
-            Student girl = new Student("3200707002", "储艺", Gender.FEMALE, im20);
+            Student girl = new Student("3220707002", "李四", Gender.FEMALE, im22);
             StudentUi.Display(girl);
             /*定义新生；录取；显示；*/
-            Student newGuy = new Student("3210707001", "张三", Gender.MALE);
+            Student newGuy = new Student("3220707001", "张三", Gender.MALE);
             newGuy.EnrollBy(infomationManagement);
             StudentUi.Display(newGuy);
             /*发送短信*/
             girl.PhoneNumber = "18900001111";
-            MessageService.SendSms(girl.PhoneNumber, "请按时钉钉打卡。");
-            MessageService.SendSms(newGuy.PhoneNumber, "请按时钉钉打卡。");
+            MessageService.SendSms(girl.PhoneNumber, "请按时打卡。");
+            MessageService.SendSms(newGuy.PhoneNumber, "请按时打卡。");
             Read();
         }
     }

@@ -2,8 +2,8 @@
 {
     public class Class
     {
-        public int Year { get; set; }
-        public Major Major { get; set; }
+		public int Year;
+		public Major Major;
 		public string Name
 		=>	$"{this.Year}级{this.Major.Name}";								//通过表达式体，实现只读属性；
 		public string ShortName

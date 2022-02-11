@@ -19,7 +19,7 @@ namespace SmartLin.LearningCSharp.Basics
 				}
 				break;                                                      //break将结束循环；
 			}
-			WriteLine($"评教成绩{rate}已保存。");
+			Write($"评教成绩{rate}已保存。");
 			Read();
 		}
 	}

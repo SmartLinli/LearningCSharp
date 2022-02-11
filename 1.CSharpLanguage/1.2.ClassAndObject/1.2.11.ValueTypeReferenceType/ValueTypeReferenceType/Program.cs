@@ -18,8 +18,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			DateTime today = DateTime.Now;									//.NET框架提供诸多自定义类型，但使用前需引用相应的命名空间；
 																			//自定义类型均为引用类型；
 			Student															//使用自行创建的自定义类型；
-				boy = new Student("3210707001", "张三")
-				, Sameboy = new Student("3210707001", "张三");
+				boy = new Student("3220707001", "张三")
+				, Sameboy = new Student("3220707001", "张三");
 			WriteLine($"boy{(boy == Sameboy ? "等于" : "不等于")}Sameboy");	//引用类型的默认比较方式只比较引用（即地址）；
 			Sameboy = boy;                                                  //引用类型的默认赋值方式只复制引用（即地址）；
 			boy.Name = "李四";

@@ -8,11 +8,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		static void Main()
 		{
 			Major infomationManagement = new Major("信息管理与信息系统", "信管");          //调用构造函数；
-			Class im21 = new Class(infomationManagement, 2021);
-			Student boy = new Student("3210707000", "张三", Gender.MALE);                 //调用构造函数；
-			boy.BirthDate = new DateTime(2003, 1, 2);
+			Class im22 = new Class(infomationManagement, 2022);
+			Student boy = new Student("3220707000", "张三", Gender.MALE);                 //调用构造函数；
+			boy.BirthDate = new DateTime(2004, 1, 2);
 			boy.PhoneNumber = "18900001111";
-			boy.Class = im21;
+			boy.Class = im22;
 			WriteLine
 				($"新生信息：\n"
 				+ $"学号：{boy.Number,-15}姓名：{boy.Name}\n"

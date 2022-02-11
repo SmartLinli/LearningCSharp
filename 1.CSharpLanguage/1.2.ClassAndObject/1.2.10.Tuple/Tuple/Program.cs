@@ -8,9 +8,9 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             /*定义专业、班级*/
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
-            Class im21 = new Class(infomationManagement, 2021);
+            Class im22 = new Class(infomationManagement, 2022);
             /*定义新生、录取并显示消息*/
-            Student newGuy = new Student("3210707000", "张三", Gender.MALE);
+            Student newGuy = new Student("3220707000", "张三", Gender.MALE);
             var result= newGuy.EnrollBy(infomationManagement);                          
             if (result.IsSuccess)
             {
