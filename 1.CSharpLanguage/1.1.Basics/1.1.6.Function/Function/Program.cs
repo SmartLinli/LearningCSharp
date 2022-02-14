@@ -34,7 +34,7 @@ namespace ConditionalStatement
 		}
 		static void InputRate(string courseName)
 		{
-			float rate = 0;
+			float rate;
 			while (true)
 			{
 				Write($"请输入《{courseName}》的评教成绩：");
