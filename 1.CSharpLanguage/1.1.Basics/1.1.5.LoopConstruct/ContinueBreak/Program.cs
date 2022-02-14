@@ -6,13 +6,13 @@ namespace SmartLin.LearningCSharp.Basics
 	{
 		static void Main()
 		{
-			bool isValid = false;
-			float rate = 0;
+			bool isValid;
+			float rate;
 			while (true)                                                    //while适用于循环次数未知的场景；
 			{
 				Write($"请输入评教成绩：");
 				var input = ReadLine();
-				isValid = float.TryParse(input, out rate);                  
+				isValid = float.TryParse(input, out rate);
 				if (!isValid)
 				{
 					continue;                                               //continue将跳至下一次循环；
