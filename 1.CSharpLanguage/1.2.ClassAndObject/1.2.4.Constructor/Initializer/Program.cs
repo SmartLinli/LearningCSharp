@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	class Program
+    class Program
     {
         static void Main()
         {
@@ -14,12 +14,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 BirthDate = new DateTime(2004, 1, 2),                                       //还可在初始化器中对其余属性进行赋值；
                 PhoneNumber = "18900001111"
             } ;
-			WriteLine
-				($"新生信息：\n"
-				+ $"学号：{boy.Number,-15}姓名：{boy.Name}\n"
-				+ $"性别：{(boy.Gender == Gender.MALE ? "男" : "女"),-14}生日：{boy.BirthDate:D}\n"
-				+ $"年龄：{boy.Age,-15}手机号：{boy.PhoneNumber}\n"
-				+ $"班级：{boy.Class.ShortName,-13}专业：{boy.Class.Major.Name}");
+            boy.ShowInfo();
 			Read();
         }
     }

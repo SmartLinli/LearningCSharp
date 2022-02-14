@@ -13,8 +13,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         /// </summary>
         /// <param name="student"></param>
         /// <returns></returns>
-        private static bool HasClass(this Student student)                                  //定义私有静态方法，并实现扩展方法；
-        => student.Class != null;
+        private static bool HasClass(this Student student)                                  
+        =>  student.Class != null;
         /// <summary>
         /// 被指定专业录取；
         /// </summary>

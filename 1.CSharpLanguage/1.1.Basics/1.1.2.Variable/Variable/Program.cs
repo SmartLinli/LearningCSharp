@@ -1,5 +1,6 @@
 ﻿using System;                                                           //调用命名空间System中的类型；
 using static System.Console;                                            //导入静态类，以便于直接调用其静态方法；
+
 namespace SmartLin.LearningCSharp.Basics                                //声明命名空间；
 {
     class Program                                                       //声明类；Main所在类的名称不限；

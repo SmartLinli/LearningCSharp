@@ -1,5 +1,6 @@
 ﻿using System;
 using static System.Console;
+
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
     class Program
@@ -12,11 +13,12 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             boy.Gender = Gender.MALE;
             boy.BirthDate = new DateTime(2004, 1, 2);                                           //直接调用new与构造函数来实例化对象，并直接赋值；
             boy.PhoneNumber = "18900001111";
-            WriteLine
-                ($"新生信息：\n"
-                + $"学号：{boy.Number,-15}姓名：{boy.Name}\n"                                    //访问对象的字段；
-                + $"性别：{(boy.Gender == Gender.MALE ? "男" : "女"),-14}生日：{boy.BirthDate:D}\n"
-                + $"手机：{boy.PhoneNumber}");
+            var info=
+                $"新生信息：\n" +
+                $"学号：{boy.Number,-15}姓名：{boy.Name}\n" +                                    //访问对象的字段；
+                $"性别：{(boy.Gender == Gender.MALE ? "男" : "女"),-14}生日：{boy.BirthDate:D}\n" +
+                $"手机：{boy.PhoneNumber}";
+            WriteLine(info);
             Read();
         }
     }

@@ -1,9 +1,8 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
-	class Program
+    class Program
     {
         static void Main()
         { 
@@ -13,7 +12,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             Major acupuncture = new Major();
             acupuncture.Name = "针灸学";
             acupuncture.ShortName = "针灸";
-
             Student girl = new Student();
             girl.Name = "李四";
             

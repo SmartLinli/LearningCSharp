@@ -8,33 +8,24 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		public static readonly string FEMALE = "女";
 		public static readonly string MALE = "男";
 	}
-	public class Nationality
-	{
-		public static readonly string HAN = "汉族";
-		public static readonly string QIANG = "羌族";
-		public static readonly string SHE = "畲族";
-	}
 	public class Student
 	{
 		public string Number { get; private set; }
 		public string Name { get; private set; }
 		public string Gender { get; private set; }
-		public string Nationality { get; set; }
-		public DateTime BirthDate { get; set; }
-		public int Age
-		=>	DateTime.Now.Year - this.BirthDate.Year;
-		public string PhoneNumber { get; set; }
-		public Class Class { get; private set; }
+		public void ShowInfo()
+		{
+			var info =
+				$"新生信息：\n" +
+				$"学号：{this.Number,-15}姓名：{this.Name}\n" +
+				$"性别：{this.Gender,-14}\n";
+			WriteLine(info);
+		}
 		private Student(string number, string name, string gender)							//将构造函数定义为私有；                   
 		{
 			this.Number = number;
 			this.Name = name;
 			this.Gender = gender;
-		}
-		private Student(string number, string name, string gender, Class currentClass)   
-			: this(number, name, gender)                                                
-		{                                                                               
-			this.Class = currentClass;
 		}
         public static Student Create(string number, string name, string gender)				//在非静态类中定义静态方法；     
         {																					//无需实例化非静态类，即可调用其静态方法，从而实现创造行为模式等设计模式；
@@ -46,15 +37,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 			}
 			Student student = new Student(number, name, gender);							//调用私有构造函数；
 			return student;
-        }
-		public static Student Create(string number, string name, string gender, Class currentClass)
-        {
-            Student student = Create(number, name, gender);                                 //调用本类的静态方法；
-            if (student != null)
-            {
-                student.Class = currentClass;
-            }
-            return student;
         }
     }
 }

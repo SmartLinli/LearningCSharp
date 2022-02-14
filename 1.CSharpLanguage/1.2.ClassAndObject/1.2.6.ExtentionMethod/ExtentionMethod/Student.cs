@@ -13,10 +13,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		public string Number { get; private set; }
 		public string Name { get; private set; }
 		public string Gender { get; private set; }
-		public DateTime BirthDate { get; set; }
-		public int Age
-		=>	DateTime.Now.Year - this.BirthDate.Year;
-		public string PhoneNumber { get; set; }
 		public Class Class { get; internal set; }
 		private Student(string number, string name, string gender)
 		{

@@ -1,12 +1,11 @@
 ﻿using System;
-using static System.Console;
 
 namespace SmartLin.LearningCSharp.ClassAndObject.Model                                      //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
 {
-	/// <summary>
-	/// 性别；
-	/// </summary>
-	public class Gender
+    /// <summary>
+    /// 性别；
+    /// </summary>
+    public class Gender
 	{
 		public static readonly string MALE = "男";
 		public static readonly string FEMALE = "女";

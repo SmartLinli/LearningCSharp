@@ -1,5 +1,6 @@
 ﻿using System;
 using static System.Console;
+
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
 	public enum Gender
@@ -38,9 +39,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
                 {
                     return null;
                 }
-                return this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
-            }
-            set
+				var maskedPhoneNumber = this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4);
+				return maskedPhoneNumber;
+			}
+			set
 			{
 				this._PhoneNumber = value;
 			}

@@ -1,16 +1,17 @@
 ﻿using System.Diagnostics;
 using static System.Console;
+
 namespace ConditionalStatement
 {
-    class Program
-    {
-        static void Main()
-        {
+	class Program
+	{
+		static void Main()
+		{
 			int MinRate = 0, MaxRate = 5;
 			bool
-				isNumeral = false,
-				isValidFraction = false,
-				isWithinRange = false;
+				isNumeral,
+				isValidFraction,
+				isWithinRange;
 			Write("请输入评教成绩：");
 			var input = ReadLine();
 			isNumeral = float.TryParse(input, out float rate);
@@ -47,6 +48,6 @@ namespace ConditionalStatement
 			#endregion
 			WriteLine("评教成绩已保存。");
 			Read();
-        }
-    }
+		}
+	}
 }

@@ -6,11 +6,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 	public class Student
 	{
 		public string Name { get; set; }
-		public Class Class { get; private set; }                            //将set访问器的访问性定义为私有，实现只读属性；
+		public Class Class { get; private set; }                                //将set访问器的访问性定义为私有，实现只读属性；
 		private bool HasClass                                               
 		=>  this.Class != null;
         public void Intro()
-        =>  WriteLine                                                        //通过表达式体，定义只有单语句的方法；
+        =>  WriteLine                                                           //通过表达式体，定义只有单语句的方法；
                 ($"我叫{this.Name}" +
                  $"{(this.HasClass ? $"，来自{this.Class.ShortName}" : "")}。");
         public void EnrollBy(Major newMajor)
@@ -23,10 +23,10 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             Class newClass = new Class();
             newClass.Year = DateTime.Now.Year;
             newClass.Major = newMajor;
-            this.Class = newClass;											//访问属性的私有访问器；实现封装；
+            this.Class = newClass;											    //访问属性的私有访问器；实现封装；
 			WriteLine($"{this.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
         }
-		public void TransferTo(Major newMajor, int year)               //定义公有方法
+		public void TransferTo(Major newMajor, int year)                        //定义公有方法
 		{
 			if (!this.HasClass)
 			{
