@@ -2,19 +2,20 @@
 
 namespace SmartLin.LearningCSharp.Basics
 {
-    class Program
-    {
-        static void Main()
-        {
-            int MinRate = 0, MaxRate = 5;
-            float rate = 0;
+	class Program
+	{
+		static void Main()
+		{
+			const int MinRate = 0, MaxRate = 5;
 			bool
-				isNumeral = false,
-				isValidFraction = false,
-				isWithinRange = false;
-            Write("请输入评教成绩：");
-            var input = ReadLine();
-            isNumeral = float.TryParse(input, out rate);
+				isNumeral,
+				isValidFraction,
+				isWithinRange;
+			float rate;
+			string input;
+			Write("请输入评教成绩：");
+			input = ReadLine();
+			isNumeral = float.TryParse(input, out rate);
 			if (!isNumeral)
 			{
 				Write("评教成绩应为数值！");
@@ -36,7 +37,7 @@ namespace SmartLin.LearningCSharp.Basics
 				return;
 			}
 			Write("评教成绩已保存。");
-            Read();
-        }
-    }
+			Read();
+		}
+	}
 }
