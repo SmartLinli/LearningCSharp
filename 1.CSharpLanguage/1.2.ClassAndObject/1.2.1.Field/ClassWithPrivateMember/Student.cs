@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace SmartLin.LearningCSharp.ClassAndObject
 {
     enum Gender

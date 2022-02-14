@@ -1,5 +1,4 @@
 ﻿using static System.Console;
-
 namespace SmartLin.LearningCSharp.Basics
 {
 	class Program
