@@ -2,10 +2,10 @@
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-	/// <summary>
-	/// 学生；
-	/// </summary>
-	public class Student : User
+    /// <summary>
+    /// 学生；
+    /// </summary>
+    public class Student : User
     {
 		/// <summary>
 		/// 学籍；

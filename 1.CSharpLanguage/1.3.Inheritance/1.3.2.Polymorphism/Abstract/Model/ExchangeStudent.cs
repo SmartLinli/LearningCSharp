@@ -16,9 +16,8 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// </summary>
 		public override void Register()                                                     //基类重写过的抽象方法，还可在派生类中被重写；
 		{
-			this.Status = "交换生";                                                         
-			WriteLine
-				($"交换生{this.Name}当前学籍为“{this.Status}”");
+			this.Status = "交换生";
+			WriteLine($"交换生{this.Name}当前学籍为“{this.Status}”");
 		}
 		/// <summary>
 		/// 构造函数；

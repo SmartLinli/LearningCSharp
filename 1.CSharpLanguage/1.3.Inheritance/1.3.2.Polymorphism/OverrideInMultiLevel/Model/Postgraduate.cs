@@ -28,10 +28,11 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// </summary>
 		public override void Intro()
 		{
-            WriteLine
-                ($"我叫{this.Name}" +
-                 $"{(this.Supervisor == null ? "，是研究生。" : $"，是{ this.Supervisor.Name}老师的研究生")}" +
-                 $"，研究方向是{this.Direction}");
+			var introduction =
+				$"我叫{this.Name}" +
+				$"{(this.Supervisor == null ? "，是研究生。" : $"，是{ this.Supervisor.Name}老师的研究生")}" +
+				$"，研究方向是{this.Direction}";
+			WriteLine(introduction);
 		}
 		/// <summary>
 		/// 构造函数；

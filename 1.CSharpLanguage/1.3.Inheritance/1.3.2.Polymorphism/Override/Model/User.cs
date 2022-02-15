@@ -1,12 +1,11 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 
 namespace SmartLin.LearningCSharp.Inheritance
 {
-	/// <summary>
-	/// 性别；
-	/// </summary>
-	public class Gender
+    /// <summary>
+    /// 性别；
+    /// </summary>
+    public class Gender
 	{
 		public static readonly string MALE = "男";
 		public static readonly string FEMALE = "女";

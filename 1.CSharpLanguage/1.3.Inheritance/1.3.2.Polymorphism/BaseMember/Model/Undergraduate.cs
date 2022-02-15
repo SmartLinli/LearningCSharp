@@ -17,7 +17,9 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()                                                        //重写基类中的虚方法；
         {
             base.Intro();                                                                   //调用基类的虚方法；基类Student未重写更高一层基类User的虚方法Intro，即隐式继承该虚方法，故此处最终调用基类User的虚方法Intro；
-            Write(this.Class == null ? "，今天刚入学。" : $"，来自{this.Class}。");
+			var undergraduateIntroduction =
+				this.Class == null ? "，今天刚入学。" : $"，来自{this.Class}。";
+			Write(undergraduateIntroduction);
         }
 		/// <summary>
 		/// 构造函数；

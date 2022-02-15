@@ -1,11 +1,9 @@
-﻿using static System.Console;
-
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
-	/// <summary>
-	/// 教职工；
-	/// </summary>
-	public class Faculty : User
+    /// <summary>
+    /// 教职工；
+    /// </summary>
+    public class Faculty : User
 	{
 		/// <summary>
 		/// 部门；

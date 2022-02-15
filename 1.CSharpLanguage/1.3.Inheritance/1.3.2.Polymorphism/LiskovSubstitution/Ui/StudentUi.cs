@@ -13,12 +13,13 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="student">学生</param>
         public static void Display(Student student)
         {
-            WriteLine
-                ($"学生信息：\n" +
-                 $"学号：{student.Number,-15}姓名：{student.Name}\n" +
-                 $"性别：{student.Gender,-14}生日：{student.BirthDate:D}\n" +
-                 $"手机号：{student.PhoneNumber}\n" +
-                 $"学籍：{student.Status}");
+            var studentIntroduction =
+                $"学生信息：\n" +
+                $"学号：{student.Number,-15}姓名：{student.Name}\n" +
+                $"性别：{student.Gender,-14}生日：{student.BirthDate:D}\n" +
+                $"手机号：{student.PhoneNumber}\n" +
+                $"学籍：{student.Status}";
+            WriteLine(studentIntroduction);
             student.Intro();
             WriteLine("\n");
         }

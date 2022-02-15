@@ -17,6 +17,16 @@
 			this.Status = "在读";
 		}
 		/// <summary>
+		/// 修改学号；
+		/// </summary>
+		/// <param name="newNumber">新学号</param>
+		public void ModifyNumber(string newNumber)
+        {
+			/*
+			this.Number = newNumber;											//派生类无法修改基类的私有成员；
+			*/
+        }
+		/// <summary>
 		/// 构造函数；
 		/// </summary>
 		/// <param name="number">学号</param>

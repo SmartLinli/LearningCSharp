@@ -7,10 +7,6 @@ namespace SmartLin.LearningCSharp.Inheritance
     /// </summary>
     public class Postgraduate : Student
     {
-        /// <summary>
-        /// 导师；
-        /// </summary>
-        public string Supervisor { get; private set; }
 		/// <summary>
 		/// 研究方向；
 		/// </summary>

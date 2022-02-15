@@ -16,9 +16,8 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// </summary>
 		public override void Register()                                                     //重写基类中的虚方法；
 		{
-			this.Status = "交换生";                                                         
-			WriteLine
-				($"交换生{this.Name}当前学籍为“{this.Status}”");
+			this.Status = "交换生";
+			WriteLine($"交换生{this.Name}当前学籍为“{this.Status}”");
 		}
 		/// <summary>
 		/// 构造函数；

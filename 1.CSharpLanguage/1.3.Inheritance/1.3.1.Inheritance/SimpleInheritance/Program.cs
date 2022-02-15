@@ -9,10 +9,10 @@ namespace SmartLin.LearningCSharp.Inheritance
 		{
 			Student boy = new Student()                                             
             {
-				Number = "3210707000",												//派生类访问基类的属性；
+				Number = "3220707000",												//派生类访问基类的属性；
 				Name = "张三",
 				Gender = Gender.MALE,
-				BirthDate = new DateTime(2003, 1, 2),
+				BirthDate = new DateTime(2004, 1, 2),
 				PhoneNumber = "18900001111",
 			};
 			boy.Intro();                                                            //派生类调用基类的方法； 

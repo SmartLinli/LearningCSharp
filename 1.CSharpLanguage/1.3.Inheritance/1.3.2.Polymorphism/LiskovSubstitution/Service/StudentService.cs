@@ -1,6 +1,4 @@
-﻿using static System.Console;
-
-namespace SmartLin.LearningCSharp.Inheritance
+﻿namespace SmartLin.LearningCSharp.Inheritance
 {
     /// <summary>
     /// 学生服务；

@@ -11,21 +11,20 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// 班级
 		/// </summary>
 		public string Class { get; private set; }
-        /// <summary>
-        /// 转专业；
-        /// </summary>
-        /// <param name="newClass">新班级</param>
-        public void TransferToMajor(string newClass)
-        {
-            if (this.Class == null)
-            {
-                WriteLine($"{this.Name}尚未被任何专业录取，无法转专业。");
-                return;
-            }
-            this.Class = newClass;
-            WriteLine
-                ($"{this.Name}已转至新专业，并分配至{newClass}班。");
-        }
+		/// <summary>
+		/// 转专业；
+		/// </summary>
+		/// <param name="newClass">新班级</param>
+		public void TransferToMajor(string newClass)
+		{
+			if (this.Class == null)
+			{
+				WriteLine($"{this.Name}尚未被任何专业录取，无法转专业。");
+				return;
+			}
+			this.Class = newClass;
+			WriteLine($"{this.Name}已转至新专业，并分配至{newClass}班。");
+		}
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

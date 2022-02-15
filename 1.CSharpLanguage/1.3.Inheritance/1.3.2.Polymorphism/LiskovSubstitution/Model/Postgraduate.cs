@@ -27,10 +27,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 		/// 注册；
 		/// </summary>
 		public sealed override void Register()                                              //密封方法不能被重写；
-        {
-			this.Status = "已注册";                                                         
-			WriteLine
-				($"研究生{this.Name}当前学籍为“{this.Status}”");
+		{
+			this.Status = "已注册";
+			WriteLine($"研究生{this.Name}当前学籍为“{this.Status}”");
 		}
         /// <summary>
         /// 介绍；
@@ -38,10 +37,11 @@ namespace SmartLin.LearningCSharp.Inheritance
         public override void Intro()
         {
             base.Intro();
-            Write
-                (this.Supervisor == null ? "，是研究生。" : $"，是{ this.Supervisor.Name}老师的研究生。" +
-                $"研究方向是{this.Direction}。");
-        }
+			var postgraduateIntroduction =
+				this.Supervisor == null ? "，是研究生。" : $"，是{ this.Supervisor.Name}老师的研究生" +
+				$"，研究方向是{this.Direction}。";
+			Write(postgraduateIntroduction);
+		}
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

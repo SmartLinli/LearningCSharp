@@ -13,12 +13,13 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="postgraduate">研究生</param>
         public static void Display(Postgraduate postgraduate)
         {
-            WriteLine
-                ($"研究生信息：\n" +
-                 $"学号：{postgraduate.Number,-15}姓名：{postgraduate.Name}\n" +
-                 $"性别：{ postgraduate.Gender,-14} 生日：{ postgraduate.BirthDate:D}\n" +
-                 $"手机号：{postgraduate.PhoneNumber}\n" +
-                 $"导师：{postgraduate.Supervisor.Name,-12}方向：{postgraduate.Direction}");
+            var postgraduateIntroduction =
+                $"研究生信息：\n" +
+                $"学号：{postgraduate.Number,-15}姓名：{postgraduate.Name}\n" +
+                $"性别：{ postgraduate.Gender,-14} 生日：{ postgraduate.BirthDate:D}\n" +
+                $"手机号：{postgraduate.PhoneNumber}\n" +
+                $"导师：{postgraduate.Supervisor.Name,-12}方向：{postgraduate.Direction}";
+            WriteLine(postgraduateIntroduction);
             postgraduate.Intro();
             WriteLine("\n");
         }

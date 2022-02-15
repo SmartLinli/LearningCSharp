@@ -28,9 +28,11 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         public override void Intro()                                                        
         {
-            base.Intro();                                                                   
-            Write(this.Class == null ? "，今天刚入学。" : $"，来自{this.Class}。");
-        }
+            base.Intro();
+			var undergraduateIntroduction =
+				this.Class == null ? "，今天刚入学。" : $"，来自{this.Class}。";
+			Write(undergraduateIntroduction);
+		}
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

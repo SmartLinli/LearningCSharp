@@ -12,14 +12,12 @@
 		{
 			get
 			{
-				if (base.PhoneNumber != null)							//访问基类的属性；
-				{
-					return base.PhoneNumber.Substring(0, 3) + "****" + base.PhoneNumber.Substring(7, 4);
-				}
-				else
+				if (base.PhoneNumber == null)							//访问基类的属性；
 				{
 					return null;
 				}
+				var maskedPhoneNumber = base.PhoneNumber.Substring(0, 3) + "****" + base.PhoneNumber.Substring(7, 4);
+				return maskedPhoneNumber;
 			}
 			set
 			{

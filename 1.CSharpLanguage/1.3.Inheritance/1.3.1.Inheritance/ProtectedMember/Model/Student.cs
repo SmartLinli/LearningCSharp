@@ -7,6 +7,10 @@ namespace SmartLin.LearningCSharp.Inheritance
 	/// </summary>
 	public class Student : User                                                 
     {
+		/// <summary>
+		/// 修改电话号码；
+		/// </summary>
+		/// <param name="newPhoneNumber">新电话号码</param>
 		public void ModifyPhoneNumber(string newPhoneNumber)
 		{
 			WriteLine("请输入短信验证码……");
