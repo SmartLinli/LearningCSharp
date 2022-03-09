@@ -19,11 +19,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 																			//自定义类型均为引用类型；
 			Student															//使用自行创建的自定义类型；
 				boy = new Student("3220707001", "张三")
-				, Sameboy = new Student("3220707001", "张三");
-			WriteLine($"boy{(boy == Sameboy ? "等于" : "不等于")}Sameboy");	//引用类型的默认比较方式只比较引用（即地址）；
-			Sameboy = boy;                                                  //引用类型的默认赋值方式只复制引用（即地址）；
+				, sameBoy = new Student("3220707001", "张三");
+			WriteLine($"boy{(boy == sameBoy ? "等于" : "不等于")}Sameboy");  //引用类型的默认比较方式只比较引用（即地址）；
+			sameBoy = boy;                                                  //引用类型的默认赋值方式只复制引用（即地址）；
 			boy.Name = "李四";
-			WriteLine($"boy{(boy == Sameboy ? "等于" : "不等于")}Sameboy");
+			WriteLine($"boy{(boy == sameBoy ? "等于" : "不等于")}Sameboy");
 			Read();
 		}
 	}
