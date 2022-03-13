@@ -21,8 +21,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             StudentUi.Display(newGuy);
             /*发送短信*/
             girl.PhoneNumber = "18900001111";
-            MessageService.SendSms(girl.PhoneNumber, "请按时打卡。");
-            MessageService.SendSms(newGuy.PhoneNumber, "请按时打卡。");
+            SmsService.SendSms(girl.PhoneNumber, "请按时打卡。");
+            SmsService.SendSms(newGuy.PhoneNumber, "请按时打卡。");
             Read();
         }
     }

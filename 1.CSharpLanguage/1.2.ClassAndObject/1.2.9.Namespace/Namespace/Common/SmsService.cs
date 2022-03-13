@@ -3,9 +3,9 @@
 namespace SmartLin.LearningCSharp.ClassAndObject.Common                                         //向文件夹添加的类，所在命名空间默认为项目默认命名空间+文件夹路径；
 {
     /// <summary>
-    /// 消息服务；
+    /// 短信服务；
     /// </summary>
-    public static class MessageService
+    public static class SmsService
     {
         /// <summary>
         /// 发送短信；

@@ -11,7 +11,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         /// <summary>
         /// 是否有班级；
         /// </summary>
-        /// <param name="student"></param>
+        /// <param name="student">学生</param>
         /// <returns></returns>
         private static bool HasClass(this Student student)                                  
         =>  student.Class != null;
