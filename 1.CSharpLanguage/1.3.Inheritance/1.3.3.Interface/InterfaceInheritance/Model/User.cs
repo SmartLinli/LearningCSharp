@@ -14,7 +14,7 @@
         /// </summary>
         public string Name { get; private set; }
         /// <summary>
-        /// 构造函数 
+        /// 构造函数；
         /// </summary>
         /// <param name="number">编号</param>
         /// <param name="name">姓名</param>

@@ -6,7 +6,7 @@
     public interface IEvaluate                                  //定义接口；
     {
         /// <summary>
-        /// 评教
+        /// 评教；
         /// </summary>
         /// <param name="faculty">被评教的教职工</param>
         void Evaluate(Faculty faculty);                         //接口成员默认公有,且不能更改访问级别；

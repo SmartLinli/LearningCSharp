@@ -13,9 +13,10 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// <param name="faculty">教职工</param>
         public void Evaluate(Faculty faculty)                           
         {
-			WriteLine
-				($"学生对{faculty.Name}老师的评教：\n从师德师风、精神面貌、课件板书、因材施教等方面进行评教……\n"
-				+ $"评教人：（匿名）\n");
+            WriteLine
+                ($"学生对{faculty.Name}老师的评教：\n" +
+                 $"从师德师风、精神面貌、课件板书、因材施教等方面进行评教……\n" +
+                 $"评教人：（匿名）\n");
         }
 		/// <summary>
 		/// 构造函数； 
