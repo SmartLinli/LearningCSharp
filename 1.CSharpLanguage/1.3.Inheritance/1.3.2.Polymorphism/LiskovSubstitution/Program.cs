@@ -20,17 +20,18 @@ namespace SmartLin.LearningCSharp.Inheritance
 			};
 			Postgraduate girl = new Postgraduate("2190757002", "李四", Gender.FEMALE, msYang);
 			girl.AssignDirection("数据可视化");
-            ExchangeStudent newGuy = new ExchangeStudent("20210531005", "王五", Gender.MALE, "21信管", "江西中医药大学")
-            {
-                Instructor = msYang
-            };
+			ExchangeStudent newGuy = new ExchangeStudent("20210531005", "王五", Gender.MALE, "21信管", "江西中医药大学")
+			{
+				Instructor = msYang
+			};
 			/*显示；介绍所有用户；批量注册；*/
-			UserUi.Display(boy);																
+			UserUi.Display(boy);
 			StudentUi.Display(boy);
 			UndergraduateUi.Display(newGuy);
-			UserService.IntroduceAll(new User[] { msYang, boy, girl, newGuy });                 
+			User[] users = { msYang, boy, girl, newGuy };
+			UserService.IntroduceAll(users);
 			WriteLine();
-            StudentService.RegisterAll(boy, girl, newGuy);
+			StudentService.RegisterAll(boy, girl, newGuy);
 			Read();
 		}
 	}
