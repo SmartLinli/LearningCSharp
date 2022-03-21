@@ -74,6 +74,5 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
             this.Number = number;
             this.Name = name;
         }
-
     }
 }

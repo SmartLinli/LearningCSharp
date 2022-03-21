@@ -49,6 +49,5 @@
             this.Number = number;
             this.Name = name;
         }
-
     }
 }

@@ -6,27 +6,24 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
     {
         static void Main()
         {
-            Student[] newStudents =                                                    
+            Student[] newStudents =
             {
-                new Student("3200707001", "闭敏媛"),
-                new Student("3200707002", "江紫燕"),
-                new Student("3200707003", "胡江彬"),
-                new Student("3200707004", "林金川"),
-                new Student("3200707005", "王泉井")
+                new Student("3210707001", "田杰红"),
+                new Student("3210707002", "胡羽心"),
+                new Student("3210707003", "吴争宇"),
+                new Student("3210707004", "廖丽珍"),
+                new Student("3210707005", "王诗琴")
             };
-            Class im20 = new Class("20信管");
-            im20 += newStudents;
-			/*查找学生*/
-			WriteLine
-				($"查得学生{im20["3200707001"].Name}。");                           //通过索引器获取数组元素；
+            Class im21 = new Class("21信管");
+            im21 += newStudents;
+            /*查找学生*/
+            WriteLine($"查得学生{im21["3210707001"].Name}。");                      //通过索引器获取数组元素；
             /*修改学生*/
-            im20["3200707002"].Name = "储艺";                                      //通过索引器获取数组元素，并修改其属性；             
-            WriteLine
-                ($"学生已更名为{im20["3200707002"].Name}。");
+            im21["3210707002"].Name = "刘兰";                                      //通过索引器获取数组元素，并修改其属性；             
+            WriteLine($"学生已更名为{im21["3210707002"].Name}。");
             /*添加学生*/
-            im20["3200707006"] = new Student("3200707006", "刘伯铭");              //通过索引器对数组元素赋值；
-			WriteLine
-				($"新增学生{im20["3200707006"].Name}。");
+            im21["3210707006"] = new Student("3210707006", "罗清香");              //通过索引器对数组元素赋值；
+            WriteLine($"新增学生{im21["3210707006"].Name}。");
             Read();
         }
     }

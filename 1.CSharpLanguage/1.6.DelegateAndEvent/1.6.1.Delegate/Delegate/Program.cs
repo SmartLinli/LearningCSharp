@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
 	{
 		static void Main()
 		{
-			Student student = new Student("3200707001", "闭敏媛")
+			Student student = new Student("3210707001", "田杰红")
 			{
 				PhoneNumber = "17877778888"
 			};

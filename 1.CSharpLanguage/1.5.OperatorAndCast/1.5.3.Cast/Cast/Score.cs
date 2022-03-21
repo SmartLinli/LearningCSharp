@@ -50,9 +50,7 @@
         /// </summary>
         /// <returns>字符串</returns>
         public override string ToString()
-        {
-            return this.Numeral.ToString();
-        }
+        =>  this.Numeral.ToString();
         /// <summary>
         /// 构造函数；
         /// </summary>
