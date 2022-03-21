@@ -19,9 +19,7 @@ namespace SmartLin.LearningCSharp.Inheritance
         /// </summary>
         /// <returns>字符串</returns>
         public override string ToString()                                   //重写System.object类的虚方法ToString；
-        {
-            return this.Name;
-        }
+        =>  this.Name;
         /// <summary>
         /// 构造函数；
         /// </summary>

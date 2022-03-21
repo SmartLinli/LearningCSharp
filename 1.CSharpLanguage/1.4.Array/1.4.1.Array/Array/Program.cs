@@ -21,11 +21,11 @@ namespace SmartLin.LearningCSharp.Array
             /*定义学生；为所有学生指定课程；*/
             Student[] students =
             {                                                                       //在数组初始化器中直接实例化各对象；
-                new Student("3200707001", "闭敏媛"),
-                new Student("3200707002", "储艺"),
-                new Student("3200707003", "胡江彬"),
-                new Student("3200707004", "林金川"),
-                new Student("3200707005", "王泉井")
+                new Student("3210707001", "田杰红"),
+                new Student("3210707002", "刘兰"),
+                new Student("3210707003", "吴争宇"),
+                new Student("3210707004", "廖丽珍"),
+                new Student("3210707005", "王诗琴")
             };
             Course[] courses = { Oop, databaseTheory };                             //声明并（使用初始化器）初始化数组；声明数组后，将自动创建派生于Array抽象类的新类；
             for (int i = 0; i < students.Length; i++)                               //调用基类Array的Lengh方法，返回数组元素个数；
