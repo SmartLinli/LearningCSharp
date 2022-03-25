@@ -11,10 +11,10 @@ namespace SmartLin.LearningCSharp.Array
 			Book cSharpExperimentBook = new Book("9787302382744", "C#语言程序设计基础实验指导（第3版）");
 			Book databaseSystemBook = new Book("9787040195835", "数据库系统概论（第5版）");
 			Book databaseExperimentBook = new Book("9787508476377", "数据库系统概论（第5版）习题解析与实验指导");
-			Course Oop = new Course("2060238", "面向对象程序设计");
+			Course oop = new Course("2060238", "面向对象程序设计");
 			Course databaseTheory = new Course("2060308", "数据库原理");
             /*指定课程的教材；*/
-            Oop.Books = new Book[] { cSharpFoundationBook, cSharpExperimentBook };  //作为对象数据成员的数组已被声明过，此处需使用new初始化，不能单独使用初始化器；
+            oop.Books = new Book[] { cSharpFoundationBook, cSharpExperimentBook };  //作为对象数据成员的数组已被声明过，此处需使用new初始化，不能单独使用初始化器；
 			databaseTheory.Books = new Book[2];                                     //初始化时必须直接或（使用初始化器）间接指定数组大小；
 			databaseTheory.Books[0] = databaseSystemBook;                           //通过索引器传送元素号，访问数组元素；
 			databaseTheory.Books[1] = databaseExperimentBook;
@@ -27,9 +27,10 @@ namespace SmartLin.LearningCSharp.Array
                 new Student("3210707004", "廖丽珍"),
                 new Student("3210707005", "王诗琴")
             };
-            Course[] courses = { Oop, databaseTheory };                             //声明并（使用初始化器）初始化数组；声明数组后，将自动创建派生于Array抽象类的新类；
+            Course[] courses = { oop, databaseTheory };                             //声明并（使用初始化器）初始化数组；声明数组后，将自动创建派生于Array抽象类的新类；
             for (int i = 0; i < students.Length; i++)                               //调用基类Array的Lengh方法，返回数组元素个数；
 			{
+				students[i].LearningCourses = new Course[100];
 				students[i].LearningCourses = courses;                              //对数组进行赋值；
 			}
 			/*显示所有学生的课程、教材；*/
