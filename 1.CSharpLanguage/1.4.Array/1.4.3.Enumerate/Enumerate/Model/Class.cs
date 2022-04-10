@@ -42,7 +42,7 @@ namespace SmartLin.LearningCSharp.Array
         /// <summary>
         /// 添加多名学生；
         /// </summary>
-        /// <param name="newStudents">学生数组</param>
+        /// <param name="newStudents">新学生数组</param>
         public void AddStudents(Student[] newStudents)
         {
             foreach (Student student in newStudents)

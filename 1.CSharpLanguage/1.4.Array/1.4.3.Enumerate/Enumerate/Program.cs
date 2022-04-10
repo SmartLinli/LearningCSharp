@@ -16,7 +16,7 @@ namespace SmartLin.LearningCSharp.Array
                 new Student("3210707005", "王诗琴"),
                 new Student("3210707006", "罗清香"),
                 new Student("3210707007", "谢晓丹"),
-                //new Student("3210707008", "刘浩雄"),                                   //此后班级对象的学生属性数组的长度将为10，但非空元素个数将为9；
+                new Student("3210707008", "刘浩雄"),                                   
                 new Student("3210707009", "程琨耀"),
                 new Student("3210707010", "李健铭")
             };

@@ -10,11 +10,11 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <summary>
         /// 初始学生人数；
         /// </summary>
-        private int _InitialStudentCount = 5;                                       //初始学生人数；
+        private int _InitialStudentCount = 5;                                       
         /// <summary>
         /// 当前学生人数；
         /// </summary>
-        private int _CurrentStudentCount = 0;                                       //当前学生人数；
+        private int _CurrentStudentCount = 0;                                       
         /// <summary>
         /// 简称；
         /// </summary>

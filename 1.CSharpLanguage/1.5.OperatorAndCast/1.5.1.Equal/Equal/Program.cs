@@ -9,7 +9,7 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
             Student
                 student = new Student("3220707001", "张三")
                 , sameStudent = new Student("3220707001", "(空)")
-                , student2 = new Student("3220705001", "张三");
+                , student2 = new Student("3220305001", "张三");
 			WriteLine
 				($"{student.Number}号{student.Name}同学" +
                  $"与{sameStudent.Number}号{sameStudent.Name}同学" +

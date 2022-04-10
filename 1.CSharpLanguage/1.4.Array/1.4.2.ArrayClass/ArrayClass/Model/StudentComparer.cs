@@ -3,22 +3,22 @@
 namespace SmartLin.LearningCSharp.ArrayClass
 {
     /// <summary>
+    /// 学生比较器类型；
+    /// </summary>
+    public enum StudentComparerType                                             //使用枚举表达不同的排序选项；
+    {
+        NUMBER,
+        NAME
+    }
+    /// <summary>
     /// 学生比较器；
     /// </summary>
     public class StudentComparer : IComparer<Student>                           //该类实现IComparer<>接口，用于实现更多排序选项；
     {
         /// <summary>
-        /// 比较类型枚举；
-        /// </summary>
-        public enum CompareType                                                 //使用枚举表达不同的排序选项；
-        {
-            NUMBER,
-            NAME
-        }
-        /// <summary>
         /// 比较类型
         /// </summary>
-        public CompareType Type { get; private set; }
+        public StudentComparerType Type { get; private set; }
         /// <summary>
         /// 比较
         /// </summary>
@@ -33,9 +33,9 @@ namespace SmartLin.LearningCSharp.ArrayClass
             }
             switch (this.Type)
             {
-                case CompareType.NUMBER:
+                case StudentComparerType.NUMBER:
                     return student.Number.CompareTo(otherStudent.Number);
-                case CompareType.NAME:
+                case StudentComparerType.NAME:
                     return student.Name.CompareTo(otherStudent.Name);
                 default:
                     return 0;
@@ -45,7 +45,7 @@ namespace SmartLin.LearningCSharp.ArrayClass
         /// 构造函数；
         /// </summary>
         /// <param name="type">比较类型</param>
-        public StudentComparer(CompareType type)
+        public StudentComparer(StudentComparerType type)
         {
             this.Type = type;
         }
