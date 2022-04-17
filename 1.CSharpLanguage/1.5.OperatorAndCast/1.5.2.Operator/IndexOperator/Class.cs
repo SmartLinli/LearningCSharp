@@ -89,7 +89,7 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
         /// <param name="number">学号</param>
         /// <returns>学生</returns>
         public Student this[string number]                                          //通过索引运算符实现索引器；索引运算符的输入参数将作为查找元素的条件；
-        {                                                                           //索引器与属性相似；
+        {                                                                           //索引器与属性相似；索引器亦支持重载；
             get                                                                     //在get访问器中，遍历数组，查找是否存在符合条件的元素；若存在，则返回该元素，否则返回空值；           
             {
                 foreach (Student student in this.Students)
@@ -103,7 +103,7 @@ namespace SmartLin.LearningCSharp.OperatorAndCast
             }
             set                                                                     //在set访问器中，遍历数组，查找是否存在符合条件的元素；若存在，则替换该元素，否则添加新元素；
             {
-                for (int i = 0; i < this.Students.Length; i++)
+                for (int i = 0; i < this.Students.Length; i++)                      //此处不可使用foreach循环，因为foreach的循环变量是只读的；
                 {
                     if (this.Students[i].Number == number)
                     {

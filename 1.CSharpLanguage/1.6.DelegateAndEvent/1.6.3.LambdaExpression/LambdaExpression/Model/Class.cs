@@ -14,15 +14,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <summary>
         /// 专业；
         /// </summary>
-        public Major Major { get; private set; }
-        /// <summary>
-        /// 名称；
-        /// </summary>
-        public string Name => $"{this.Year}级{this.Major.Name}";
-        /// <summary>
-        /// 简称；
-        /// </summary>
-        public string ShortName => $"{this.Year % 100}{this.Major.ShortName}";
+        public Major Major { get; private set; }        
         /// <summary>
         /// 学生；
         /// </summary>
