@@ -8,9 +8,9 @@ namespace SmartLin.LearningCSharp.Array
     public class Class
     {
         /// <summary>
-        /// 初始学生数；
+        /// 最大学生数；
         /// </summary>
-        private int _InitialStudentCount = 5;
+        private int _MaxStudentCount = 5;
         /// <summary>
         /// 当前学生数；
         /// </summary>
@@ -29,10 +29,10 @@ namespace SmartLin.LearningCSharp.Array
         /// <param name="newStudent">新学生</param>
         public void AddStudent(Student newStudent)
         {
-            if (this._CurrentStudentCount >= this._InitialStudentCount)
+            if (this._CurrentStudentCount >= this._MaxStudentCount)
             {
-                this._InitialStudentCount *= 2;
-                Student[] newStudents = new Student[this._InitialStudentCount];
+                this._MaxStudentCount *= 2;
+                Student[] newStudents = new Student[this._MaxStudentCount];
                 this.Students.CopyTo(newStudents, 0);
                 this.Students = newStudents;
             }
@@ -70,7 +70,7 @@ namespace SmartLin.LearningCSharp.Array
         public Class(string shortName)
         {
             this.ShortName = shortName;
-            this.Students = new Student[_InitialStudentCount];
+            this.Students = new Student[_MaxStudentCount];
             this._CurrentStudentCount = 0;
         }
     }
