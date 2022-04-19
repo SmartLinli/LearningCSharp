@@ -10,9 +10,9 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
     public class GenericContainer<T> where T : IEntity                                  //约束该泛型类型必须实现指定接口；
     {
         /// <summary>
-        /// 初始元素个数；
+        /// 最大元素个数；
         /// </summary>
-        private int _InitialElementCount = 5;
+        private int _MaxElementCount = 5;
         /// <summary>
         /// 当前元素个数；
         /// </summary>                         
@@ -27,10 +27,10 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <param name="newElement">新元素</param>
         public void Add(T newElement)
         {
-            if (this._CurrentElementCount >= this._InitialElementCount)
+            if (this._CurrentElementCount >= this._MaxElementCount)
             {
-                this._InitialElementCount *= 2;
-                T[] newElements = new T[this._InitialElementCount];
+                this._MaxElementCount *= 2;
+                T[] newElements = new T[this._MaxElementCount];
                 this.Elements.CopyTo(newElements, 0);
                 this.Elements = newElements;
             }
@@ -135,7 +135,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// </summary>
         public GenericContainer()
         {
-            this.Elements = new T[this._InitialElementCount];
+            this.Elements = new T[this._MaxElementCount];
             this._CurrentElementCount = 0;
         }
         /// <summary>
@@ -146,7 +146,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             : this()
         {
             this.Elements = elements;
-            this._InitialElementCount = elements.Length;
+            this._MaxElementCount = elements.Length;
             this._CurrentElementCount = elements.Length;
         }
     }
