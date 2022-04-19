@@ -49,7 +49,6 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                     results[i] = student;
                     i++;
                 }
-
             }
             return results;
         }
@@ -76,7 +75,6 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                     results[i] = student;
                     i++;
                 }
-
             }
             return results;
         }
@@ -103,7 +101,6 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                     results[i] = student;
                     i++;
                 }
-
             }
             return results;
         }

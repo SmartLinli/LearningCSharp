@@ -23,7 +23,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                 new Student("3210707010", "李健铭", Gender.MALE, new DateTime(2002, 3, 25))
             };
             im21.Students = students;
-            /*通过不同方法，实现不同查询；
+            WriteLine("\n----------通过不同方法，实现不同查询----------\n");
             StudentUi.Display
                 ("查找学号为3210707001的学生"
                 , im21.Students.FindByNumber("3210707001"));
@@ -36,8 +36,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
             StudentUi.Display
                 ("查找生日早于2003年的学生"
                 , im21.Students.FindByBirthDateEarlierThan(new DateTime(2003, 1, 1)));
-            */
-            /*通过不同委托，实现不同查询*/
+            WriteLine("\n----------通过不同委托，实现不同查询----------\n");
             StudentUi.Display
                 ("查找名为田杰红的学生"
                 , im21.Students.FindBy
@@ -50,7 +49,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
                 ("查找生日早于2003年的学生"
                 , im21.Students.FindBy
                     (StudentService.FindByBirthDateEarlierThan, new DateTime(2003, 1, 1)));
-            /*通过λ表达式，实现不同查询或操作*/
+            WriteLine("\n----------通过λ表达式，实现不同查询或操作----------\n");
             StudentUi.Display
                 ("查找姓刘的学生"
                 , im21.Students.Find
