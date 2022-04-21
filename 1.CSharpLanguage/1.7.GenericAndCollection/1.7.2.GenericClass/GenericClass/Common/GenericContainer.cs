@@ -22,6 +22,10 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// </summary>
         private T[] Elements { get; set; }
         /// <summary>
+        /// 是否内容为空；
+        /// </summary>
+        public bool IsEmpty => this._CurrentElementCount == 0;
+        /// <summary>
         /// 添加元素；
         /// </summary>
         /// <param name="newElement">新元素</param>

@@ -34,19 +34,11 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 		/// <summary>
 		/// 年龄；
 		/// </summary>
-		public int Age 
-		=>	DateTime.Now.Year - this.BirthDate.Year;                      
-		private string _PhoneNumber;
+		public int Age => DateTime.Now.Year - this.BirthDate.Year;
 		/// <summary>
 		/// 电话；
 		/// </summary>
-		public string PhoneNumber
-		{
-			get => this._PhoneNumber != null ?                                          
-					this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4)
-					: null;
-			set => this._PhoneNumber = value;
-		}
+		public string PhoneNumber { get; set; }
 		/// <summary>
 		/// 构造函数；
 		/// </summary>

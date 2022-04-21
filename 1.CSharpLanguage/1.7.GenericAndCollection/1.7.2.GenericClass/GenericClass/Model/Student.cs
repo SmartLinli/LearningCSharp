@@ -38,17 +38,6 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 		=>	this.BirthDate == null ?													//基于Nullable<T>的可空类型；
 				null
 				: (DateTime.Now.Year - this.BirthDate.Value.Year) as int?;				//通过Value属性访问Nullable<T>中的值；返回值还需转为可空类型；			
-		private string _PhoneNumber;
-		/// <summary>
-		/// 电话；
-		/// </summary>
-		public string PhoneNumber
-		{
-			get => this._PhoneNumber != null ?
-					this._PhoneNumber.Substring(0, 3) + "****" + this._PhoneNumber.Substring(7, 4)
-					: null;
-			set => this._PhoneNumber = value;
-		}
 		/// <summary>
 		/// 学籍；
 		/// </summary>

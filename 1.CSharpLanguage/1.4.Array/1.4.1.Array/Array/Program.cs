@@ -30,7 +30,6 @@ namespace SmartLin.LearningCSharp.Array
             Course[] courses = { oop, databaseTheory };                             //声明并（使用初始化器）初始化数组；声明数组后，将自动创建派生于Array抽象类的新类；
             for (int i = 0; i < students.Length; i++)                               //调用基类Array的Lengh方法，返回数组元素个数；
 			{
-				students[i].LearningCourses = new Course[100];
 				students[i].LearningCourses = courses;                              //对数组进行赋值；
 			}
 			/*显示所有学生的课程、教材；*/

@@ -82,7 +82,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// <param name="students">多名学生</param>
         /// <param name="getProperty">获取指定属性的值</param>
         /// <returns>学生</returns>
-        public static Student Max<T>(this Student[] students, Func<Student, T> getProperty) where T : IComparable   //使用自定义的泛型委托作为参数；
+        public static Student Max<T>(this Student[] students, Func<Student, T> getProperty) where T : IComparable       //使用自定义的泛型委托作为参数；
         {
             Student maxStudent = students[0];
             foreach (Student student in students)

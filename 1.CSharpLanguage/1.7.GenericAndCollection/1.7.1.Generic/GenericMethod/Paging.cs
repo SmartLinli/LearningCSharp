@@ -17,10 +17,10 @@
         {
 
             int
-                maxPageNumber = 0,                                                                      //最大页码；
-                 targetPageStartIndex = 0,                                                              //目标页中的数组元素的起始序号；
-                 targetPageEndIndex = 0,                                                                //目标页中的数组元素的终止序号；
-                 targetPageSize = 0;                                                                    //目标页大小；
+                maxPageNumber,                                                                          //最大页码；
+                 targetPageStartIndex,                                                                  //目标页中的数组元素的起始序号；
+                 targetPageEndIndex,                                                                    //目标页中的数组元素的终止序号；
+                 targetPageSize;                                                                        //目标页大小；
             maxPageNumber = array.Length / pageSize + 1;
             targetPageStartIndex = pageSize * (pageNumber - 1);
             if (pageNumber == maxPageNumber)
