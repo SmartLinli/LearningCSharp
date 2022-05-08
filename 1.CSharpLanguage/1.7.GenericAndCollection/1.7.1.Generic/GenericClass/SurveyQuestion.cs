@@ -3,7 +3,7 @@
     /// <summary>
     /// 调查问题；
     /// </summary>
-    /// <typeparam name="T">类型</typeparam>
+    /// <typeparam name="T">回答类型</typeparam>
     public class SurveyQuestion<T>                  //定义泛型类，并定义类型参数；
     {
         /// <summary>

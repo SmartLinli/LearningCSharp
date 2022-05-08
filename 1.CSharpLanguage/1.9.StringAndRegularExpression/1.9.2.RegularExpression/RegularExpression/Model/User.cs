@@ -1,13 +1,12 @@
-﻿using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using static System.Console;
 
 namespace SmartLin.LearningCSharp.StringAndRegularExpression
 {
-	/// <summary>
-	/// 用户；
-	/// </summary>
-	public class User
+    /// <summary>
+    /// 用户；
+    /// </summary>
+    public class User
     {
         /// <summary>
         /// 学号/工号；
@@ -18,45 +17,10 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         /// 由大小写字母与数字构成；
         /// </summary>
         public string Password { get; private set; }
-		/// <summary>
-		/// 邮箱；
-		/// </summary>
-		public string Email { get; private set; }
-		/// <summary>
-		/// 加密；
-		/// 将密码中每个字符替换为前1个字符；
-		/// </summary>
-		/// <param name="plainText">明文</param>
-		/// <returns>密文</returns>
-		private static string Encrypt(string plainText)        
-        {
-            StringBuilder cipherTextBuilder = new StringBuilder(plainText);                 
-            for (int i = 'a'; i <= 'z'; i++)
-            {
-                char
-                    oldLowerCaseLetter = (char)i
-                    , newLowerCaseLetter = (char)(i - 1);
-                cipherTextBuilder =
-                    cipherTextBuilder.Replace(oldLowerCaseLetter, newLowerCaseLetter);      
-            }
-            for (int i = 'A'; i <= 'Z'; i++)
-            {
-                char
-                    oldUpperCaseLetter = (char)i
-                    , newUpperCaseLetter = (char)(i - 1);
-                cipherTextBuilder =
-                    cipherTextBuilder.Replace(oldUpperCaseLetter, newUpperCaseLetter);
-            }
-            for (int i = '0'; i <= '9'; i++)
-            {
-                char
-                    oldDigit = (char)i
-                    , newDigit = (char)(i - 1);
-                cipherTextBuilder =
-                    cipherTextBuilder.Replace(oldDigit, newDigit);
-            }
-            return cipherTextBuilder.ToString();                                            
-        }
+        /// <summary>
+        /// 邮箱；
+        /// </summary>
+        public string Email { get; private set; }
         /// <summary>
         /// 检查学号/工号；
         /// 学号应为10位数字；工号应为7位数字；
@@ -64,9 +28,9 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
         /// <param name="number">学号/工号</param>
         /// <returns>是否有效</returns>
         private static bool CheckNumber(string number)
-        {   
-            return Regex.IsMatch
-                (number, @"^(\d{10}|\d{7})$");                                                      //调用Regex类的IsMatch静态方法，判断字符串与模式是否匹配；
+        {
+            return Regex.IsMatch                                                                    //调用Regex类的IsMatch静态方法，判断字符串与模式是否匹配；
+                (number, @"^(\d{10}|\d{7})$");                                                      //可参阅https://docs.microsoft.com/zh-cn/dotnet/api/system.text.regularexpressions.regex.ismatch
         }
         /// <summary>
         /// 检查密码；
@@ -115,7 +79,7 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
             }
             User newUser = new User();
             newUser.Number = number;
-            newUser.Password = Encrypt(password);
+            newUser.Password = CryptoHelper.Encrypt(password);
             return newUser;
         }
         /// <summary>
@@ -129,7 +93,7 @@ namespace SmartLin.LearningCSharp.StringAndRegularExpression
                 WriteLine("错误：用户密码应为6～20位，支持大小写字母与数字，不能全为字母或数字！");
                 return false;
             }
-            this.Password = Encrypt(newPassword);
+            this.Password = CryptoHelper.Encrypt(newPassword);
             return true;
         }
     }

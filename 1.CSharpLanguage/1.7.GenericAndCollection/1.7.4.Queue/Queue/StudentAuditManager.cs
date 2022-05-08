@@ -33,7 +33,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         {
             students.ForEach
                 (s => this.StudentsEntered.Enqueue(s));
-            WriteLine($"新报名共{students.Count}人。");
+            WriteLine($"\n新报名共{students.Count}人。");
         }
         /// <summary>
         /// 审核学生；
@@ -64,7 +64,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         /// </summary>
         public void ShowStudentsPassed()
         {
-            WriteLine($"以下{this.StudentsPassed.Count}名学生通过审核：");
+            WriteLine($"\n以下{this.StudentsPassed.Count}名学生通过审核：");
             this.StudentsPassed.ForEach
                 (s => WriteLine($"学号：{s.Number,-15}姓名：{s.Name,-5}"));
         }

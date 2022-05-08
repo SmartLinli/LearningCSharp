@@ -49,7 +49,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>是否满足</returns>
         public static bool FindByName(Student student, object value)
         {
-            string studentName = value as string;
+            string studentName = value.ToString();
             return student.Name == studentName;
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace SmartLin.LearningCSharp.DelegateAndEvent
         /// <returns>是否满足</returns>
         public static bool FindByGender(Student student, object value)
         {
-            return student.Gender == (value as string);
+            return student.Gender == value as string;
         }
         /// <summary>
         /// 生日早于某日作为条件；

@@ -43,12 +43,18 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 		/// </summary>
 		public string Status { get; set; }
 		/// <summary>
-		/// 构造函数；
+		/// 将学生转为字符串；
 		/// </summary>
-		/// <param name="number">学号</param>
-		/// <param name="name">姓名</param>
-		/// <param name="gender">性别</param>
-		public Student(string number, string name, string gender)
+		/// <returns>学生姓名</returns>
+		public override string ToString()
+		=>	this.Name;
+        /// <summary>
+        /// 构造函数；
+        /// </summary>
+        /// <param name="number">学号</param>
+        /// <param name="name">姓名</param>
+        /// <param name="gender">性别</param>
+        public Student(string number, string name, string gender)
 		{
 			this.Number = number;
 			this.Name = name;

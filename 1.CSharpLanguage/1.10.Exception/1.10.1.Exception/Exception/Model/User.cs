@@ -44,7 +44,7 @@ namespace SmartLin.LearningCSharp.ErrorAndException
             }                                                                               //除了自定义异常，还可使用应用程序异常；
             User newUser = new User();
             newUser.Number = number;
-            newUser.Password = CryptoService.Encrypt(password);
+            newUser.Password = CryptoHelper.Encrypt(password);
             newUser.EmailAddress = emailAddress;
             newUser.IsActivated = false;
             return newUser;

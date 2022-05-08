@@ -21,7 +21,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             };
             int pageSize = 3, pageNumber = 4;
             Student[] currentPageStudents = 
-                PagingService.GetPage(students, pageSize, pageNumber);          //调用泛型方法；泛型方法可通过参数推断类型，无需再指定类型；
+                students.GetPage(pageSize, pageNumber);                         //调用泛型方法；泛型方法可通过参数推断类型，无需再指定类型；
 			WriteLine($"第{pageNumber}页：");
             foreach (Student student in currentPageStudents)
             {

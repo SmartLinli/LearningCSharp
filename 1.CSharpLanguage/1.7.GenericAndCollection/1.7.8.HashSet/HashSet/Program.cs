@@ -11,29 +11,29 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 			HashSet<Student>                                                                            //定义散列集；
 				students = new HashSet<Student>()
 				{
-                    new Student("3200707001", "闭敏媛", Gender.FEMALE),
-                    new Student("3200707002", "储艺", Gender.FEMALE),
-                    new Student("3200707003", "胡江彬", Gender.FEMALE),
-                    new Student("3200707004", "林金川", Gender.MALE),
-                    new Student("3200707005", "王泉井", Gender.FEMALE),
-                    new Student("3200708001", "陈静怡", Gender.FEMALE),
-                    new Student("3200708002", "程黄朝", Gender.MALE),
-                    new Student("3200708003", "金国燕", Gender.FEMALE)
+                    new Student("3210707001", "田杰红", Gender.FEMALE),
+                    new Student("3210707002", "刘兰", Gender.FEMALE),
+                    new Student("3210707003", "吴争宇", Gender.MALE),
+                    new Student("3210707004", "廖丽珍", Gender.FEMALE),
+                    new Student("3210707005", "王诗琴", Gender.FEMALE),
+                    new Student("3210708001", "唐昆", Gender.MALE),
+                    new Student("3210708002", "吴诗怡", Gender.FEMALE),
+                    new Student("3210708003", "陈樱", Gender.FEMALE)
                 }
 				, students2 = new HashSet<Student>()
 				{
-                    new Student("3200707004", "林金川", Gender.MALE),
-                    new Student("3200707005", "王泉井", Gender.FEMALE),
-                    new Student("3200707006", "刘伯铭", Gender.MALE),
-                    new Student("3200708002", "程黄朝", Gender.MALE),
-                    new Student("3200708003", "金国燕", Gender.FEMALE),
-                    new Student("3200708004", "李毅", Gender.FEMALE),
-                    new Student("3200708005", "李成芳", Gender.FEMALE),
+                    new Student("3210707004", "廖丽珍", Gender.MALE),
+                    new Student("3210707005", "王诗琴", Gender.FEMALE),
+                    new Student("3210707006", "罗清香", Gender.MALE),
+                    new Student("3210708002", "吴诗怡", Gender.FEMALE),
+                    new Student("3210708003", "陈樱", Gender.FEMALE),
+                    new Student("3210708004", "郑凯莉", Gender.FEMALE),
+                    new Student("3210708005", "王富玉", Gender.MALE),
                 }
 				, students3 = new HashSet<Student>()
 				{
-					new Student("3200707006", "刘伯铭", Gender.MALE)
-					, new Student("3200708002", "程黄朝", Gender.MALE)
+					new Student("3210707006", "罗清香", Gender.FEMALE)
+					, new Student("3210708002", "吴诗怡", Gender.FEMALE)
 				};
 			WriteLine("差集：");
 			students.Except(students2).ToList().ForEach												//调用Except泛型方法获取2个集的差集；散列集可转为列表，调用ForEach方法迭代访问各元素；

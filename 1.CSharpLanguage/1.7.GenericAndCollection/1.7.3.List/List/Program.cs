@@ -46,7 +46,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                         new Student("3210707014", "钟稚琴", Gender.FEMALE, new DateTime(2002, 9, 24))
                     });
             students.Insert                                                                             //在指定位置插入元素；
-                (13, new Student("3210707015", "官祥杰", Gender.MALE, new DateTime(2002, 11, 29)));
+                (14, new Student("3210707015", "官祥杰", Gender.MALE, new DateTime(2002, 11, 29)));
             /*
             students.Remove                                                                             //查找指定元素并删除；
                 (new Student("3210707001", null, 0));                                                   //查找时将调用equals方法进行匹配；若未重写equals方法，将调用object类的equals方法；

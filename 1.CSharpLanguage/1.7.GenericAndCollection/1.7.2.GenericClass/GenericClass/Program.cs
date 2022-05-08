@@ -22,7 +22,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             };
             GenericContainer<Student> im21Students = new GenericContainer<Student>();
             im21Students.Add(students);
-            im21Students.ForEach(StudentService.Register);
+            im21Students.ForEach(s => s.Register());
             foreach (Student student in im21Students)
             {
                 SmsManager.Inform(student, "请做好开学准备");

@@ -14,9 +14,9 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
         private static void Display(Student student)
         {
             WriteLine
-                ($"学号：{student.Number,-15}姓名：{student.Name}\n"
-                + $"性别：{student.Gender,-14}生日：{student.BirthDate:D}\n"
-                + $"年龄：{student.Age,-15}学籍：{student.Status}");
+                ($"学号：{student.Number,-15}姓名：{student.Name}\n"+
+                 $"性别：{student.Gender,-14}生日：{student.BirthDate:D}\n"+
+                 $"年龄：{student.Age,-15}学籍：{student.Status}");
         }
         /// <summary>
         /// 显示学生；

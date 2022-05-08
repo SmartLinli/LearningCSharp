@@ -10,9 +10,9 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 		/// <summary>
 		/// 通知；
 		/// </summary>
-		/// <param name="student">学生</param>
+		/// <param name="user">用户</param>
 		/// <param name="message">消息</param>
-		public static void Inform(Student student, string message)
-		=>	WriteLine($"已通知学生{student.Name}：{message}。\n");
+		public static void Inform<T>(T user, string message)
+		=>	WriteLine($"已通知用户{user}：{message}。\n");
 	}
 }
