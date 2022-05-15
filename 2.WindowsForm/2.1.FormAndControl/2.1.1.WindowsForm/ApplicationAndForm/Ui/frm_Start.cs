@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         public frm_Start()
         {
-            InitializeComponent();                                                          //初始化组件方法内适宜进行效果固定的操作，例如将属性设为固定值；
+            InitializeComponent();                                                          
         }
     }
 }

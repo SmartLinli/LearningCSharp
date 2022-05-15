@@ -14,8 +14,11 @@ namespace SmartLin.LearningCSharp.FormAndControl
         public frm_Center()
         {
             InitializeComponent();
+            this.FormBorderStyle= FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = $"{this._UserName}的个人中心";
+            this.TopMost = true;
         }
     }
 }

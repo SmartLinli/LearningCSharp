@@ -28,14 +28,14 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                 SmsManager.Inform(student, "请做好开学准备");
             }
             StudentUi.Display
-                ("查找学号为3210707001的学生"
-                , im21Students["3210707001"]);
+                ("查找学号为3210707001的学生",
+                 im21Students["3210707001"]);
             StudentUi.Display
-                ("查找姓李的学生"
-                , im21Students.Find(s => s.Name.Substring(0, 1) == "李"));
+                ("查找姓李的学生",
+                 im21Students.Find(s => s.Name.Substring(0, 1) == "李"));
             StudentUi.Display
-                ("将所有男生改为女性"
-                , im21Students
+                ("将所有男生改为女性",
+                 im21Students
                     .Find(s => s.Gender == Gender.MALE)
                     .ForEach(s => s.Gender = Gender.FEMALE));
             Read();

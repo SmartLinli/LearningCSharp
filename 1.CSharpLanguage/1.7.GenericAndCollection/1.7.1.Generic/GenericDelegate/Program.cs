@@ -25,19 +25,19 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 			im21.Students = students;
 
 			StudentUi.Display
-				("查找年龄最小的学生"
-				, im21.Students.Max(s => s.BirthDate));
+				("查找年龄最小的学生",
+				 im21.Students.Max(s => s.BirthDate));
 			StudentUi.Display
-				("查找姓李的学生"
-				, im21.Students.Find(s => s.Name.Substring(0, 1) == "李"));
+				("查找姓李的学生",
+				 im21.Students.Find(s => s.Name.Substring(0, 1) == "李"));
 			WriteLine
 				($"\n统计姓李的学生人数：{im21.Students.Count(s => s.Name.Substring(0, 1) == "李")}人");
 			StudentUi.Display
-				("将所有学生性别改为女性"
-				, im21.Students.Modify(s => s.Gender = Gender.FEMALE));
+				("将所有学生性别改为女性",
+				 im21.Students.Modify(s => s.Gender = Gender.FEMALE));
 			StudentUi.Display
-				("对所有学生按照年龄由大到小排序"
-				, im21.Students.Sort((s, s2) => s.BirthDate.CompareTo(s2.BirthDate)));
+				("对所有学生按照年龄由大到小排序",
+				 im21.Students.Sort((s, s2) => s.BirthDate.CompareTo(s2.BirthDate)));
 			Read();
 		}
 	}

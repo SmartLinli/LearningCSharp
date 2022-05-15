@@ -36,11 +36,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 240);
             this.Icon = global::SmartLin.LearningCSharp.FormAndControl.Properties.Resources.YellowSmiley_16px;
-            this.MaximizeBox = false;
             this.Name = "frm_Center";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "个人中心";
-            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

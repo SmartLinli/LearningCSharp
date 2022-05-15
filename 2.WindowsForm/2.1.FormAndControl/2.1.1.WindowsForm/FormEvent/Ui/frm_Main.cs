@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace SmartLin.LearningCSharp.FormAndControl
 {
@@ -20,7 +21,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frm_Main_Load(object sender, System.EventArgs e)
+        private void frm_Main_Load(object sender, EventArgs e)                          //双击窗体空白处，将自动创建函数，并注册窗体载入事件；该注册操作位于设计器代码文件中；
         {
             MessageBox.Show($"即将进入{this.Text}。");
         }
