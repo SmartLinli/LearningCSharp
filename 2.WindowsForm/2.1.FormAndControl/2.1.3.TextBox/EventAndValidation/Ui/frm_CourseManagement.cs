@@ -19,7 +19,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
         public frm_CourseManagement()
         {
             InitializeComponent();
-            this.AcceptButton = this.btn_Submit;
             this.txb_CourseNumber.Tag = true;                                           //将验证结果写入文本框的标签；标签可接受object类型的对象；
             this.txb_CourseNumber.Validating += txb_CourseNumber_Validating;
         }
@@ -40,8 +39,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
                     , "错误"
                     , MessageBoxButtons.OK
                     , MessageBoxIcon.Error);
-                this.txb_CourseNumber.Focus();
-                this.txb_CourseNumber.SelectAll();
                 return;
             }
             this.txb_CourseNumber.Tag = true;

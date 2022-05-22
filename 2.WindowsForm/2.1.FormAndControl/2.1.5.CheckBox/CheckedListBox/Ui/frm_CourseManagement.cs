@@ -33,9 +33,9 @@ namespace SmartLin.LearningCSharp.FormAndControl
             }
             HashSet<string>                                                                         //将应选中项目、所有项目转为散列集；
                 currentItemsHashSet = new HashSet<string>(this._Course.FormativeAssessments)
-                , allItemsHashSet = new HashSet<string>(CourseService.GetAllFormativeAssessments);
+                , allItemsHashSet = new HashSet<string>(Course.AllFormativeAssessments);
             allItemsHashSet.ExceptWith(currentItemsHashSet);                                        //通过散列集的差集方法，获取剩余项目；
-            object[] restItems = (new List<string>(allItemsHashSet)).ToArray();                     //将包含剩余项目的散列集（通过列表）转为数组；
+            string[] restItems = new List<string>(allItemsHashSet).ToArray();                       //将包含剩余项目的散列集（通过列表）转为数组；
             this.clb_FormativeAssessment.Items.AddRange(restItems);                                 //批量添加剩余项目；
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
             {
                 itemList.Add(item.ToString());                                                      //将项目加入列表；
             }
-            this._Course.FormativeAssessments = itemList.ToArray();                                                              //将列表转为数组；
+            this._Course.FormativeAssessments = itemList.ToArray();                                 //将列表转为数组；
         }
         /// <summary>
         /// 载入按钮点击；

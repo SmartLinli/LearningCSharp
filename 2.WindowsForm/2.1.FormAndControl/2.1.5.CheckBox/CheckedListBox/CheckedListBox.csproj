@@ -56,7 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service\CourseService.cs" />
     <Compile Include="Ui\frm_CourseManagement.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -27,6 +27,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void btn_Load_Click(object sender, EventArgs e)
         {
             this._Course = CourseRepository.Find("2060316");
+            /*省略课程号、名称、学分的载入；*/
             this.txb_CourseDescription.Text = this._Course.Description;
             this.ckb_IsAvailable.Checked = this._Course.IsAvailable;                    //多选按钮的选中状态与逻辑类型的变量对应；
             this.ckb_HasExperiment.Checked = this._Course.HasExperiment;

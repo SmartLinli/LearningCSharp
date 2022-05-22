@@ -13,6 +13,15 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         private Course _Course;
         /// <summary>
+        /// 构造函数；
+        /// </summary>
+        public frm_CourseManagement()
+        {
+            InitializeComponent();
+            this.AcceptButton = this.btn_Submit;                                        //设置按下回车键时点击的按钮；该功能仅在焦点处于非按钮控件时生效；若焦点处于其它按钮，则按下回车键只能点击其它按钮；
+            this.KeyDown += this.frm_CourseManagement_KeyDown;                          //注册（订阅）课程管理窗体的按下按键事件；
+        }
+        /// <summary>
         /// 在课程管理窗体中按下按键；
         /// </summary>
         /// <param name="sender"></param>
@@ -37,15 +46,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
                         break;
                 }
             };
-        }
-        /// <summary>
-        /// 构造函数；
-        /// </summary>
-        public frm_CourseManagement()
-        {
-            InitializeComponent();
-            this.AcceptButton = this.btn_Submit;                                        //设置按下回车键时点击的按钮；该功能仅在焦点处于非按钮控件时生效；若焦点处于其它按钮，则按下回车键只能点击其它按钮；
-            this.KeyDown += this.frm_CourseManagement_KeyDown;                          //注册（订阅）课程管理窗体的按下按键事件；
         }
         /// <summary>
         /// 点击载入按钮；
