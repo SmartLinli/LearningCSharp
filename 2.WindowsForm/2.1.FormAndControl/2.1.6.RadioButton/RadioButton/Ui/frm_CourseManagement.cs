@@ -24,8 +24,8 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void rdb_IsCompulsory_CheckedChanged(object sender, EventArgs e)            //选中或取消选中均能触发选中状态更改事件；若分组框中的若干单选按钮触发选中状态更改事件，则取消选中的单选按钮先触发事件，而选中的单选按钮后触发事件；
-        {
+        private void rdb_IsCompulsory_CheckedChanged(object sender, EventArgs e)            //选中或取消选中均能触发选中状态更改事件；
+        {                                                                                   //若分组框中的若干单选按钮触发选中状态更改事件，则取消选中的单选按钮先触发事件，而选中的单选按钮后触发事件；
             this._Course.LearningType = (sender as RadioButton).Text;                       //获取单选按钮的文本；
         }
         /// <summary>

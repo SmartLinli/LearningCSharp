@@ -25,7 +25,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         private void LoadCourseAppraisalType()
         {
             this.lsb_CourseAppraisalType.Items.Clear();                                     //清空列表框的项目集合；
-            this.lsb_CourseAppraisalType.Items.AddRange(CourseAppraisalType.GetAllTypes()); //批量加入列表框的项目集合；
+            this.lsb_CourseAppraisalType.Items.AddRange(CourseAppraisalType.AllTypes);      //批量加入列表框的项目集合；
             this.lsb_CourseAppraisalType.SelectedItem = this._Course.AppraisalType;         //设置列表框的选中项目；
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
             string currentCourseAppraisalType =
                 this.lsb_CourseAppraisalType.SelectedItem.ToString();                        //获取列表框的选中项目的字符串；
             string[] availableCourseAppraisalForms =
-                CourseAppraisalType.GetAllForms(currentCourseAppraisalType);
+                CourseAppraisalType.GetForms(currentCourseAppraisalType);
             this.lsb_CourseAppraisalForm.Items.Clear();                                      //清空子列表框的项目集合；
             this.lsb_CourseAppraisalForm.Items.AddRange(availableCourseAppraisalForms);      //获取子项目，批量加入子列表框的项目集合；
             this.lsb_CourseAppraisalForm.SelectedItem = this._Course.AppraisalForm;          //设置列表框的选中项目；

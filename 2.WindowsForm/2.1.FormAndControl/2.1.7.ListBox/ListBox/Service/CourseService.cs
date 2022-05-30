@@ -48,16 +48,14 @@
         /// 获取所有课程考核类型；
         /// </summary>
         /// <returns>课程考核类型</returns>
-        public static string[] GetAllTypes()
-        {
-            return new string[] { EXAMINATION, TEST };
-        }
+        public static string[] AllTypes =>
+            new string[] { EXAMINATION, TEST };
         /// <summary>
-        /// 获取所有课程考核形式；
+        /// 获取课程考核形式；
         /// </summary>
         /// <param name="typeName">课程考核类型名称</param>
         /// <returns>课程考核形式</returns>
-        public static string[] GetAllForms(string typeName)
+        public static string[] GetForms(string typeName)
         {
             switch (typeName)
             {
@@ -81,12 +79,8 @@
         /// <summary>
         /// 获取所有形成性评价；
         /// </summary>
-        /// <returns></returns>
-        public static string[] GetAllFormativeAssessment
-        {
-            get
-            {
-                return new string[]
+        public static string[] AllFormativeAssessment =>
+            new string[]
                 {
                     "课后作业",
                     "实验报告",
@@ -98,7 +92,5 @@
                     "自主学习",
                     "汇报答辩"
                 };
-            }
-        }
     }
 }

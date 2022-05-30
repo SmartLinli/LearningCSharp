@@ -25,11 +25,8 @@
         /// 获取所有形成性评价；
         /// </summary>
         /// <returns></returns>
-        public static string[] GetAllFormativeAssessment
-        {
-            get
-            {
-                return new string[]
+        public static string[] AllFormativeAssessment =>
+            new string[]
                 {
                     "课后作业",
                     "实验报告",
@@ -41,7 +38,6 @@
                     "自主学习",
                     "汇报答辩"
                 };
-            }
-        }
+
     }
 }
