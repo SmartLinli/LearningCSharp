@@ -21,7 +21,7 @@ namespace SmartLin.LearningCSharp.StrategyPattern
             User newUser3 = User.Create
                 ("3180707003"
                 , "MyPassword7003"
-                , new HexadecimalCrypto());
+                , new HexCrypto());
             WriteLine($"用户{newUser3.Number}注册成功，加密后的密码为：{newUser3.Password}");
             Read();
         }

@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\CryptoService.cs" />
-    <Compile Include="Common\HexadecimalCrypto.cs" />
+    <Compile Include="Common\HexCrypto.cs" />
     <Compile Include="Common\ICrypto.cs" />
     <Compile Include="Common\LeftShiftCrypto.cs" />
     <Compile Include="Program.cs" />

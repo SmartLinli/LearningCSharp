@@ -1,11 +1,11 @@
 ﻿using System.Text;
 
-namespace SmartLin.LearningCSharp.StrategyPattern
+namespace SmartLin.LearningCSharp.Reflection
 {
     /// <summary>
     /// 十六进制加密器；
     /// </summary>
-    public class HexadecimalCrypto : ICrypto
+    public class HexCrypto : ICrypto
     {
         /// <summary>
         /// 加密；

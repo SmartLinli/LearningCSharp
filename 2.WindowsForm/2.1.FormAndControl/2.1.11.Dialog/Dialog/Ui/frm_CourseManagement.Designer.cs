@@ -547,7 +547,6 @@ namespace SmartLin.LearningCSharp.FormAndControl
             this.AcceptButton = this.btn_Load;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_Submit;
             this.ClientSize = new System.Drawing.Size(317, 323);
             this.Controls.Add(this.tbc_Course);
             this.Controls.Add(this.btn_Submit);

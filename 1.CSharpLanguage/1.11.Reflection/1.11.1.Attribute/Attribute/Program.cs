@@ -20,11 +20,11 @@ namespace SmartLin.LearningCSharp.Reflection
                 try
                 {
                     ValidationService.Validate(course);
-                    WriteLine("课程{0}《{1}》信息正确。\n", course.Number, course.Name);
+                    WriteLine($"课程{course.Number}《{course.Name}》信息正确。\n");
                 }
                 catch (ApplicationException ex)
                 {
-                    WriteLine("错误：课程{0}《{1}》信息有误，{2}。\n", course.Number, course.Name, ex.Message);
+                    WriteLine($"错误：课程{course.Number}《{course.Name}》信息有误，{ex.Message}。\n");
                 }
             }
 
@@ -40,11 +40,11 @@ namespace SmartLin.LearningCSharp.Reflection
                 try
                 {
                     ValidationService.Validate(book);
-                    WriteLine("教材{0}《{1}》信息正确。\n", book.Isbn, book.Name);
+                    WriteLine($"教材{book.Isbn}《{book.Name}》信息正确。\n");
                 }
                 catch (ApplicationException ex)
                 {
-                    WriteLine("错误：教材{0}《{1}》信息有误，{2}。\n", book.Isbn, book.Name, ex.Message);
+                    WriteLine($"错误：教材{book.Isbn}《{book.Name}》信息有误，{ex.Message}。\n");
                 }
             }
             Read();
