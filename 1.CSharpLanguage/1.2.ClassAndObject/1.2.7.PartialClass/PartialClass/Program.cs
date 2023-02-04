@@ -6,8 +6,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     {
         static void Main()
         {
-            Student girl = new Student("3220707002", "李四", Gender.FEMALE);                
-            girl.EmailAddress = "3220707002@fjtcm.edu.cn";                                     //访问部分类的成员；
+            Student girl = new Student("3230707002", "李四", Gender.FEMALE);                
+            girl.EmailAddress = "3230707002@fjtcm.edu.cn";                                     //访问部分类的成员；
             girl.SendEmail("新生须知");
             Read();
         }

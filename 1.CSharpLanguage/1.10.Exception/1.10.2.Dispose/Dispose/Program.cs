@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.ErrorAndException
     {
         static void Main()
         {
-            User newUser = User.Create("3180707001", "MyPassword7001", "3180707001@fjtcm.edu.cn");
+            User newUser = User.Create("3230707001", "MyPassword7001", "3230707001@fjtcm.edu.cn");
             try
             {
                 newUser.Activate();

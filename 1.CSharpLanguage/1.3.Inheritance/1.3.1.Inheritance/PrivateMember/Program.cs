@@ -7,7 +7,7 @@ namespace SmartLin.LearningCSharp.Inheritance
     {
         static void Main()
         {
-			Student boy = new Student("3220707001", "张三", Gender.MALE);
+			Student boy = new Student("3230707001", "张三", Gender.MALE);
 			boy.Intro();
 			boy.SendSms("请及时评教。");
 			Read();

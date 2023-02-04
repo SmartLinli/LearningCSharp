@@ -11,12 +11,12 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         {
             /*定义专业、班级；*/
             Major infomationManagement = new Major("信息管理与信息系统", "信管");
-            Class im22 = new Class(infomationManagement, 2022);
+            Class im23 = new Class(infomationManagement, 2023);
             /*定义学生并显示*/
-            Student girl = new Student("3220707002", "李四", Gender.FEMALE, im22);
+            Student girl = new Student("3230707002", "李四", Gender.FEMALE, im23);
             StudentUi.Display(girl);
             /*定义新生；录取；显示；*/
-            Student newGuy = new Student("3220707001", "张三", Gender.MALE);
+            Student newGuy = new Student("3230707001", "张三", Gender.MALE);
             newGuy.EnrollBy(infomationManagement);
             StudentUi.Display(newGuy);
             /*发送短信*/

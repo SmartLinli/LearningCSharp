@@ -10,19 +10,19 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             StudentAuditManager studentAuditManager = new StudentAuditManager();
             List<Student> students = new List<Student>()
             {
-                new Student("3210707001", "田杰红"),
-                new Student("3210707002", "刘兰"),
-                new Student("3210707003", "吴争宇"),
-                new Student("3210707004", "廖丽珍")
+                new Student("3220707001", "曾羽"),
+                new Student("3220707002", "纪凝"),
+                new Student("3220707003", "宋明杰"),
+                new Student("3220707004", "温歆滢")
             };
             studentAuditManager.EnterStudents(students);
             studentAuditManager.AuditStudents();
             
             students = new List<Student>()
             {
-                new Student("3210707005", "王诗琴"),
-                new Student("3210707006", "罗清香"),
-                new Student("3210707007", "谢晓丹")
+                new Student("3220707005", "连云飞"),
+                new Student("3210707006", "张吉恒煊"),
+                new Student("3210707007", "徐思亮")
             };
             studentAuditManager.EnterStudents(students);
             studentAuditManager.AuditStudents();

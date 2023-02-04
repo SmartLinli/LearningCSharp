@@ -11,16 +11,16 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
 		{
 			List<Student> studentsList = new List<Student>()                                                //定义泛型列表对象；
             {
-				new Student("3210707001", "田杰红", Gender.FEMALE, new DateTime(2001, 9, 10)),
-				new Student("3210707002", "刘兰", Gender.FEMALE, new DateTime(2003, 2, 9)),
-				new Student("3210707003", "吴争宇", Gender.MALE, new DateTime(2004, 1, 5)),
-				new Student("3210707004", "廖丽珍", Gender.FEMALE, new DateTime(2002, 11, 12)),
-				new Student("3210707005", "王诗琴", Gender.FEMALE, new DateTime(2003, 10, 28)),
-				new Student("3210707006", "罗清香", Gender.FEMALE, new DateTime(2003, 2, 24)),
-				new Student("3210707007", "谢晓丹", Gender.FEMALE, new DateTime(2002, 10, 19)),
-				new Student("3210707008", "刘浩雄", Gender.MALE, new DateTime(2002, 9, 25)),
-				new Student("3210707009", "程琨耀", Gender.MALE, new DateTime(2002, 11, 29)),
-				new Student("3210707010", "李健铭", Gender.MALE, new DateTime(2002, 3, 25))
+				new Student("3220707001", "曾羽", Gender.MALE, new DateTime(2004, 10, 10)),
+				new Student("3220707002", "纪凝", Gender.MALE, new DateTime(2003, 11, 11)),
+				new Student("3220707003", "宋明杰", Gender.MALE, new DateTime(2004, 8, 28)),
+				new Student("3220707004", "温歆滢", Gender.FEMALE, new DateTime(2004, 6, 14)),
+				new Student("3220707005", "连云飞", Gender.MALE, new DateTime(2004, 5, 7)),
+				new Student("3220707006", "张吉恒煊", Gender.MALE, new DateTime(2003, 12, 22)),
+				new Student("3220707007", "徐思亮", Gender.MALE, new DateTime(2004, 1, 29)),
+				new Student("3220707008", "林艺玲", Gender.FEMALE, new DateTime(2003, 10, 25)),
+				new Student("3220707009", "张君英", Gender.FEMALE, new DateTime(2003, 5, 5)),
+				new Student("3220707010", "张昕楠", Gender.FEMALE, new DateTime(2004, 9, 8))
 			};
 			Dictionary<string, Student> students = studentsList.ToDictionary(s => s.Number);                //字典仅提供Add方法，仅能逐一添加单个元素；故使用列表提供的ToDictionary方法将列表转为字典，并在参数中指定键；
 			while (true)

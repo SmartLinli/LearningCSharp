@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     {
         static void Main()
         {
-			Student boy = new Student("3220707000", "张三", Gender.MALE)            
+			Student boy = new Student("3230707000", "张三", Gender.MALE)            
 			{
 				Nationality = Nationality.SHE                                              //调用类的静态字段；
 			};

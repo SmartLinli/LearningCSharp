@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.ClassAndObject
     {
         static void Main()
         {
-			Student boy = new Student("3220707000", "张三")
+			Student boy = new Student("3230707000", "张三")
 			{
 				PhoneNumber = "18900001111"
 			};

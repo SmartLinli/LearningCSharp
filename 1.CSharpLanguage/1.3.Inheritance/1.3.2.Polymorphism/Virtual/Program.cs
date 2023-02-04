@@ -10,9 +10,9 @@ namespace SmartLin.LearningCSharp.Inheritance
 			{
 				PhoneNumber = "13322223333"
 			}; 
-			Student boy = new Student("3220707001", "张三", Gender.MALE)
+			Student boy = new Student("3230707001", "张三", Gender.MALE)
 			{
-				PhoneNumber = "15955559999"
+				PhoneNumber = "18900001111"
 			};
 
 			msYang.Intro();                                                                         //调用基类的虚方法；

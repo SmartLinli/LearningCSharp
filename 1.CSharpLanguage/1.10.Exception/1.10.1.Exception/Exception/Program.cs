@@ -10,7 +10,7 @@ namespace SmartLin.LearningCSharp.ErrorAndException
             User newUser = null;
             try                                                                                         //若try语句块正常结束，则将跳过catch语句块，走向后续语句；
             {
-                newUser = User.Register("3220707001", "MyPassword7001", "3210707001@fjtcm.edu.cn");
+                newUser = User.Register("3230707001", "MyPassword7001", "3230707001@fjtcm.edu.cn");
                 newUser.Activate();
             }                                                                                           //若try语句块出现异常，则将进入catch语句块，捕捉并处理异常；
             catch (ApplicationException ex)                                                             //每个catch语句块将捕捉类型最匹配的异常；

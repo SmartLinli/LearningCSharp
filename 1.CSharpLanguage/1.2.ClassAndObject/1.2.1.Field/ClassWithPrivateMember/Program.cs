@@ -8,11 +8,11 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         static void Main()
         {
             Student boy = new Student();                                                        //声明类的实例（对象），调用new关键字来实例化对象，调用默认构造函数来初始化对象；
-            boy.Number = "3220707001";                                                          //向对象的字段赋值；
+            boy.Number = "3230707001";                                                          //向对象的字段赋值；
             boy.Name = "张三";
             boy.Gender = Gender.MALE;
             /*
-			boy.BirthDate = new DateTime(2004, 1, 2);                                           //私有字段无法从外部访问；
+			boy.BirthDate = new DateTime(2005, 1, 2);                                           //私有字段无法从外部访问；
             boy.PhoneNumber = "18900001111";
             */
             var info =

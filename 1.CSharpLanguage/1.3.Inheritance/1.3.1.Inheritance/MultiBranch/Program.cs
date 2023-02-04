@@ -13,11 +13,11 @@ namespace SmartLin.LearningCSharp.Inheritance
 				PhoneNumber = "13599995555",
 				Department = "人文与管理学院",
 			};
-			Student boy = new Student("3220707001", "张三", Gender.MALE)
+			Student boy = new Student("3230707001", "张三", Gender.MALE)
 			{
-				BirthDate = new DateTime(2004, 1, 2),
+				BirthDate = new DateTime(2005, 1, 2),
 				PhoneNumber = "18900001111",
-				Class = "22信管",
+				Class = "23信管",
 			};
 			mrLin.Intro();                                                          
 			WriteLine($"目前任教于{mrLin.Department}。\n");

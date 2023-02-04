@@ -61,7 +61,7 @@
     <Compile Include="Common\Cryptography\Sha1Cryptography.cs" />
     <Compile Include="Common\Cryptography\Sha512Cryptography.cs" />
     <Compile Include="Common\CryptoService.cs" />
-    <Compile Include="Common\Crypto\HexadecimalCrypto.cs" />
+    <Compile Include="Common\Crypto\HexCrypto.cs" />
     <Compile Include="Common\Crypto\ICrypto.cs" />
     <Compile Include="Common\Crypto\LeftShiftCrypto.cs" />
     <Compile Include="Program.cs" />
