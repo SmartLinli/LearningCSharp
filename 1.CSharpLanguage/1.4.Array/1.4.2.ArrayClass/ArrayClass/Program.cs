@@ -21,11 +21,11 @@ namespace SmartLin.LearningCSharp.ArrayClass
             im22.AddStudents(students);
 			Student[] newStudents =
 			{
-                new Student("3210707006", "张吉恒煊"),
-                new Student("3210707007", "徐思亮"),
-                new Student("3210707008", "林艺玲"),                                  
-                new Student("3210707009", "张君英"),
-                //new Student("3210707010", "张昕楠")                                    //班级对象的学生属性数组的长度将增长为10，但非空元素个数将为9；
+                new Student("3220707006", "张吉恒煊"),
+                new Student("3220707007", "徐思亮"),
+                new Student("3220707008", "林艺玲"),                                  
+                new Student("3220707009", "张君英"),
+                //new Student("3220707010", "张昕楠")                                    //班级对象的学生属性数组的长度将增长为10，但非空元素个数将为9；
             };
             im22.AddStudents(newStudents);
 			/*排序；*/

@@ -14,11 +14,11 @@ namespace SmartLin.LearningCSharp.Array
                 new Student("3220707003", "宋明杰"),
                 new Student("3220707004", "温歆滢"),
                 new Student("3220707005", "连云飞"),
-                new Student("3210707006", "张吉恒煊"),
-                new Student("3210707007", "徐思亮"),
-                new Student("3210707008", "林艺玲"),                                  
-                new Student("3210707009", "张君英"),
-                new Student("3210707010", "张昕楠")
+                new Student("3220707006", "张吉恒煊"),
+                new Student("3220707007", "徐思亮"),
+                new Student("3220707008", "林艺玲"),                                  
+                new Student("3220707009", "张君英"),
+                new Student("3220707010", "张昕楠")
             };
             Class im22 = new Class("22信管");
             im22.AddStudents(students);

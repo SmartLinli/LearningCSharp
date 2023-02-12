@@ -21,8 +21,8 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
             students = new List<Student>()
             {
                 new Student("3220707005", "连云飞"),
-                new Student("3210707006", "张吉恒煊"),
-                new Student("3210707007", "徐思亮")
+                new Student("3220707006", "张吉恒煊"),
+                new Student("3220707007", "徐思亮")
             };
             studentAuditManager.EnterStudents(students);
             studentAuditManager.AuditStudents();
