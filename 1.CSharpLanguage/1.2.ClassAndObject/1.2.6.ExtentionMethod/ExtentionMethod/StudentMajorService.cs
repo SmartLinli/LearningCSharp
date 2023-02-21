@@ -20,26 +20,19 @@ namespace SmartLin.LearningCSharp.ClassAndObject
             student.Class = newClass;
             WriteLine($"{student.Name}被{newMajor.Name}专业录取，并分配至{newClass.ShortName}班。");
         }
-        private static bool ValidateForTransferToMajor(this Student student)
+        public static void TransferTo(this Student student, Major newMajor, int year)       //公有静态扩展方法（重载1）
         {
             if (!student.HasClass())
             {
                 WriteLine($"{student.Name}尚未被任何专业录取，无法转专业。");
-            }
-            return student.HasClass();
-        }
-        public static void TransferTo(this Student student, Major newMajor, int year)       //公有静态扩展方法（重载1）
-        {
-            if (!student.ValidateForTransferToMajor())                                      //调用私有静态扩展方法，实现代码复用；
                 return;
+            }
             Class newClass = new Class(newMajor, year);
             student.Class = newClass;
             WriteLine($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
         }
         public static void TransferTo(this Student student, Major newMajor)                 //公有静态扩展方法（重载2）
         {
-            if (!student.ValidateForTransferToMajor())
-                return;
             int newClassYear = student.Class.Year + 1;
             student.TransferTo(newMajor, newClassYear);                                     //调用另一重载方法，实现代码复用；
         }

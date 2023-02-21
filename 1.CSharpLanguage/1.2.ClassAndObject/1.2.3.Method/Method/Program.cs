@@ -8,8 +8,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject
         { 
             Student girl = new Student();
             girl.Name = "李四";
-			girl.Class = "23信管";
-            girl.Intro();                                                                   //调用方法；
+            girl.EnrollBy("23信管");                                                  //调用方法；
+            girl.Intro();                                                                   
             Read();
         }
     }

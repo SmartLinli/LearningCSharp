@@ -12,7 +12,7 @@ namespace SmartLin.LearningCSharp.Basics
         }
         static void Main()
         {
-            WriteLine("请分别输入学号、姓名、性别、生日、身高、体重、是否注册：");       //调用Console的WriteLine方法，将字符串输出至控制台，以行终止符结束；
+            WriteLine("请分别输入学号、姓名、性别、生日、身高、体重、是否注册：");      //调用Console的WriteLine方法，将字符串输出至控制台，以行终止符结束；
             var number = ReadLine();                                                //调用Console的ReadLine方法，从控制台读取输入流，以回车结束，并返回字符串；
             var name = ReadLine();                                                  //调用Console的ReadLine方法，从控制台读取输入流，以回车结束，并返回字符串；
             var gender = (Gender)int.Parse(ReadLine());                             //先将输入字符串转为整型，再通过强制类型转换，按照枚举值转为相应的枚举名称；

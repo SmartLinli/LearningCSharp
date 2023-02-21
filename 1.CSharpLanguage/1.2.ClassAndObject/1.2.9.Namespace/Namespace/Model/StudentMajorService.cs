@@ -61,14 +61,16 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// <param name="year">年级</param>
         public static void TransferTo(this Student student, Major newMajor, int year)  
         {
-            if (student.ValidateForTransferToMajor())                                       
+            if (!student.HasClass())
             {
-                Class newClass = new Class(newMajor, year);
-                student.Class = newClass;
-				WriteLine
-					($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
-			}
-		}
+                WriteLine($"{student.Name}尚未被任何专业录取，无法转专业。");
+                return;
+            }
+            Class newClass = new Class(newMajor, year);
+            student.Class = newClass;
+            WriteLine
+                ($"{student.Name}已转至{newMajor.Name}专业，并分配至{newClass.ShortName}班。");
+        }
         /// <summary>
         /// 转专业；
         /// </summary>
@@ -76,11 +78,8 @@ namespace SmartLin.LearningCSharp.ClassAndObject.Model                          
         /// <param name="newMajor">新专业</param>
         public static void TransferTo(this Student student, Major newMajor)            
         {
-            if (student.ValidateForTransferToMajor())
-            {
-                int newClassYear = student.Class.Year + 1;
-                student.TransferTo(newMajor, newClassYear);                            
-            }
+            int newClassYear = student.Class.Year + 1;
+            student.TransferTo(newMajor, newClassYear);
         }
     }
 }

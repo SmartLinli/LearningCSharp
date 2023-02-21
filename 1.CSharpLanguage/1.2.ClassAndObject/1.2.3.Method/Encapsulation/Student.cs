@@ -9,10 +9,6 @@ namespace SmartLin.LearningCSharp.ClassAndObject
 		public Class Class { get; private set; }                                //将set访问器的访问性定义为私有，实现只读属性；
 		private bool HasClass                                               
 		=>  this.Class != null;
-        public void Intro()
-        =>  WriteLine                                                           //通过表达式体，定义只有单语句的方法；
-                ($"我叫{this.Name}" +
-                 $"{(this.HasClass ? $"，来自{this.Class.ShortName}" : "")}。");
         public void EnrollBy(Major newMajor)
         {
             if (this.HasClass)                                              
