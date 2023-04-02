@@ -18,22 +18,22 @@ namespace SmartLin.LearningCSharp.Array
 			databaseTheory.Books = new Book[2];                                     //初始化时必须直接或（使用初始化器）间接指定数组大小；
 			databaseTheory.Books[0] = databaseSystemBook;                           //通过索引器传送元素号，访问数组元素；
 			databaseTheory.Books[1] = databaseExperimentBook;
-            /*定义学生；为所有学生指定课程；*/
+            /*定义课程组与学生；为所有学生指定课程；*/
+            Course[] courses = { oop, databaseTheory };                             //声明并（使用初始化器）初始化数组；声明数组后，将自动创建派生于Array抽象类的新类；
             Student[] students =
-            {                                                                       //在数组初始化器中直接实例化各对象；
+			{                                                                       //在数组初始化器中直接实例化各对象；
                 new Student("3220707001", "曾羽"),
                 new Student("3220707002", "纪凝"),
                 new Student("3220707003", "宋明杰"),
                 new Student("3220707004", "温歆滢"),
                 new Student("3220707005", "连云飞")
             };
-            Course[] courses = { oop, databaseTheory };                             //声明并（使用初始化器）初始化数组；声明数组后，将自动创建派生于Array抽象类的新类；
             for (int i = 0; i < students.Length; i++)                               //调用基类Array的Lengh方法，返回数组元素个数；
 			{
 				students[i].LearningCourses = courses;                              //对数组进行赋值；
 			}
 			/*显示所有学生的课程、教材；*/
-			foreach (Student student in students)                                   //使用foreach语句（单向只读）迭代数组中的所有元素；
+			foreach (Student student in students)                                   //使用foreach语句（单向只读）遍历数组中的所有元素；
 			{
 				WriteLine($"{student.Number,-12}{student.Name,-5}本学期课程：");
 				foreach (Course course in student.LearningCourses)
