@@ -21,7 +21,7 @@ namespace SmartLin.LearningCSharp.GenericTypeAndCollection
                 new Student("3220707007", "徐思亮", Gender.MALE, new DateTime(2004, 1, 29)),
                 new Student("3220707008", "林艺玲", Gender.FEMALE, new DateTime(2003, 10, 25)),
                 new Student("3220707009", "张君英", Gender.FEMALE, new DateTime(2003, 5, 5)),
-                new Student("3220707010", "张昕楠", Gender.FEMALE, new DateTime(2004, 9, 8)
+                new Student("3220707010", "张昕楠", Gender.FEMALE, new DateTime(2004, 9, 8))
             };
             WriteLine($"当前容量：{students.Capacity}。");
             WriteLine($"当前个数：{students.Count}。");
