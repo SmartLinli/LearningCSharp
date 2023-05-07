@@ -28,7 +28,7 @@ namespace SmartLin.LearningCSharp.FormAndControl
         /// <param name="e"></param>
         private void frm_Start_Load(object sender, EventArgs e)
         {
-            this._User = UserRepository.Find("3210707001");                                 //通过用户仓储，获取用户对象；
+            this._User = UserRepository.Find("3230707001");                                 //通过用户仓储，获取用户对象；
             MessageBox.Show($"欢迎登录，{this._User.Name}。");
         }
         /// <summary>
