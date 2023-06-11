@@ -3,9 +3,9 @@
 namespace SmartLin.LearningCSharp.Reflection
 {
     /// <summary>
-    /// 浮点数验证特性；
+    /// 取值范围验证特性；
     /// </summary>
-    public class FloatValidationAttribute : Attribute, IValidationAttribute         //定义特性；自定义特性应继承Attribute类；
+    public class RangeAttribute : Attribute, IValidationAttribute         //定义特性；自定义特性应继承Attribute类；
     {
         /// <summary>
         /// 最小值；
@@ -39,7 +39,7 @@ namespace SmartLin.LearningCSharp.Reflection
         /// </summary>
         /// <param name="minValue">最小值</param>
         /// <param name="maxValue">最大值</param>
-        public FloatValidationAttribute(float minValue, float maxValue)
+        public RangeAttribute(float minValue, float maxValue)
         {
             this.MinValue = minValue;
             this.MaxValue = maxValue;

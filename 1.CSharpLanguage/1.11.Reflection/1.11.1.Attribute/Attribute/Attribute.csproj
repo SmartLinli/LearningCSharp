@@ -56,10 +56,10 @@
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Common\IValidationAttribute.cs" />
-    <Compile Include="Common\FloatValidationAttribute.cs" />
+    <Compile Include="Common\RangeAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Common\StringValidationAttribute.cs" />
+    <Compile Include="Common\StringLengthAttribute.cs" />
     <Compile Include="Common\ValidationService.cs" />
   </ItemGroup>
   <ItemGroup>

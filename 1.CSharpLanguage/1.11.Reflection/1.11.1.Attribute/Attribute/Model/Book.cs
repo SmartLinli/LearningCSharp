@@ -8,17 +8,17 @@
         /// <summary>
         /// 书号；
         /// </summary>
-        [StringValidation(13, Description = "书号")]
+        [StringLength(13, Description = "书号")]
         public string Isbn { get; private set; }
         /// <summary>
         /// 书名；
         /// </summary>
-        [StringValidation(20, Description = "书名")]
+        [StringLength(20, Description = "书名")]
         public string Name { get; private set; }
         /// <summary>
         /// 价格；
         /// </summary>
-        [FloatValidation(0f, 100f, Description = "价格")]
+        [Range(0f, 100f, Description = "价格")]
         public float Price { get; private set; }
         /// <summary>
         /// 构造函数；

@@ -3,9 +3,9 @@
 namespace SmartLin.LearningCSharp.Reflection
 {
     /// <summary>
-    /// 字符串验证特性；
+    /// 字符串长度验证特性；
     /// </summary>
-    public class StringValidationAttribute : Attribute, IValidationAttribute        //定义特性；自定义特性应继承Attribute类；
+    public class StringLengthAttribute : Attribute, IValidationAttribute        //定义特性；自定义特性应继承Attribute类；
     {
         /// <summary>
         /// 最大长度；
@@ -34,7 +34,7 @@ namespace SmartLin.LearningCSharp.Reflection
         /// 构造函数；
         /// </summary>
         /// <param name="maxLength">最大长度</param>
-        public StringValidationAttribute(int maxLength)
+        public StringLengthAttribute(int maxLength)
         {
             this.MaxLength = maxLength;
         }
