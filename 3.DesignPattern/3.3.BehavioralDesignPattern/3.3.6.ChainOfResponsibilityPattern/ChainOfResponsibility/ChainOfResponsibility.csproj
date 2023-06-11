@@ -53,15 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AbstractApprover.cs" />
-    <Compile Include="Model\StaffRoomApprover.cs" />
+    <Compile Include="Model\Approver\AbstractApprover.cs" />
+    <Compile Include="Model\Approver\StaffRoomApprover.cs" />
     <Compile Include="Model\Faculty.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Request.cs" />
     <Compile Include="Model\Student.cs" />
-    <Compile Include="Model\CollegeApprover.cs" />
-    <Compile Include="Model\TeachingAffairOfficeApprover.cs" />
+    <Compile Include="Model\Approver\CollegeApprover.cs" />
+    <Compile Include="Model\Approver\TeachingAffairOfficeApprover.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

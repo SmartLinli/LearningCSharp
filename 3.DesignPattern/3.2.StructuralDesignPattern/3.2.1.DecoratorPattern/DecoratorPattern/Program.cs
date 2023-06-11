@@ -6,7 +6,7 @@ namespace SmartLin.LearningCSharp.DecoratorPattern
     {
         static void Main()
         {
-            Student student = new Student("3180707001", "周林好");                          //定义被装饰者（亦即装饰者的基类）；
+            Student student = new Student("3230707001", "张三");                            //定义被装饰者（亦即装饰者的基类）；
             student = new StudentCadre(student)                                             //定义装饰者；装饰者（间接）派生于被装饰者，故可直接向后者赋值；
             {
                 Duty = "班级团支书"                                                          //被装饰者作为基类，无法访问装饰者的成员，只能通过装饰者的初始化器来向后者的成员赋值；
@@ -19,7 +19,7 @@ namespace SmartLin.LearningCSharp.DecoratorPattern
             student.Intro();                                                                //调用方法；该方法已经过各装饰者（亦即派生类）的重写；
             WriteLine();
 
-            Student student2 = new Student("3180707002", "林钦妹");
+            Student student2 = new Student("3230707002", "李四");
             StudentCadre studentCadre = new StudentCadre(student2)
             {
                 Duty = "组织委员"

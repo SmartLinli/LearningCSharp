@@ -25,7 +25,7 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
                 this.NextApprover.Handle(request);
                 return;
             }
-            WriteLine("该请求需要教务处慎重研究决定，请耐心等待结果。\n");                            //若无下一审批者，则予以回复；
+            WriteLine("无法批准该请求。\n");                                                         //若无下一审批者，则予以回复；
         }
         /// <summary>
         /// 构造函数

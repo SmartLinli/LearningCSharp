@@ -12,7 +12,7 @@
         /// <summary>
         /// 姓名；
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
         /// <summary>
         /// 构造函数；
         /// </summary>

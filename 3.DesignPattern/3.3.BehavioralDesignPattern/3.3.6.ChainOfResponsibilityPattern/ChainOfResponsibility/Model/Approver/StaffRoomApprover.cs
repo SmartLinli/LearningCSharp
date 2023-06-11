@@ -25,7 +25,7 @@ namespace SmartLin.LearningCSharp.ChainOfResponsibilityPattern
                 this.NextApprover.Handle(request);
                 return;
             }
-            WriteLine("请向上一级主管领导提出请求。\n");                                              //若无下一审批者，则予以回复；
+            WriteLine("无法批准该请求。\n");                                                         //若无下一审批者，则予以回复；
         }
         /// <summary>
         /// 构造函数
